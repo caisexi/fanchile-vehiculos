@@ -49,7 +49,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'ordenTrabajos' => array(self::HAS_MANY, 'OrdenTrabajo', 'id_reigistro_factura'),
+			'ordenTrabajos' => array(self::HAS_MANY, 'OrdenTrabajo', 'id_registro_factura'),
 			'idProveedor' => array(self::BELONGS_TO, 'Proveedores', 'id_proveedor'),
 		);
 	}

@@ -50,8 +50,8 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 				'filter'=>GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)),
 				),
 		array(
-				'name'=>'id_reigistro_factura',
-				'value'=>'GxHtml::valueEx($data->idReigistroFactura)',
+				'name'=>'id_registro_factura',
+				'value'=>'GxHtml::valueEx($data->idregistroFactura)',
 				'filter'=>GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true)),
 				),
 		'kilometraje',

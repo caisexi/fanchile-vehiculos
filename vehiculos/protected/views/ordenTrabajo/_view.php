@@ -10,8 +10,8 @@
 	<?php echo GxHtml::encode($data->getAttributeLabel('id_vehiculo')); ?>:
 		<?php echo GxHtml::encode(GxHtml::valueEx($data->idVehiculo)); ?>
 	<br />
-	<?php echo GxHtml::encode($data->getAttributeLabel('id_reigistro_factura')); ?>:
-		<?php echo GxHtml::encode(GxHtml::valueEx($data->idReigistroFactura)); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('id_registro_factura')); ?>:
+		<?php echo GxHtml::encode(GxHtml::valueEx($data->idregistroFactura)); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('kilometraje')); ?>:
 	<?php echo GxHtml::encode($data->kilometraje); ?>

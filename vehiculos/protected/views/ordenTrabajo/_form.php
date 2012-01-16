@@ -29,9 +29,9 @@
 		<?php echo $form->error($model,'id_vehiculo'); ?>
 		</div><!-- row -->
 		<div class="row">
-		<?php echo $form->labelEx($model,'id_reigistro_factura'); ?>
-		<?php echo $form->dropDownList($model, 'id_reigistro_factura', GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'id_reigistro_factura'); ?>
+		<?php echo $form->labelEx($model,'id_registro_factura'); ?>
+		<?php echo $form->dropDownList($model, 'id_registro_factura', GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true))); ?>
+		<?php echo $form->error($model,'id_registro_factura'); ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'kilometraje'); ?>

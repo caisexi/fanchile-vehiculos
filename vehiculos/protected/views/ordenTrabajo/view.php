@@ -27,9 +27,9 @@ array(
 			'value' => $model->idVehiculo !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->idVehiculo)), array('vehiculos/view', 'id' => GxActiveRecord::extractPkValue($model->idVehiculo, true))) : null,
 			),
 array(
-			'name' => 'idReigistroFactura',
+			'name' => 'idregistroFactura',
 			'type' => 'raw',
-			'value' => $model->idReigistroFactura !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->idReigistroFactura)), array('registroFactura/view', 'id' => GxActiveRecord::extractPkValue($model->idReigistroFactura, true))) : null,
+			'value' => $model->idregistroFactura !== null ? GxHtml::link(GxHtml::encode(GxHtml::valueEx($model->idregistroFactura)), array('registroFactura/view', 'id' => GxActiveRecord::extractPkValue($model->idregistroFactura, true))) : null,
 			),
 'kilometraje',
 'fecha',

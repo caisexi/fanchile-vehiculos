@@ -27,11 +27,16 @@ class RegistroFacturaController extends GxController {
 	}
 
 	public function actionUpdate($id) {
+            
+                Yii::import('ext.multimodelform.MultiModelForm');                
+          
 		$model = $this->loadModel($id, 'RegistroFactura');
 
 
 		if (isset($_POST['RegistroFactura'])) {
 			$model->setAttributes($_POST['RegistroFactura']);
+                        
+                        $masterValues = array ('groupid'=>$model->id);
 
 			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->id));

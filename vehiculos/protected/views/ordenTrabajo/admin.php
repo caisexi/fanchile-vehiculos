@@ -50,7 +50,7 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 				'filter'=>GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)),
 				),
 		array(
-				'name'=>'id_registro_factura',
+				'name'=>'id_rf',
 				'value'=>'GxHtml::valueEx($data->idregistroFactura)',
 				'filter'=>GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true)),
 				),

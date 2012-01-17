@@ -21,8 +21,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'id_registro_factura'); ?>
-		<?php echo $form->dropDownList($model, 'id_registro_factura', GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
+		<?php echo $form->label($model, 'id_rf'); ?>
+		<?php echo $form->dropDownList($model, 'id_rf', GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">

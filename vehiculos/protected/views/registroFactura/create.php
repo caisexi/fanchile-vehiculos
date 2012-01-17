@@ -16,5 +16,8 @@ $this->menu = array(
 <?php
 $this->renderPartial('_form', array(
 		'model' => $model,
-		'buttons' => 'create'));
+                'model_ot' => $model_ot,
+                'validatedOt' => $validatedOt,
+		'buttons' => 'create'
+    ));
 ?>

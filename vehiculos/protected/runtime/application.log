@@ -204,3 +204,6 @@ in C:\wamp\www\vehiculos\index.php (13)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/17 15:21:01 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)

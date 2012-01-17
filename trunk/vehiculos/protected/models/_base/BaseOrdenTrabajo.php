@@ -12,7 +12,7 @@
  * @property integer $id
  * @property integer $nro_guia
  * @property integer $id_vehiculo
- * @property integer $id_registro_factura
+ * @property integer $id_rf
  * @property string $kilometraje
  * @property string $fecha
  * @property string $creado
@@ -37,16 +37,16 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'fecha';
+		return 'nro_guia';
 	}
 
 	public function rules() {
 		return array(
-			array('id, nro_guia, id_vehiculo, id_registro_factura, fecha, creado, modificado', 'required'),
-			array('id, nro_guia, id_vehiculo, id_registro_factura', 'numerical', 'integerOnly'=>true),
+			array('nro_guia, id_vehiculo, id_rf, fecha, creado, modificado', 'required'),
+			array('nro_guia, id_vehiculo, id_rf', 'numerical', 'integerOnly'=>true),
 			array('kilometraje', 'length', 'max'=>7),
 			array('kilometraje', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, nro_guia, id_vehiculo, id_registro_factura, kilometraje, fecha, creado, modificado', 'safe', 'on'=>'search'),
+			array('id, nro_guia, id_vehiculo, id_rf, kilometraje, fecha, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +54,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 		return array(
 			'detallesOts' => array(self::HAS_MANY, 'DetallesOt', 'id_ot'),
 			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
-			'idregistroFactura' => array(self::BELONGS_TO, 'RegistroFactura', 'id_registro_factura'),
+			'idregistroFactura' => array(self::BELONGS_TO, 'RegistroFactura', 'id_rf'),
 		);
 	}
 
@@ -65,10 +65,9 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
-			'id' => Yii::t('app', 'ID'),
 			'nro_guia' => Yii::t('app', 'Nro Guia'),
 			'id_vehiculo' => null,
-			'id_registro_factura' => null,
+			'id_rf' => null,
 			'kilometraje' => Yii::t('app', 'Kilometraje'),
 			'fecha' => Yii::t('app', 'Fecha'),
 			'creado' => Yii::t('app', 'Creado'),
@@ -85,7 +84,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 		$criteria->compare('id', $this->id);
 		$criteria->compare('nro_guia', $this->nro_guia);
 		$criteria->compare('id_vehiculo', $this->id_vehiculo);
-		$criteria->compare('id_registro_factura', $this->id_registro_factura);
+		$criteria->compare('id_rf', $this->id_rf);
 		$criteria->compare('kilometraje', $this->kilometraje, true);
 		$criteria->compare('fecha', $this->fecha, true);
 		$criteria->compare('creado', $this->creado, true);
@@ -95,4 +94,13 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+        
+        public function beforeValidate() {
+            if ($this->isNewRecord)
+                $this->creado = new CDbExpression('NOW()');
+
+            $this->modificado = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 }

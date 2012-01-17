@@ -9,21 +9,41 @@ class RegistroFacturaController extends GxController {
 		));
 	}
 
-	public function actionCreate() {
+	public function actionCreate() {            
+                Yii::import('ext.multimodelform.MultiModelForm');
+                
 		$model = new RegistroFactura;
-
+                
+                $model_ot = new OrdenTrabajo();
+                
+                $validatedOt = array();
+                
 		if (isset($_POST['RegistroFactura'])) {
-			$model->setAttributes($_POST['RegistroFactura']);
-
-			if ($model->save()) {
-				if (Yii::app()->getRequest()->getIsAjaxRequest())
-					Yii::app()->end();
+			$model->attributes=$_POST['RegistroFactura'];
+                        
+                        if(MultiModelForm::validate($model_ot,$validatedOt,$deleteOt) && $model->save()) {
+                            
+                            $masterValues = array ('id_rf'=>$model->id);
+                            
+                            if (Yii::app()->getRequest()->getIsAjaxRequest())
+                            {
+                                Yii::app()->end();
+                            }
 				else
-					$this->redirect(array('view', 'id' => $model->id));
+                                {
+                                    if(MultiModelForm::save($model_ot,$validatedOt,$deleteOt,$masterValues))
+                                    {
+                                        $this->redirect(array('view', 'id' => $model->id));
+                                    }
+                                }
 			}
 		}
 
-		$this->render('create', array( 'model' => $model));
+		$this->render('create', array(
+				'model' => $model,
+                                'model_ot' => $model_ot,
+                                'validatedOt' => $validatedOt,
+				));
 	}
 
 	public function actionUpdate($id) {
@@ -31,20 +51,26 @@ class RegistroFacturaController extends GxController {
                 Yii::import('ext.multimodelform.MultiModelForm');                
           
 		$model = $this->loadModel($id, 'RegistroFactura');
-
+                
+                $model_ot = new OrdenTrabajo();
+                
+                $validatedOt = array();
 
 		if (isset($_POST['RegistroFactura'])) {
 			$model->setAttributes($_POST['RegistroFactura']);
                         
-                        $masterValues = array ('groupid'=>$model->id);
+                        $masterValues = array ('id_rf'=>$model->id);
 
-			if ($model->save()) {
+			if(MultiModelForm::save($model_ot,$validatedOt,$deleteOt,$masterValues) && $model->save()) 
+                        {
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
 
 		$this->render('update', array(
 				'model' => $model,
+                                'model_ot' => $model_ot,
+                                'validatedOt' => $validatedOt,
 				));
 	}
 

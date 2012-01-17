@@ -36,7 +36,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'fecha';
+		return 'nro_factura';
 	}
 
 	public function rules() {
@@ -49,7 +49,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'ordenTrabajos' => array(self::HAS_MANY, 'OrdenTrabajo', 'id_registro_factura'),
+			'ordenTrabajos' => array(self::HAS_MANY, 'OrdenTrabajo', 'id_rf'),
 			'idProveedor' => array(self::BELONGS_TO, 'Proveedores', 'id_proveedor'),
 		);
 	}
@@ -97,5 +97,5 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
             $this->modificado = new CDbExpression('NOW()');
 
             return parent::beforeSave();
-        }
+        }       
 }

@@ -207,3 +207,176 @@ in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php 
 2012/01/17 15:21:01 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
 in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:33:07 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:33:11 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:39:00 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:43:48 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:44:16 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:46:43 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:46:46 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:47:02 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:49:35 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 15:54:59 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:31:59 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:32:51 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:32:56 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:39:35 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`orden_trabajo`, CONSTRAINT `orden_trabajo_ibfk_2` FOREIGN KEY (`id_rf`) REFERENCES `registro_factura` (`id`)). The SQL statement executed was: DELETE FROM `registro_factura` WHERE `registro_factura`.`id`=1.
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (87)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:39:35 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`orden_trabajo`, CONSTRAINT `orden_trabajo_ibfk_2` FOREIGN KEY (`id_rf`) REFERENCES `registro_factura` (`id`)). The SQL statement executed was: DELETE FROM `registro_factura` WHERE `registro_factura`.`id`=1' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('1')
+#2 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(87): CActiveRecord->delete()
+#3 [internal function]: RegistroFacturaController->actionDelete('1')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/delete/1?ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/17 17:39:49 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`orden_trabajo`, CONSTRAINT `orden_trabajo_ibfk_2` FOREIGN KEY (`id_rf`) REFERENCES `registro_factura` (`id`)). The SQL statement executed was: DELETE FROM `registro_factura` WHERE `registro_factura`.`id`=1.
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (87)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:39:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`orden_trabajo`, CONSTRAINT `orden_trabajo_ibfk_2` FOREIGN KEY (`id_rf`) REFERENCES `registro_factura` (`id`)). The SQL statement executed was: DELETE FROM `registro_factura` WHERE `registro_factura`.`id`=1' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('1')
+#2 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(87): CActiveRecord->delete()
+#3 [internal function]: RegistroFacturaController->actionDelete('1')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/delete/1?ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/17 17:44:05 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (68)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:44:25 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:44:37 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:44:47 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:57:54 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 17:58:00 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 18:14:20 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 18:17:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "personas".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personas')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/personas
+---
+2012/01/17 18:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "persona".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('persona')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/persona
+---
+2012/01/17 18:17:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "personal".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/personal
+---
+2012/01/17 18:17:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "personal".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/personal
+---
+2012/01/17 18:24:13 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (22)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 18:26:52 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (60)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:34:43 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (23)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:53:02 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (23)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:56:26 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:56:47 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:57:02 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:58:11 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 20:59:57 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 21:00:06 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 21:01:13 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/17 21:01:13 [warning] [application] Failed to set unsafe attribute "id" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)

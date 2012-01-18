@@ -68,7 +68,7 @@ class MultiModelForm extends CWidget
      *
      * @var string $addItemText
      */
-    public $addItemText = 'Add item';
+    public $addItemText = 'Añadir';
 
     /**
      * Show 'Add item' link and empty item in errormode
@@ -84,7 +84,7 @@ class MultiModelForm extends CWidget
      *
      * @var string $removeText
      */
-    public $removeText = 'Remove';
+    public $removeText = 'Borrar';
 
     /**
      * The confirmation text before remove an item
@@ -92,7 +92,7 @@ class MultiModelForm extends CWidget
      *
      * @var string $removeText
      */
-    public $removeConfirm = 'Delete this item?';
+    public $removeConfirm = 'Desea eliminar?';
 
     /**
      * The htmlOptions for the remove link

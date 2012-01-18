@@ -42,7 +42,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('nro_guia, id_vehiculo, id_rf, fecha, creado, modificado', 'required'),
+			array('nro_guia, id_vehiculo, fecha, creado, modificado', 'required'),
 			array('nro_guia, id_vehiculo, id_rf', 'numerical', 'integerOnly'=>true),
 			array('kilometraje', 'length', 'max'=>7),
 			array('kilometraje', 'default', 'setOnEmpty' => true, 'value' => null),

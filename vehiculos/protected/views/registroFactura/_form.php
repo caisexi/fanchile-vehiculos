@@ -82,9 +82,14 @@
                             'dateFormat' => 'yy-mm-dd',
                             
                     )),
+                      'id_rf'=>array(
+                        'type'=>'hidden',
+                        'visible'=>false,  // not seen in the table
+                        ),
                 ));
                 
                 $this->widget('ext.multimodelform.MultiModelForm',array(
+                    'tableView' => true,
                     'id' => 'id_ot', //the unique widget id
                     'formConfig' => $otFormConfig, //the form configuration array
                     'model' => $model_ot, //instance of the form model

@@ -14,29 +14,25 @@ class RegistroFacturaController extends GxController {
                 
 		$model = new RegistroFactura;
                 
-                $model_ot = new OrdenTrabajo();
+                $model_ot = new OrdenTrabajo;
                 
                 $validatedOt = array();
                 
+                $masterValues = array();
+                
 		if (isset($_POST['RegistroFactura'])) {
+                    
 			$model->attributes=$_POST['RegistroFactura'];
                         
-                        if(MultiModelForm::validate($model_ot,$validatedOt,$deleteOt) && $model->save()) {
+                        if(MultiModelForm::validate($model_ot,$validatedOt,$deletedItems) && $model->save())
+                        {  
+                            $masterValues = array('id_rf' => $model->id);
                             
-                            $masterValues = array ('id_rf'=>$model->id);
-                            
-                            if (Yii::app()->getRequest()->getIsAjaxRequest())
+                            if(MultiModelForm::save($model_ot,$validatedOt,$deletedItems,$masterValues))
                             {
-                                Yii::app()->end();
+                                $this->redirect(array('view', 'id' => $model->id));
                             }
-				else
-                                {
-                                    if(MultiModelForm::save($model_ot,$validatedOt,$deleteOt,$masterValues))
-                                    {
-                                        $this->redirect(array('view', 'id' => $model->id));
-                                    }
-                                }
-			}
+                        }
 		}
 
 		$this->render('create', array(
@@ -52,7 +48,7 @@ class RegistroFacturaController extends GxController {
           
 		$model = $this->loadModel($id, 'RegistroFactura');
                 
-                $model_ot = new OrdenTrabajo();
+                $model_ot = new OrdenTrabajo;
                 
                 $validatedOt = array();
 

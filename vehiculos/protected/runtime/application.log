@@ -380,3 +380,9 @@ in C:\wamp\www\vehiculos\index.php (13)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/19 13:03:58 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/19 13:04:17 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (25)
+in C:\wamp\www\vehiculos\index.php (13)

@@ -10,37 +10,51 @@ class OrdenTrabajoController extends GxController {
 	}
 
 	public function actionCreate() {
+                Yii::import('ext.multimodelform.MultiModelForm');
+                
 		$model = new OrdenTrabajo;
-
+                
+                $detalle = new DetallesOt;
+                
+                $detallesValidados = array();
 
 		if (isset($_POST['OrdenTrabajo'])) {
 			$model->setAttributes($_POST['OrdenTrabajo']);
 
-			if ($model->save()) {
-				if (Yii::app()->getRequest()->getIsAjaxRequest())
-					Yii::app()->end();
-				else
+			if (MultiModelForm::validate($detalle,$detallesValidados,$detallesBorrados) && $model->save()) {
+                            
+				$masterValues = array ('id_ot'=>$model->id);
+                                
+                                if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues))
+                                        
 					$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
 
-		$this->render('create', array( 'model' => $model));
+		$this->render('create', array( 'model' => $model, 'detalle' => $detalle, 'detallesValidados' => $detallesValidados));
 	}
 
 	public function actionUpdate($id) {
+                Yii::import('ext.multimodelform.MultiModelForm');
+                
 		$model = $this->loadModel($id, 'OrdenTrabajo');
-
+                
+                $detalle = new DetallesOt;
+                
+                $detallesValidados = array();
 
 		if (isset($_POST['OrdenTrabajo'])) {
 			$model->setAttributes($_POST['OrdenTrabajo']);
+                        
+                        $masterValues = array ('id_ot'=>$model->id);
 
-			if ($model->save()) {
+			if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues) && $model->save()) {
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
 
 		$this->render('update', array(
-				'model' => $model,
+				'model' => $model, 'detalle' => $detalle, 'detallesValidados' => $detallesValidados,
 				));
 	}
 

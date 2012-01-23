@@ -9,64 +9,38 @@ class RegistroFacturaController extends GxController {
 		));
 	}
 
-	public function actionCreate() {            
-                Yii::import('ext.multimodelform.MultiModelForm');
-                
+	public function actionCreate() {
 		$model = new RegistroFactura;
-                
-                $model_ot = new OrdenTrabajo;
-                
-                $validatedOt = array();
-                
-                $masterValues = array();
-                
-		if (isset($_POST['RegistroFactura'])) {
-                    
-			$model->attributes=$_POST['RegistroFactura'];
-                        
-                        if(MultiModelForm::validate($model_ot,$validatedOt,$deletedItems) && $model->save())
-                        {  
-                            $masterValues = array('id_rf' => $model->id);
-                            
-                            if(MultiModelForm::save($model_ot,$validatedOt,$deletedItems,$masterValues))
-                            {
-                                $this->redirect(array('view', 'id' => $model->id));
-                            }
-                        }
-		}
 
-		$this->render('create', array(
-				'model' => $model,
-                                'model_ot' => $model_ot,
-                                'validatedOt' => $validatedOt,
-				));
-	}
-
-	public function actionUpdate($id) {
-            
-                Yii::import('ext.multimodelform.MultiModelForm');                
-          
-		$model = $this->loadModel($id, 'RegistroFactura');
-                
-                $model_ot = new OrdenTrabajo;
-                
-                $validatedOt = array();
 
 		if (isset($_POST['RegistroFactura'])) {
 			$model->setAttributes($_POST['RegistroFactura']);
-                        
-                        $masterValues = array ('id_rf'=>$model->id);
 
-			if(MultiModelForm::save($model_ot,$validatedOt,$deleteOt,$masterValues) && $model->save()) 
-                        {
+			if ($model->save()) {
+				if (Yii::app()->getRequest()->getIsAjaxRequest())
+					Yii::app()->end();
+				else
+					$this->redirect(array('view', 'id' => $model->id));
+			}
+		}
+
+		$this->render('create', array( 'model' => $model));
+	}
+
+	public function actionUpdate($id) {
+		$model = $this->loadModel($id, 'RegistroFactura');
+
+
+		if (isset($_POST['RegistroFactura'])) {
+			$model->setAttributes($_POST['RegistroFactura']);
+
+			if ($model->save()) {
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
 
 		$this->render('update', array(
 				'model' => $model,
-                                'model_ot' => $model_ot,
-                                'validatedOt' => $validatedOt,
 				));
 	}
 

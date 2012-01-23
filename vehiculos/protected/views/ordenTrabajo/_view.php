@@ -11,13 +11,13 @@
 		<?php echo GxHtml::encode(GxHtml::valueEx($data->idVehiculo)); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('id_rf')); ?>:
-		<?php echo GxHtml::encode(GxHtml::valueEx($data->idregistroFactura)); ?>
-	<br />
-	<?php echo GxHtml::encode($data->getAttributeLabel('kilometraje')); ?>:
-	<?php echo GxHtml::encode($data->kilometraje); ?>
+		<?php echo GxHtml::encode(GxHtml::valueEx($data->idRf)); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('fecha')); ?>:
 	<?php echo GxHtml::encode($data->fecha); ?>
+	<br />
+	<?php echo GxHtml::encode($data->getAttributeLabel('kilometraje')); ?>:
+	<?php echo GxHtml::encode($data->kilometraje); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('creado')); ?>:
 	<?php echo GxHtml::encode($data->creado); ?>

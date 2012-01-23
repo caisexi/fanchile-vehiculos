@@ -12,14 +12,15 @@
  * @property integer $id
  * @property integer $id_detalle_reparacion
  * @property integer $id_ot
- * @property integer $cantidad
  * @property integer $id_marca
- * @property string $observacion
+ * @property integer $cantidad
  * @property integer $precio_unitario
+ * @property integer $subtotal
+ * @property string $observacion
  *
- * @property MarcasRepuestos $idMarca
  * @property DetalleReparacion $idDetalleReparacion
  * @property OrdenTrabajo $idOt
+ * @property MarcasRepuestos $idMarca
  */
 abstract class BaseDetallesOt extends GxActiveRecord {
 
@@ -36,23 +37,24 @@ abstract class BaseDetallesOt extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'observacion';
+		return 'idOt';
 	}
 
 	public function rules() {
 		return array(
-			array('id_detalle_reparacion, id_ot, id_marca, observacion, precio_unitario', 'required'),
-			array('id_detalle_reparacion, id_ot, cantidad, id_marca, precio_unitario', 'numerical', 'integerOnly'=>true),
-			array('cantidad', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, id_detalle_reparacion, id_ot, cantidad, id_marca, observacion, precio_unitario', 'safe', 'on'=>'search'),
+			array('precio_unitario, subtotal', 'required'),
+			array('id_detalle_reparacion, id_ot, id_marca, cantidad, precio_unitario, subtotal', 'numerical', 'integerOnly'=>true),
+			array('observacion', 'safe'),
+			array('id_detalle_reparacion, id_marca, cantidad, observacion', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id, id_detalle_reparacion, id_ot, id_marca, cantidad, precio_unitario, subtotal, observacion', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations() {
 		return array(
-			'idMarca' => array(self::BELONGS_TO, 'MarcasRepuestos', 'id_marca'),
 			'idDetalleReparacion' => array(self::BELONGS_TO, 'DetalleReparacion', 'id_detalle_reparacion'),
 			'idOt' => array(self::BELONGS_TO, 'OrdenTrabajo', 'id_ot'),
+			'idMarca' => array(self::BELONGS_TO, 'MarcasRepuestos', 'id_marca'),
 		);
 	}
 
@@ -66,13 +68,14 @@ abstract class BaseDetallesOt extends GxActiveRecord {
 			'id' => Yii::t('app', 'ID'),
 			'id_detalle_reparacion' => null,
 			'id_ot' => null,
-			'cantidad' => Yii::t('app', 'Cantidad'),
 			'id_marca' => null,
-			'observacion' => Yii::t('app', 'Observacion'),
+			'cantidad' => Yii::t('app', 'Cantidad'),
 			'precio_unitario' => Yii::t('app', 'Precio Unitario'),
-			'idMarca' => null,
+			'subtotal' => Yii::t('app', 'Subtotal'),
+			'observacion' => Yii::t('app', 'Observacion'),
 			'idDetalleReparacion' => null,
 			'idOt' => null,
+			'idMarca' => null,
 		);
 	}
 
@@ -82,10 +85,11 @@ abstract class BaseDetallesOt extends GxActiveRecord {
 		$criteria->compare('id', $this->id);
 		$criteria->compare('id_detalle_reparacion', $this->id_detalle_reparacion);
 		$criteria->compare('id_ot', $this->id_ot);
-		$criteria->compare('cantidad', $this->cantidad);
 		$criteria->compare('id_marca', $this->id_marca);
-		$criteria->compare('observacion', $this->observacion, true);
+		$criteria->compare('cantidad', $this->cantidad);
 		$criteria->compare('precio_unitario', $this->precio_unitario);
+		$criteria->compare('subtotal', $this->subtotal);
+		$criteria->compare('observacion', $this->observacion, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

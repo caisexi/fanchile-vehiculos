@@ -10,6 +10,9 @@ class OrdenTrabajoController extends GxController {
 	}
 
 	public function actionCreate() {
+                if(Yii::app()->getRequest()->isAjaxRequest){ //if the page was loaded by ajax (ajaxTab) 
+                    $this->layout=false;//disable the layout 
+                } 
                 Yii::import('ext.multimodelform.MultiModelForm');
                 
 		$model = new OrdenTrabajo;

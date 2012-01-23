@@ -1,9 +1,10 @@
-<div class="form wide">
+<div class="form">
 
 
 <?php $form = $this->beginWidget('GxActiveForm', array(
 	'id' => 'orden-trabajo-form',
 	'enableAjaxValidation' => false,
+    
 ));
 ?>
 
@@ -12,6 +13,7 @@
 	</p>
 
 	<?php echo $form->errorSummary(array_merge(array($model),$detallesValidados)); ?>
+        
 
 		<div class="row">
 		<?php echo $form->labelEx($model,'nro_guia'); ?>
@@ -65,7 +67,6 @@
                     'data' => $detalle->findAll('id_ot=:id_Ot', array(':id_Ot'=>$model->id)),
                 ));
                 ?>
-                <input type="button" value="Calcular Subtotales" onclick="subtotal()">
 <?php
 echo GxHtml::submitButton(Yii::t('app', 'Guardar'));
 $this->endWidget();
@@ -76,44 +77,66 @@ $this->endWidget();
 function subtotal(){    
     existe = true;
     existe2 = true;
+    existe3 = true;
 
-    pu = 'precio_unitario';
-    cant = 'cantidad';
-    sub = 'subtotal';
+    pu = '_precio_unitario';
+    cant = '_cantidad';
+    sub = '_subtotal';    
+    deta = 'DetallesOt';
     
-    deta = 'DetallesOt_';
+    pu_a = deta+pu;
+    cant_a = deta+cant;
+    sub_a = deta+sub;
     
-    update = 'u___';
+    update = '_u___';
+    error = '_n___';
 
-    i=1;
+    i_a=1;
     i_b=0;
+    i_c=0;
     
     while(existe2){    
         try{
-            pu_b = deta+i_b.toString()+update+pu;
-            cant_b = deta+i_b.toString()+update+cant;
-            sub_b = deta+i_b.toString()+update+sub;
+            pu_b = deta+update+i_b.toString()+pu;
+            cant_b = deta+update+i_b.toString()+cant;
+            sub_b = deta+update+i_b.toString()+sub;
             if(document.getElementById(pu_b).value != ''){
+                if(document.getElementById(cant_b).value == '')
+                    document.getElementById(cant_b).value = 1;
                 document.getElementById(sub_b).value = document.getElementById(pu_b).value * document.getElementById(cant_b).value;
             }
             i_b = i_b + 1;
-            //alert(sub);
         }catch(e){
            existe2 = false;
         }
     }
+    while(existe3){    
+        try{
+            pu_c = deta+error+i_c.toString()+pu;
+            cant_c = deta+error+i_c.toString()+cant;
+            sub_c = deta+error+i_c.toString()+sub;
+            if(document.getElementById(pu_c).value != ''){
+                if(document.getElementById(cant_c).value == '')
+                    document.getElementById(cant_c).value = 1;
+                document.getElementById(sub_c).value = document.getElementById(pu_c).value * document.getElementById(cant_c).value;
+            }
+            i_c = i_c + 1;
+        }catch(e){
+           existe3 = false;
+        }
+    }
     while(existe){    
         try{
-            pu_a = deta+i_b.toString()+pu;
-            cant_a = deta+i_b.toString()+cant;
-            sub_a = deta+i_b.toString()+sub;
+            
             if(document.getElementById(pu_a).value != ''){
+                if(document.getElementById(cant_a).value == '')
+                    document.getElementById(cant_a).value = 1;
                 document.getElementById(sub_a).value = document.getElementById(pu_a).value * document.getElementById(cant_a).value;
             }
-            i = i + 1;
-            pu_a = pu+i.toString();
-            cant_a = cant+i.toString();
-            sub_a = sub+i.toString();
+            i_a = i_a + 1;
+            pu_a = deta+pu+i_a.toString();
+            cant_a = deta+cant+i_a.toString();
+            sub_a = deta+sub+i_a.toString();
             //alert(sub);
         }catch(e){
            existe = false;

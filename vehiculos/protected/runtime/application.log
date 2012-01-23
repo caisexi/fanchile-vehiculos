@@ -1220,3 +1220,779 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/vehiculos/index.php/re
 ---
+2012/01/23 14:45:08 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:45:08 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:45:08 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:46:55 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:46:55 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:46:55 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:47:12 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:47:12 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:47:12 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 14:47:12 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:07 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:07 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:07 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:07 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:07 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:48 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:48 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:48 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:48 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:08:48 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:21 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:21 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:21 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:21 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:21 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:36 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:36 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:36 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:36 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:12:36 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:21:00 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:21:00 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:21:00 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:21:00 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:21:00 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:34:46 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/23 15:55:14 [error] [exception.CException] exception 'CException' with message 'OrdenTrabajo and its behaviors do not have a method or closure named "renderPartial".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('renderPartial', Array)
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(19): CActiveRecord->__call('renderPartial', Array)
+#2 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(19): OrdenTrabajo->renderPartial('_form', NULL, true)
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#11 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(34): CController->render('create', Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/23 15:55:30 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(19): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(34): OrdenTrabajoController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+2012/01/23 15:55:58 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(18): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(34): OrdenTrabajoController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (18)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+2012/01/23 15:57:34 [error] [exception.CException] exception 'CException' with message 'RegistroFacturaController cannot find the requested view "_partial".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): CController->renderPartial('_partial', NULL, true)
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): CController->renderPartial('_form', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): CController->render('create', Array)
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/23 15:57:45 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (20)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 16:00:15 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (20)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 16:00:50 [error] [exception.CException] exception 'CException' with message 'GxActiveForm and its behaviors do not have a method or closure named "renderPartial".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): CComponent->__call('renderPartial', Array)
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): GxActiveForm->renderPartial('_form', NULL, true)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): CController->render('create', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 16:00:58 [error] [exception.CException] exception 'CException' with message 'RegistroFactura and its behaviors do not have a method or closure named "renderPartial".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('renderPartial', Array)
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): CActiveRecord->__call('renderPartial', Array)
+#2 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): RegistroFactura->renderPartial('_form', NULL, true)
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#11 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): CController->render('create', Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:01:45 [error] [exception.CException] exception 'CException' with message 'RegistroFactura and its behaviors do not have a method or closure named "renderPartial".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('renderPartial', Array)
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): CActiveRecord->__call('renderPartial', Array)
+#2 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): RegistroFactura->renderPartial('_form', NULL, true)
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#11 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): CController->render('create', Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/23 18:01:59 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (20)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:01:59 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(20): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (20)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:11:09 [error] [php] Undefined variable: form (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:2)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (2)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (27)
+2012/01/23 18:13:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('AjaxModule/ajax...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:13:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "AjaxModule/ajax/reqTest01".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('AjaxModule/ajax...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/AjaxModule/ajax/reqTest01
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "asdasd".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('asdasd')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/asdasd
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:13:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ordentrabajos".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajos')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajos
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ordentrabajos".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('ordentrabajos')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ordentrabajos')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/orden...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/ordentrabajos
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:14:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('index.php')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('index.php')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/index...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/index.php/ordentrabajo/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:16:25 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:19:33 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:19:41 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:20:08 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:20:55 [error] [exception.CException] exception 'CException' with message 'RegistroFacturaController cannot find the requested view "application.views.user.ordentrabajo._form".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): CController->renderPartial('application.vie...', Array, true)
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): CController->renderPartial('_form', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): CController->render('create', Array)
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+---
+2012/01/23 18:21:10 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:23:19 [error] [php] Undefined variable: detallesValidados (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#7 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#8 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#9 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#13 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#14 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (14)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+2012/01/23 18:24:04 [error] [php] Undefined variable: detallesValidados (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:19)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (27)
+2012/01/23 18:24:23 [error] [php] Undefined variable: detallesValidados (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:19)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(19): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(27): RegistroFacturaController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): RegistroFacturaController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (19)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (27)
+2012/01/23 19:07:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "personak".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personak')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/personak
+---
+2012/01/23 19:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "persona".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('persona')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/persona
+---
+2012/01/23 19:07:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "personal".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/personal
+---

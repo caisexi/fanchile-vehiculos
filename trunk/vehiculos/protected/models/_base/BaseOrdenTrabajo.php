@@ -13,14 +13,14 @@
  * @property integer $nro_guia
  * @property integer $id_vehiculo
  * @property integer $id_rf
- * @property string $kilometraje
  * @property string $fecha
+ * @property string $kilometraje
  * @property string $creado
  * @property string $modificado
  *
  * @property DetallesOt[] $detallesOts
  * @property Vehiculos $idVehiculo
- * @property RegistroFactura $idregistroFactura
+ * @property RegistroFactura $idRf
  */
 abstract class BaseOrdenTrabajo extends GxActiveRecord {
 
@@ -33,7 +33,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'OrdenTrabajo|OrdenTrabajos', $n);
+		return Yii::t('app', 'Orden de Trabajo|Ordenes de Trabajo', $n);
 	}
 
 	public static function representingColumn() {
@@ -42,11 +42,11 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('nro_guia, id_vehiculo, fecha, creado, modificado', 'required'),
+			array('nro_guia, id_vehiculo, id_rf, fecha, creado, modificado', 'required'),
 			array('nro_guia, id_vehiculo, id_rf', 'numerical', 'integerOnly'=>true),
 			array('kilometraje', 'length', 'max'=>7),
 			array('kilometraje', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, nro_guia, id_vehiculo, id_rf, kilometraje, fecha, creado, modificado', 'safe', 'on'=>'search'),
+			array('id, nro_guia, id_vehiculo, id_rf, fecha, kilometraje, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,7 +54,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 		return array(
 			'detallesOts' => array(self::HAS_MANY, 'DetallesOt', 'id_ot'),
 			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
-			'idregistroFactura' => array(self::BELONGS_TO, 'RegistroFactura', 'id_rf'),
+			'idRf' => array(self::BELONGS_TO, 'RegistroFactura', 'id_rf'),
 		);
 	}
 
@@ -65,16 +65,17 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 
 	public function attributeLabels() {
 		return array(
+			'id' => Yii::t('app', 'ID'),
 			'nro_guia' => Yii::t('app', 'Nro Guia'),
 			'id_vehiculo' => null,
 			'id_rf' => null,
-			'kilometraje' => Yii::t('app', 'Kilometraje'),
 			'fecha' => Yii::t('app', 'Fecha'),
+			'kilometraje' => Yii::t('app', 'Kilometraje'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
 			'detallesOts' => null,
 			'idVehiculo' => null,
-			'idregistroFactura' => null,
+			'idRf' => null,
 		);
 	}
 
@@ -85,8 +86,8 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 		$criteria->compare('nro_guia', $this->nro_guia);
 		$criteria->compare('id_vehiculo', $this->id_vehiculo);
 		$criteria->compare('id_rf', $this->id_rf);
-		$criteria->compare('kilometraje', $this->kilometraje, true);
 		$criteria->compare('fecha', $this->fecha, true);
+		$criteria->compare('kilometraje', $this->kilometraje, true);
 		$criteria->compare('creado', $this->creado, true);
 		$criteria->compare('modificado', $this->modificado, true);
 
@@ -94,6 +95,45 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+        
+        public function getMultiModelForm() {
+            $memberFormConfig = array(
+              'elements'=>array(
+                'id_detalle_reparacion'=>array(
+                    'type'=>'dropdownlist',
+                    'items'=>array(''=>'SELECCIONAR')+GxHtml::listDataEx(DetalleReparacion::model()->findAllAttributes(null, true)),
+                ),
+                'id_marca'=>array(
+                    'type'=>'dropdownlist',
+                    //it is important to add an empty item because of new records
+                    'items'=>array(''=>'SELECCIONAR')+GxHtml::listDataEx(MarcasRepuestos::model()->findAllAttributes(null, true)),
+                ),
+                'precio_unitario'=>array(
+                    'type'=>'text',
+                    'maxlength'=>11,
+                    'size'=>11,
+                    'onblur'=>'subtotal()',
+                ),
+                'cantidad'=>array(
+                    'type'=>'text',
+                    'maxlength'=>7,
+                    'size'=>7,
+                    'onblur'=>'subtotal()',
+                ),
+                'subtotal'=>array(
+                    'type'=>'text',
+                    'maxlength'=>11,
+                    'size'=>11,
+                ),
+                'observacion'=>array(
+                    'type'=>'textarea',
+                    'cols'=>15,
+                    'row'=>3,
+                ),
+            ));
+            
+            return $memberFormConfig;
+        }
         
         public function beforeValidate() {
             if ($this->isNewRecord)

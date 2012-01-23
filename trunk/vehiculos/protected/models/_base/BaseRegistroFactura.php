@@ -43,6 +43,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 		return array(
 			array('nro_factura, total_neto, total_bruto, id_proveedor, fecha, creado, modificado', 'required'),
 			array('nro_factura, total_neto, total_bruto, id_proveedor', 'numerical', 'integerOnly'=>true),
+                        array('nro_factura', 'length','max'=>6),
 			array('id, nro_factura, total_neto, total_bruto, id_proveedor, fecha, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}

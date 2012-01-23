@@ -26,11 +26,6 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model, 'kilometraje'); ?>
-		<?php echo $form->textField($model, 'kilometraje', array('maxlength' => 7)); ?>
-	</div>
-
-	<div class="row">
 		<?php echo $form->label($model, 'fecha'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
@@ -43,6 +38,11 @@
 				),
 			));
 ; ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model, 'kilometraje'); ?>
+		<?php echo $form->textField($model, 'kilometraje', array('maxlength' => 7)); ?>
 	</div>
 
 	<div class="row">

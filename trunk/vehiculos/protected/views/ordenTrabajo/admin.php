@@ -51,11 +51,11 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 				),
 		array(
 				'name'=>'id_rf',
-				'value'=>'GxHtml::valueEx($data->idregistroFactura)',
+				'value'=>'GxHtml::valueEx($data->idRf)',
 				'filter'=>GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true)),
 				),
-		'kilometraje',
 		'fecha',
+		'kilometraje',
 		/*
 		'creado',
 		'modificado',

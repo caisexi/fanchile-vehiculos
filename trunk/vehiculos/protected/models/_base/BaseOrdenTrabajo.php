@@ -111,14 +111,16 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
                 'precio_unitario'=>array(
                     'type'=>'text',
                     'maxlength'=>11,
-                    'size'=>11,
+                    'size'=>12,
                     'onblur'=>'subtotal()',
+                    'onkeypress'=>'if (event.keyCode == 13){subtotal()};',
                 ),
                 'cantidad'=>array(
                     'type'=>'text',
                     'maxlength'=>7,
                     'size'=>7,
-                    'onblur'=>'subtotal()',
+                    'onblur'=>'subtotal();',
+                    'onkeypress'=>'if (event.keyCode == 13){subtotal()};',
                 ),
                 'subtotal'=>array(
                     'type'=>'text',

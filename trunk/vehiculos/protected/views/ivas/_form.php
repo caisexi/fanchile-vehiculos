@@ -1,7 +1,7 @@
 <div class="form">
 
 
-<?php $form = $this->beginWidget('GxActiveForm', array(
+<?php  $form = $this->beginWidget('GxActiveForm', array(
 	'id' => 'ivas-form',
 	'enableAjaxValidation' => false,
 ));
@@ -14,16 +14,12 @@
 	<?php echo $form->errorSummary($model); ?>
 
 		<div class="row">
-		<?php echo $form->labelEx($model,'id'); ?>
-		<?php echo $form->textField($model, 'id'); ?>
-		<?php echo $form->error($model,'id'); ?>
-		</div><!-- row -->
-		<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
 			'attribute' => 'fecha',
 			'value' => $model->fecha,
+                        'language'=>'es',
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,

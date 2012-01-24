@@ -55,6 +55,8 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 			'detallesOts' => array(self::HAS_MANY, 'DetallesOt', 'id_ot'),
 			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
 			'idRf' => array(self::BELONGS_TO, 'RegistroFactura', 'id_rf'),
+                        'sumita' => array(self::STAT, 'DetallesOt', 'id_ot',
+                            'select'=> 'SUM(subtotal)'),
 		);
 	}
 

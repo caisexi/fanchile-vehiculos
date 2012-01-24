@@ -1,4 +1,5 @@
 <?php
+
 $this->breadcrumbs = array(
 	$model->label(2) => array('index'),
 	Yii::t('app', 'Manage'),
@@ -15,7 +16,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$.fn.yiiGridView.update('vehiculos-grid', {
+	$.fn.yiiGridView.update('personal-grid', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -25,6 +26,10 @@ $('.search-form form').submit(function(){
 
 <h1><?php echo Yii::t('app', 'Manage') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
 
+<p>
+You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) at the beginning of each of your search values to specify how the comparison should be done.
+</p>
+
 <?php echo GxHtml::link(Yii::t('app', 'Advanced Search'), '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search', array(
@@ -33,33 +38,23 @@ $('.search-form form').submit(function(){
 </div><!-- search-form -->
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
-	'id' => 'vehiculos-grid',
+	'id' => 'personal-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
-                'patente',
-                array(
-				'name'=>'idMarca',
-				'value'=>'GxHtml::valueEx($data->idMarca0)',
-				'filter'=>GxHtml::listDataEx(MarcasVehiculos::model()->findAllAttributes(null, true)),
-				),
-                array(
-				'name'=>'idModelo',
-				'value'=>'GxHtml::valueEx($data->idModelo0)',
-				'filter'=>GxHtml::listDataEx(ModelosVehiculos::model()->findAllAttributes(null, true)),
-				),
+		'rut',
+		'nombre',
+		'apellido_pat',
+		'apellido_mat',
 		array(
-				'name'=>'idTipoVehiculo',
-				'value'=>'GxHtml::valueEx($data->idTipoVehiculo0)',
-				'filter'=>GxHtml::listDataEx(TiposVehiculos::model()->findAllAttributes(null, true)),
+				'name'=>'id_cargo_empresa',
+				'value'=>'GxHtml::valueEx($data->idCargoEmpresa)',
+				'filter'=>GxHtml::listDataEx(CargosEmpresa::model()->findAllAttributes(null, true)),
 				),
-		array(
-				'name'=>'idColor',
-				'value'=>'GxHtml::valueEx($data->idColor0)',
-				'filter'=>GxHtml::listDataEx(ColoresVehiculos::model()->findAllAttributes(null, true)),
-				),
-		'ano',
-		
+		/*
+		'creado',
+		'modificado',
+		*/
 		array(
 			'class' => 'CButtonColumn',
 		),

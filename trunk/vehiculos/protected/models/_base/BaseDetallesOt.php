@@ -45,7 +45,7 @@ abstract class BaseDetallesOt extends GxActiveRecord {
 			array('precio_unitario, subtotal', 'required'),
 			array('id_detalle_reparacion, id_ot, id_marca, cantidad, precio_unitario, subtotal', 'numerical', 'integerOnly'=>true),
 			array('observacion', 'safe'),
-			array('id_detalle_reparacion, id_marca, cantidad, observacion', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id_detalle_reparacion, id_marca, cantidad, observacion', 'default', 'setOnEmpty' => true, 'value' => null),        
 			array('id, id_detalle_reparacion, id_ot, id_marca, cantidad, precio_unitario, subtotal, observacion', 'safe', 'on'=>'search'),
 		);
 	}
@@ -79,6 +79,7 @@ abstract class BaseDetallesOt extends GxActiveRecord {
 		);
 	}
 
+        
 	public function search() {
 		$criteria = new CDbCriteria;
 

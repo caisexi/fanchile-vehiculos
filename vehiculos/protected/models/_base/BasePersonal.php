@@ -36,12 +36,12 @@ abstract class BasePersonal extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'rut';
+		return array('nombre','apellido_pat');
 	}
 
 	public function rules() {
 		return array(
-			array('rut, nombre, apellido_pat, id_cargo_empresa, creado, modificado', 'required'),
+			array('rut, nombre, apellido_pat, creado, modificado', 'required'),
 			array('id_cargo_empresa', 'numerical', 'integerOnly'=>true),
 			array('rut', 'length', 'max'=>9),
 			array('nombre, apellido_pat, apellido_mat', 'length', 'max'=>50),
@@ -93,4 +93,13 @@ abstract class BasePersonal extends GxActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+        
+        public function beforeValidate() {
+            if ($this->isNewRecord)
+                $this->creado = new CDbExpression('NOW()');
+
+            $this->modificado = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 }

@@ -29,6 +29,7 @@
 			'model' => $model,
 			'attribute' => 'fecha',
 			'value' => $model->fecha,
+                        'language'=>'es',
 			'options' => array(
 				'showButtonPanel' => true,
 				'changeYear' => true,
@@ -38,16 +39,7 @@
 ; ?>
 		<?php echo $form->error($model,'fecha'); ?>
 		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'creado'); ?>
-		<?php echo $form->textField($model, 'creado'); ?>
-		<?php echo $form->error($model,'creado'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'modificado'); ?>
-		<?php echo $form->textField($model, 'modificado'); ?>
-		<?php echo $form->error($model,'modificado'); ?>
-		</div><!-- row -->
+
 
 
 <?php

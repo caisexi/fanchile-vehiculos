@@ -75,4 +75,13 @@ abstract class BaseUsuarios extends GxActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+        
+        public function beforeValidate() {
+            if ($this->isNewRecord)
+                $this->creado = new CDbExpression('NOW()');
+
+            $this->modificado = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 }

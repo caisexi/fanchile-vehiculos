@@ -67,6 +67,7 @@
                     'data' => $detalle->findAll('id_ot=:id_Ot', array(':id_Ot'=>$model->id)),
                 ));
                 ?>
+                
 <?php
 echo GxHtml::submitButton(Yii::t('app', 'Guardar'));
 $this->endWidget();

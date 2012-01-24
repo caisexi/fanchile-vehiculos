@@ -1996,3 +1996,1595 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/vehiculos/index.php/personal
 ---
+2012/01/23 19:14:49 [error] [php] Undefined variable: patente (C:\wamp\www\vehiculos\protected\views\vehiculos\admin.php:40)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): VehiculosController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): VehiculosController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php(74): VehiculosController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): VehiculosController->actionAdmin()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): VehiculosController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): VehiculosController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): VehiculosController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/vehiculos/admin
+in C:\wamp\www\vehiculos\protected\views\vehiculos\admin.php (40)
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (74)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 19:34:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cargose,´resa".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('cargose,??resa')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/cargose,%C2%B4resa
+---
+2012/01/23 19:34:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "cargoseempresa".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('cargoseempresa')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/cargoseempresa
+---
+2012/01/23 19:34:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "persona".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('persona')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/persona
+---
+2012/01/23 19:35:31 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 19:48:14 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 19:48:38 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 19:50:18 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 19:57:46 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:08:55 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:33:10 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:33:49 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:34:05 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:35:05 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:35:27 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:36:03 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:36:21 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:36:39 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:36:53 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:37:21 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:37:36 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:37:53 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:38:11 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:38:45 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:38:59 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:39:15 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:39:31 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:39:53 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:40:10 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:40:22 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:40:40 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:40:59 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:41:15 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:41:41 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:41:55 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:42:14 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:42:35 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:43:00 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:43:16 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:43:34 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:43:53 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:44:11 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:44:37 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:44:52 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:45:09 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:45:22 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:45:55 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:47:23 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:48:36 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:49:11 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:50:42 [warning] [application] Failed to set unsafe attribute "cargosEmpresas" of "AreasEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\AreasEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:50:58 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:52:06 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:52:22 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:52:34 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:53:31 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:53:42 [warning] [application] Failed to set unsafe attribute "cargosEmpresas" of "AreasEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\AreasEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:54:08 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:54:20 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:54:44 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:54:57 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:55:09 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:55:36 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:56:10 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:56:22 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:56:33 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:56:44 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:56:53 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:57:41 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:58:01 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 20:59:30 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 21:00:21 [warning] [application] Failed to set unsafe attribute "personals" of "CargosEmpresa".
+in C:\wamp\www\vehiculos\protected\controllers\CargosEmpresaController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 21:00:36 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 21:01:10 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 21:01:30 [warning] [application] Failed to set unsafe attribute "historialVehiculoses" of "Personal".
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/23 21:03:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "HISTORIALVEHICULO".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('HISTORIALVEHICU...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/HISTORIALVEHICULO
+---
+2012/01/23 21:05:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombreapellido_pat' in 'field list'. The SQL statement executed was: SELECT id, nombreapellido_pat FROM `personal` `t`.
+in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php (248)
+in C:\wamp\www\vehiculos\protected\views\historialVehiculos\_form.php (23)
+in C:\wamp\www\vehiculos\protected\views\historialVehiculos\create.php (19)
+2012/01/23 21:05:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombreapellido_pat' in 'field list'. The SQL statement executed was: SELECT id, nombreapellido_pat FROM `personal` `t`' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(248): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\vehiculos\protected\views\historialVehiculos\_form.php(23): GxActiveRecord->findAllAttributes(NULL, true)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\vehiculos\protected\views\historialVehiculos\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(27): CController->render('create', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): HistorialVehiculosController->actionCreate()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('hISTORIALVEHICU...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/vehiculos/index.php/hISTORIALVEHICULOS/create
+---
+2012/01/23 21:05:18 [error] [exception.CException] exception 'CException' with message 'Property "Personal.0" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('0')
+#1 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(213): CActiveRecord->__get('0')
+#2 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxHtml.php(143): GxActiveRecord->__toString()
+#3 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxHtml.php(86): GxHtml::valueEx(Object(Personal), NULL)
+#4 C:\wamp\www\vehiculos\protected\views\historialVehiculos\_form.php(23): GxHtml::listDataEx(Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\vehiculos\protected\views\historialVehiculos\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(27): CController->render('create', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): HistorialVehiculosController->actionCreate()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('hISTORIALVEHICU...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/vehiculos/index.php/hISTORIALVEHICULOS/create
+---
+2012/01/23 21:06:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' apellido_pat FROM `personal` `t`' at line 1. The SQL statement executed was: SELECT id, nombre,  , apellido_pat FROM `personal` `t`.
+in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php (248)
+in C:\wamp\www\vehiculos\protected\views\historialVehiculos\_form.php (23)
+in C:\wamp\www\vehiculos\protected\views\historialVehiculos\create.php (19)
+2012/01/23 21:06:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ' apellido_pat FROM `personal` `t`' at line 1. The SQL statement executed was: SELECT id, nombre,  , apellido_pat FROM `personal` `t`' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(248): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\vehiculos\protected\views\historialVehiculos\_form.php(23): GxActiveRecord->findAllAttributes(NULL, true)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\vehiculos\protected\views\historialVehiculos\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(27): CController->render('create', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): HistorialVehiculosController->actionCreate()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('hISTORIALVEHICU...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/vehiculos/index.php/hISTORIALVEHICULOS/create
+---
+2012/01/23 21:27:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registrofacturas".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/registrofacturas
+---
+2012/01/24 12:47:20 [error] [exception.CException] exception 'CException' with message 'DetallesOt has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp\www\framework\base\CModel.php:287
+Stack trace:
+#0 C:\wamp\www\framework\base\CModel.php(259): CModel->createValidators()
+#1 C:\wamp\www\framework\base\CModel.php(544): CModel->getValidators()
+#2 C:\wamp\www\framework\base\CModel.php(318): CModel->getSafeAttributeNames()
+#3 C:\wamp\www\framework\web\form\CFormInputElement.php(253): CModel->isAttributeSafe('id_detalle_repa...')
+#4 C:\wamp\www\framework\web\form\CFormElement.php(137): CFormInputElement->evaluateVisible()
+#5 C:\wamp\www\framework\web\form\CFormElement.php(82): CFormElement->getVisible()
+#6 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(942): CFormElement->__get('visible')
+#7 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(765): MultiModelRenderForm->renderTableHeader()
+#8 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(817): MultiModelForm->renderTableBegin(true)
+#9 C:\wamp\www\framework\web\CBaseController.php(174): MultiModelForm->run()
+#10 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(68): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/24 12:49:07 [error] [exception.CException] exception 'CException' with message 'DetallesOt has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp\www\framework\base\CModel.php:287
+Stack trace:
+#0 C:\wamp\www\framework\base\CModel.php(259): CModel->createValidators()
+#1 C:\wamp\www\framework\base\CModel.php(544): CModel->getValidators()
+#2 C:\wamp\www\framework\base\CModel.php(318): CModel->getSafeAttributeNames()
+#3 C:\wamp\www\framework\web\form\CFormInputElement.php(253): CModel->isAttributeSafe('id_detalle_repa...')
+#4 C:\wamp\www\framework\web\form\CFormElement.php(137): CFormInputElement->evaluateVisible()
+#5 C:\wamp\www\framework\web\form\CFormElement.php(82): CFormElement->getVisible()
+#6 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(942): CFormElement->__get('visible')
+#7 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(765): MultiModelRenderForm->renderTableHeader()
+#8 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(817): MultiModelForm->renderTableBegin(true)
+#9 C:\wamp\www\framework\web\CBaseController.php(174): MultiModelForm->run()
+#10 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(68): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/24 12:49:10 [error] [exception.CException] exception 'CException' with message 'DetallesOt has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp\www\framework\base\CModel.php:287
+Stack trace:
+#0 C:\wamp\www\framework\base\CModel.php(259): CModel->createValidators()
+#1 C:\wamp\www\framework\base\CModel.php(544): CModel->getValidators()
+#2 C:\wamp\www\framework\base\CModel.php(318): CModel->getSafeAttributeNames()
+#3 C:\wamp\www\framework\web\form\CFormInputElement.php(253): CModel->isAttributeSafe('id_detalle_repa...')
+#4 C:\wamp\www\framework\web\form\CFormElement.php(137): CFormInputElement->evaluateVisible()
+#5 C:\wamp\www\framework\web\form\CFormElement.php(82): CFormElement->getVisible()
+#6 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(942): CFormElement->__get('visible')
+#7 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(765): MultiModelRenderForm->renderTableHeader()
+#8 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(817): MultiModelForm->renderTableBegin(true)
+#9 C:\wamp\www\framework\web\CBaseController.php(174): MultiModelForm->run()
+#10 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(68): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/24 12:50:06 [error] [exception.CException] exception 'CException' with message 'DetallesOt has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp\www\framework\base\CModel.php:287
+Stack trace:
+#0 C:\wamp\www\framework\base\CModel.php(259): CModel->createValidators()
+#1 C:\wamp\www\framework\base\CModel.php(544): CModel->getValidators()
+#2 C:\wamp\www\framework\base\CModel.php(318): CModel->getSafeAttributeNames()
+#3 C:\wamp\www\framework\web\form\CFormInputElement.php(253): CModel->isAttributeSafe('id_detalle_repa...')
+#4 C:\wamp\www\framework\web\form\CFormElement.php(137): CFormInputElement->evaluateVisible()
+#5 C:\wamp\www\framework\web\form\CFormElement.php(82): CFormElement->getVisible()
+#6 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(942): CFormElement->__get('visible')
+#7 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(765): MultiModelRenderForm->renderTableHeader()
+#8 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(817): MultiModelForm->renderTableBegin(true)
+#9 C:\wamp\www\framework\web\CBaseController.php(174): MultiModelForm->run()
+#10 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(68): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/24 13:03:54 [error] [exception.CException] exception 'CException' with message 'DetallesOt has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp\www\framework\base\CModel.php:287
+Stack trace:
+#0 C:\wamp\www\framework\base\CModel.php(259): CModel->createValidators()
+#1 C:\wamp\www\framework\base\CModel.php(544): CModel->getValidators()
+#2 C:\wamp\www\framework\base\CModel.php(318): CModel->getSafeAttributeNames()
+#3 C:\wamp\www\framework\web\form\CFormInputElement.php(253): CModel->isAttributeSafe('id_detalle_repa...')
+#4 C:\wamp\www\framework\web\form\CFormElement.php(137): CFormInputElement->evaluateVisible()
+#5 C:\wamp\www\framework\web\form\CFormElement.php(82): CFormElement->getVisible()
+#6 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(942): CFormElement->__get('visible')
+#7 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(765): MultiModelRenderForm->renderTableHeader()
+#8 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(817): MultiModelForm->renderTableBegin(true)
+#9 C:\wamp\www\framework\web\CBaseController.php(174): MultiModelForm->run()
+#10 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(68): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/24 13:03:57 [error] [exception.CException] exception 'CException' with message 'DetallesOt has an invalid validation rule. The rule must specify attributes to be validated and the validator name.' in C:\wamp\www\framework\base\CModel.php:287
+Stack trace:
+#0 C:\wamp\www\framework\base\CModel.php(259): CModel->createValidators()
+#1 C:\wamp\www\framework\base\CModel.php(544): CModel->getValidators()
+#2 C:\wamp\www\framework\base\CModel.php(318): CModel->getSafeAttributeNames()
+#3 C:\wamp\www\framework\web\form\CFormInputElement.php(253): CModel->isAttributeSafe('id_detalle_repa...')
+#4 C:\wamp\www\framework\web\form\CFormElement.php(137): CFormInputElement->evaluateVisible()
+#5 C:\wamp\www\framework\web\form\CFormElement.php(82): CFormElement->getVisible()
+#6 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(942): CFormElement->__get('visible')
+#7 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(765): MultiModelRenderForm->renderTableHeader()
+#8 C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php(817): MultiModelForm->renderTableBegin(true)
+#9 C:\wamp\www\framework\web\CBaseController.php(174): MultiModelForm->run()
+#10 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(68): CBaseController->widget('ext.multimodelf...', Array)
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#12 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/24 13:04:49 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#4 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/up...')
+#5 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update
+---
+2012/01/24 13:17:10 [error] [php] Undefined variable: asdasd (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:76)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php(23): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(59): OrdenTrabajoController->render()
+#7 unknown(0): OrdenTrabajoController->actionUpdate()
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#12 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/1
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (76)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php (23)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (59)
+2012/01/24 13:23:05 [error] [exception.CException] exception 'CException' with message 'OrdenTrabajo and its behaviors do not have a method or closure named "totals".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(226): CComponent->__call('totals', Array)
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(76): CActiveRecord->__call('totals', Array)
+#2 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(76): OrdenTrabajo->totals()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php(23): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#11 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(59): CController->render('update', Array)
+#12 [internal function]: OrdenTrabajoController->actionUpdate('1')
+#13 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OrdenTrabajoController), Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrdenTrabajoController), Object(ReflectionMethod), Array)
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/up...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/1
+---
+2012/01/24 13:35:12 [error] [exception.CException] exception 'CException' with message 'Property "OrdenTrabajo.sumita" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('sumita')
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(70): CActiveRecord->__get('sumita')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php(23): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(59): CController->render('update', Array)
+#11 [internal function]: OrdenTrabajoController->actionUpdate('1')
+#12 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OrdenTrabajoController), Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrdenTrabajoController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/up...')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/1
+---
+2012/01/24 13:53:17 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "sumita" in active record class "OrdenTrabajo" is specified with an invalid foreign key "id_ot". There is no such column in the table "vehiculos".' in C:\wamp\www\framework\db\ar\CActiveFinder.php:1424
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveFinder.php(1401): CStatElement->queryOneMany()
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(487): CStatElement->query()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(167): CJoinElement->lazyFind(Object(OrdenTrabajo))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(269): CActiveFinder->lazyFind(Object(OrdenTrabajo))
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(142): CActiveRecord->getRelated('sumita')
+#5 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(70): CActiveRecord->__get('sumita')
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#11 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(35): CController->render('create', Array)
+#15 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#16 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#20 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#21 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#22 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/update/1
+---
+2012/01/24 13:59:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registrofacturas".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/registrofacturas
+---
+2012/01/24 14:01:02 [error] [php] Trying to get property of non-object (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (32)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:02:29 [error] [php] Trying to get property of non-object (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (32)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:04:29 [error] [php] Trying to get property of non-object (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (32)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:05:28 [error] [php] Trying to get property of non-object (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (32)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detallesOt/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detallesOt/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detallesOt/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/1
+---
+2012/01/24 14:09:04 [error] [php] Trying to get property of non-object (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (32)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:11:45 [error] [php] Trying to get property of non-object (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:35)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:18:31 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:18:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(8): GxController->loadModel('456456', 'OrdenTrabajo')
+#1 [internal function]: OrdenTrabajoController->actionView('456456')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OrdenTrabajoController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrdenTrabajoController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/vi...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/456456
+---
+2012/01/24 14:19:19 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:20:32 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:21:53 [error] [php] Use of undefined constant id - assumed 'id' (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:33)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:23:06 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:23:34 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (27)
+2012/01/24 14:23:34 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 14:23:44 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (27)
+2012/01/24 14:23:44 [warning] [application] Failed to set unsafe attribute "id" of "RegistroFactura".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (33)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 15:03:33 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (25)
+2012/01/24 15:04:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (25)
+2012/01/24 15:04:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (25)
+2012/01/24 15:40:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'total_neto' cannot be null. The SQL statement executed was: INSERT INTO `registro_factura` (`nro_factura`, `id_proveedor`, `fecha`, `total_neto`, `total_bruto`, `creado`, `modificado`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, NOW(), NOW()). Bound with :yp0='12312', :yp1=3, :yp2='2012-01-27', :yp3=NULL, :yp4=NULL.
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (19)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 15:40:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'total_neto' cannot be null. The SQL statement executed was: INSERT INTO `registro_factura` (`nro_factura`, `id_proveedor`, `fecha`, `total_neto`, `total_bruto`, `creado`, `modificado`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, NOW(), NOW()). Bound with :yp0='12312', :yp1=3, :yp2='2012-01-27', :yp3=NULL, :yp4=NULL' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1014): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(787): CActiveRecord->insert(NULL)
+#2 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(19): CActiveRecord->save()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/create
+---
+2012/01/24 17:38:45 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:38:45 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:38:45 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:38:45 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:38:45 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detallesOt/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detallesOt/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detallesOt/41
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenTrabajo/37
+---
+2012/01/24 17:52:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detallesOt".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detallesOt')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detallesOt/
+---
+2012/01/24 17:53:53 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:54:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:55:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:55:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:55:12 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 17:55:12 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 18:01:18 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 18:01:34 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 18:15:51 [error] [php] Use of undefined constant valor_iva - assumed 'valor_iva' (C:\wamp\www\vehiculos\protected\views\ivas\_form.php:4)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:16:02 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:546)
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#1 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#2 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#3 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#6 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#7 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#8 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#12 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:16:04 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:546)
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#1 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#2 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#3 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#6 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#7 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#8 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#12 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:17:51 [error] [exception.CDbException] exception 'CDbException' with message 'Table "ivas" does not have a column named "0".' in C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1471): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, 'ORDER BY fecha ...', Array, '`t`.')
+#1 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(4): CActiveRecord->findAllByAttributes(Array, 'ORDER BY fecha ...')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:21:21 [error] [php] Undefined variable: ivas (C:\wamp\www\vehiculos\protected\views\ivas\_form.php:4)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:21:33 [error] [exception.CDbException] exception 'CDbException' with message 'Table "ivas" does not have a column named "0".' in C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1471): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, 'ORDER BY fecha ...', Array, '`t`.')
+#1 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(4): CActiveRecord->findAllByAttributes(Array, 'ORDER BY fecha ...')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:24:39 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE ORDER BY fecha LIMIT 1.
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:24:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE ORDER BY fecha LIMIT 1' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(4): CActiveRecord->findAll('ORDER BY fecha ...')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:25:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE ORDER BY fecha LIMIT 1.
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:25:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE ORDER BY fecha LIMIT 1' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(4): CActiveRecord->findAll('ORDER BY fecha ...')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:36:35 [error] [php] Undefined variable: iva (C:\wamp\www\vehiculos\protected\views\ivas\_form.php:4)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:37:36 [error] [php] include(int.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(4): spl_autoload_call()
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#2 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#3 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#4 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#6 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#7 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#8 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#9 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#12 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#13 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (4)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:37:44 [error] [php] Undefined variable: iva (C:\wamp\www\vehiculos\protected\views\ivas\_form.php:5)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:38:50 [error] [exception.CException] exception 'CException' with message 'Property "IvasController.iva" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(5): CComponent->__get('iva')
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#10 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#11 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#12 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:39:30 [error] [exception.CDbException] exception 'CDbException' with message 'Table "ivas" does not have a column named "1".' in C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1471): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, Array, Array, '`t`.')
+#1 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(5): CActiveRecord->findAllByAttributes(Array, Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:40:25 [error] [exception.CDbException] exception 'CDbException' with message 'Table "ivas" does not have a column named "0".' in C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:570
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1471): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, Array, Array, '`t`.')
+#1 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(5): CActiveRecord->findAllByAttributes(Array, Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:43:04 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha LIMIT 1' at line 1. The SQL statement executed was: ORDER BY fecha LIMIT 1.
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:43:04 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha LIMIT 1' at line 1. The SQL statement executed was: ORDER BY fecha LIMIT 1' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1517): CDbCommand->queryAll()
+#2 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(5): CActiveRecord->findAllBySql('ORDER BY fecha ...')
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#4 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#8 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#11 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 18:55:58 [error] [php] Undefined variable: ivaa (C:\wamp\www\vehiculos\protected\views\ivas\_form.php:5)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:59:42 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha DESC) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE `t`.`valor_iva`=:yp0 AND (ORDER BY fecha DESC) LIMIT 1. Bound with :yp0=0.
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 18:59:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha DESC) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE `t`.`valor_iva`=:yp0 AND (ORDER BY fecha DESC) LIMIT 1. Bound with :yp0=0' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(5): CActiveRecord->findByAttributes(Array, 'ORDER BY fecha ...')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 19:00:24 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha DESC) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE `t`.`valor_iva`=:yp0 AND (ORDER BY fecha DESC) LIMIT 1. Bound with :yp0=0.
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 19:00:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY fecha DESC) LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `ivas` `t` WHERE `t`.`valor_iva`=:yp0 AND (ORDER BY fecha DESC) LIMIT 1. Bound with :yp0=0' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1455): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\vehiculos\protected\views\ivas\_form.php(5): CActiveRecord->findByAttributes(Array, 'ORDER BY fecha ...')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#18 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ivas/create')
+#19 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#20 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/vehiculos/index.php/ivas/create
+---
+2012/01/24 19:04:09 [error] [php] Use of undefined constant id - assumed 'id' (C:\wamp\www\vehiculos\protected\views\ivas\_form.php:5)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 19:04:20 [error] [php] Invalid argument supplied for foreach() (C:\wamp\www\framework\db\schema\CDbCommandBuilder.php:546)
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#1 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#2 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#3 C:\wamp\www\vehiculos\protected\views\ivas\create.php(19): IvasController->renderPartial()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): IvasController->renderInternal()
+#6 C:\wamp\www\framework\web\CController.php(870): IvasController->renderFile()
+#7 C:\wamp\www\framework\web\CController.php(783): IvasController->renderPartial()
+#8 C:\wamp\www\vehiculos\protected\controllers\IvasController.php(27): IvasController->render()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): IvasController->actionCreate()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\CController.php(287): IvasController->runAction()
+#12 C:\wamp\www\framework\web\CController.php(266): IvasController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): IvasController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ivas/create
+in C:\wamp\www\vehiculos\protected\views\ivas\_form.php (5)
+in C:\wamp\www\vehiculos\protected\views\ivas\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\IvasController.php (27)
+2012/01/24 19:17:18 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:34)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (34)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 19:18:56 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:34)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (34)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 19:20:55 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:34)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (34)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 19:21:46 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:34)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (34)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 19:22:15 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:34)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (34)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 19:23:36 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:35)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#1 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#2 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#3 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#4 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#5 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#6 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (35)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 19:33:40 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:1)
+Stack trace:
+#0 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#1 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#2 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(43): OrdenTrabajoController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (1)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (43)
+2012/01/24 19:34:10 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:1)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(43): OrdenTrabajoController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (1)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (43)
+2012/01/24 19:43:27 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:1)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(43): OrdenTrabajoController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (1)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (43)
+2012/01/24 19:44:23 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:1)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(43): OrdenTrabajoController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (1)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (43)
+2012/01/24 19:45:17 [error] [php] Object of class Ivas could not be converted to int (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:1)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(43): OrdenTrabajoController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): OrdenTrabajoController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (1)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (43)
+2012/01/24 19:52:43 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 19:52:43 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 19:53:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detallesOt/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detallesOt/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detallesOt/51
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/45
+---
+2012/01/24 19:54:08 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)

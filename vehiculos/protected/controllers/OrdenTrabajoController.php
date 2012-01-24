@@ -10,9 +10,7 @@ class OrdenTrabajoController extends GxController {
 	}
 
 	public function actionCreate() {
-                if(Yii::app()->getRequest()->isAjaxRequest){ //if the page was loaded by ajax (ajaxTab) 
-                    $this->layout=false;//disable the layout 
-                } 
+
                 Yii::import('ext.multimodelform.MultiModelForm');
                 
 		$model = new OrdenTrabajo;
@@ -29,8 +27,16 @@ class OrdenTrabajoController extends GxController {
 				$masterValues = array ('id_ot'=>$model->id);
                                 
                                 if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues))
-                                        
-					$this->redirect(array('view', 'id' => $model->id));
+                                {
+                                        $factura = $this->loadModel($model->id_rf, 'RegistroFactura');
+                                        $suma = $model->sumita;
+                                        $suma_neto = $suma + $factura->total_neto;
+                                        $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
+                                        $suma_bruto = $suma_neto * (($iva['valor_iva']/100)+1);
+                                        $factura->setAttributes(array('total_neto'=>$suma_neto, 'total_bruto'=>round($suma_bruto)));
+                                        if($factura->save())
+                                            $this->redirect(array('registrofactura/view', 'id' => $factura->id));
+                                }
 			}
 		}
 
@@ -52,7 +58,13 @@ class OrdenTrabajoController extends GxController {
                         $masterValues = array ('id_ot'=>$model->id);
 
 			if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues) && $model->save()) {
-				$this->redirect(array('view', 'id' => $model->id));
+				$factura = $this->loadModel($model->id_rf, 'RegistroFactura');
+                                        $suma = $model->sumita;
+                                        $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
+                                        $suma_bruto = $suma * (($iva['valor_iva']/100)+1);
+                                        $factura->setAttributes(array('total_neto'=>$suma, 'total_bruto'=>round($suma_bruto)));
+                                        if($factura->save())
+                                            $this->redirect(array('registrofactura/view', 'id' => $factura->id));
 			}
 		}
 

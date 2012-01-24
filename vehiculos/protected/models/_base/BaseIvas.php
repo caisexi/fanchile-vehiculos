@@ -29,7 +29,7 @@ abstract class BaseIvas extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'fecha';
+		return 'valor_iva';
 	}
 
 	public function rules() {

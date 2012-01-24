@@ -41,7 +41,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('nro_factura, total_neto, total_bruto, id_proveedor, fecha, creado, modificado', 'required'),
+			array('nro_factura, id_proveedor, fecha, creado, modificado', 'required'),
 			array('nro_factura, total_neto, total_bruto, id_proveedor', 'numerical', 'integerOnly'=>true),
                         array('nro_factura', 'length','max'=>6),
 			array('id, nro_factura, total_neto, total_bruto, id_proveedor, fecha, creado, modificado', 'safe', 'on'=>'search'),
@@ -93,9 +93,12 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
         
         public function beforeValidate() {
             if ($this->isNewRecord)
+            {
                 $this->creado = new CDbExpression('NOW()');
+            }
 
             $this->modificado = new CDbExpression('NOW()');
+            
 
             return parent::beforeSave();
         }       

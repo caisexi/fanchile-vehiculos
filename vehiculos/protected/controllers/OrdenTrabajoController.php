@@ -1,6 +1,39 @@
 <?php
 
 class OrdenTrabajoController extends GxController {
+    
+        public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+		);
+	}
+
+	/**
+	 * Specifies the access control rules.
+	 * This method is used by the 'accessControl' filter.
+	 * @return array access control rules
+	 */
+	public function accessRules()
+	{
+		return array(
+			array('allow',  // allow all users to perform 'index' and 'view' actions
+				'actions'=>array('index','view'),
+				'users'=>array('*'),
+			),
+			array('allow', // allow authenticated user to perform 'create' and 'update' actions
+				'actions'=>array('create','update'),
+				'users'=>array('@'),
+			),
+			array('allow', // allow admin user to perform 'admin' and 'delete' actions
+				'actions'=>array('admin','delete','ACRf'),
+				'users'=>array('admin'),
+			),
+			array('deny',  // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
 
 
 	public function actionView($id) {
@@ -101,5 +134,23 @@ class OrdenTrabajoController extends GxController {
 			'model' => $model,
 		));
 	}
+        
+        public function actionACRf() {
+            if (isset($_GET['term'])) {
+            $searchTerm = $_GET['term'];
+            $result = array();
+            $getrfs = RegistroFactura::model()->findAll('nro_factura LIKE :nro_factura', array(':nro_factura' => '%' . $searchTerm . '%'));
+
+            foreach ($getrfs as $getrf) {
+                $result[] = array(
+                    'label' => $getrf->nro_factura, // label y value son usados por el juiautocomplete
+                    'value' => $getrf->nro_factura,
+                    'id' => $getrf->id,
+                );
+            }
+
+                echo CJSON::encode($result);
+            }
+        }
 
 }

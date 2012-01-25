@@ -3588,3 +3588,549 @@ HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/45
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/24 20:19:33 [error] [exception.CException] exception 'CException' with message 'Alias "modules.srbac.components.SDbAuthManager" is invalid. Make sure it points to an existing directory or file.' in C:\wamp\www\framework\YiiBase.php:343
+Stack trace:
+#0 C:\wamp\www\framework\YiiBase.php(198): YiiBase::import('modules.srbac.c...', true)
+#1 C:\wamp\www\framework\base\CModule.php(387): YiiBase::createComponent(Array)
+#2 C:\wamp\www\framework\base\CModule.php(104): CModule->getComponent('authManager')
+#3 C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php(244): CModule->__get('authManager')
+#4 C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php(43): SrbacModule->isInstalled()
+#5 C:\wamp\www\framework\web\CController.php(307): AuthitemController->beforeAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('frontpage')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('srbac/authitem/...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/srbac/authitem/frontpage
+---
+2012/01/24 20:21:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:21:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:21:11 [error] [php] include(User.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php(277): spl_autoload_call()
+#1 C:\wamp\www\vehiculos\protected\modules\srbac\components\Helper.php(423): SrbacModule->getUserModel()
+#2 C:\wamp\www\vehiculos\protected\modules\srbac\views\authitem\install\install.php(103): checkInstall()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): AuthitemController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): AuthitemController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): AuthitemController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php(499): AuthitemController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): AuthitemController->actionInstall()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): AuthitemController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): AuthitemController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): AuthitemController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/srbac/authitem/install
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (277)
+in C:\wamp\www\vehiculos\protected\modules\srbac\components\Helper.php (423)
+in C:\wamp\www\vehiculos\protected\modules\srbac\views\authitem\install\install.php (103)
+2012/01/24 20:22:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:23:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:23:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:23:59 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:25:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:26:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:26:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'vehiculos.items' doesn't exist. The SQL statement executed was: SHOW COLUMNS FROM `items`.
+in C:\wamp\www\vehiculos\protected\modules\srbac\models\AuthItem.php (40)
+in C:\wamp\www\vehiculos\protected\modules\srbac\SrbacModule.php (248)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (43)
+2012/01/24 20:28:14 [error] [php] Undefined variable: list (C:\wamp\www\vehiculos\protected\modules\srbac\components\Helper.php:541)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\CController.php(287): AuthitemController->runAction()
+#4 C:\wamp\www\framework\web\CController.php(266): AuthitemController->runActionWithFilters()
+#5 C:\wamp\www\framework\web\CWebApplication.php(276): AuthitemController->run()
+#6 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/srbac/authitem/getUsers?term=sdffdsf
+in C:\wamp\www\vehiculos\protected\modules\srbac\components\Helper.php (541)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (59)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:28:17 [error] [php] Undefined variable: list (C:\wamp\www\vehiculos\protected\modules\srbac\components\Helper.php:541)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#1 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#2 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#3 C:\wamp\www\framework\web\CController.php(287): AuthitemController->runAction()
+#4 C:\wamp\www\framework\web\CController.php(266): AuthitemController->runActionWithFilters()
+#5 C:\wamp\www\framework\web\CWebApplication.php(276): AuthitemController->run()
+#6 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#7 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#8 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/srbac/authitem/getUsers?term=fran
+in C:\wamp\www\vehiculos\protected\modules\srbac\components\Helper.php (541)
+in C:\wamp\www\vehiculos\protected\modules\srbac\controllers\AuthitemController.php (59)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:39:54 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contrasena2" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contrasena2')
+#1 C:\wamp\www\framework\validators\CCompareValidator.php(91): CActiveRecord->__get('contrasena2')
+#2 C:\wamp\www\framework\validators\CValidator.php(197): CCompareValidator->validateAttribute(Object(Usuarios), 'contrasena')
+#3 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Usuarios), NULL)
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(19): CActiveRecord->save()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UsuariosController->actionCreate()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/create')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/usuarios/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/usuarios/create
+---
+2012/01/24 20:42:19 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.verifyCode" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('verifyCode')
+#1 C:\wamp\www\framework\validators\CCaptchaValidator.php(47): CActiveRecord->__get('verifyCode')
+#2 C:\wamp\www\framework\validators\CValidator.php(197): CCaptchaValidator->validateAttribute(Object(Usuarios), 'verifyCode')
+#3 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Usuarios), NULL)
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(19): CActiveRecord->save()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UsuariosController->actionCreate()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/create')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/usuarios/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/usuarios/create
+---
+2012/01/24 20:43:11 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.verifyCode" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('verifyCode')
+#1 C:\wamp\www\framework\validators\CCaptchaValidator.php(47): CActiveRecord->__get('verifyCode')
+#2 C:\wamp\www\framework\validators\CValidator.php(197): CCaptchaValidator->validateAttribute(Object(Usuarios), 'verifyCode')
+#3 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Usuarios), NULL)
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(19): CActiveRecord->save()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UsuariosController->actionCreate()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/create')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/usuarios/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/usuarios/create
+---
+2012/01/24 20:43:38 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.verifyCode" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('verifyCode')
+#1 C:\wamp\www\framework\validators\CCaptchaValidator.php(47): CActiveRecord->__get('verifyCode')
+#2 C:\wamp\www\framework\validators\CValidator.php(197): CCaptchaValidator->validateAttribute(Object(Usuarios), 'verifyCode')
+#3 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Usuarios), NULL)
+#4 C:\wamp\www\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#5 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(19): CActiveRecord->save()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UsuariosController->actionCreate()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/create')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/usuarios/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/usuarios/create
+---
+2012/01/24 20:43:58 [error] [exception.CException] exception 'CException' with message 'CCaptchaValidator.action "captcha" is invalid. Unable to find such an action in the current controller.' in C:\wamp\www\framework\validators\CCaptchaValidator.php:76
+Stack trace:
+#0 C:\wamp\www\framework\validators\CCaptchaValidator.php(50): CCaptchaValidator->getCaptchaAction()
+#1 C:\wamp\www\framework\validators\CValidator.php(197): CCaptchaValidator->validateAttribute(Object(Usuarios), 'verifyCode')
+#2 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(Usuarios), NULL)
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(786): CModel->validate(NULL)
+#4 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(19): CActiveRecord->save()
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UsuariosController->actionCreate()
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/create')
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/vehiculos/index.php/usuarios/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/usuarios/create
+---
+2012/01/24 20:45:08 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:46:19 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:46:27 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:46:30 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:46:33 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:47:29 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:47:36 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:47:46 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:47:47 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:47:48 [warning] [application] Failed to set unsafe attribute "contrasena2" of "Usuarios".
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (17)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/24 20:49:44 [error] [php] include(contrasena2.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\framework\validators\CValidator.php(171): import()
+#1 C:\wamp\www\framework\base\CModel.php(285): createValidator()
+#2 C:\wamp\www\framework\base\CModel.php(259): Usuarios->createValidators()
+#3 C:\wamp\www\framework\base\CModel.php(302): Usuarios->getValidators()
+#4 C:\wamp\www\framework\web\helpers\CHtml.php(1185): Usuarios->isAttributeRequired()
+#5 C:\wamp\www\framework\web\widgets\CActiveForm.php(553): activeLabelEx()
+#6 C:\wamp\www\vehiculos\protected\views\usuarios\_form.php(17): GxActiveForm->labelEx()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): UsuariosController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): UsuariosController->renderFile()
+#10 C:\wamp\www\vehiculos\protected\views\usuarios\create.php(19): UsuariosController->renderPartial()
+#11 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#12 C:\wamp\www\framework\web\CBaseController.php(96): UsuariosController->renderInternal()
+#13 C:\wamp\www\framework\web\CController.php(870): UsuariosController->renderFile()
+#14 C:\wamp\www\framework\web\CController.php(783): UsuariosController->renderPartial()
+#15 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(27): UsuariosController->render()
+#16 C:\wamp\www\framework\web\actions\CInlineAction.php(50): UsuariosController->actionCreate()
+#17 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#18 C:\wamp\www\framework\web\CController.php(287): UsuariosController->runAction()
+#19 C:\wamp\www\framework\web\CController.php(266): UsuariosController->runActionWithFilters()
+#20 C:\wamp\www\framework\web\CWebApplication.php(276): UsuariosController->run()
+#21 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/usuarios/create
+in C:\wamp\www\vehiculos\protected\views\usuarios\_form.php (17)
+in C:\wamp\www\vehiculos\protected\views\usuarios\create.php (19)
+in C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php (27)
+2012/01/24 20:53:11 [error] [exception.CException] exception 'CException' with message 'Property "Usuarios.contrasena2" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('contrasena2')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('contrasena2')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(Usuarios), 'contrasena2')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1238): CHtml::activeInputField('password', Object(Usuarios), 'contrasena2', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(598): CHtml::activePasswordField(Object(Usuarios), 'contrasena2', Array)
+#5 C:\wamp\www\vehiculos\protected\views\usuarios\_form.php(28): CActiveForm->passwordField(Object(Usuarios), 'contrasena2', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\vehiculos\protected\views\usuarios\update.php(21): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#11 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('update', Array, true)
+#14 C:\wamp\www\vehiculos\protected\controllers\UsuariosController.php(44): CController->render('update', Array)
+#15 [internal function]: UsuariosController->actionUpdate('1')
+#16 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#17 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(UsuariosController), Object(ReflectionMethod), Array)
+#18 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#19 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('usuarios/update')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/usuarios/update/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/usuarios/1
+---
+2012/01/25 12:25:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "veiculos".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('veiculos')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/veiculos
+---
+2012/01/25 12:26:00 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.usuario" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\components\UserIdentity.php(8): CComponent->__get('usuario')
+#1 C:\wamp\www\vehiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#3 C:\wamp\www\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(88): CModel->validate()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/site/login
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/login
+---
+2012/01/25 12:30:28 [error] [exception.CException] exception 'CException' with message 'Property "UserIdentity.nueva_contrasena" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\components\UserIdentity.php(11): CComponent->__get('nueva_contrasen...')
+#1 C:\wamp\www\vehiculos\protected\models\LoginForm.php(52): UserIdentity->authenticate()
+#2 C:\wamp\www\framework\validators\CInlineValidator.php(43): LoginForm->authenticate('password', Array)
+#3 C:\wamp\www\framework\validators\CValidator.php(197): CInlineValidator->validateAttribute(Object(LoginForm), 'password')
+#4 C:\wamp\www\framework\base\CModel.php(158): CValidator->validate(Object(LoginForm), NULL)
+#5 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(88): CModel->validate()
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionLogin()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('login')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/login')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/site/login
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/login
+---
+2012/01/25 12:45:58 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/admin')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/login
+---
+2012/01/25 12:46:04 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/admin')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/admin
+---
+2012/01/25 12:46:18 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/admin')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/admin
+---
+2012/01/25 13:44:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/admin')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/login
+---
+2012/01/25 13:49:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "cre".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('cre')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('cre')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/cre
+---
+2012/01/25 14:49:01 [error] [exception.CException] exception 'CException' with message 'Property "RegistroFactura.nro_facturamazo" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('nro_facturamazo')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(1696): CActiveRecord->__get('nro_facturamazo')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1660): CHtml::value(Object(RegistroFactura), 'nro_facturamazo')
+#3 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(30): CHtml::listData(Array, 'id', 'nro_facturamazo')
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(76): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/25 14:49:17 [error] [exception.CException] exception 'CException' with message 'Property "RegistroFactura.0" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('0')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(1696): CActiveRecord->__get('0')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1660): CHtml::value(Object(RegistroFactura), 0)
+#3 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(30): CHtml::listData(Array, 'id', 0)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#9 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#10 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#12 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(76): CController->render('create', Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/25 15:06:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ACRf".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('ACRf')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACRf')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/ACRf')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/ACRf?term=a
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/25 15:06:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ACRf".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('ACRf')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACRf')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/ACRf')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/ACRf?term=0
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/25 15:06:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ACRf".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('ACRf')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACRf')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/ACRf')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/ACRf?term=a
+---
+2012/01/25 15:07:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "ACRf".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('ACRf')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACRf')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/ACRf?term=0
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/25 15:08:21 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACRf')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/AC...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACRf?term=0
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/create
+---
+2012/01/25 15:12:07 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)

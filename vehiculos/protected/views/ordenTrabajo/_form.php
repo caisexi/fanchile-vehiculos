@@ -26,9 +26,19 @@
 		<?php echo $form->error($model,'id_vehiculo'); ?>
 		</div><!-- row -->
 		<div class="row">
-		<?php echo $form->labelEx($model,'id_rf'); ?>
-		<?php echo $form->dropDownList($model, 'id_rf', GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'id_rf'); ?>
+                <?php echo $form->labelEx($model,'id_rf'); ?>
+                <?php echo $form->hiddenField($model, 'id_rf'); ?>
+                <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'model'=>$model,
+                    'attribute'=>'idRf',
+                    'source'=>$this->createUrl('ordentrabajo/ACRf'),
+                    'options'=>array(
+                        'showAnim'=>'fold',
+                        'minLength'=>'1',
+                        'select'=>'js:function(event, ui) { $("#OrdenTrabajo_id_rf").val(ui.item.id);}'
+                    ),
+                ));
+                ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>

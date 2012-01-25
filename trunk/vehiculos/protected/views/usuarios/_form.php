@@ -19,9 +19,14 @@
 		<?php echo $form->error($model,'usuario'); ?>
 		</div><!-- row -->
 		<div class="row">
-		<?php echo $form->labelEx($model,'contrasena'); ?>
-		<?php echo $form->textField($model, 'contrasena', array('maxlength' => 30)); ?>
-		<?php echo $form->error($model,'contrasena'); ?>
+		<?php echo $form->labelEx($model,'nueva_contrasena'); ?>
+		<?php echo $form->PasswordField($model, 'nueva_contrasena', array('maxlength' => 30)); ?>
+		<?php echo $form->error($model,'nueva_contrasena'); ?>
+		</div><!-- row -->
+                <div class="row">
+		<?php echo $form->labelEx($model,'contrasena2'); ?>
+		<?php echo $form->PasswordField($model, 'contrasena2', array('maxlength' => 30)); ?>
+		<?php echo $form->error($model,'contrasena2'); ?>
 		</div><!-- row -->
 
 

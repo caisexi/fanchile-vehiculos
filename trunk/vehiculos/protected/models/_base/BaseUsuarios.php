@@ -17,7 +17,10 @@
  *
  */
 abstract class BaseUsuarios extends GxActiveRecord {
-
+    
+        public $nueva_contrasena;
+        public $contrasena2;
+        
 	public static function model($className=__CLASS__) {
 		return parent::model($className);
 	}
@@ -27,7 +30,7 @@ abstract class BaseUsuarios extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Usuarios|Usuarioses', $n);
+		return Yii::t('app', 'Usuario|Usuarios', $n);
 	}
 
 	public static function representingColumn() {
@@ -36,9 +39,13 @@ abstract class BaseUsuarios extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('usuario, contrasena, creado, modificado', 'required'),
-			array('usuario, contrasena', 'length', 'max'=>30),
-			array('id, usuario, contrasena, creado, modificado', 'safe', 'on'=>'search'),
+			array('usuario, creado, modificado', 'required'),
+			array('usuario, contrasena', 'length', 'max'=>32),
+                        array('nueva_contrasena','length','min'=>3,'max'=>16,'allowEmpty'=>false,'on'=>'insert'),
+                        array('nueva_contrasena','length','min'=>3,'max'=>16,'allowEmpty'=>true,'on'=>'update'),
+                        array('nueva_contrasena', 'compare', 'compareAttribute'=>'contrasena2'), 
+                        array('contrasena , contrasena2', 'safe'),
+			array('usuario, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,15 +66,14 @@ abstract class BaseUsuarios extends GxActiveRecord {
 			'contrasena' => Yii::t('app', 'Contrasena'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
+                        'nueva_contrasena'=>'Contraseña',
 		);
 	}
 
 	public function search() {
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('id', $this->id);
 		$criteria->compare('usuario', $this->usuario, true);
-		$criteria->compare('contrasena', $this->contrasena, true);
 		$criteria->compare('creado', $this->creado, true);
 		$criteria->compare('modificado', $this->modificado, true);
 
@@ -83,5 +89,11 @@ abstract class BaseUsuarios extends GxActiveRecord {
             $this->modificado = new CDbExpression('NOW()');
 
             return parent::beforeSave();
+        }
+        
+        public function beforeSave() {
+            if (!empty($this->nueva_contrasena))
+                    $this->contrasena = md5(md5($this->nueva_contrasena).Yii::app()->params["salt"]);
+            return true;
         }
 }

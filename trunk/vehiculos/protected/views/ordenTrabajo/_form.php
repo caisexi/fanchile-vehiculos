@@ -22,8 +22,18 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'id_vehiculo'); ?>
-		<?php echo $form->dropDownList($model, 'id_vehiculo', GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'id_vehiculo'); ?>
+                <?php echo $form->hiddenField($model, 'id_vehiculo'); ?>
+                <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'model'=>$model,
+                    'attribute'=>'idVehiculo',
+                    'source'=>$this->createUrl('ordentrabajo/ACVehi'),
+                    'options'=>array(
+                        'showAnim'=>'fold',
+                        'minLength'=>'1',
+                        'select'=>'js:function(event, ui) { $("#OrdenTrabajo_id_vehiculo").val(ui.item.id);}'
+                    ),
+                ));
+                ?>
 		</div><!-- row -->
 		<div class="row">
                 <?php echo $form->labelEx($model,'id_rf'); ?>

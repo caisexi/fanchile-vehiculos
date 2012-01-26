@@ -26,7 +26,7 @@ class OrdenTrabajoController extends GxController {
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete','ACRf'),
+				'actions'=>array('admin','delete','ACRf','ACVehi'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -146,6 +146,24 @@ class OrdenTrabajoController extends GxController {
                     'label' => $getrf->nro_factura, // label y value son usados por el juiautocomplete
                     'value' => $getrf->nro_factura,
                     'id' => $getrf->id,
+                );
+            }
+
+                echo CJSON::encode($result);
+            }
+        }
+        
+        public function actionACVehi() {
+            if (isset($_GET['term'])) {
+            $searchTerm = $_GET['term'];
+            $result = array();
+            $gevehis = Vehiculos::model()->findAll('patente LIKE :patente', array(':patente' => '%' . $searchTerm . '%'));
+
+            foreach ($gevehis as $gevehi) {
+                $result[] = array(
+                    'label' => $gevehi->patente, // label y value son usados por el juiautocomplete
+                    'value' => $gevehi->patente,
+                    'id' => $gevehi->id,
                 );
             }
 

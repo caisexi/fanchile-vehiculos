@@ -4134,3 +4134,119 @@ HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/create
 2012/01/25 15:12:07 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
 in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/01/25 15:50:05 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACVehi')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/AC...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACVehi?term=1
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenTrabajo/create
+---
+2012/01/25 15:50:06 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACVehi')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/AC...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACVehi?term=c
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenTrabajo/create
+---
+2012/01/25 15:50:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACVehi')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/AC...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACVehi?term=cc
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenTrabajo/create
+---
+2012/01/25 15:50:28 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACVehi')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/AC...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACVehi?term=c
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenTrabajo/create
+---
+2012/01/25 15:51:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'patente' in 'where clause'. The SQL statement executed was: SELECT * FROM `registro_factura` `t` WHERE patente LIKE :patente. Bound with :patente='%c%'.
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (160)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/25 15:51:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'patente' in 'where clause'. The SQL statement executed was: SELECT * FROM `registro_factura` `t` WHERE patente LIKE :patente. Bound with :patente='%c%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(160): CActiveRecord->findAll('patente LIKE :p...', Array)
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionACVehi()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACVehi')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/AC...')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACVehi?term=c
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenTrabajo/create
+---
+2012/01/25 15:51:21 [error] [php] Undefined variable: getrf (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:164)
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#1 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/ACVehi?term=c
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (164)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/25 15:53:32 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/25 15:53:32 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)

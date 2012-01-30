@@ -46,7 +46,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 			array('nro_guia, id_vehiculo, id_rf', 'numerical', 'integerOnly'=>true),
 			array('kilometraje', 'length', 'max'=>7),
 			array('kilometraje', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, nro_guia, id_vehiculo, id_rf, fecha, kilometraje, creado, modificado', 'safe', 'on'=>'search'),
+			array('nro_guia, id_vehiculo, id_rf, fecha, kilometraje, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -84,7 +84,6 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 	public function search() {
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('id', $this->id);
 		$criteria->compare('nro_guia', $this->nro_guia);
 		$criteria->compare('id_vehiculo', $this->id_vehiculo);
 		$criteria->compare('id_rf', $this->id_rf);
@@ -146,5 +145,14 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
             $this->modificado = new CDbExpression('NOW()');
 
             return parent::beforeSave();
+        }
+        
+        public function formatearPatente($patente) {
+            
+            $primer = strtoupper(substr($patente,0,-4));
+            $segundo = strtoupper(substr($patente,2,-2));
+            $tercero = substr($patente,4);
+            $mixpatente = $primer.'-'.$segundo.'-'.$tercero;
+            return $mixpatente;
         }
 }

@@ -8,7 +8,7 @@
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+		<?php echo Yii::t('app', 'Los campos con'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'son obligatorios'); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -21,7 +21,10 @@
 		
 		<div class="row">
 		<?php echo $form->labelEx($model,'id_proveedor'); ?>
-		<?php echo $form->dropDownList($model, 'id_proveedor', GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true))); ?>
+                    <?php   $criteria=new CDbCriteria;                        
+                            $criteria->order='nombre ASC';
+                            ?>
+		<?php echo $form->dropDownList($model, 'id_proveedor', GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true,$criteria))); ?>
 		<?php echo $form->error($model,'id_proveedor'); ?>
 		</div><!-- row -->
 		<div class="row">

@@ -111,7 +111,6 @@ abstract class BaseVehiculos extends GxActiveRecord {
 	public function search() {
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('id', $this->id);
 		$criteria->compare('idCombustible', $this->idCombustible);
 		$criteria->compare('idTipoVehiculo', $this->idTipoVehiculo);
 		$criteria->compare('idProveedor', $this->idProveedor);

@@ -33,7 +33,7 @@ abstract class BaseProveedores extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Proveedores|Proveedores', $n);
+		return Yii::t('app', 'Proveedor|Proveedores', $n);
 	}
 
 	public static function representingColumn() {

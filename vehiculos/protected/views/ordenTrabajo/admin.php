@@ -42,7 +42,6 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 	'dataProvider' => $model->search(),
 	'filter' => $model,
 	'columns' => array(
-		'id',
 		'nro_guia',
 		array(
 				'name'=>'id_vehiculo',

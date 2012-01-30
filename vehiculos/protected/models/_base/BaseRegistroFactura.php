@@ -32,7 +32,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'RegistroFactura|RegistroFacturas', $n);
+		return Yii::t('app', 'Factura|Facturas', $n);
 	}
 
 	public static function representingColumn() {
@@ -76,6 +76,9 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 
 	public function search() {
 		$criteria = new CDbCriteria;
+                $criteria->with = array('ordenTrabajos');
+                
+                
 
 		$criteria->compare('id', $this->id);
 		$criteria->compare('nro_factura', $this->nro_factura);
@@ -85,6 +88,8 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 		$criteria->compare('fecha', $this->fecha, true);
 		$criteria->compare('creado', $this->creado, true);
 		$criteria->compare('modificado', $this->modificado, true);
+                
+                $criteria->compare('ordenTrabajos.id', $this->id, true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,
@@ -101,5 +106,12 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
             
 
             return parent::beforeSave();
-        }       
+        } 
+        
+        public function sumarNeto() {
+            $totalneto = 0;
+            foreach($this->ordenTrabajos as $ots)
+                $totalneto = $totalneto + $ots->sumita;
+            return $totalneto;
+        }
 }

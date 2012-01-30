@@ -37,10 +37,29 @@
 		</div><!-- row -->
 		<div class="row">
                 <?php echo $form->labelEx($model,'id_rf'); ?>
+                <?php 
+                if (isset($_GET['factura']) && isset($_GET['id']))
+                {
+                    echo $form->hiddenField($model, 'id_rf',array('value'=>$_GET['id']));
+                    $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'model'=>$model,
+                    'attribute'=>'idRf',                    
+                    'source'=>$this->createUrl('ordentrabajo/ACRf'),
+                    'htmlOptions'=>array('value'=>$_GET['factura']),
+                    'options'=>array(
+                        'showAnim'=>'fold',
+                        'minLength'=>'1',
+                        'select'=>'js:function(event, ui) { $("#OrdenTrabajo_id_rf").val(ui.item.id);}'
+                    ),
+                ));
+                }
+                else
+                {
+                ?>
                 <?php echo $form->hiddenField($model, 'id_rf'); ?>
                 <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
                     'model'=>$model,
-                    'attribute'=>'idRf',
+                    'attribute'=>'idRf',                    
                     'source'=>$this->createUrl('ordentrabajo/ACRf'),
                     'options'=>array(
                         'showAnim'=>'fold',
@@ -48,6 +67,7 @@
                         'select'=>'js:function(event, ui) { $("#OrdenTrabajo_id_rf").val(ui.item.id);}'
                     ),
                 ));
+                }
                 ?>
 		</div><!-- row -->
 		<div class="row">

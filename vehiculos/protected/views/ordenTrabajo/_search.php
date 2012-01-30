@@ -24,6 +24,7 @@
 		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
 			'model' => $model,
 			'attribute' => 'fecha',
+                        'language' => 'es',
 			'value' => $model->fecha,
 			'options' => array(
 				'showButtonPanel' => true,

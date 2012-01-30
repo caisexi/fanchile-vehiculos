@@ -2,7 +2,7 @@
 
 $this->breadcrumbs = array(
 	$model->label(2) => array('index'),
-	Yii::t('app', 'Manage'),
+	Yii::t('app', 'Administrar'),
 );
 
 $this->menu = array(
@@ -26,10 +26,6 @@ $('.search-form form').submit(function(){
 
 <h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
 
-<p>
-Se pueden utilizar los operadores (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al comienzo de cada una de las busquedas para hacer alguna comparacion.
-</p>
-
 <?php echo GxHtml::link(Yii::t('app', 'Busqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search', array(
@@ -41,6 +37,12 @@ Se pueden utilizar los operadores (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al c
 	'id' => 'registro-factura-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
+        'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
+        'pager' => array(
+            'header'=>'',
+            'prevPageLabel' => 'Anterior',
+            'nextPageLabel' => 'Siguiente',
+        ),
 	'columns' => array(
 		'nro_factura',
 		'total_neto',

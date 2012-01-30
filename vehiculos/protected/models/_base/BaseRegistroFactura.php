@@ -76,11 +76,7 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 
 	public function search() {
 		$criteria = new CDbCriteria;
-                $criteria->with = array('ordenTrabajos');
                 
-                
-
-		$criteria->compare('id', $this->id);
 		$criteria->compare('nro_factura', $this->nro_factura);
 		$criteria->compare('total_neto', $this->total_neto);
 		$criteria->compare('total_bruto', $this->total_bruto);
@@ -113,5 +109,10 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
             foreach($this->ordenTrabajos as $ots)
                 $totalneto = $totalneto + $ots->sumita;
             return $totalneto;
+        }
+        
+        public function formatearKm($numerillo) {
+            
+            return number_format($numerillo, 0, ',', '.');
         }
 }

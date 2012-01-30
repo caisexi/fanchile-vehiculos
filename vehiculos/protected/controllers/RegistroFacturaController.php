@@ -41,13 +41,18 @@ class RegistroFacturaController extends GxController {
                     'pagination'=>array(
                         'pageSize'=>30,
                     ),
+                    'sort'=>array(
+			'defaultOrder'=>'fecha ASC',
+                    ),
                     'criteria' => array(
                         'condition' => 'id_rf = :rf',
                         'params' => array(
                         ':rf' => $this->loadModel($id, 'RegistroFactura')->id,
                         ),
                         ),
-                    ));
+                    )
+                        
+                        );
             
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'RegistroFactura'),

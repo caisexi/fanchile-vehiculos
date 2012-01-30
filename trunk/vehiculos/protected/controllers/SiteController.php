@@ -100,4 +100,12 @@ class SiteController extends Controller
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
+        
+        public function actionParcial()
+	{
+		$dataProvider = new CActiveDataProvider('OrdenTrabajo');
+		$this->render('parcial', array(
+			'dataProvider' => $dataProvider,
+		));
+	}
 }

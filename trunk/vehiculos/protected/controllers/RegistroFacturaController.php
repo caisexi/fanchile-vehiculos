@@ -37,8 +37,21 @@ class RegistroFacturaController extends GxController {
 
 
 	public function actionView($id) {
+                $dataProvider = new CActiveDataProvider('OrdenTrabajo', array(
+                    'pagination'=>array(
+                        'pageSize'=>30,
+                    ),
+                    'criteria' => array(
+                        'condition' => 'id_rf = :rf',
+                        'params' => array(
+                        ':rf' => $this->loadModel($id, 'RegistroFactura')->id,
+                        ),
+                        ),
+                    ));
+            
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'RegistroFactura'),
+                        'OrdenTrabajo' => $dataProvider,
 		));
 	}
 

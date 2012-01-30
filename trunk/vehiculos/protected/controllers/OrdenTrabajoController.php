@@ -92,10 +92,9 @@ class OrdenTrabajoController extends GxController {
 
 			if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues) && $model->save()) {
 				$factura = $this->loadModel($model->id_rf, 'RegistroFactura');
-                                        $suma = $model->sumita;
                                         $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
-                                        $suma_bruto = $suma * (($iva['valor_iva']/100)+1);
-                                        $factura->setAttributes(array('total_neto'=>$suma, 'total_bruto'=>round($suma_bruto)));
+                                        $suma_bruto = $factura->sumarNeto() * (($iva['valor_iva']/100)+1);
+                                        $factura->setAttributes(array('total_neto'=>$factura->sumarNeto(), 'total_bruto'=>round($suma_bruto)));
                                         if($factura->save())
                                             $this->redirect(array('registrofactura/view', 'id' => $factura->id));
 			}

@@ -63,7 +63,7 @@ abstract class BaseUsuarios extends GxActiveRecord {
 		return array(
 			'id' => Yii::t('app', 'ID'),
 			'usuario' => Yii::t('app', 'Usuario'),
-			'contrasena' => Yii::t('app', 'Contrasena'),
+			'contrasena' => Yii::t('app', 'Contraseña'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
                         'nueva_contrasena'=>'Contraseña',

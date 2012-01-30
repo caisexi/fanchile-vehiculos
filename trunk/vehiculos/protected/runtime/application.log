@@ -7873,3 +7873,1513 @@ in C:\wamp\www\vehiculos\index.php (13)
 2012/01/27 21:28:41 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
 in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 11:50:14 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-24%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 11:50:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-24%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012-01-24&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 11:50:32 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-10%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 11:50:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-10%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012-01-10&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 11:51:07 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE ((id_proveedor=:ycp0) AND (fecha LIKE :ycp1)). Bound with :ycp0='3', :ycp1='%2012-01-24%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 11:51:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE ((id_proveedor=:ycp0) AND (fecha LIKE :ycp1)). Bound with :ycp0='3', :ycp1='%2012-01-24%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=3&RegistroFactura%5Bfecha%5D=2012-01-24&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 11:55:00 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-18%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 11:55:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-18%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012-01-18&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 11:57:53 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-26%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 11:57:53 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-26%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012-01-26&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 12:01:11 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-26%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 12:01:11 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-26%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012-01-26&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 12:01:23 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 12:01:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012&RegistroFactura_page=1&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 12:07:07 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-30%'.
+in C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php (62)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (119)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 12:07:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'fecha' in where clause is ambiguous. The SQL statement executed was: SELECT COUNT(DISTINCT `t`.`id`) FROM `registro_factura` `t`  LEFT OUTER JOIN `orden_trabajo` `ordenTrabajos` ON (`ordenTrabajos`.`id_rf`=`t`.`id`)  WHERE (fecha LIKE :ycp0). Bound with :ycp0='%2012-01-30%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(425): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveFinder.php(762): CDbCommand->queryScalar()
+#2 C:\wamp\www\framework\db\ar\CActiveFinder.php(155): CJoinElement->count(Object(CDbCriteria))
+#3 C:\wamp\www\framework\db\ar\CActiveRecord.php(1540): CActiveFinder->count(Object(CDbCriteria))
+#4 C:\wamp\www\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#5 C:\wamp\www\framework\web\CDataProvider.php(193): CActiveDataProvider->calculateTotalItemCount()
+#6 C:\wamp\www\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#7 C:\wamp\www\framework\web\CDataProvider.php(137): CActiveDataProvider->fetchData()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(105): CDataProvider->getData()
+#9 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(269): CBaseListView->init()
+#10 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#11 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\admin.php(62): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(119): CController->render('admin', Array)
+#18 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionAdmin()
+#19 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#21 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#23 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#26 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#28 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#29 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#30 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin?RegistroFactura%5Bnro_factura%5D=&RegistroFactura%5Btotal_neto%5D=&RegistroFactura%5Btotal_bruto%5D=&RegistroFactura%5Bid_proveedor%5D=&RegistroFactura%5Bfecha%5D=2012-01-30&RegistroFactura%5Bcreado%5D=&RegistroFactura%5Bmodificado%5D=&ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 12:12:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detallesot".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detallesot')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detallesot
+---
+2012/01/30 12:15:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`orden_trabajo`, CONSTRAINT `orden_trabajo_ibfk_2` FOREIGN KEY (`id_rf`) REFERENCES `registro_factura` (`id`)). The SQL statement executed was: DELETE FROM `registro_factura` WHERE `registro_factura`.`id`=1.
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (95)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 12:15:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`orden_trabajo`, CONSTRAINT `orden_trabajo_ibfk_2` FOREIGN KEY (`id_rf`) REFERENCES `registro_factura` (`id`)). The SQL statement executed was: DELETE FROM `registro_factura` WHERE `registro_factura`.`id`=1' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('1')
+#2 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(95): CActiveRecord->delete()
+#3 [internal function]: RegistroFacturaController->actionDelete('1')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/delete/1?ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/01/30 12:40:37 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 12:40:37 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 12:40:37 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/30 13:27:46 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/%3C?echo%20$data-%3Eid?%3E
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 13:28:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/%3C?echo%20$data-%3Eid?%3E
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 13:28:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 13:28:38 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 13:29:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 14:12:29 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:12:29 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:12:29 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/30 14:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('admin')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 14:14:23 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:14:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:14:35 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:14:36 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:15:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('admin')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 14:15:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('Administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/Administrar
+---
+2012/01/30 14:15:22 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('Administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/Administrar
+---
+2012/01/30 14:15:47 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('Administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/Administrar
+---
+2012/01/30 14:15:49 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('Administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/Administrar
+---
+2012/01/30 14:15:50 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('Administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/Administrar
+---
+2012/01/30 14:15:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:15:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:16:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('admin')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/01/30 14:16:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registrofacturas".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/registrofacturas
+---
+2012/01/30 14:17:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "admin".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('admin')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/01/30 14:17:37 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:19:29 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:19:29 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:19:29 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/30 14:19:29 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/30 14:20:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "administrar".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('administrar')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('administrar')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/administrar
+---
+2012/01/30 14:26:58 [error] [exception.CException] exception 'CException' with message 'Property "RegistroFactura.kilometraje" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('kilometraje')
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(47): CActiveRecord->__get('kilometraje')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#7 [internal function]: RegistroFacturaController->actionView('12')
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/12
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 14:27:25 [error] [php] Undefined variable: data (C:\wamp\www\vehiculos\protected\views\registroFactura\view.php:47)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): RegistroFacturaController->render()
+#3 unknown(0): RegistroFacturaController->actionView()
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): RegistroFacturaController->runAction()
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): RegistroFacturaController->filterAccessControl()
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/12
+in C:\wamp\www\vehiculos\protected\views\registroFactura\view.php (47)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (55)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:27:48 [error] [exception.CException] exception 'CException' with message 'Property "Vehiculos.kilometraje" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('kilometraje')
+#1 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('kilometraje')
+#2 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#3 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('RegistroFactura...', Array)
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(OrdenTrabajo))
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#7 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(73): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#15 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#18 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#19 [internal function]: RegistroFacturaController->actionView('12')
+#20 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#21 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#22 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#29 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#31 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#32 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/12
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 14:28:06 [error] [exception.CException] exception 'CException' with message 'Property "Vehiculos.kilometraje" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('kilometraje')
+#1 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('kilometraje')
+#2 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#3 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('RegistroFactura...', Array)
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(OrdenTrabajo))
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#7 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(72): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#15 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#18 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#19 [internal function]: RegistroFacturaController->actionView('12')
+#20 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#21 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#22 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#29 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#31 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#32 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/12
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 14:28:07 [error] [exception.CException] exception 'CException' with message 'Property "Vehiculos.kilometraje" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('kilometraje')
+#1 C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code(1): CActiveRecord->__get('kilometraje')
+#2 C:\wamp\www\framework\base\CComponent.php(607): eval()
+#3 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(139): CComponent->evaluateExpression('RegistroFactura...', Array)
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(OrdenTrabajo))
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#7 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#8 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#9 [internal function]: CBaseListView->renderSection(Array)
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#12 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#13 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(72): CBaseController->widget('zii.widgets.gri...', Array)
+#14 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#15 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#18 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#19 [internal function]: RegistroFacturaController->actionView('12')
+#20 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#21 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#22 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#23 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#24 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#25 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#28 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#29 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#30 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#31 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#32 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#33 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#34 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/12
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/30 14:28:56 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:28:56 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 14:28:56 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/30 15:04:11 [error] [exception.CException] exception 'CException' with message 'Property "CDataColumn.enableSorting" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\YiiBase.php(222): CComponent->__set('enableSorting', true)
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(313): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#3 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#4 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(73): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#11 [internal function]: RegistroFacturaController->actionView('1')
+#12 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:04:23 [error] [exception.CException] exception 'CException' with message 'Property "CDataColumn.enableSorting" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\YiiBase.php(222): CComponent->__set('enableSorting', true)
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(313): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#3 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#4 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(73): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#11 [internal function]: RegistroFacturaController->actionView('1')
+#12 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:04:24 [error] [exception.CException] exception 'CException' with message 'Property "CDataColumn.enableSorting" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\YiiBase.php(222): CComponent->__set('enableSorting', true)
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(313): YiiBase::createComponent(Array, Object(CGridView))
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#3 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#4 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(73): CBaseController->widget('zii.widgets.gri...', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#10 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#11 [internal function]: RegistroFacturaController->actionView('1')
+#12 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:07:54 [error] [exception.CException] exception 'CException' with message 'Property "CGridView.sortableAttributes" is not defined.' in C:\wamp\www\framework\base\CComponent.php:174
+Stack trace:
+#0 C:\wamp\www\framework\web\CWidgetFactory.php(162): CComponent->__set('sortableAttribu...', Array)
+#1 C:\wamp\www\framework\web\CBaseController.php(147): CWidgetFactory->createWidget(Object(RegistroFacturaController), 'zii.widgets.gri...', Array)
+#2 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#3 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(76): CBaseController->widget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#8 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#9 [internal function]: RegistroFacturaController->actionView('1')
+#10 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#21 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:20:25 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('$data->idVehicu...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:20:48 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('idVehiculo->pat...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:21:31 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('ordenTrabajos->...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:21:32 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('ordenTrabajos->...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:21:59 [error] [exception.CException] exception 'CException' with message 'Property "OrdenTrabajo.patente" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('patente')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(1696): CActiveRecord->__get('patente')
+#2 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(141): CHtml::value(Object(OrdenTrabajo), 'patente')
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(OrdenTrabajo))
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#8 [internal function]: CBaseListView->renderSection(Array)
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#11 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#18 [internal function]: RegistroFacturaController->actionView('1')
+#19 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#30 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#31 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:22:44 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('ordenTrabajos->...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:23:17 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('idVehiculo->pat...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:23:59 [error] [exception.CException] exception 'CException' with message 'The column must be specified in the format of "Name:Type:Label", where "Type" and "Label" are optional.' in C:\wamp\www\framework\zii\widgets\grid\CGridView.php:337
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(308): CGridView->createDataColumn('$data->idVehicu...')
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(284): CGridView->initColumns()
+#2 C:\wamp\www\framework\web\CBaseController.php(148): CGridView->init()
+#3 C:\wamp\www\framework\web\CBaseController.php(173): CBaseController->createWidget('zii.widgets.gri...', Array)
+#4 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#9 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#10 [internal function]: RegistroFacturaController->actionView('1')
+#11 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 15:24:08 [error] [exception.CException] exception 'CException' with message 'Property "OrdenTrabajo.idvehiculo" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('idvehiculo')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(1696): CActiveRecord->__get('idvehiculo')
+#2 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(141): CHtml::value(Object(OrdenTrabajo), 'idvehiculo')
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent(0, Object(OrdenTrabajo))
+#4 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CGridColumn->renderDataCell(0)
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow(0)
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#8 [internal function]: CBaseListView->renderSection(Array)
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#10 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#11 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#12 C:\wamp\www\vehiculos\protected\views\registroFactura\view.php(75): CBaseController->widget('zii.widgets.gri...', Array)
+#13 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#14 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#15 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#16 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#17 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(55): CController->render('view', Array)
+#18 [internal function]: RegistroFacturaController->actionView('1')
+#19 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#30 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#31 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/index
+---
+2012/01/30 19:13:48 [error] [exception.CException] exception 'CException' with message 'Property "OrdenTrabajo.voila" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('voila')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('voila')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(OrdenTrabajo), 'voila')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1219): CHtml::activeInputField('hidden', Object(OrdenTrabajo), 'voila', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(583): CHtml::activeHiddenField(Object(OrdenTrabajo), 'voila', Array)
+#5 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(43): CActiveForm->hiddenField(Object(OrdenTrabajo), 'voila')
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#11 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(76): CController->render('create', Array)
+#15 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#16 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/cr...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create?factura=058945&id=15
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/15
+---
+2012/01/30 19:13:56 [error] [php] Use of undefined constant voila - assumed 'voila' (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:43)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(76): OrdenTrabajoController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create?factura=058945&id=15
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (43)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (76)
+2012/01/30 19:23:59 [error] [php] Undefined index: factura (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:48)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php(23): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(105): OrdenTrabajoController->render()
+#7 unknown(0): OrdenTrabajoController->actionUpdate()
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/1
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (48)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php (23)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+2012/01/30 19:26:09 [error] [php] Undefined variable: id (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:47)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php(23): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(105): OrdenTrabajoController->render()
+#7 unknown(0): OrdenTrabajoController->actionUpdate()
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/1
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (47)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php (23)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+2012/01/30 19:37:01 [error] [php] Undefined variable: f (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php:64)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php(23): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(105): OrdenTrabajoController->render()
+#7 unknown(0): OrdenTrabajoController->actionUpdate()
+#8 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#12 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#14 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#16 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#18 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#19 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#20 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#21 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/1
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (64)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\update.php (23)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+2012/01/30 19:39:26 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/30 19:39:26 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)

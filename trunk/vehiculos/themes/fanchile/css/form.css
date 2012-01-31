@@ -158,3 +158,28 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
 	clear: left;
 	padding-left: 110px;
 }
+
+.boton{
+    /* estilos tipograficos */
+	background: #3A6249;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+ 
+    /* padding, margin y borde */
+ 
+    padding: 5px 25px;
+    margin-right: 15px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 15px;
+}
+
+.boton:hover{
+    /* estilos tipograficos */
+	background: #4F8664;
+    color: #fff;
+
+}

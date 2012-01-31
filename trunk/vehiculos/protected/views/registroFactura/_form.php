@@ -15,7 +15,7 @@
         
 		<div class="row">
 		<?php echo $form->labelEx($model,'nro_factura'); ?>
-		<?php echo $form->textField($model, 'nro_factura'); ?>
+		<?php echo $form->textField($model,'nro_factura',array('onblur' => 'cambiarNro()')); ?>
 		<?php echo $form->error($model,'nro_factura'); ?>
 		</div><!-- row -->
 		
@@ -45,7 +45,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'total_neto'); ?>
-		<?php echo $form->textField($model, 'total_neto'); ?>
+		<?php echo $form->textField($model, 'total_neto',array('onblur'=>'calcularBruto()')); ?>
 		<?php echo $form->error($model,'total_neto'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -58,3 +58,18 @@ echo GxHtml::submitButton(Yii::t('app', 'Guardar'));
 $this->endWidget();
 ?>
 </div><!-- form -->
+
+<script type="text/javascript">
+    function cambiarNro(){
+        largo = document.getElementById('RegistroFactura_nro_factura').value.length;
+        for(i=0;i<7-largo;i++)
+            {
+               document.getElementById('RegistroFactura_nro_factura').value = 0 + document.getElementById('RegistroFactura_nro_factura').value;
+            }
+    }
+
+    function calcularBruto(){
+        document.getElementById('RegistroFactura_total_bruto').value = Math.round(document.getElementById('RegistroFactura_total_neto').value * 1.19);
+    }
+    
+</script>

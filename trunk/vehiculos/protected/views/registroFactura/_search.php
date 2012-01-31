@@ -22,7 +22,10 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'id_proveedor'); ?>
-		<?php echo $form->dropDownList($model, 'id_proveedor', GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
+                <?php   $criteria=new CDbCriteria;                        
+                        $criteria->order='nombre ASC';
+                ?>
+		<?php echo $form->dropDownList($model, 'id_proveedor', GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true,$criteria)), array('prompt' => Yii::t('app', 'Todos'))); ?>
 	</div>
 
 	<div class="row">

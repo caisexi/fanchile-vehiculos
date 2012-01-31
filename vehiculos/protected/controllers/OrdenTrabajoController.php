@@ -37,8 +37,22 @@ class OrdenTrabajoController extends GxController {
 
 
 	public function actionView($id) {
+                $dataProvider = new CActiveDataProvider('DetallesOt', array(
+                    'pagination'=>array(
+                        'pageSize'=>30,
+                    ),
+                    'criteria' => array(
+                        'condition' => 'id_ot = :ot',
+                        'params' => array(
+                        ':ot' => $this->loadModel($id, 'OrdenTrabajo')->id,
+                        ),
+                        ),
+                    )
+                        
+                );
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'OrdenTrabajo'),
+                        'detOt' => $dataProvider,
 		));
 	}
 

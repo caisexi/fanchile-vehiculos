@@ -26,11 +26,7 @@ $('.search-form form').submit(function(){
 
 <h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
 
-<p>
-Se pueden utilizar los operadores (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al comienzo de cada una de las busquedas para hacer alguna comparacion.
-</p>
-
-<?php echo GxHtml::link(Yii::t('app', 'Advanced Search'), '#', array('class' => 'search-button')); ?>
+<?php echo GxHtml::link(Yii::t('app', 'Busqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display:none">
 <?php $this->renderPartial('_search', array(
 	'model' => $model,
@@ -41,6 +37,13 @@ Se pueden utilizar los operadores (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) al c
 	'id' => 'orden-trabajo-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
+        'emptyText' => 'No hay resultados',
+        'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
+        'pager' => array(
+            'header'=>'',
+            'prevPageLabel' => 'Anterior',
+            'nextPageLabel' => 'Siguiente',
+        ),
 	'columns' => array(
 		'nro_guia',
 		array(

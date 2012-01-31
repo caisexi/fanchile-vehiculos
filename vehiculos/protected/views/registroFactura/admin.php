@@ -46,13 +46,22 @@ $('.search-form form').submit(function(){
         ),
 	'columns' => array(
 		'nro_factura',
-		'total_neto',
-		'total_bruto',
+                array(
+                    'name'=>'total_neto',
+                    'value'=> 'Vehiculos::formatearPeso($data->total_neto)',
+                    'htmlOptions'=>array('style' => 'text-align: right;'),
+                    ),
+                array(
+                    'name'=>'total_bruto',
+                    'value'=> 'Vehiculos::formatearPeso($data->total_bruto)',
+                    'htmlOptions'=>array('style' => 'text-align: right;'),
+                    ),
 		array(
-				'name'=>'id_proveedor',
-				'value'=>'GxHtml::valueEx($data->idProveedor)',
-				'filter'=>GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true)),
-				),
+                    'name'=>'id_proveedor',
+                    'value'=>'GxHtml::valueEx($data->idProveedor)',
+                    'filter'=>GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true)),
+                    'htmlOptions'=>array('style' => 'text-align: center;'),
+                    ),
 		'fecha',
 		/*
 		'creado',

@@ -1,16 +1,16 @@
-<div class="view" onclick="location.href='view/<?php echo $data->id?>'"  onmouseover="this.style.backgroundColor='#7AC08E'"  onmouseout="this.style.backgroundColor='#fff'">
+<div class="view" onclick="location.href='view/<?php echo $data->id?>'" onmouseover="this.style.backgroundColor='#7AC08E'"  onmouseout="this.style.backgroundColor='#fff'">
 
-	<?php echo "<font color='red'>".GxHtml::encode($data->getAttributeLabel('nro_factura'))."</font>"?>:
-	<?php echo GxHtml::encode($data->nro_factura); ?>
+	<?php echo GxHtml::encode($data->getAttributeLabel('nro_factura'))?>:
+	<?php echo "<font color='red'>".GxHtml::encode($data->nro_factura)."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('total_neto')); ?>:
-	<?php echo GxHtml::encode($data->total_neto); ?>
+	<?php echo "<font color='blue'>".GxHtml::encode(Vehiculos::formatearPeso($data->total_neto))."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('total_bruto')); ?>:
-	<?php echo GxHtml::encode($data->total_bruto); ?>
+	<?php echo "<font color='blue'>".GxHtml::encode(Vehiculos::formatearPeso($data->total_bruto))."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('id_proveedor')); ?>:
-		<?php echo GxHtml::encode(GxHtml::valueEx($data->idProveedor)); ?>
+		<?php echo "<font color='green'>".GxHtml::encode(GxHtml::valueEx($data->idProveedor))."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('fecha')); ?>:
 	<?php echo GxHtml::encode($data->fecha); ?>

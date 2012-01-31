@@ -52,7 +52,7 @@ class RegistroFacturaController extends GxController {
                         ),
                     )
                         
-                        );
+                );
             
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'RegistroFactura'),

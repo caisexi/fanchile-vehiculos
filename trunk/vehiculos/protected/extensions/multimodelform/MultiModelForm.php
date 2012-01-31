@@ -615,7 +615,7 @@ class MultiModelForm extends CWidget
             $onClick = "if(confirm('{$this->removeConfirm}')) " . $onClick;
 
         $htmlOptions = array_merge($this->removeHtmlOptions, array('onclick' => $onClick));
-        $link = CHtml::link($this->removeText, '#', $htmlOptions);
+        $link = CHtml::image(Yii::app()->baseUrl.'/images/delete.png','Agregar', $htmlOptions);
 
         return CHtml::tag($this->removeLinkWrapper['tag'],
             $this->removeLinkWrapper['htmlOptions'], $link);
@@ -1080,10 +1080,10 @@ class MultiModelRenderForm extends CForm
      */
     public function getAddLink()
     {
-        return CHtml::tag('a',
+        return CHtml::image(Yii::app()->baseUrl.'/images/add.png','Agregar',
             array('id' => $this->parentWidget->id,
                 'href' => '#',
-                'rel' => '.' . $this->parentWidget->getCopyClass()
+                'rel' => '.' . $this->parentWidget->getCopyClass(),
             ),
             $this->parentWidget->addItemText
         );

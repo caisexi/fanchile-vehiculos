@@ -7,14 +7,15 @@ $this->breadcrumbs = array(
 
 $this->menu=array(
         array('label'=>Yii::t('app', 'Agregar') . ' ' . $model->getRelationLabel('ordenTrabajos', 1), 'url'=>array('ordentrabajo/create?factura='.$model->nro_factura.'&id='.$model->id)),
-	array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('admin')),
+	array('label'=>Yii::t('app', 'Administrar') . ' ' . $model->label(2), 'url'=>array('admin')),
+        array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
 	array('label'=>Yii::t('app', 'Agregar') . ' ' . $model->label(), 'url'=>array('create')),
 	array('label'=>Yii::t('app', 'Editar') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
 	array('label'=>Yii::t('app', 'Borrar') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
 );
 ?>
 
-<h1><?php echo GxHtml::encode($model->label()) . ' N.° ' . "<font color='yellow'>". GxHtml::encode(GxHtml::valueEx($model))."</font>"; ?></h1>
+<h1><?php echo GxHtml::encode($model->label()) . ' N° ' . "<font color='yellow'>". GxHtml::encode(GxHtml::valueEx($model))."</font>"; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data' => $model,
@@ -35,15 +36,25 @@ $this->widget('zii.widgets.grid.CGridView', array(
     'summaryText'=>'', 
     'dataProvider' => $OrdenTrabajo,
     'columns' => array(
-        'nro_guia',
+        array(
+            'name'=>'nro_guia',
+            'value' => '$data->nro_guia',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+        ),
         array(
             'header'=>'Patente',
             'value' => 'OrdenTrabajo::formatearPatente($data->idVehiculo->patente)',
+            'htmlOptions'=>array('style' => 'text-align: center;'),
         ),
-        'fecha',
+        array(
+            'name'=>'fecha',
+            'value' => '$data->fecha',
+            'htmlOptions'=>array('style' => 'text-align: center;'),
+        ),
         array(
                 'header'=>'Kilometraje',
                 'value' => 'RegistroFactura::formatearKm($data->kilometraje)',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
         array(
             'header'=>'Subtotal',
@@ -52,6 +63,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'class' => 'CButtonColumn',
+            'header' => 'Opciones',
             'template'=>'{view}{update}',
             'buttons'=>array
             (
@@ -66,8 +78,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
                     'url'=>'Yii::app()->createUrl("ordentrabajo/update", array("id"=>$data->id))',
                 ),
             ),
-        ),
-        
+        ),        
     ),
 ));
 

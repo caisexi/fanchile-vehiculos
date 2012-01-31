@@ -140,7 +140,7 @@ abstract class BaseVehiculos extends GxActiveRecord {
         
         public function formatearPeso($numerillo) {
             
-            return '$'.number_format($numerillo, 0, ',', '.');
+            return '$ '.number_format($numerillo, 0, ',', '.');
         }
         
         public function formatearPatente($patente) {

@@ -6,8 +6,8 @@ $this->breadcrumbs = array(
 );
 
 $this->menu = array(
-	array('label'=>Yii::t('app', 'Create') . ' ' . OrdenTrabajo::label(), 'url' => array('create')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . OrdenTrabajo::label(2), 'url' => array('admin')),
+	array('label'=>Yii::t('app', 'Agregar') . ' ' . OrdenTrabajo::label(), 'url' => array('create')),
+	array('label'=>Yii::t('app', 'Administrar') . ' ' . OrdenTrabajo::label(2), 'url' => array('admin')),
 );
 ?>
 
@@ -15,5 +15,12 @@ $this->menu = array(
 
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
+        'emptyText' => 'No hay resultados',
+        'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
+        'pager' => array(
+            'header'=>'',
+            'prevPageLabel' => 'Anterior',
+            'nextPageLabel' => 'Siguiente',
+        ),
 	'itemView'=>'_view',
 )); 

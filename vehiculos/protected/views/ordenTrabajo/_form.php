@@ -109,7 +109,7 @@
                 ?>
                 
 <?php
-echo GxHtml::submitButton(Yii::t('app', 'Guardar'));
+echo GxHtml::submitButton(Yii::t('app', 'Guardar'),array('class' => 'boton'));
 $this->endWidget();
 ?>
 </div><!-- form -->

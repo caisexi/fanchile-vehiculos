@@ -9568,3 +9568,89 @@ in C:\wamp\www\vehiculos\index.php (13)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
 in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 13:22:36 [error] [php] htmlspecialchars() expects parameter 1 to be string, array given (C:\wamp\www\framework\web\helpers\CHtml.php:85)
+Stack trace:
+#0 C:\wamp\www\framework\web\helpers\CHtml.php(140): renderAttributes()
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(436): tag()
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(471): button()
+#3 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php(112): submitButton()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#6 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#7 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php(21): OrdenTrabajoController->renderPartial()
+#8 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#9 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#10 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#11 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#12 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(76): OrdenTrabajoController->render()
+#13 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionCreate()
+#14 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#15 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#16 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#17 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#18 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#19 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#20 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#21 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#22 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#23 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#24 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#25 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/create?factura=0126168&id=17
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\_form.php (112)
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\create.php (21)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (76)
+2012/01/31 13:23:24 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:23:24 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:23:30 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:23:30 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:30:18 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:30:18 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:32:41 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:32:41 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "re".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('re')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/re
+---
+2012/01/31 13:35:32 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:35:32 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:35:55 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:35:55 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:35:55 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 13:38:24 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:38:24 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)

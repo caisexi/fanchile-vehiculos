@@ -54,7 +54,7 @@
 		<?php echo $form->error($model,'total_bruto'); ?>
 		</div><!-- row -->
 <?php
-echo GxHtml::submitButton(Yii::t('app', 'Guardar'));
+echo GxHtml::submitButton(Yii::t('app', 'Guardar'),array('class' => 'boton'));
 $this->endWidget();
 ?>
 </div><!-- form -->

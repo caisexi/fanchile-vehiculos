@@ -9383,3 +9383,188 @@ in C:\wamp\www\vehiculos\index.php (13)
 2012/01/30 19:39:26 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
 in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:01:59 [error] [exception.CException] exception 'CException' with message 'Property "RegistroFactura.nro_factur" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('nro_factur')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('nro_factur')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(RegistroFactura), 'nro_factur')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(RegistroFactura), 'nro_factur', Array)
+#4 C:\wamp\www\framework\web\widgets\CActiveForm.php(568): CHtml::activeTextField(Object(RegistroFactura), 'nro_factur', Array)
+#5 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(18): CActiveForm->textField(Object(RegistroFactura), 'nro_factur', Array)
+#6 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#7 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#9 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#11 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#13 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#14 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(78): CController->render('create', Array)
+#15 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#16 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#18 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#28 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/
+---
+2012/01/31 12:02:14 [error] [php] Use of undefined constant bra - assumed 'bra' (C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php:18)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#1 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(18): RegistroFacturaController->renderPartial()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(78): RegistroFacturaController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(134): RegistroFacturaController->runAction()
+#10 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#12 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): RegistroFacturaController->filterAccessControl()
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#14 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#16 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#17 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#18 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#19 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (18)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (18)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (78)
+2012/01/31 12:02:22 [error] [php] strpos() expects parameter 1 to be string, array given (C:\wamp\www\framework\web\helpers\CHtml.php:1992)
+Stack trace:
+#0 C:\wamp\www\framework\web\helpers\CHtml.php(1203): resolveNameID()
+#1 C:\wamp\www\framework\web\widgets\CActiveForm.php(568): activeTextField()
+#2 C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php(18): GxActiveForm->textField()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#6 C:\wamp\www\vehiculos\protected\views\registroFactura\create.php(18): RegistroFacturaController->renderPartial()
+#7 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#8 C:\wamp\www\framework\web\CBaseController.php(96): RegistroFacturaController->renderInternal()
+#9 C:\wamp\www\framework\web\CController.php(870): RegistroFacturaController->renderFile()
+#10 C:\wamp\www\framework\web\CController.php(783): RegistroFacturaController->renderPartial()
+#11 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(78): RegistroFacturaController->render()
+#12 C:\wamp\www\framework\web\actions\CInlineAction.php(50): RegistroFacturaController->actionCreate()
+#13 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#14 C:\wamp\www\framework\web\filters\CFilterChain.php(134): RegistroFacturaController->runAction()
+#15 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#16 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#17 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): RegistroFacturaController->filterAccessControl()
+#18 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#19 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#20 C:\wamp\www\framework\web\CController.php(266): RegistroFacturaController->runActionWithFilters()
+#21 C:\wamp\www\framework\web\CWebApplication.php(276): RegistroFacturaController->run()
+#22 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#23 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#24 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/registrofactura/create
+in C:\wamp\www\vehiculos\protected\views\registroFactura\_form.php (18)
+in C:\wamp\www\vehiculos\protected\views\registroFactura\create.php (18)
+in C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php (78)
+2012/01/31 12:38:16 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:38:16 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:38:16 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 12:43:21 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:43:21 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:03 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:03 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:13 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:13 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:42 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:42 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:51:42 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 12:55:29 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:55:29 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:55:29 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 12:56:32 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:56:32 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:57:17 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:57:17 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (56)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:58:35 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:58:35 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:58:35 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 12:58:58 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:58:58 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 12:58:58 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 12:58:58 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/01/31 13:01:02 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:01:02 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (89)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/01/31 13:01:02 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)

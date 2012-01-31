@@ -37,6 +37,7 @@ $('.search-form form').submit(function(){
 	'id' => 'registro-factura-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
+        'emptyText' => 'No hay resultados',
         'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
         'pager' => array(
             'header'=>'',

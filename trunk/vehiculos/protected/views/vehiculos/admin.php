@@ -66,6 +66,11 @@ $('.search-form form').submit(function(){
                                 'htmlOptions' => array('width' => '80')
 				),
 		'ano',
+                array(
+				'name'=>'estado',
+				'value'=>'$data->estado == 1 ? "EN USO" : ($data->estado == 0 ? "EN VENTA" : "VENDIDO")',
+				'filter'=>array(1 =>'EN USO',0 => 'EN VENTA',2 => 'VENDIDO'),
+				),
 		
 		array(
                     'class' => 'CButtonColumn',

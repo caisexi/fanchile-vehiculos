@@ -77,9 +77,9 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
 	public function search() {
 		$criteria = new CDbCriteria;
                 
-		$criteria->compare('nro_factura', $this->nro_factura);
-		$criteria->compare('total_neto', $this->total_neto);
-		$criteria->compare('total_bruto', $this->total_bruto);
+		$criteria->compare('nro_factura', $this->nro_factura, true);
+		$criteria->compare('total_neto', $this->total_neto, true);
+		$criteria->compare('total_bruto', $this->total_bruto, true);
 		$criteria->compare('id_proveedor', $this->id_proveedor);
 		$criteria->compare('fecha', $this->fecha, true);
 		$criteria->compare('creado', $this->creado, true);

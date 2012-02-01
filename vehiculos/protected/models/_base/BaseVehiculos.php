@@ -138,20 +138,6 @@ abstract class BaseVehiculos extends GxActiveRecord {
             return parent::beforeSave();
         }
         
-        public function formatearPeso($numerillo) {
-            
-            return '$ '.number_format($numerillo, 0, ',', '.');
-        }
-        
-        public function formatearPatente($patente) {
-            
-            $primer = strtoupper(substr($patente,0,-4));
-            $segundo = strtoupper(substr($patente,2,-2));
-            $tercero = substr($patente,4);
-            $mixpatente = $primer.'-'.$segundo.'-'.$tercero;
-            return $mixpatente;
-        }
-        
         public function saberEstado($estado) {
             
             switch ($estado) {

@@ -53,29 +53,38 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
                 'header'=>'Kilometraje',
-                'value' => 'RegistroFactura::formatearKm($data->kilometraje)',
+                'value' => 'OrdenTrabajo::formatearKm($data->kilometraje)',
             'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
         array(
             'header'=>'Subtotal',
-            'value' => 'Vehiculos::formatearPeso($data->sumita)',
+            'value' => 'OrdenTrabajo::formatearPeso($data->sumita)',
             'htmlOptions'=>array('style' => 'text-align: right;'),
         ),
         array(
             'class' => 'CButtonColumn',
             'header' => 'Opciones',
-            'template'=>'{view}{update}',
+            'htmlOptions'=>array('width' => 120),
+            'template'=>'{view}{update}{delete}',
             'buttons'=>array
             (
                 'view' => array
                 (
                     'label'=>'Ver',
                     'url'=>'Yii::app()->createUrl("ordentrabajo/view", array("id"=>$data->id))',
+                    'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
                 ),
                 'update' => array
                 (
                     'label'=>'Editar',
                     'url'=>'Yii::app()->createUrl("ordentrabajo/update", array("id"=>$data->id))',
+                    'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
+                ),
+                'delete' => array
+                (
+                    'label'=>'Borrar',
+                    'url'=>'Yii::app()->createUrl("ordentrabajo/delete", array("id"=>$data->id))',
+                    'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
                 ),
             ),
         ),        
@@ -87,11 +96,11 @@ $this->widget('zii.widgets.grid.CGridView', array(
 	'attributes' => array(
             array(
                 'name'=>'Total Neto',
-                'value' => Vehiculos::formatearPeso($model->total_neto),
+                'value' => OrdenTrabajo::formatearPeso($model->total_neto),
             ),
             array(
                 'name'=>'Total Bruto',
-                'value' => Vehiculos::formatearPeso($model->total_bruto),
+                'value' => OrdenTrabajo::formatearPeso($model->total_bruto),
             ),
         ),
 )); 

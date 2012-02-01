@@ -3,7 +3,7 @@
 $this->breadcrumbs = array(
 	$model->label(2) => array('index'),
 	GxHtml::valueEx($model) => array('view', 'id' => GxActiveRecord::extractPkValue($model, true)),
-	Yii::t('app', 'Update'),
+	Yii::t('app', 'Editar'),
 );
 
 $this->menu = array(

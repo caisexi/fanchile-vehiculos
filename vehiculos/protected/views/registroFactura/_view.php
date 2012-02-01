@@ -4,10 +4,10 @@
 	<?php echo "<font color='red'>".GxHtml::encode($data->nro_factura)."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('total_neto')); ?>:
-	<?php echo "<font color='blue'>".GxHtml::encode(Vehiculos::formatearPeso($data->total_neto))."</font>"; ?>
+	<?php echo "<font color='blue'>".GxHtml::encode(OrdenTrabajo::formatearPeso($data->total_neto))."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('total_bruto')); ?>:
-	<?php echo "<font color='blue'>".GxHtml::encode(Vehiculos::formatearPeso($data->total_bruto))."</font>"; ?>
+	<?php echo "<font color='blue'>".GxHtml::encode(OrdenTrabajo::formatearPeso($data->total_bruto))."</font>"; ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('id_proveedor')); ?>:
 		<?php echo "<font color='green'>".GxHtml::encode(GxHtml::valueEx($data->idProveedor))."</font>"; ?>

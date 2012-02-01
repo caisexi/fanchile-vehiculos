@@ -26,7 +26,7 @@ class VehiculosController extends GxController {
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','ACColor','ACModelo','ACMarca','ACCombustibles','ACTiposVehiculos','ACProveedor'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users

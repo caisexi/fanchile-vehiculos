@@ -110,8 +110,4 @@ abstract class BaseRegistroFactura extends GxActiveRecord {
                 $totalneto = $totalneto + $ots->sumita;
             return $totalneto;
         }
-        
-        public function formatearKm($numerillo) {            
-            return number_format($numerillo, 0, ',', '.');
-        }
 }

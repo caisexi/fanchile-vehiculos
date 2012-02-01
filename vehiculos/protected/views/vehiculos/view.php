@@ -52,13 +52,13 @@ array(
 array(
 			'name' => 'precioCompra',
 			'type' => 'raw',
-			'value' => $model->formatearPeso($model->precioCompra),
+			'value' => OrdenTrabajo::formatearPeso($model->precioCompra),
 			),
 'ano',
 array(
 			'name' => 'patente',
 			'type' => 'raw',
-			'value' => $model->formatearPatente($model->patente),
+			'value' => OrdenTrabajo::formatearPatente($model->patente),
 			),
 array(
 			'name' => 'estado',

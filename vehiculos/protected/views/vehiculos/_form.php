@@ -40,7 +40,7 @@
             'options'=>array(
                 'showAnim'=>'fold',
 		'minLength'=>'1',
-		'select'=>'js:function(event, ui) { console.log(ui.item); $("#TiposVehiculos").val(ui.item.label); $("#Vehiculos_idTipoVehiculo").val(ui.item.id); return false; }'
+		'select'=>'js:function(event, ui) { $("#Vehiculos_idTipoVehiculo").val(ui.item.id);}'
             ),
         ));
         ?>
@@ -56,7 +56,7 @@
             'options'=>array(
                 'showAnim'=>'fold',
 		'minLength'=>'1',
-		'select'=>'js:function(event, ui) { console.log(ui.item); $("#Proveedor").val(ui.item.label); $("#Vehiculos_idProveedor").val(ui.item.id); return false; }'
+		'select'=>'js:function(event, ui) {$("#Vehiculos_idProveedor").val(ui.item.id);}'
             ),
         ));
         ?>
@@ -72,7 +72,7 @@
             'options'=>array(
                 'showAnim'=>'fold',
 		'minLength'=>'1',
-		'select'=>'js:function(event, ui) { console.log(ui.item); $("#Marca").val(ui.item.label); $("#Vehiculos_idMarca").val(ui.item.id); return false; }'
+		'select'=>'js:function(event, ui) { $("#Vehiculos_idMarca").val(ui.item.id);}'
             ),
         ));
         ?>
@@ -89,7 +89,7 @@
             'options'=>array(
                 'showAnim'=>'fold',
 		'minLength'=>'1',
-		'select'=>'js:function(event, ui) { console.log(ui.item); $("#Modelo").val(ui.item.label); $("#Vehiculos_idModelo").val(ui.item.id); return false; }'
+		'select'=>'js:function(event, ui) {$("#Vehiculos_idModelo").val(ui.item.id);}'
             ),
         ));
         ?>        
@@ -107,7 +107,7 @@
             'options'=>array(
                 'showAnim'=>'fold',
 		'minLength'=>'1',
-		'select'=>'js:function(event, ui) { console.log(ui.item); $("#Color").val(ui.item.label); $("#Vehiculos_idColor").val(ui.item.id); return false; }'
+		'select'=>'js:function(event, ui) { $("#Vehiculos_idColor").val(ui.item.id);}'
             ),
             'htmlOptions'=>array(
                 'style'=>'width:100px;'
@@ -132,7 +132,7 @@
 	</div><!-- row -->
         <div class="row">
             <?php echo $form->labelEx($model,'estado'); ?>
-            <?php echo $form->dropDownList($model, 'estado', array(0 => 'EN VENTA',1 =>'EN USO',2 => 'VENDIDO')); ?>
+            <?php echo $form->dropDownList($model, 'estado', array(1 =>'EN USO',0 => 'EN VENTA',2 => 'VENDIDO')); ?>
             <?php echo $form->error($model,'estado'); ?>
 	</div><!-- row -->
        

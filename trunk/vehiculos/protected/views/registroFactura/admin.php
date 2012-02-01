@@ -48,12 +48,12 @@ $('.search-form form').submit(function(){
 		'nro_factura',
                 array(
                     'name'=>'total_neto',
-                    'value'=> 'Vehiculos::formatearPeso($data->total_neto)',
+                    'value'=> 'OrdenTrabajo::formatearPeso($data->total_neto)',
                     'htmlOptions'=>array('style' => 'text-align: right;'),
                     ),
                 array(
                     'name'=>'total_bruto',
-                    'value'=> 'Vehiculos::formatearPeso($data->total_bruto)',
+                    'value'=> 'OrdenTrabajo::formatearPeso($data->total_bruto)',
                     'htmlOptions'=>array('style' => 'text-align: right;'),
                     ),
 		array(

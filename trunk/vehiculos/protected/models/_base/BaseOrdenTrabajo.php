@@ -155,4 +155,13 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
             $mixpatente = $primer.'-'.$segundo.'-'.$tercero;
             return $mixpatente;
         }
+        
+        public function formatearPeso($numerillo) {
+            
+            return '$ '.number_format($numerillo, 0, ',', '.');
+        }
+        
+        public function formatearKm($numerillo) {            
+            return number_format($numerillo, 0, ',', '.');
+        }
 }

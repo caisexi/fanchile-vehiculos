@@ -22,7 +22,7 @@ $this->menu=array(
 array(
 			'name' => 'idVehiculo',
 			'type' => 'raw',
-			'value' => $model->idVehiculo !== null ? GxHtml::link(Vehiculos::formatearPatente($model->idVehiculo), array('vehiculos/view', 'id' => GxActiveRecord::extractPkValue($model->idVehiculo, true))) : null,
+			'value' => $model->idVehiculo !== null ? GxHtml::link(OrdenTrabajo::formatearPatente($model->idVehiculo), array('vehiculos/view', 'id' => GxActiveRecord::extractPkValue($model->idVehiculo, true))) : null,
 			),
 array(
 			'name' => 'idRf',
@@ -32,7 +32,7 @@ array(
 array(
 			'name' => 'kilometraje',
 			'type' => 'raw',
-			'value' => RegistroFactura::formatearKm($model->kilometraje),
+			'value' => OrdenTrabajo::formatearKm($model->kilometraje),
 			),            
 'fecha',
 'creado',
@@ -60,12 +60,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'name'=>'precio_unitario',
-            'value' => 'Vehiculos::formatearPeso($data->precio_unitario)',
+            'value' => 'OrdenTrabajo::formatearPeso($data->precio_unitario)',
             'htmlOptions'=>array('style' => 'text-align: right;'),
         ),
         array(
             'name'=>'subtotal',
-            'value' => 'Vehiculos::formatearPeso($data->subtotal)',
+            'value' => 'OrdenTrabajo::formatearPeso($data->subtotal)',
             'htmlOptions'=>array('style' => 'text-align: right;'),
         ),
         array(

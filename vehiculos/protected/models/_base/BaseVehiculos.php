@@ -119,7 +119,7 @@ abstract class BaseVehiculos extends GxActiveRecord {
 		$criteria->compare('idColor', $this->idColor);
 		$criteria->compare('ano', $this->ano, true);
 		$criteria->compare('patente', $this->patente, true);
-		$criteria->compare('precioCompra', $this->precioCompra);
+		$criteria->compare('precioCompra', $this->precioCompra, true);
 		$criteria->compare('estado', $this->estado);
 		$criteria->compare('foto', $this->foto, true);
 		$criteria->compare('creado', $this->creado, true);

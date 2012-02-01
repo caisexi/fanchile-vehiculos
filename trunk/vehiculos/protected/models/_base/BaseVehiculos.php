@@ -90,7 +90,7 @@ abstract class BaseVehiculos extends GxActiveRecord {
 			'idMarca' => null,
 			'idModelo' => null,
 			'idColor' => null,
-			'ano' => Yii::t('app', 'Ano'),
+			'ano' => Yii::t('app', 'Año'),
 			'patente' => Yii::t('app', 'Patente'),
 			'precioCompra' => Yii::t('app', 'Precio Compra'),
 			'estado' => Yii::t('app', 'Estado'),

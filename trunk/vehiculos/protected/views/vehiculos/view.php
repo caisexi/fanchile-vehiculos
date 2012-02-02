@@ -67,5 +67,81 @@ array(
 'creado',
 'modificado',
 	),
-)); ?>
+)); 
+
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'ordenesvh-grid',
+    'summaryText'=>'', 
+    'dataProvider' => $dataProvider,
+    'columns' => array(
+        array(
+            'name'=>'nro_factura',
+            'value' => '$data->idRf->nro_factura',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+        ),
+        array(
+            'name'=>'Fecha Factura',
+            'value' => '$data->idRf->fecha',
+            'htmlOptions'=>array('style' => 'text-align: center;'),
+        ),
+        array(
+            'name'=>'nro_guia',
+            'value' => '$data->nro_guia',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+        ),
+        array(
+            'name'=>'Fecha Guia',
+            'value' => '$data->fecha',
+            'htmlOptions'=>array('style' => 'text-align: center;'),
+        ),
+        array(
+            'header'=>'Kilometraje',
+            'value' => 'OrdenTrabajo::formatearKm($data->kilometraje)',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+        array(
+            'header'=>'Subtotal',
+            'value' => 'OrdenTrabajo::formatearPeso($data->sumita)',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+        ),
+        array(
+            'class' => 'CButtonColumn',
+            'header' => 'Opciones',
+            'htmlOptions'=>array('width' => 120),
+            'template'=>'{view}{update}{delete}',
+            'buttons'=>array
+            (
+                'view' => array
+                (
+                    'label'=>'Ver',
+                    'url'=>'Yii::app()->createUrl("ordentrabajo/view", array("id"=>$data->id))',
+                    'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
+                ),
+                'update' => array
+                (
+                    'label'=>'Editar',
+                    'url'=>'Yii::app()->createUrl("ordentrabajo/update", array("id"=>$data->id))',
+                    'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
+                ),
+                'delete' => array
+                (
+                    'label'=>'Borrar',
+                    'url'=>'Yii::app()->createUrl("ordentrabajo/delete", array("id"=>$data->id))',
+                    'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
+                ),
+            ),
+        ),
+    ),
+));
+
+$this->widget('zii.widgets.CDetailView', array(
+	'data' => $model,
+	'attributes' => array(
+            array(
+                'name'=>'Gasto Acumulado',
+                'value' => OrdenTrabajo::formatearPeso($model->gastoAcumulado),
+            ),
+        ),
+)); 
+?>
 

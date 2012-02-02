@@ -32,17 +32,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'name'=>'Total Acumulado',
-            'value' => 'OrdenTrabajo::formatearPeso($data["acumulado"])',
-            'htmlOptions'=>array('style' => 'text-align: right;'),
-        ),
-        array(
-            'name'=>'Kilometraje Inicial',
-            'value' => 'OrdenTrabajo::formatearKm($data["inicial"])',
-            'htmlOptions'=>array('style' => 'text-align: right;'),
-        ),
-        array(
-            'name'=>'Kilometraje Final',
-            'value' => 'OrdenTrabajo::formatearKm($data["final"])',
+            'value' => 'OrdenTrabajo::formatearPeso($data["gastoAcumulado"])',
             'htmlOptions'=>array('style' => 'text-align: right;'),
         ),
         array(

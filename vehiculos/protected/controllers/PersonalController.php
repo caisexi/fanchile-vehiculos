@@ -26,7 +26,7 @@ class PersonalController extends GxController {
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete','ACPersona'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -105,5 +105,23 @@ class PersonalController extends GxController {
 			'model' => $model,
 		));
 	}
+        
+        public function actionACPersona() {
+            if (isset($_GET['term'])) {
+            $searchTerm = $_GET['term'];
+            $result = array();
+            $personal = Personal::model()->findAll('nombre LIKE :nombre OR apellido_pat LIKE :apell', array(':nombre' => '%' . $searchTerm . '%', ':apell' => '%' . $searchTerm . '%'));
+
+            foreach ($personal as $persona) {
+                $result[] = array(
+                    'label' => $persona->nombre . ' ' . $persona->apellido_pat, // label y value son usados por el juiautocomplete
+                    'value' => $persona->nombre . ' ' . $persona->apellido_pat,
+                    'id' => $persona->id,
+                );
+            }
+
+                echo CJSON::encode($result);
+            }
+        }
 
 }

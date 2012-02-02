@@ -26,7 +26,7 @@ class HistorialVehiculosController extends GxController {
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
-				'actions'=>array('admin','delete'),
+				'actions'=>array('admin','delete', 'ACPatente'),
 				'users'=>array('admin'),
 			),
 			array('deny',  // deny all users
@@ -105,5 +105,23 @@ class HistorialVehiculosController extends GxController {
 			'model' => $model,
 		));
 	}
+        
+        public function actionACPatente() {
+            if (isset($_GET['term'])) {
+            $searchTerm = $_GET['term'];
+            $result = array();
+            $patentes = Vehiculos::model()->findAll('patente LIKE :nombre', array(':nombre' => '%' . $searchTerm . '%'));
+
+            foreach ($patentes as $patente) {
+                $result[] = array(
+                    'label' => $patente->patente, // label y value son usados por el juiautocomplete
+                    'value' => $patente->patente,
+                    'id' => $patente->id,
+                );
+            }
+
+                echo CJSON::encode($result);
+            }
+        }
 
 }

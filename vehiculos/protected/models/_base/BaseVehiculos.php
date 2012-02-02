@@ -59,7 +59,7 @@ abstract class BaseVehiculos extends GxActiveRecord {
 			array('patente', 'length', 'max'=>6),
 			array('foto', 'safe'),
 			array('idColor, foto', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, idCombustible, idTipoVehiculo, idProveedor, idMarca, idModelo, idColor, ano, patente, precioCompra, estado, foto, creado, modificado', 'safe', 'on'=>'search'),
+			array('id, idCombustible, idTipoVehiculo, idProveedor, idMarca, idModelo, idColor, ano, patente, precioCompra, estado, foto, gastoAcumulado, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -151,5 +151,12 @@ abstract class BaseVehiculos extends GxActiveRecord {
                     return "VENDIDO";
                     break;
             }
+        }
+        
+        public function sumarGasto() {
+            $totalgasto = 0;
+            foreach($this->ordenTrabajos as $ots)
+                $totalgasto = $totalgasto + $ots->sumita;
+            return $totalgasto;
         }
 }

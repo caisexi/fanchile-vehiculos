@@ -76,12 +76,14 @@ class OrdenTrabajoController extends GxController {
                                 if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues))
                                 {
                                         $factura = $this->loadModel($model->id_rf, 'RegistroFactura');
+                                        $auto = $this->loadModel($model->id_vehiculo, 'Vehiculos');
                                         $suma = $model->sumita;
                                         $suma_neto = $suma + $factura->total_neto;
+                                        $auto->gastoAcumulado = $auto->sumarGasto();
                                         $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
                                         $suma_bruto = $suma_neto * (($iva['valor_iva']/100)+1);
                                         $factura->setAttributes(array('total_neto'=>$suma_neto, 'total_bruto'=>round($suma_bruto)));
-                                        if($factura->save())
+                                        if($factura->save() && $auto->save())
                                             $this->redirect(array('registrofactura/view', 'id' => $factura->id));
                                 }
 			}
@@ -105,11 +107,13 @@ class OrdenTrabajoController extends GxController {
                         $masterValues = array ('id_ot'=>$model->id);
 
 			if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues) && $model->save()) {
-				$factura = $this->loadModel($model->id_rf, 'RegistroFactura');
+                                        $factura = $this->loadModel($model->id_rf, 'RegistroFactura');
+                                        $auto = $this->loadModel($model->id_vehiculo, 'Vehiculos');
+                                        $auto->gastoAcumulado = $auto->sumarGasto();
                                         $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
                                         $suma_bruto = $factura->sumarNeto() * (($iva['valor_iva']/100)+1);
                                         $factura->setAttributes(array('total_neto'=>$factura->sumarNeto(), 'total_bruto'=>round($suma_bruto)));
-                                        if($factura->save())
+                                        if($factura->save() && $auto->save())
                                             $this->redirect(array('registrofactura/view', 'id' => $factura->id));
 			}
 		}

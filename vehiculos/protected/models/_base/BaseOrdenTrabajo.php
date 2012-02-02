@@ -102,12 +102,12 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
               'elements'=>array(
                 'id_detalle_reparacion'=>array(
                     'type'=>'dropdownlist',
-                    'items'=>array(''=>'SELECCIONAR')+GxHtml::listDataEx(DetalleReparacion::model()->findAllAttributes(null, true)),
+                    'items'=>array(''=>'---')+GxHtml::listDataEx(DetalleReparacion::model()->findAllAttributes(null, true)),
                 ),
                 'id_marca'=>array(
                     'type'=>'dropdownlist',
                     //it is important to add an empty item because of new records
-                    'items'=>array(''=>'SELECCIONAR')+GxHtml::listDataEx(MarcasRepuestos::model()->findAllAttributes(null, true)),
+                    'items'=>array(''=>'---')+GxHtml::listDataEx(MarcasRepuestos::model()->findAllAttributes(null, true)),
                 ),
                 'precio_unitario'=>array(
                     'type'=>'text',

@@ -71,7 +71,12 @@ array(
 
 $this->widget('zii.widgets.grid.CGridView', array(
     'id' => 'ordenesvh-grid',
-    'summaryText'=>'', 
+    'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
+        'pager' => array(
+            'header'=>'',
+            'prevPageLabel' => 'Anterior',
+            'nextPageLabel' => 'Siguiente',
+        ),
     'dataProvider' => $dataProvider,
     'columns' => array(
         array(

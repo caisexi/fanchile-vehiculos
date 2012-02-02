@@ -39,7 +39,7 @@ class VehiculosController extends GxController {
 	public function actionView($id) {
                 $dataProvider = new CActiveDataProvider('OrdenTrabajo', array(
                     'pagination'=>array(
-                        'pageSize'=>30,
+                        'pageSize'=>10,
                     ),
                     'sort'=>array(
 			'defaultOrder'=>'idRf.fecha ASC',

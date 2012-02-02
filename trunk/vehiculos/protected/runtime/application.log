@@ -948,3 +948,1346 @@ in C:\wamp\www\vehiculos\index.php (13)
 2012/02/01 19:42:26 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
 in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/02/01 20:11:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "parcialpdf".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('parcialpdf')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+---
+2012/02/01 20:12:30 [error] [php] Constant K_PATH_CACHE already defined (C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php:85)
+Stack trace:
+#0 unknown(0): ReflectionClass->newInstance()
+#1 C:\wamp\www\framework\YiiBase.php(215): call_user_func_array()
+#2 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(3): createComponent()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (85)
+in C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php (3)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (114)
+2012/02/01 20:20:16 [error] [php] Undefined property: TCPDF::$cell_margin (C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php:6311)
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php(97): call_user_func_array()
+#1 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(25): ETcPdf->__call()
+#2 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(25): ETcPdf->writeHTMLCell()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php (6311)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php (21468)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (97)
+2012/02/01 20:20:17 [error] [php] Undefined property: TCPDF::$cell_margin (C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php:6311)
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php(97): call_user_func_array()
+#1 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(25): ETcPdf->__call()
+#2 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(25): ETcPdf->writeHTMLCell()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php (6311)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php (21468)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (97)
+2012/02/01 20:20:19 [error] [php] Undefined property: TCPDF::$cell_margin (C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php:6311)
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php(97): call_user_func_array()
+#1 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(25): ETcPdf->__call()
+#2 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(25): ETcPdf->writeHTMLCell()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php (6311)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\tcpdf\tcpdf.php (21468)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (97)
+2012/02/01 20:24:34 [error] [php] require_once(C:\wamp\www\vehiculos\protected\extensions\tcpdf/tcpdff/tcpdf.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory (C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php:38)
+Stack trace:
+#0 C:\wamp\www\framework\YiiBase.php(198): import()
+#1 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(2): createComponent()
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#3 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#4 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#5 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#9 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#10 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (38)
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (38)
+in C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php (2)
+2012/02/01 20:24:43 [error] [php] Constant K_PATH_CACHE already defined (C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php:85)
+Stack trace:
+#0 unknown(0): ReflectionClass->newInstance()
+#1 C:\wamp\www\framework\YiiBase.php(215): call_user_func_array()
+#2 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(2): createComponent()
+#3 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#4 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#5 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#6 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#7 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#8 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#9 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#10 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#11 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\extensions\tcpdf\ETcPdf.php (85)
+in C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php (2)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (114)
+2012/02/01 20:30:36 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "//viewPath/_export".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(26): CController->renderPartial('//viewPath/_exp...', true, true)
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', NULL, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', NULL, true)
+#4 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('parcialpdf', NULL, true)
+#5 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): CController->render('parcialpdf')
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+---
+2012/02/01 20:31:12 [error] [php] Undefined variable: html (C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php:29)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php (29)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (114)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/01 20:34:19 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "site/parcial".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(26): CController->renderPartial('site/parcial', true, true)
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', NULL, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', NULL, true)
+#4 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('parcialpdf', NULL, true)
+#5 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): CController->render('parcialpdf')
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+---
+2012/02/01 20:34:29 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "site/parcial".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(26): CController->renderPartial('site/parcial', true, true)
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', NULL, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', NULL, true)
+#4 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('parcialpdf', NULL, true)
+#5 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): CController->render('parcialpdf')
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+---
+2012/02/01 20:46:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "parcialpdf.pdf".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('parcialpdf.pdf')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf.pdf')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf.pdf
+---
+2012/02/01 20:54:03 [error] [php] Undefined variable: l (C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php:33)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf
+in C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php (33)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (114)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/01 21:03:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "parcialpdf.php".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('parcialpdf.php')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf.php')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf.php
+---
+2012/02/01 21:03:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "parcialpdf.php".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('parcialpdf.php')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf.php')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/parcialpdf.php
+---
+2012/02/01 21:24:04 [error] [exception.CException] exception 'CException' with message 'Alias "application.extensions.tcpdf.ETcPdf" is invalid. Make sure it points to an existing PHP file.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\framework\YiiBase.php(198): YiiBase::import('application.ext...', true)
+#1 C:\wamp\www\vehiculos\protected\views\site\parcialpdf.php(3): YiiBase::createComponent('application.ext...', 'P', 'cm', 'A4', true, 'UTF-8')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('parcialpdf', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(115): CController->render('parcialpdf', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index-test.php(15): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index-test.php/site/parcialpdf
+---
+2012/02/01 21:25:10 [error] [php] include(mpdf.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\wamp\www\vehiculos\protected\extensions\yii-pdf\EYiiPdf.php(82): ReflectionClass->__construct()
+#2 C:\wamp\www\vehiculos\protected\extensions\yii-pdf\EYiiPdf.php(104): EYiiPdf->initLibrary()
+#3 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): EYiiPdf->mPDF()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#7 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index-test.php(15): CWebApplication->run()
+REQUEST_URI=/vehiculos/index-test.php/site/parcialpdf
+2012/02/01 21:25:11 [error] [php] include(mpdf.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\wamp\www\vehiculos\protected\extensions\yii-pdf\EYiiPdf.php(82): ReflectionClass->__construct()
+#2 C:\wamp\www\vehiculos\protected\extensions\yii-pdf\EYiiPdf.php(104): EYiiPdf->initLibrary()
+#3 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(114): EYiiPdf->mPDF()
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#6 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#7 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index-test.php(15): CWebApplication->run()
+REQUEST_URI=/vehiculos/index-test.php/site/parcialpdf
+2012/02/01 21:27:37 [error] [exception.HTML2PDF_exception] <span style="color: #AA0000; font-weight: bold;">ERREUR n°6</span><br>Fichier : C:\wamp\www\vehiculos\protected\vendors\html2pdf\html2pdf.class.php<br>Ligne : 1319<br><br>Impossible de charger l'image <b>/vehiculos/images/logo verdana.png</b>
+REQUEST_URI=/vehiculos/index-test.php/site/parcialpdf
+---
+2012/02/01 21:28:31 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "registrofactura/index".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('registrofactura...', Array, true)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(120): CController->render('registrofactura...', Array, true)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index-test.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index-test.php/site/parcialpdf
+---
+2012/02/01 21:28:55 [error] [exception.CException] exception 'CException' with message 'SiteController cannot find the requested view "registroFactura/index".' in C:\wamp\www\framework\web\CController.php:879
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('registroFactura...', Array, true)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(120): CController->render('registroFactura...', Array, true)
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionParcialpdf()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('parcialpdf')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/parcialpdf')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index-test.php(15): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index-test.php/site/parcialpdf
+---
+2012/02/02 12:33:19 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`historial_vehiculos`, CONSTRAINT `historial_vehiculos_ibfk_1` FOREIGN KEY (`id_vehiculo`) REFERENCES `vehiculos` (`id`)). The SQL statement executed was: DELETE FROM `vehiculos` WHERE `vehiculos`.`id`=1.
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (83)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:33:19 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`historial_vehiculos`, CONSTRAINT `historial_vehiculos_ibfk_1` FOREIGN KEY (`id_vehiculo`) REFERENCES `vehiculos` (`id`)). The SQL statement executed was: DELETE FROM `vehiculos` WHERE `vehiculos`.`id`=1' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('1')
+#2 C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php(83): CActiveRecord->delete()
+#3 [internal function]: VehiculosController->actionDelete('1')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(VehiculosController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(VehiculosController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/delet...')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/delete/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/1
+---
+2012/02/02 12:34:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`historial_vehiculos`, CONSTRAINT `historial_vehiculos_ibfk_1` FOREIGN KEY (`id_vehiculo`) REFERENCES `vehiculos` (`id`)). The SQL statement executed was: DELETE FROM `vehiculos` WHERE `vehiculos`.`id`=1.
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (83)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:34:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`historial_vehiculos`, CONSTRAINT `historial_vehiculos_ibfk_1` FOREIGN KEY (`id_vehiculo`) REFERENCES `vehiculos` (`id`)). The SQL statement executed was: DELETE FROM `vehiculos` WHERE `vehiculos`.`id`=1' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('1')
+#2 C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php(83): CActiveRecord->delete()
+#3 [internal function]: VehiculosController->actionDelete('1')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(VehiculosController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(VehiculosController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/delet...')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/delete/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/1
+---
+2012/02/02 12:34:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`historial_vehiculos`, CONSTRAINT `historial_vehiculos_ibfk_1` FOREIGN KEY (`id_vehiculo`) REFERENCES `vehiculos` (`id`)). The SQL statement executed was: DELETE FROM `vehiculos` WHERE `vehiculos`.`id`=1.
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (83)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:34:12 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`vehiculos`.`historial_vehiculos`, CONSTRAINT `historial_vehiculos_ibfk_1` FOREIGN KEY (`id_vehiculo`) REFERENCES `vehiculos` (`id`)). The SQL statement executed was: DELETE FROM `vehiculos` WHERE `vehiculos`.`id`=1' in C:\wamp\www\framework\db\CDbCommand.php:354
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(1735): CDbCommand->execute()
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1159): CActiveRecord->deleteByPk('1')
+#2 C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php(83): CActiveRecord->delete()
+#3 [internal function]: VehiculosController->actionDelete('1')
+#4 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(VehiculosController), Array)
+#5 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(VehiculosController), Object(ReflectionMethod), Array)
+#6 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#7 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#9 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#13 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#15 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/delet...')
+#16 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#17 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/delete/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/1
+---
+2012/02/02 12:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/100
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos
+---
+2012/02/02 12:38:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/100
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos
+---
+2012/02/02 12:48:25 [warning] [application] Failed to set unsafe attribute "vehiculoses" of "ColoresVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\ColoresVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:48:52 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:48:52 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:48:52 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:48:52 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:48:52 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:48:52 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:24 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:24 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:24 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:24 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:24 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:24 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:59 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:59 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:59 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:59 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:59 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:49:59 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:50:37 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:50:37 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:50:37 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:50:37 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:50:37 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:50:37 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:23 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:23 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:23 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:23 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:23 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:23 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:58 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:58 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:58 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:58 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:58 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:51:58 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:52:59 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:52:59 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:52:59 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:52:59 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:52:59 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:52:59 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:54:24 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:54:24 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:54:24 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:54:24 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:54:24 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:54:24 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:55:29 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:55:29 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:55:29 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:55:29 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:55:29 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 12:55:29 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:08 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:08 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:08 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:08 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:08 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:08 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:21 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:21 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:21 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:21 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:21 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:00:21 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (51)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:02:23 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:02:23 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:02:23 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:02:23 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:02:23 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:02:23 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (69)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:12:54 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACPatente')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/ACPatente?term=c
+HTTP_REFERER=http://localhost/vehiculos/index.php/historialvehiculos/create
+---
+2012/02/02 13:13:08 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACPatente')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/ACPatente?term=ca
+HTTP_REFERER=http://localhost/vehiculos/index.php/historialvehiculos/create
+---
+2012/02/02 13:13:47 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombre' in 'where clause'. The SQL statement executed was: SELECT * FROM `vehiculos` `t` WHERE nombre LIKE :nombre. Bound with :nombre='%a%'.
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (113)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:13:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nombre' in 'where clause'. The SQL statement executed was: SELECT * FROM `vehiculos` `t` WHERE nombre LIKE :nombre. Bound with :nombre='%a%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(113): CActiveRecord->findAll('nombre LIKE :no...', Array)
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): HistorialVehiculosController->actionACPatente()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACPatente')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/ACPatente?term=a
+HTTP_REFERER=http://localhost/vehiculos/index.php/historialvehiculos/create
+---
+2012/02/02 13:14:12 [error] [exception.CException] exception 'CException' with message 'Property "Vehiculos.nombre" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('nombre')
+#1 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(117): CActiveRecord->__get('nombre')
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): HistorialVehiculosController->actionACPatente()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACPatente')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/ACPatente?term=c
+HTTP_REFERER=http://localhost/vehiculos/index.php/historialvehiculos/create
+---
+2012/02/02 13:23:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'apellido_pat' in 'where clause'. The SQL statement executed was: SELECT * FROM `modelos_vehiculos` `t` WHERE nombre LIKE :nombre OR apellido_pat LIKE :apell. Bound with :nombre='%a%', :apell='%a%'.
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (113)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:23:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'apellido_pat' in 'where clause'. The SQL statement executed was: SELECT * FROM `modelos_vehiculos` `t` WHERE nombre LIKE :nombre OR apellido_pat LIKE :apell. Bound with :nombre='%a%', :apell='%a%'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(113): CActiveRecord->findAll('nombre LIKE :no...', Array)
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(50): PersonalController->actionACPersona()
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACPersona')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/ACPers...')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/vehiculos/index.php/personal/ACPersona?term=a
+HTTP_REFERER=http://localhost/vehiculos/index.php/historialvehiculos/create
+---
+2012/02/02 13:24:30 [error] [php] Undefined variable: vehiculo (C:\wamp\www\vehiculos\protected\controllers\PersonalController.php:117)
+Stack trace:
+#0 C:\wamp\www\framework\web\filters\CFilterChain.php(134): PersonalController->runAction()
+#1 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#2 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): PersonalController->filterAccessControl()
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): PersonalController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): PersonalController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/personal/ACPersona?term=a
+in C:\wamp\www\vehiculos\protected\controllers\PersonalController.php (117)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:24:50 [error] [exception.CException] exception 'CException' with message 'Property "Personal.apellido_pa" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('apellido_pa')
+#1 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(118): CActiveRecord->__get('apellido_pa')
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): PersonalController->actionACPersona()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#7 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACPersona')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/ACPers...')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/personal/ACPersona?term=a
+HTTP_REFERER=http://localhost/vehiculos/index.php/historialvehiculos/create
+---
+2012/02/02 13:26:19 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:26:19 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:29:40 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:29:40 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:31:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idVehiculo' in 'field list'. The SQL statement executed was: SELECT id, idVehiculo FROM `historial_vehiculos` `t`.
+in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php (248)
+in C:\wamp\www\vehiculos\protected\views\personal\_form.php (43)
+in C:\wamp\www\vehiculos\protected\views\personal\create.php (19)
+2012/02/02 13:31:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idVehiculo' in 'field list'. The SQL statement executed was: SELECT id, idVehiculo FROM `historial_vehiculos` `t`' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(248): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\vehiculos\protected\views\personal\_form.php(43): GxActiveRecord->findAllAttributes(NULL, true)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\vehiculos\protected\views\personal\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(60): CController->render('create', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): PersonalController->actionCreate()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/create')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/vehiculos/index.php/personal/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/personal
+---
+2012/02/02 13:32:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idVehiculo' in 'field list'. The SQL statement executed was: SELECT id, idVehiculo FROM `historial_vehiculos` `t`.
+in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php (248)
+in C:\wamp\www\vehiculos\protected\views\personal\_form.php (43)
+in C:\wamp\www\vehiculos\protected\views\personal\create.php (19)
+2012/02/02 13:32:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idVehiculo' in 'field list'. The SQL statement executed was: SELECT id, idVehiculo FROM `historial_vehiculos` `t`' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(248): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\vehiculos\protected\views\personal\_form.php(43): GxActiveRecord->findAllAttributes(NULL, true)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\vehiculos\protected\views\personal\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(60): CController->render('create', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): PersonalController->actionCreate()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/create')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/vehiculos/index.php/personal/create
+---
+2012/02/02 13:32:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idVehiculo' in 'field list'. The SQL statement executed was: SELECT id, idVehiculo FROM `historial_vehiculos` `t`.
+in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php (248)
+in C:\wamp\www\vehiculos\protected\views\personal\_form.php (43)
+in C:\wamp\www\vehiculos\protected\views\personal\create.php (19)
+2012/02/02 13:32:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'idVehiculo' in 'field list'. The SQL statement executed was: SELECT id, idVehiculo FROM `historial_vehiculos` `t`' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1406): CActiveRecord->query(Object(CDbCriteria), true)
+#3 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(248): CActiveRecord->findAll(Object(CDbCriteria))
+#4 C:\wamp\www\vehiculos\protected\views\personal\_form.php(43): GxActiveRecord->findAllAttributes(NULL, true)
+#5 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#6 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#8 C:\wamp\www\vehiculos\protected\views\personal\create.php(19): CController->renderPartial('_form', Array)
+#9 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#10 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#11 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#12 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('create', Array, true)
+#13 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(60): CController->render('create', Array)
+#14 C:\wamp\www\framework\web\actions\CInlineAction.php(50): PersonalController->actionCreate()
+#15 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#16 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#17 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#18 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#19 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#20 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#21 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#22 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#23 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('create')
+#24 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/create')
+#25 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#26 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#27 {main}
+REQUEST_URI=/vehiculos/index.php/personal/create
+HTTP_REFERER=http://localhost/vehiculos/index.php/personal/admin
+---
+2012/02/02 13:35:31 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:35:31 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:35:36 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:35:36 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:35:58 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:35:58 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:36:16 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:36:16 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:36:25 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:36:25 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:36:54 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:36:54 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:38:22 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:38:22 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:38:30 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:38:30 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:38:57 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:38:57 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:39:03 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:39:03 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:39:48 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:39:48 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:40:10 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:40:10 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:41:06 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:41:06 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (50)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:42:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/2
+HTTP_REFERER=http://localhost/vehiculos/index.php/REGISTROFACTURA
+---
+2012/02/02 13:45:41 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:45:41 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:46:28 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:46:28 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:47:22 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:47:22 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:48:09 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:48:09 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:49:29 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:49:29 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:51:17 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:51:17 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:53:00 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:53:00 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:53:59 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:53:59 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:56:11 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:56:11 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:56:53 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 13:56:53 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:13:03 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:13:03 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:13:03 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:13:03 [error] [exception.CException] exception 'CException' with message 'Property "Vehiculos.totalAcumulado" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('totalAcumulado')
+#1 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(112): CActiveRecord->__get('totalAcumulado')
+#2 [internal function]: OrdenTrabajoController->actionUpdate('58')
+#3 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OrdenTrabajoController), Array)
+#4 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrdenTrabajoController), Object(ReflectionMethod), Array)
+#5 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#7 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#12 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/up...')
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/58
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/update/58
+---
+2012/02/02 14:13:47 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:13:47 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:13:47 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:13:47 [error] [php] Undefined variable: suma (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:112)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/58
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (112)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:16:29 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:16:29 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:16:29 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:18:23 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:18:23 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:18:23 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:18:46 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:18:46 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:18:46 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:25:22 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:25:22 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:25:22 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:25:53 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:25:53 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:25:53 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:26:13 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:26:13 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:26:13 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:26:13 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:28:57 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:28:57 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:28:57 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:29:44 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:29:44 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:32:06 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:32:06 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:32:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:32:55 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:32:55 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:32:55 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:32:55 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:33:26 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:33:26 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:33:26 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:34:11 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:34:11 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:36:54 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:36:54 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:38:30 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:38:30 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:38:30 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:39:08 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:08 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:08 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:39:19 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:19 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:19 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:39:28 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:28 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:28 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:39:47 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:47 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:39:47 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:40:16 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:40:16 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:40:16 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:40:24 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:40:24 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:40:24 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/02 14:40:35 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:40:35 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/02 14:40:35 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)

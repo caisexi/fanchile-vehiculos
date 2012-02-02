@@ -39,9 +39,6 @@
 		<?php echo $form->error($model,'id_cargo_empresa'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('historialVehiculoses')); ?></label>
-		<?php echo $form->checkBoxList($model, 'historialVehiculoses', GxHtml::encodeEx(GxHtml::listDataEx(HistorialVehiculos::model()->findAllAttributes(null, true)), false, true)); ?>
-
 <?php
 echo GxHtml::submitButton(Yii::t('app', 'Save'));
 $this->endWidget();

@@ -34,7 +34,7 @@ abstract class BaseHistorialVehiculos extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'fecha';
+		return 'idVehiculo';
 	}
 
 	public function rules() {

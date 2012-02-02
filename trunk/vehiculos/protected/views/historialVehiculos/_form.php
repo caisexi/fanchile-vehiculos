@@ -12,16 +12,42 @@
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
+        
+                <div class="row">
+                
+                <?php echo $form->labelEx($model,'id_vehiculo'); ?>
+        
+                <?php echo $form->hiddenField($model, 'id_vehiculo'); ?>
 
+                <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'model'=>$model,
+                    'attribute'=>'idVehiculo',
+                    'source'=>$this->createUrl('historialvehiculos/ACPatente'),
+                    'options'=>array(
+                        'showAnim'=>'fold',
+                        'minLength'=>'1',
+                        'select'=>'js:function(event, ui) { $("#HistorialVehiculos_id_vehiculo").val(ui.item.id);}'
+                    ),
+                ));
+                ?>
+                </div><!-- row -->
+		
 		<div class="row">
-		<?php echo $form->labelEx($model,'id_vehiculo'); ?>
-		<?php echo $form->dropDownList($model, 'id_vehiculo', GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'id_vehiculo'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'id_persona'); ?>
-		<?php echo $form->dropDownList($model, 'id_persona', GxHtml::listDataEx(Personal::model()->findAllAttributes(null, true))); ?>
-		<?php echo $form->error($model,'id_persona'); ?>
+                <?php echo $form->labelEx($model,'id_persona'); ?>
+        
+                <?php echo $form->hiddenField($model, 'id_persona'); ?>
+
+                <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'model'=>$model,
+                    'attribute'=>'idPersona',
+                    'source'=>$this->createUrl('personal/ACPersona'),
+                    'options'=>array(
+                        'showAnim'=>'fold',
+                        'minLength'=>'1',
+                        'select'=>'js:function(event, ui) { $("#HistorialVehiculos_id_persona").val(ui.item.id);}'
+                    ),
+                ));
+                ?>
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'fecha'); ?>

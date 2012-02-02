@@ -37,8 +37,25 @@ class VehiculosController extends GxController {
 
 
 	public function actionView($id) {
+                $dataProvider = new CActiveDataProvider('OrdenTrabajo', array(
+                    'pagination'=>array(
+                        'pageSize'=>30,
+                    ),
+                    'sort'=>array(
+			'defaultOrder'=>'idRf.fecha ASC',
+                    ),
+                    'criteria' => array(
+                        'with' => array('idRf'),
+                        'condition' => 'id_vehiculo = :idvh',
+                        'params' => array(
+                            ':idvh' => $this->loadModel($id, 'Vehiculos')->id,
+                        ),
+                    ),
+                ));
+               
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'Vehiculos'),
+                        'dataProvider' => $dataProvider,
 		));
 	}
 

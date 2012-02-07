@@ -5199,3 +5199,119 @@ REQUEST_URI=/vehiculos/
 in C:\wamp\www\vehiculos\themes\fanchile\views\layouts\main.php (32)
 in C:\wamp\www\vehiculos\protected\views\layouts\column2.php (21)
 in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (32)
+2012/02/07 14:29:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "registrofacturas".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/registrofacturas
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/index
+---
+2012/02/07 14:29:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ordenestrabajo/view/about".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordenestrabajo/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/ordenestrabajo/view/about
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:29:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ordenestrabajo/view/about".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordenestrabajo/...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/ordenestrabajo/view/about
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:29:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ordenestrabajo".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordenestrabajo')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/ordenestrabajo
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordenestrabajo/view/about
+---
+2012/02/07 14:29:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ordenestrabajos".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordenestrabajos')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/ordenestrabajos
+---
+2012/02/07 14:29:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/18
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:30:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/18
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:30:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/18
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:30:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/18
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:30:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/18
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:30:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/18
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura
+---
+2012/02/07 14:34:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detallesot".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detallesot')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detallesot/
+HTTP_REFERER=http://localhost/vehiculos/index.php/tiposvehiculos
+---
+2012/02/07 14:35:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "detalleraparacion".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('detalleraparaci...')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/detalleraparacion/
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/update/58
+---

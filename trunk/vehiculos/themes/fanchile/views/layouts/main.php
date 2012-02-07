@@ -39,24 +39,36 @@
 			'items'=>array
 			(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-				array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'jqSlideMenuTest', 'url'=>array('#'), 'items'=>array
+				array('label'=>'Ingresos', 'url'=>array('#'), 'items'=>array
 				(
-					array('label'=>'Home', 'url'=>array('/site/index')),
-					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-					array('label'=>'Contact', 'url'=>array('/site/contact'), 'items'=>array
+					array('label'=>'Factura', 'url'=>array('/registrofactura/ ')),
+					array('label'=>'Orden de trabajo', 'url'=>array('/ordentrabajo/ ')),
+                                        array('label'=>'Historial Vehiculo', 'url'=>array('/historialvehiculos/ ')),
+								
+				)),
+                                array('label'=>'Administrar', 'url'=>array('#'), 'items'=>array
 					(
-						array('label'=>'Home', 'url'=>array('/site/index')),
-						array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-						array('label'=>'Contact', 'url'=>array('/site/contact'), 'items'=>array
+						array('label'=>'Vehiculos', 'url'=>array('#'), 'items'=>array
 						(
-							array('label'=>'Home', 'url'=>array('/site/index')),
-							array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
-							array('label'=>'Contact', 'url'=>array('/site/contact')),
-						)), 
-					)),				
-				)),				
+							array('label'=>'Colores', 'url'=>array('/coloresvehiculos/ ')),
+							array('label'=>'Marcas', 'url'=>array('/marcasvehiculos/ ')),
+							array('label'=>'Modelos', 'url'=>array('/modelosvehiculos/ ')),
+                                                        array('label'=>'Combustibles', 'url'=>array('/combustibles/ ')),
+                                                        array('label'=>'Tipos', 'url'=>array('/tiposvehiculos')),
+						)),
+                                                array('label'=>'Detalles de reparacion', 'url'=>array('/detallereparacion/ ')),
+                                                array('label'=>'Proveedores', 'url'=>array('/proveedores/ ')),
+                                                array('label'=>'Marcas Repuestos', 'url'=>array('/marcasrepuestos/ ')),
+                                                array('label'=>'Ivas', 'url'=>array('/ivas/ ')),
+                                                array('label'=>'Personal', 'url'=>array('#'), 'items'=>array
+						(
+                                                        array('label'=>'Personal', 'url'=>array('/personal/ ')),
+                                                        array('label'=>'Cargos', 'url'=>array('/cargosempresa/ ')),
+							array('label'=>'Areas', 'url'=>array('/areasempresa/ ')),
+						)),
+                                                array('label'=>'Usuarios', 'url'=>array('/usuarios/ ')),
+                                                
+					)),	
 				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

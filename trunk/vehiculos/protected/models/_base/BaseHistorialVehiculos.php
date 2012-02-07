@@ -30,7 +30,7 @@ abstract class BaseHistorialVehiculos extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'HistorialVehiculos|HistorialVehiculoses', $n);
+		return Yii::t('app', 'Historial de Vehiculo|Historiales de Vehiculos', $n);
 	}
 
 	public static function representingColumn() {

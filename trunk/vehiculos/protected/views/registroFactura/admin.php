@@ -67,8 +67,32 @@ $('.search-form form').submit(function(){
 		'creado',
 		'modificado',
 		*/
-		array(
-			'class' => 'CButtonColumn',
-		),
+                array(
+                    'class' => 'CButtonColumn',
+                    'header' => 'Opciones',
+                    'htmlOptions'=>array('width' => 120),
+                    'template'=>'{view}{update}{delete}',
+                    'buttons'=>array
+                    (
+                        'view' => array
+                        (
+                            'label'=>'Ver',
+                            'url'=>'Yii::app()->createUrl("historialvehiculos/view", array("id"=>$data->id))',
+                            'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
+                        ),
+                        'update' => array
+                        (
+                            'label'=>'Editar',
+                            'url'=>'Yii::app()->createUrl("historialvehiculos/update", array("id"=>$data->id))',
+                            'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
+                        ),
+                        'delete' => array
+                        (
+                            'label'=>'Borrar',
+                            'url'=>'Yii::app()->createUrl("historialvehiculos/delete", array("id"=>$data->id))',
+                            'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
+                        ),
+                    ),
+                ),
 	),
 )); ?>

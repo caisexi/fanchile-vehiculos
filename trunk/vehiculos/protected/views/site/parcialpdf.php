@@ -1,16 +1,17 @@
-<?php
-
-$this->breadcrumbs = array(Yii::t('app', 'Resumen Parcial'));
-
-$this->menu = array(
-        array('label'=>'PDF', 'url'=>array('site/bparcial?pdf=1&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal)),
-    );
-
-?>
-
 <h2>RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL <?php echo date('d-m-Y',strtotime($fechainicial)); ?> HASTA EL <?php echo date('d-m-Y',strtotime($fechafinal)) ?></h2>
-<?php
 
+
+<?php
+/*
+$data = $dataProvider->getData();
+echo '<table id="yw0" class="detail-view2">
+<tr class="principal">
+<td colspan="2" align="center"><b>DATOS DEL CONTRATO</b></td>
+<tr>';
+foreach ($data as $dat)
+echo '<tr class="odd"><td> <b>N° Control</b> </td><td> '.$dat['patente'].'</td></tr>';
+echo '</table>';
+*/
 $this->widget('zii.widgets.grid.CGridView', array(
     'summaryText'=>'', 
     'dataProvider' => $dataProvider,
@@ -18,7 +19,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name'=>'Patente',
             'value' => 'OrdenTrabajo::formatearPatente($data["patente"])',
-            'htmlOptions'=>array('width' => '100'),
+            'htmlOptions'=>array('width' => '60'),
         ),
         array(
             'name'=>'Tipo de Vehiculo',
@@ -49,11 +50,12 @@ $this->widget('zii.widgets.grid.CGridView', array(
         array(
             'name'=>'Recorrido Parcial',
             'value' => 'OrdenTrabajo::formatearKm($data["recorrido"])',
-            'htmlOptions'=>array('style' => 'text-align: right;'),
+            'htmlOptions'=>array('style' => 'text-align: right;', 'width' => '100'),
         ),
         array(
             'name'=>'Pesos/Km',
             'value' => '$data["pesoskm"]',
+            'htmlOptions'=>array('style' => 'text-align: center;'),
         ),
     ),
 ));

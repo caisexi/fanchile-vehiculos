@@ -23,21 +23,45 @@
 <div class="container" id="page">
 
     <div id="header">
-		<div id="logo">                  
-                        <?php //echo CHtml::encode(Yii::app()->name); ?>
-                        <?php //echo CHtml::image(Yii::app()->request->baseUrl.'/images/logo.jpg'); ?>                           
-                </div>
-    </div><!-- header -->
 
-	<div id="mainmenu">
+    </div><!-- header -->
+<?php
+	$jqueryslidemenupath = Yii::app()->assetManager->publish(Yii::app()->basePath.'/scripts/jqueryslidemenu/');
+	
+	//Register jQuery, JS and CSS files
+	Yii::app()->clientScript->registerCoreScript('jquery');
+	Yii::app()->clientScript->registerCssFile($jqueryslidemenupath.'/jqueryslidemenu.css');	
+	Yii::app()->clientScript->registerScriptFile($jqueryslidemenupath.'/jqueryslidemenu.js');
+?>
+	<div id="myslidemenu" class="jqueryslidemenu">
+	<!-- <div id="mainmenu"> -->
 		<?php $this->widget('zii.widgets.CMenu',array(
-			'items'=>array(
+			'items'=>array
+			(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Vehiculos', 'url'=>array('/vehiculos/admin')),
-				array('label'=>'Ingresar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+				array('label'=>'Contact', 'url'=>array('/site/contact')),
+				array('label'=>'jqSlideMenuTest', 'url'=>array('#'), 'items'=>array
+				(
+					array('label'=>'Home', 'url'=>array('/site/index')),
+					array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+					array('label'=>'Contact', 'url'=>array('/site/contact'), 'items'=>array
+					(
+						array('label'=>'Home', 'url'=>array('/site/index')),
+						array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+						array('label'=>'Contact', 'url'=>array('/site/contact'), 'items'=>array
+						(
+							array('label'=>'Home', 'url'=>array('/site/index')),
+							array('label'=>'About', 'url'=>array('/site/page', 'view'=>'about')),
+							array('label'=>'Contact', 'url'=>array('/site/contact')),
+						)), 
+					)),				
+				)),				
+				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
+		<br style="clear: left" />
 	</div><!-- mainmenu -->
 	<?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

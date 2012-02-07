@@ -1,5 +1,5 @@
 <div class="form">
-    <?php echo CHtml::beginForm('bparcial','post'); ?>
+    <?php echo CHtml::beginForm('bparcial','get'); ?>
 
     <div class="row">
         <?php echo CHtml::Label('Fecha Inicio','fecha_inicial'); ?>
@@ -14,7 +14,7 @@
             ));
         ; ?>
     </div>
-    
+    <?php echo CHtml::hiddenField('pdf',0); ?>
     <div class="row">
         <?php echo CHtml::Label('Fecha Termino','fecha_termino'); ?>
         <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(

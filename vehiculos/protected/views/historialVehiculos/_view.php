@@ -1,4 +1,4 @@
-<div class="view"  onclick="location.href='view/<?php echo $data->id?>'" onmouseover="this.style.backgroundColor='#7AC08E'"  onmouseout="this.style.backgroundColor='#fff'">
+<div class="view" onclick="location.href='view/<?php echo $data->id?>'" onmouseover="this.style.backgroundColor='#7AC08E'"  onmouseout="this.style.backgroundColor='#fff'">
 
 	<?php echo GxHtml::encode($data->getAttributeLabel('id_vehiculo')); ?>:
 		<?php echo GxHtml::encode(GxHtml::valueEx($data->idVehiculo)); ?>

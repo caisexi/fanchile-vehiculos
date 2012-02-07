@@ -6336,3 +6336,675 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/vehiculos/index.php/coloresvehiculos/favicon.ico
 ---
+2012/02/07 18:23:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('coloresvehiculo...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/coloresvehiculos/favicon.ico
+---
+2012/02/07 18:23:24 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('coloresvehiculo...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/coloresvehiculos/view/favicon.ico
+---
+2012/02/07 18:24:32 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('coloresvehiculo...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/coloresvehiculos/view/favicon.ico
+---
+2012/02/07 18:30:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('coloresvehiculo...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/coloresvehiculos/favicon.ico
+---
+2012/02/07 18:31:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('coloresvehiculo...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/coloresvehiculos/favicon.ico
+---
+2012/02/07 18:31:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:31:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:31:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:31:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:32:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:32:02 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/view/...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/view/favicon.ico
+---
+2012/02/07 18:32:04 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/updat...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/update/favicon.ico
+---
+2012/02/07 18:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/favicon.ico
+---
+2012/02/07 18:32:47 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/view/favicon.ico
+---
+2012/02/07 18:32:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/update/favicon.ico
+---
+2012/02/07 18:33:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/favicon.ico
+---
+2012/02/07 18:33:36 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/favicon.ico
+---
+2012/02/07 18:33:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:34:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/favicon.ico
+---
+2012/02/07 18:34:15 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/view/favicon.ico
+---
+2012/02/07 18:34:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/favicon.ico
+---
+2012/02/07 18:34:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/104
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos
+---
+2012/02/07 18:34:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('favicon.ico')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/favicon.ico
+---
+2012/02/07 18:34:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:34:50 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/view/...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/view/favicon.ico
+---
+2012/02/07 18:35:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:35:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:36:10 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:36:10 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:36:10 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:36:10 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:36:10 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:36:10 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:36:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:36:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:37:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:39:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:39:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:39:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/fa...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/favicon.ico
+---
+2012/02/07 18:40:00 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/vi...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/view/favicon.ico
+---
+2012/02/07 18:40:05 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\wamp\www\framework\web\CController.php:337
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(310): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#2 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#3 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#9 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/up...')
+#10 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#11 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#12 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/favicon.ico
+---
+2012/02/07 18:45:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:45:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:45:22 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:45:22 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:45:22 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:45:22 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:45:22 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:45:22 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (14)
+2012/02/07 18:45:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:45:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:45:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:45:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:45:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:46:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:46:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:46:09 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACCombustibles')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/ACCom...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/ACCombustibles?term=a
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/create
+---
+2012/02/07 18:46:20 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\wamp\www\framework\web\auth\CAccessControlFilter.php:157
+Stack trace:
+#0 C:\wamp\www\framework\web\auth\CAccessControlFilter.php(120): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\wamp\www\framework\web\filters\CFilter.php(39): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#3 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#6 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('ACCombustibles')
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/ACCom...')
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#11 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/ACCombustibles?term=aa
+HTTP_REFERER=http://localhost/vehiculos/index.php/vehiculos/create
+---
+2012/02/07 18:46:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/favicon.ic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/site/favicon.ico
+---
+2012/02/07 18:47:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:47:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:52:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('vehiculos/favic...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/vehiculos/favicon.ico
+---
+2012/02/07 18:52:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/favicon.ico
+---
+2012/02/07 18:52:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/favicon.ico
+---
+2012/02/07 18:53:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "favicon.ico".' in C:\wamp\www\framework\web\CController.php:484
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(271): CController->missingAction('favicon.ico')
+#1 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('favicon.ico')
+#2 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#3 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#4 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/favicon.ico
+---

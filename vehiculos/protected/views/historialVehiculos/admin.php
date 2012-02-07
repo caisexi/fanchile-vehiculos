@@ -2,12 +2,12 @@
 
 $this->breadcrumbs = array(
 	$model->label(2) => array('index'),
-	Yii::t('app', 'Manage'),
+	Yii::t('app', 'Administrar'),
 );
 
 $this->menu = array(
-		array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url'=>array('index')),
-		array('label'=>Yii::t('app', 'Create') . ' ' . $model->label(), 'url'=>array('create')),
+		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
+		array('label'=>Yii::t('app', 'Agregar') . ' ' . $model->label(), 'url'=>array('create')),
 	);
 
 Yii::app()->clientScript->registerScript('search', "
@@ -24,14 +24,10 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1><?php echo Yii::t('app', 'Manage') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
+<h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
 
-<p>
-You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
-<?php echo GxHtml::link(Yii::t('app', 'Advanced Search'), '#', array('class' => 'search-button')); ?>
-<div class="search-form">
+<?php echo GxHtml::link(Yii::t('app', 'Busqueda Avanzada'), '#', array('class' => 'search-button')); ?>
+<div class="search-form" style="display:none">
 <?php $this->renderPartial('_search', array(
 	'model' => $model,
 )); ?>
@@ -40,13 +36,19 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'historial-vehiculos-grid',
 	'dataProvider' => $model->search(),
+        'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
+        'pager' => array(
+            'header'=>'',
+            'prevPageLabel' => 'Anterior',
+            'nextPageLabel' => 'Siguiente',
+        ),
 	'filter' => $model,
 	'columns' => array(
-		'id',
 		array(
 				'name'=>'id_vehiculo',
 				'value'=>'GxHtml::valueEx($data->idVehiculo)',
 				'filter'=>GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)),
+                                'htmlOptions' => array('width' => '85'),
 				),
 		array(
 				'name'=>'id_persona',
@@ -56,8 +58,33 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 		'fecha',
 		'creado',
 		'modificado',
-		array(
-			'class' => 'CButtonColumn',
-		),
+                array(
+                    'class' => 'CButtonColumn',
+                    'header' => 'Opciones',
+                    'htmlOptions'=>array('width' => 120),
+                    'template'=>'{view}{update}{delete}',
+                    'buttons'=>array
+                    (
+                        'view' => array
+                        (
+                            'label'=>'Ver',
+                            'url'=>'Yii::app()->createUrl("historialvehiculos/view", array("id"=>$data->id))',
+                            'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
+                        ),
+                        'update' => array
+                        (
+                            'label'=>'Editar',
+                            'url'=>'Yii::app()->createUrl("historialvehiculos/update", array("id"=>$data->id))',
+                            'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
+                        ),
+                        'delete' => array
+                        (
+                            'label'=>'Borrar',
+                            'url'=>'Yii::app()->createUrl("historialvehiculos/delete", array("id"=>$data->id))',
+                            'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
+                        ),
+                    ),
+                ), 
 	),
+        
 )); ?>

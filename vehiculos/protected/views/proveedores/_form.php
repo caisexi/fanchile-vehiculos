@@ -8,7 +8,7 @@
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+		<?php echo Yii::t('app', 'Los campos con'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'son obligatorios'); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -49,13 +49,8 @@
 		<?php echo $form->error($model,'rutProveedor'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('registroFacturas')); ?></label>
-		<?php echo $form->checkBoxList($model, 'registroFacturas', GxHtml::encodeEx(GxHtml::listDataEx(RegistroFactura::model()->findAllAttributes(null, true)), false, true)); ?>
-		<label><?php echo GxHtml::encode($model->getRelationLabel('vehiculoses')); ?></label>
-		<?php echo $form->checkBoxList($model, 'vehiculoses', GxHtml::encodeEx(GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)), false, true)); ?>
-
 <?php
-echo GxHtml::submitButton(Yii::t('app', 'Save'));
+echo GxHtml::submitButton(Yii::t('app', 'Guardar'),array('class' => 'boton'));
 $this->endWidget();
 ?>
 </div><!-- form -->

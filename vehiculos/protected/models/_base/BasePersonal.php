@@ -32,7 +32,7 @@ abstract class BasePersonal extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Personal|Personals', $n);
+		return Yii::t('app', 'Personal|Personal', $n);
 	}
 
 	public static function representingColumn() {

@@ -25,7 +25,7 @@ abstract class BaseCiudades extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Ciudades|Ciudades', $n);
+		return Yii::t('app', 'Ciudad|Ciudades', $n);
 	}
 
 	public static function representingColumn() {

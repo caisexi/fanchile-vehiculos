@@ -84,7 +84,7 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 	public function search() {
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('nro_guia', $this->nro_guia);
+		$criteria->compare('nro_guia', $this->nro_guia, true);
 		$criteria->compare('id_vehiculo', $this->id_vehiculo);
 		$criteria->compare('id_rf', $this->id_rf);
 		$criteria->compare('fecha', $this->fecha, true);

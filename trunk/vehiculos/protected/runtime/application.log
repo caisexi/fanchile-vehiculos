@@ -7008,3 +7008,201 @@ Stack trace:
 #5 {main}
 REQUEST_URI=/vehiculos/index.php/registrofactura/favicon.ico
 ---
+2012/02/07 19:25:27 [warning] [application] Failed to set unsafe attribute "vehiculoses" of "ColoresVehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\ColoresVehiculosController.php (68)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/07 19:48:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(41): GxController->loadModel('1', 'HistorialVehicu...')
+#1 [internal function]: HistorialVehiculosController->actionView('1')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HistorialVehiculosController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HistorialVehiculosController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/marcasvehiculos/admin
+---
+2012/02/07 20:40:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "view/view".' in C:\wamp\www\framework\web\CWebApplication.php:280
+Stack trace:
+#0 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('view/view')
+#1 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#2 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/vehiculos/index.php/view/3
+HTTP_REFERER=http://localhost/vehiculos/index.php/tiposvehiculos
+---
+2012/02/07 21:12:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(64): GxController->loadModel('58', 'HistorialVehicu...')
+#1 [internal function]: HistorialVehiculosController->actionUpdate('58')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HistorialVehiculosController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HistorialVehiculosController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/update/58
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/admin
+---
+2012/02/07 21:12:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(64): GxController->loadModel('59', 'HistorialVehicu...')
+#1 [internal function]: HistorialVehiculosController->actionUpdate('59')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HistorialVehiculosController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HistorialVehiculosController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/update/59
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/admin
+---
+2012/02/07 21:12:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(64): GxController->loadModel('67', 'HistorialVehicu...')
+#1 [internal function]: HistorialVehiculosController->actionUpdate('67')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HistorialVehiculosController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HistorialVehiculosController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/update/67
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/admin
+---
+2012/02/07 21:25:53 [warning] [application] Failed to set unsafe attribute "sumita" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (148)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/07 21:26:29 [error] [php] Use of undefined constant sumita - assumed 'sumita' (C:\wamp\www\framework\base\CComponent.php(607) : eval()'d code:1)
+Stack trace:
+#0 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(138): CDataColumn->renderDataCellContent()
+#1 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(517): CDataColumn->renderDataCell()
+#2 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(490): CGridView->renderTableRow()
+#3 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(400): CGridView->renderTableBody()
+#4 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#5 unknown(0): CGridView->renderSection()
+#6 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback()
+#7 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CGridView->renderContent()
+#8 C:\wamp\www\framework\web\CBaseController.php(174): CGridView->run()
+#9 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\admin.php(94): OrdenTrabajoController->widget()
+#10 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#11 C:\wamp\www\framework\web\CBaseController.php(96): OrdenTrabajoController->renderInternal()
+#12 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#13 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#14 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(152): OrdenTrabajoController->render()
+#15 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionAdmin()
+#16 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#18 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#20 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#21 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#22 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#23 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#24 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#25 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#26 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#27 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/admin
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\admin.php (94)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (152)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/07 21:27:10 [error] [exception.CException] exception 'CException' with message 'Property "OrdenTrabajo.Subtotal" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('Subtotal')
+#1 C:\wamp\www\framework\web\helpers\CHtml.php(2044): CActiveRecord->__get('Subtotal')
+#2 C:\wamp\www\framework\web\helpers\CHtml.php(1774): CHtml::resolveValue(Object(OrdenTrabajo), 'Subtotal')
+#3 C:\wamp\www\framework\web\helpers\CHtml.php(1205): CHtml::activeInputField('text', Object(OrdenTrabajo), 'Subtotal', Array)
+#4 C:\wamp\www\framework\zii\widgets\grid\CDataColumn.php(105): CHtml::activeTextField(Object(OrdenTrabajo), 'Subtotal', Array)
+#5 C:\wamp\www\framework\zii\widgets\grid\CGridColumn.php(106): CDataColumn->renderFilterCellContent()
+#6 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(450): CGridColumn->renderFilterCell()
+#7 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(428): CGridView->renderFilter()
+#8 C:\wamp\www\framework\zii\widgets\grid\CGridView.php(398): CGridView->renderTableHeader()
+#9 C:\wamp\www\framework\zii\widgets\CBaseListView.php(158): CGridView->renderItems()
+#10 [internal function]: CBaseListView->renderSection(Array)
+#11 C:\wamp\www\framework\zii\widgets\CBaseListView.php(141): preg_replace_callback('/{(\w+)}/', Array, '{summary}?{item...')
+#12 C:\wamp\www\framework\zii\widgets\CBaseListView.php(126): CBaseListView->renderContent()
+#13 C:\wamp\www\framework\web\CBaseController.php(174): CBaseListView->run()
+#14 C:\wamp\www\vehiculos\protected\views\ordenTrabajo\admin.php(93): CBaseController->widget('zii.widgets.gri...', Array)
+#15 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#16 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#17 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#18 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('admin', Array, true)
+#19 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(152): CController->render('admin', Array)
+#20 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionAdmin()
+#21 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#22 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#23 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#24 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#25 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#26 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#27 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#28 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('admin')
+#30 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/ad...')
+#31 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#32 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/admin
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/
+---
+2012/02/07 21:28:26 [error] [php] Undefined variable: data (C:\wamp\www\vehiculos\protected\views\ordenTrabajo\admin.php:64)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): OrdenTrabajoController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): OrdenTrabajoController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(152): OrdenTrabajoController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): OrdenTrabajoController->actionAdmin()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/admin
+in C:\wamp\www\vehiculos\protected\views\ordenTrabajo\admin.php (64)
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (152)
+in C:\wamp\www\vehiculos\index.php (13)

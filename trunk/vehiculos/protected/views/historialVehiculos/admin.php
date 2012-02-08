@@ -36,6 +36,7 @@ $('.search-form form').submit(function(){
 <?php $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'historial-vehiculos-grid',
 	'dataProvider' => $model->search(),
+        'emptyText' => 'No hay resultados',
         'summaryText' => 'Mostrando del {start} al {end} de {count} resultado(s).',
         'pager' => array(
             'header'=>'',

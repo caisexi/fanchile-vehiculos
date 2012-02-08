@@ -56,7 +56,7 @@
 							array('label'=>'Marcas', 'url'=>array('/marcasvehiculos/ ')),
 							array('label'=>'Modelos', 'url'=>array('/modelosvehiculos/ ')),
                                                         array('label'=>'Combustibles', 'url'=>array('/combustibles/ ')),
-                                                        array('label'=>'Tipos', 'url'=>array('/tiposvehiculos')),
+                                                        array('label'=>'Tipos', 'url'=>array('/tiposvehiculos/ ')),
 						)),
                                                 array('label'=>'Detalles de reparacion', 'url'=>array('/detallereparacion/ ')),
                                                 array('label'=>'Proveedores', 'url'=>array('/proveedores/ ')),
@@ -70,9 +70,17 @@
 						)),
                                                 array('label'=>'Usuarios', 'url'=>array('/usuarios/ ')),
                                                 
-					)),	
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+					)),
+                                array('label'=>'Informes', 'url'=>array('#'), 'items'=>array
+					(
+						array('label'=>'Mantenciones', 'url'=>array('#'), 'items'=>array
+						(
+                                                        array('label'=>'Parcial', 'url'=>array('/site/parcial')),
+							array('label'=>'Mensual', 'url'=>array('#')),
+						)),                                                
+					)),
+				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
 		<br style="clear: left" />

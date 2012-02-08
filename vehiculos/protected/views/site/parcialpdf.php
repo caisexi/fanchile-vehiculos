@@ -1,6 +1,3 @@
-<h2>RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL <?php echo date('d-m-Y',strtotime($fechainicial)); ?> HASTA EL <?php echo date('d-m-Y',strtotime($fechafinal)) ?></h2>
-
-
 <?php
 /*
 $data = $dataProvider->getData();
@@ -12,6 +9,7 @@ foreach ($data as $dat)
 echo '<tr class="odd"><td> <b>N° Control</b> </td><td> '.$dat['patente'].'</td></tr>';
 echo '</table>';
 */
+
 $this->widget('zii.widgets.grid.CGridView', array(
     'summaryText'=>'', 
     'dataProvider' => $dataProvider,
@@ -54,7 +52,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'name'=>'Pesos/Km',
-            'value' => '$data["pesoskm"]',
+            'value' => 'number_format($data["pesoskm"],4,",",".")',
             'htmlOptions'=>array('style' => 'text-align: center;'),
         ),
     ),

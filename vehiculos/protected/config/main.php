@@ -7,8 +7,8 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+        'sourceLanguage'=>'es_es',
 	'name'=>'SISTEMA DE CONTROL DE FLOTA DE VEHICULOS',
-    
         'theme'=>'fanchile',
 
 	// preloading 'log' component

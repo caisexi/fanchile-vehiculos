@@ -90,12 +90,10 @@ class SiteController extends GxController
 	{
             
             $oDbConnection = Yii::app()->db;
-            
-            $estado = 1;
 
             $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechainic ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
-            $oCommand->bindParam(':estado', $estado);
+            $oCommand->bindParam(':estado', $estado = 1);
             
             $oCommand->bindParam(':fechainic', $_GET['fecha_inicial']);
             
@@ -112,15 +110,54 @@ class SiteController extends GxController
                     'dataProvider' => $dataProvider,
                     'fechainicial' => $_GET['fecha_inicial'],
                     'fechafinal' => $_GET['fecha_termino'],
-            ));}
+                ));
+            }
             else
             {
                 $mPDF1 = Yii::app()->ePdf->mPDF();
+               $header = array (
+                  'odd' => array (
+                    'L' => array (
+                      'content' => 'FORESTAL ANCHILE LTDA.',
+                      'font-size' => 10,
+                      'font-style' => 'B',
+                      'font-family' => 'serif',
+                      'color'=>'#000000'
+                    ),
+                    'C' => array (
+                      'content' => 'RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
+                    CDateTimeParser::parse(
+                        $_GET['fecha_inicial'], 
+                        'yyyy-MM-dd'
+                    ),
+                    'long',null)).' HASTA EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
+                    CDateTimeParser::parse(
+                        $_GET['fecha_termino'], 
+                        'yyyy-MM-dd'
+                    ),
+                    'long',null)),
+                      'font-size' => 10,
+                      'font-style' => 'B',
+                      'font-family' => 'serif',
+                      'color'=>'#000000'
+                    ),
+                    'R' => array (
+                      'content' => 'GERENCIA DE ADMINISTRACION',
+                      'font-size' => 10,
+                      'font-style' => 'B',
+                      'font-family' => 'serif',
+                      'color'=>'#000000'
+                    ),
+                    'line' => 1,
+                  ),
+                  'even' => array ()
+                );
+                $mPDF1->SetHeader($header);
 
-                $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','LETTER-L');
+                $mPDF1->SetFooter('PAGINA {PAGENO}');
+                $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','A3-L');
                 
-                $mPDF1->SetHeader('Document Title|Center Text|{PAGENO}');
-                $mPDF1->SetFooter('Reporte Parcial');
+                
                 
                 $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/styles_pdf.css');
                 $mPDF1->WriteHTML($stylesheet, 1);

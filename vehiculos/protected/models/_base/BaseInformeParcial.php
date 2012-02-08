@@ -7,12 +7,11 @@
  * property or method in class "InformeParcial".
  *
  * Columns in table "informe_parcial" available as properties of the model,
- * and there are no model relations.
+ * followed by relations of table "informe_parcial" available as properties of the model.
  *
  * @property integer $id
- * @property integer $id_patente
+ * @property integer $id_vehiculo
  * @property integer $id_usuario
- * @property integer $id_area
  * @property integer $total_reparaciones
  * @property integer $total_acumulado
  * @property integer $recorrido_parcial
@@ -20,6 +19,8 @@
  * @property string $fecha_inicial
  * @property string $fecha_final
  *
+ * @property Personal $idUsuario
+ * @property Vehiculos $idVehiculo
  */
 abstract class BaseInformeParcial extends GxActiveRecord {
 
@@ -36,20 +37,22 @@ abstract class BaseInformeParcial extends GxActiveRecord {
 	}
 
 	public static function representingColumn() {
-		return 'pesos_km';
+		return array('fecha_inicial','fecha_final');
 	}
 
 	public function rules() {
 		return array(
-			array('id_patente, id_usuario, id_area, total_reparaciones, total_acumulado, recorrido_parcial, pesos_km, fecha_inicial, fecha_final', 'required'),
-			array('id_patente, id_usuario, id_area, total_reparaciones, total_acumulado, recorrido_parcial', 'numerical', 'integerOnly'=>true),
+			array('id_vehiculo, id_usuario, total_reparaciones, total_acumulado, recorrido_parcial, pesos_km, fecha_inicial, fecha_final', 'required'),
+			array('id_vehiculo, id_usuario, total_reparaciones, total_acumulado, recorrido_parcial', 'numerical', 'integerOnly'=>true),
 			array('pesos_km', 'length', 'max'=>10),
-			array('id, id_patente, id_usuario, id_area, total_reparaciones, total_acumulado, recorrido_parcial, pesos_km, fecha_inicial, fecha_final', 'safe', 'on'=>'search'),
+			array('id, id_vehiculo, id_usuario, total_reparaciones, total_acumulado, recorrido_parcial, pesos_km, fecha_inicial, fecha_final', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations() {
 		return array(
+			'idUsuario' => array(self::BELONGS_TO, 'Personal', 'id_usuario'),
+			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
 		);
 	}
 
@@ -61,15 +64,16 @@ abstract class BaseInformeParcial extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'id' => Yii::t('app', 'ID'),
-			'id_patente' => Yii::t('app', 'Id Patente'),
-			'id_usuario' => Yii::t('app', 'Id Usuario'),
-			'id_area' => Yii::t('app', 'Id Area'),
+			'id_vehiculo' => null,
+			'id_usuario' => null,
 			'total_reparaciones' => Yii::t('app', 'Total Reparaciones'),
 			'total_acumulado' => Yii::t('app', 'Total Acumulado'),
 			'recorrido_parcial' => Yii::t('app', 'Recorrido Parcial'),
 			'pesos_km' => Yii::t('app', 'Pesos Km'),
 			'fecha_inicial' => Yii::t('app', 'Fecha Inicial'),
 			'fecha_final' => Yii::t('app', 'Fecha Final'),
+			'idUsuario' => null,
+			'idVehiculo' => null,
 		);
 	}
 
@@ -77,9 +81,8 @@ abstract class BaseInformeParcial extends GxActiveRecord {
 		$criteria = new CDbCriteria;
 
 		$criteria->compare('id', $this->id);
-		$criteria->compare('id_patente', $this->id_patente);
+		$criteria->compare('id_vehiculo', $this->id_vehiculo);
 		$criteria->compare('id_usuario', $this->id_usuario);
-		$criteria->compare('id_area', $this->id_area);
 		$criteria->compare('total_reparaciones', $this->total_reparaciones);
 		$criteria->compare('total_acumulado', $this->total_acumulado);
 		$criteria->compare('recorrido_parcial', $this->recorrido_parcial);

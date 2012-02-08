@@ -7445,3 +7445,131 @@ Stack trace:
 REQUEST_URI=/vehiculos/index.php/ordentrabajo/update/7
 HTTP_REFERER=http://localhost/vehiculos/index.php/personal/admin
 ---
+2012/02/08 15:51:14 [error] [exception.CException] exception 'CException' with message 'Property "Personal.nombre apellido_pat" is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get('nombre apellido...')
+#1 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(213): CActiveRecord->__get('nombre apellido...')
+#2 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxHtml.php(143): GxActiveRecord->__toString()
+#3 C:\wamp\www\vehiculos\protected\views\personal\view.php(5): GxHtml::valueEx(Object(Personal))
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#8 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(42): CController->render('view', Array)
+#9 [internal function]: PersonalController->actionView('1')
+#10 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PersonalController), Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PersonalController), Object(ReflectionMethod), Array)
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#21 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/view')
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vehiculos/index.php/personal/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/personal/
+---
+2012/02/08 15:51:54 [error] [exception.CException] exception 'CException' with message 'Property "Personal. " is not defined.' in C:\wamp\www\framework\base\CComponent.php:131
+Stack trace:
+#0 C:\wamp\www\framework\db\ar\CActiveRecord.php(144): CComponent->__get(' ')
+#1 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxActiveRecord.php(209): CActiveRecord->__get(' ')
+#2 C:\wamp\www\vehiculos\protected\extensions\giix-components\GxHtml.php(143): GxActiveRecord->__toString()
+#3 C:\wamp\www\vehiculos\protected\views\personal\view.php(5): GxHtml::valueEx(Object(Personal))
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#5 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#6 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#7 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('view', Array, true)
+#8 C:\wamp\www\vehiculos\protected\controllers\PersonalController.php(42): CController->render('view', Array)
+#9 [internal function]: PersonalController->actionView('1')
+#10 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(PersonalController), Array)
+#11 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(PersonalController), Object(ReflectionMethod), Array)
+#12 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#13 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#14 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#15 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#16 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#17 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#18 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#19 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('view')
+#21 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('personal/view')
+#22 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#23 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/vehiculos/index.php/personal/view/1
+HTTP_REFERER=http://localhost/vehiculos/index.php/personal/
+---
+2012/02/08 17:33:44 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/08 17:33:44 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/08 17:33:44 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/08 17:34:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(64): GxController->loadModel('27', 'HistorialVehicu...')
+#1 [internal function]: HistorialVehiculosController->actionUpdate('27')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HistorialVehiculosController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HistorialVehiculosController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/update/27
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/02/08 17:35:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php(64): GxController->loadModel('27', 'HistorialVehicu...')
+#1 [internal function]: HistorialVehiculosController->actionUpdate('27')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(HistorialVehiculosController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(HistorialVehiculosController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('update')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('historialvehicu...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/historialvehiculos/update/27
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/02/08 17:54:06 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/08 17:54:06 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (105)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/08 17:54:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/08 17:54:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)

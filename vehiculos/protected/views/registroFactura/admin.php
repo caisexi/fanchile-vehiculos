@@ -77,19 +77,19 @@ $('.search-form form').submit(function(){
                         'view' => array
                         (
                             'label'=>'Ver',
-                            'url'=>'Yii::app()->createUrl("historialvehiculos/view", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("registrofactura/view", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
                         ),
                         'update' => array
                         (
                             'label'=>'Editar',
-                            'url'=>'Yii::app()->createUrl("historialvehiculos/update", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("registrofactura/update", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
                         ),
                         'delete' => array
                         (
                             'label'=>'Borrar',
-                            'url'=>'Yii::app()->createUrl("historialvehiculos/delete", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("registrofactura/delete", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
                         ),
                     ),

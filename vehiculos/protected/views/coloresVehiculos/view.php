@@ -19,18 +19,6 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data' => $model,
 	'attributes' => array(
-'id',
 'nombre',
 	),
 )); ?>
-
-<h2><?php echo GxHtml::encode($model->getRelationLabel('vehiculoses')); ?></h2>
-<?php
-	echo GxHtml::openTag('ul');
-	foreach($model->vehiculoses as $relatedModel) {
-		echo GxHtml::openTag('li');
-		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('vehiculos/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
-		echo GxHtml::closeTag('li');
-	}
-	echo GxHtml::closeTag('ul');
-?>

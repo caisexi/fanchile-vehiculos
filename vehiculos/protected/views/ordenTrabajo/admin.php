@@ -58,10 +58,11 @@ $('.search-form form').submit(function(){
 				),
 		'fecha',
 		'kilometraje',
-		/*
-		'creado',
-		'modificado',
-		*/
+                array(
+				'header'=>'Subtotal',
+				'value'=>'OrdenTrabajo::formatearPeso($data->sumita)',
+                                'htmlOptions' => array('width' => '100')
+				),
 		array(
                     'class' => 'CButtonColumn',
                     'header' => 'Opciones',
@@ -72,19 +73,19 @@ $('.search-form form').submit(function(){
                         'view' => array
                         (
                             'label'=>'Ver',
-                            'url'=>'Yii::app()->createUrl("historialvehiculos/view", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("ordentrabajo/view", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
                         ),
                         'update' => array
                         (
                             'label'=>'Editar',
-                            'url'=>'Yii::app()->createUrl("historialvehiculos/update", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("ordentrabajo/update", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
                         ),
                         'delete' => array
                         (
                             'label'=>'Borrar',
-                            'url'=>'Yii::app()->createUrl("historialvehiculos/delete", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("ordentrabajo/delete", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
                         ),
                     ),

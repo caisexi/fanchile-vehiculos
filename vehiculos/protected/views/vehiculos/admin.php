@@ -43,7 +43,11 @@ $('.search-form form').submit(function(){
             'nextPageLabel' => 'Siguiente',
         ),
 	'columns' => array(
-                'patente',
+                array(
+				'name'=>'patente',
+				'value'=>'$data->patente',
+                                'htmlOptions' => array('width' => '60')
+				),
                 array(
 				'name'=>'idMarca',
 				'value'=>'GxHtml::valueEx($data->idMarca0)',
@@ -65,7 +69,11 @@ $('.search-form form').submit(function(){
 				'filter'=>GxHtml::listDataEx(ColoresVehiculos::model()->findAllAttributes(null, true)),
                                 'htmlOptions' => array('width' => '80')
 				),
-		'ano',
+		array(
+				'name'=>'ano',
+				'value'=>'$data->ano',
+                                'htmlOptions' => array('width' => '50')
+				),
                 array(
 				'name'=>'estado',
 				'value'=>'$data->estado == 1 ? "EN USO" : ($data->estado == 0 ? "EN VENTA" : "VENDIDO")',
@@ -75,7 +83,7 @@ $('.search-form form').submit(function(){
 		array(
                     'class' => 'CButtonColumn',
                     'header' => 'Opciones',
-                    'htmlOptions'=>array('width' => 120),
+                    'htmlOptions'=>array('width' => 100),
                     'template'=>'{view}{update}{delete}',
                     'buttons'=>array
                     (

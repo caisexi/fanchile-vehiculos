@@ -40,7 +40,7 @@
 			'items'=>array
 			(
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
-				array('label'=>'Ingresos', 'url'=>array('#'), 'items'=>array
+				array('label'=>'Registros', 'url'=>array('#'), 'items'=>array
 				(
 					array('label'=>'Factura', 'url'=>array('/registrofactura/ ')),
 					array('label'=>'Orden de trabajo', 'url'=>array('/ordentrabajo/ ')),
@@ -58,16 +58,20 @@
                                                         array('label'=>'Combustibles', 'url'=>array('/combustibles/ ')),
                                                         array('label'=>'Tipos', 'url'=>array('/tiposvehiculos/ ')),
 						)),
-                                                array('label'=>'Detalles de reparacion', 'url'=>array('/detallereparacion/ ')),
-                                                array('label'=>'Proveedores', 'url'=>array('/proveedores/ ')),
-                                                array('label'=>'Marcas Repuestos', 'url'=>array('/marcasrepuestos/ ')),
-                                                array('label'=>'Ivas', 'url'=>array('/ivas/ ')),
+                                                array('label'=>'Proveedores', 'url'=>array('#'), 'items'=>array
+						(
+                                                    array('label'=>'Proveedores', 'url'=>array('/proveedores/ ')),
+                                                    array('label'=>'Ciudades', 'url'=>array('/ciudades/ ')),
+                                                )),
                                                 array('label'=>'Personal', 'url'=>array('#'), 'items'=>array
 						(
                                                         array('label'=>'Personal', 'url'=>array('/personal/ ')),
                                                         array('label'=>'Cargos', 'url'=>array('/cargosempresa/ ')),
 							array('label'=>'Areas', 'url'=>array('/areasempresa/ ')),
 						)),
+                                                array('label'=>'Marcas Repuestos', 'url'=>array('/marcasrepuestos/ ')),
+                                                array('label'=>'Ivas', 'url'=>array('/ivas/ ')),
+                                                array('label'=>'Detalles de reparacion', 'url'=>array('/detallereparacion/ ')),
                                                 array('label'=>'Usuarios', 'url'=>array('/usuarios/ ')),
                                                 
 					)),

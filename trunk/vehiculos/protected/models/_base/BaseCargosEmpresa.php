@@ -27,7 +27,7 @@ abstract class BaseCargosEmpresa extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'CargosEmpresa|CargosEmpresas', $n);
+		return Yii::t('app', 'Cargo Empresa|Cargos Empresa', $n);
 	}
 
 	public static function representingColumn() {
@@ -38,7 +38,7 @@ abstract class BaseCargosEmpresa extends GxActiveRecord {
 		return array(
 			array('nombre', 'required'),
 			array('id_area_empresa', 'numerical', 'integerOnly'=>true),
-			array('nombre', 'length', 'max'=>30),
+			array('nombre', 'length', 'max'=>40),
 			array('id_area_empresa', 'default', 'setOnEmpty' => true, 'value' => null),
 			array('id, nombre, id_area_empresa', 'safe', 'on'=>'search'),
 		);

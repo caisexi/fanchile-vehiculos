@@ -1,8 +1,4 @@
-<div class="view">
-
-	<?php echo GxHtml::encode($data->getAttributeLabel('id')); ?>:
-	<?php echo GxHtml::link(GxHtml::encode($data->id), array('view', 'id' => $data->id)); ?>
-	<br />
+<div class="view" onclick="location.href='view/<?php echo $data->id?>'" onmouseover="this.style.backgroundColor='#7AC08E'"  onmouseout="this.style.backgroundColor='#fff'">
 
 	<?php echo GxHtml::encode($data->getAttributeLabel('rut')); ?>:
 	<?php echo GxHtml::encode($data->rut); ?>
@@ -22,10 +18,9 @@
 	<?php echo GxHtml::encode($data->getAttributeLabel('creado')); ?>:
 	<?php echo GxHtml::encode($data->creado); ?>
 	<br />
-	<?php /*
+
 	<?php echo GxHtml::encode($data->getAttributeLabel('modificado')); ?>:
 	<?php echo GxHtml::encode($data->modificado); ?>
 	<br />
-	*/ ?>
 
 </div>

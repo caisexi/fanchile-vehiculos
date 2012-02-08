@@ -6,11 +6,11 @@ $this->breadcrumbs = array(
 );
 
 $this->menu=array(
-	array('label'=>Yii::t('app', 'List') . ' ' . $model->label(2), 'url'=>array('index')),
-	array('label'=>Yii::t('app', 'Create') . ' ' . $model->label(), 'url'=>array('create')),
-	array('label'=>Yii::t('app', 'Update') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
-	array('label'=>Yii::t('app', 'Delete') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>Yii::t('app', 'Manage') . ' ' . $model->label(2), 'url'=>array('admin')),
+	array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
+	array('label'=>Yii::t('app', 'Agregar') . ' ' . $model->label(), 'url'=>array('create')),
+	array('label'=>Yii::t('app', 'Editar') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
+	array('label'=>Yii::t('app', 'Borrar') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
+	array('label'=>Yii::t('app', 'Administrar') . ' ' . $model->label(2), 'url'=>array('admin')),
 );
 ?>
 
@@ -19,7 +19,6 @@ $this->menu=array(
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data' => $model,
 	'attributes' => array(
-'id',
 'nombre',
 'direccion',
 array(
@@ -33,23 +32,3 @@ array(
 'rutProveedor',
 	),
 )); ?>
-
-<h2><?php echo GxHtml::encode($model->getRelationLabel('registroFacturas')); ?></h2>
-<?php
-	echo GxHtml::openTag('ul');
-	foreach($model->registroFacturas as $relatedModel) {
-		echo GxHtml::openTag('li');
-		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('registroFactura/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
-		echo GxHtml::closeTag('li');
-	}
-	echo GxHtml::closeTag('ul');
-?><h2><?php echo GxHtml::encode($model->getRelationLabel('vehiculoses')); ?></h2>
-<?php
-	echo GxHtml::openTag('ul');
-	foreach($model->vehiculoses as $relatedModel) {
-		echo GxHtml::openTag('li');
-		echo GxHtml::link(GxHtml::encode(GxHtml::valueEx($relatedModel)), array('vehiculos/view', 'id' => GxActiveRecord::extractPkValue($relatedModel, true)));
-		echo GxHtml::closeTag('li');
-	}
-	echo GxHtml::closeTag('ul');
-?>

@@ -25,7 +25,7 @@ abstract class BaseDetalleReparacion extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'DetalleReparacion|DetalleReparacions', $n);
+		return Yii::t('app', 'Detalle de Reparacion|Detalles de Reparaciones', $n);
 	}
 
 	public static function representingColumn() {

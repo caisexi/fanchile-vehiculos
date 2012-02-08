@@ -8,14 +8,14 @@
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+		<?php echo Yii::t('app', 'Los campos con'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'son obligatorios'); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
 
 		<div class="row">
 		<?php echo $form->labelEx($model,'nombre'); ?>
-		<?php echo $form->textField($model, 'nombre', array('maxlength' => 30)); ?>
+		<?php echo $form->textField($model, 'nombre', array('maxlength' => 40,'size'=>'50')); ?>
 		<?php echo $form->error($model,'nombre'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -24,11 +24,8 @@
 		<?php echo $form->error($model,'id_area_empresa'); ?>
 		</div><!-- row -->
 
-		<label><?php echo GxHtml::encode($model->getRelationLabel('personals')); ?></label>
-		<?php echo $form->checkBoxList($model, 'personals', GxHtml::encodeEx(GxHtml::listDataEx(Personal::model()->findAllAttributes(null, true)), false, true)); ?>
-
 <?php
-echo GxHtml::submitButton(Yii::t('app', 'Save'));
+echo GxHtml::submitButton(Yii::t('app', 'Guardar'),array('class' => 'boton'));
 $this->endWidget();
 ?>
 </div><!-- form -->

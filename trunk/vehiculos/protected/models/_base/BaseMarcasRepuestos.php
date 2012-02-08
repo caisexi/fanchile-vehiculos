@@ -25,7 +25,7 @@ abstract class BaseMarcasRepuestos extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'MarcasRepuestos|MarcasRepuestoses', $n);
+		return Yii::t('app', 'Marca de Repuesto|Marcas de Repuestos', $n);
 	}
 
 	public static function representingColumn() {

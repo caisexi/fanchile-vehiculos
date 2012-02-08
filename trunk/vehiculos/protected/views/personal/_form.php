@@ -8,7 +8,7 @@
 ?>
 
 	<p class="note">
-		<?php echo Yii::t('app', 'Fields with'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'are required'); ?>.
+		<?php echo Yii::t('app', 'Los campos con'); ?> <span class="required">*</span> <?php echo Yii::t('app', 'son obligatorios'); ?>.
 	</p>
 
 	<?php echo $form->errorSummary($model); ?>
@@ -40,7 +40,7 @@
 		</div><!-- row -->
 
 <?php
-echo GxHtml::submitButton(Yii::t('app', 'Save'));
+echo GxHtml::submitButton(Yii::t('app', 'Guardar'),array('class' => 'boton'));
 $this->endWidget();
 ?>
 </div><!-- form -->

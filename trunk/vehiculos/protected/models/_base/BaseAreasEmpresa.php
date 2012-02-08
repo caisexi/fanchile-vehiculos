@@ -25,7 +25,7 @@ abstract class BaseAreasEmpresa extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'AreasEmpresa|AreasEmpresas', $n);
+		return Yii::t('app', 'Area Empresa|Areas Empresa', $n);
 	}
 
 	public static function representingColumn() {

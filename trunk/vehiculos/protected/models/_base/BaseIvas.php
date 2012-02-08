@@ -25,7 +25,7 @@ abstract class BaseIvas extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Ivas|Ivases', $n);
+		return Yii::t('app', 'Iva|Ivas', $n);
 	}
 
 	public static function representingColumn() {

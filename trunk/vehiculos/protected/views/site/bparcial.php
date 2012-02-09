@@ -4,7 +4,7 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Parcial'));
 
 $this->menu = array(
         array('label'=>'PDF', 'url'=>array('site/bparcial?pdf=1&save=0&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal)),
-        array('label'=>'SAVE', 'url'=>array('site/bparcial?pdf=1&save=1&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal)),
+        array('label'=>'GUARDAR', 'url'=>array('site/bparcial?pdf=1&save=1&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal)),
     );
 
 ?>

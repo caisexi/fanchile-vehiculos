@@ -104,7 +104,7 @@ class SiteController extends GxController
             $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
                 'keyField'=>'patente'
             ));                
-             if($_GET['pdf'] == 0)
+            if($_GET['pdf'] == 0)
             {          
                 $this->render('bparcial', array(
                     'dataProvider' => $dataProvider,
@@ -112,9 +112,28 @@ class SiteController extends GxController
                     'fechafinal' => $_GET['fecha_termino'],
                 ));
             }
+            elseif($_GET['save'] == 1)
+            {                
+                $dpinf = $dataProvider->getData();
+                
+                foreach($dpinf as $i=>$dp)
+                {
+                    $inf[$i] = new InformeParcial();
+                    $inf[$i]['id_vehiculo'] = $dp['id_vehi'];
+                    $inf[$i]['id_usuario'] = $dp['perso_id'];
+                    $inf[$i]['total_reparaciones'] = $dp['reparaciones'];
+                    $inf[$i]['total_acumulado'] = $dp['gastoAcumulado'];
+                    $inf[$i]['recorrido_parcial'] = $dp['recorrido'];
+                    $inf[$i]['pesos_km'] = $dp['pesoskm'];
+                    $inf[$i]['fecha_inicial'] = $_GET['fecha_inicial'];
+                    $inf[$i]['fecha_final'] = $_GET['fecha_termino'];
+                    $inf[$i]->save();
+                }
+                $this->render('inf', array('cac'=>$inf,'cac1'=>$dpinf));
+            }
             else
             {
-                $mPDF1 = Yii::app()->ePdf->mPDF();
+               $mPDF1 = Yii::app()->ePdf->mPDF();
                $header = array (
                   'odd' => array (
                     'L' => array (

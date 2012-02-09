@@ -15,6 +15,7 @@
         ; ?>
     </div>
     <?php echo CHtml::hiddenField('pdf',0); ?>
+    <?php echo CHtml::hiddenField('save',0); ?>
     <div class="row">
         <?php echo CHtml::Label('Fecha Termino','fecha_termino'); ?>
         <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
@@ -30,7 +31,7 @@
     </div>
     
     <div class="row submit">
-        <?php echo CHtml::submitButton('Consultar'); ?>
+        <?php echo GxHtml::submitButton(Yii::t('app', 'Consultar'),array('class' => 'boton')); ?>
     </div>
     
 <?php echo CHtml::endForm(); ?>

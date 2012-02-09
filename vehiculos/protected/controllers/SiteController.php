@@ -85,13 +85,13 @@ class SiteController extends GxController
 	{
 		$this->render('parcial');
 	}
-        
+
         public function actionBparcial()
 	{
             
             $oDbConnection = Yii::app()->db;
 
-            $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechainic ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
+            $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechainic ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
             $oCommand->bindParam(':estado', $estado = 1);
             

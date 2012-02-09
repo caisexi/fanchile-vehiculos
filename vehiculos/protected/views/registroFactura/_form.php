@@ -21,9 +21,10 @@
 		
 		<div class="row">
 		<?php echo $form->labelEx($model,'id_proveedor'); ?>
-                    <?php   $criteria=new CDbCriteria;                        
-                            $criteria->order='nombre ASC';
-                            ?>
+                <?php   
+                    $criteria=new CDbCriteria;                        
+                    $criteria->order='nombre ASC';
+                ?>
 		<?php echo $form->dropDownList($model, 'id_proveedor', GxHtml::listDataEx(Proveedores::model()->findAllAttributes(null, true,$criteria))); ?>
 		<?php echo $form->error($model,'id_proveedor'); ?>
 		</div><!-- row -->

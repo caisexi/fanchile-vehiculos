@@ -84,7 +84,18 @@ class OrdenTrabajoController extends GxController {
                                         $suma_bruto = $suma_neto * (($iva['valor_iva']/100)+1);
                                         $factura->setAttributes(array('total_neto'=>$suma_neto, 'total_bruto'=>round($suma_bruto)));
                                         if($factura->save() && $auto->save())
-                                            $this->redirect(array('registrofactura/view', 'id' => $factura->id));
+                                        {
+                                            $oDbConnection = Yii::app()->db;
+                                            $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($model->fecha))));
+                                            $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
+                                            $gastado = $oDbConnection->createCommand('select sum(detalles_ot.subtotal) as gasto from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot where YEAR(orden_trabajo.fecha) = :fec');
+                                            $gastado->bindParam(':fec', date("Y",strtotime($model->fecha)));
+                                            $gas = $gastado->queryRow();
+                                            print_r($gas);
+                                            $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_anual - $gas['gasto']));                                        
+                                            if($presupuesto->save())
+                                                $this->redirect(array('registrofactura/view', 'id' => $factura->id));
+                                        }
                                 }
 			}
 		}
@@ -114,7 +125,18 @@ class OrdenTrabajoController extends GxController {
                                         $suma_bruto = $factura->sumarNeto() * (($iva['valor_iva']/100)+1);
                                         $factura->setAttributes(array('total_neto'=>$factura->sumarNeto(), 'total_bruto'=>round($suma_bruto)));
                                         if($factura->save() && $auto->save())
-                                            $this->redirect(array('registrofactura/view', 'id' => $factura->id));
+                                        {
+                                            $oDbConnection = Yii::app()->db;
+                                            $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($model->fecha))));
+                                            $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
+                                            $gastado = $oDbConnection->createCommand('select sum(detalles_ot.subtotal) as gasto from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot where YEAR(orden_trabajo.fecha) = :fec');
+                                            $gastado->bindParam(':fec', date("Y",strtotime($model->fecha)));
+                                            $gas = $gastado->queryRow();
+                                            print_r($gas);
+                                            $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_anual - $gas['gasto']));                                        
+                                            if($presupuesto->save())
+                                                $this->redirect(array('registrofactura/view', 'id' => $factura->id));
+                                        }
 			}
 		}
 

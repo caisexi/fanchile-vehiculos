@@ -46,6 +46,7 @@
 					array('label'=>'Factura', 'url'=>array('/registrofactura/ ')),
 					array('label'=>'Orden de trabajo', 'url'=>array('/ordentrabajo/ ')),
                                         array('label'=>'Historial Vehiculo', 'url'=>array('/historialvehiculos/ ')),
+                                        array('label'=>'Ingreso Presupuestario', 'url'=>array('/presupuesto/ ')),
 								
 				)),
                                 array('label'=>'Administrar', 'url'=>array('#'), 'items'=>array

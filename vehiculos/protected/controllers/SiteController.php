@@ -85,7 +85,24 @@ class SiteController extends GxController
 	{
 		$this->render('parcial');
 	}
+            
+        public function actionProgresogasto()
+        {
+            $oDbConnection = Yii::app()->db;
 
+            $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot GROUP BY MONTH(orden_trabajo.fecha)');
+ 
+            $oCDbDataReader = $oCommand->queryAll();
+            
+            $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
+                'keyField'=>'mes'
+            ));  
+            
+            $this->render('progresogasto', array(
+                    'dataProvider' => $dataProvider,
+            ));
+        }
+        
         public function actionBparcial()
 	{
             

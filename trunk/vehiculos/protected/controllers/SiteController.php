@@ -90,7 +90,7 @@ class SiteController extends GxController
         {
             $oDbConnection = Yii::app()->db;
 
-            $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot GROUP BY MONTH(orden_trabajo.fecha)');
+            $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf GROUP BY MONTH(registro_factura.fecha)');
  
             $oCDbDataReader = $oCommand->queryAll();
             

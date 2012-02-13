@@ -1,9 +1,4 @@
-<div class="view">
-
-	<?php echo GxHtml::encode($data->getAttributeLabel('id')); ?>:
-	<?php echo GxHtml::link(GxHtml::encode($data->id), array('view', 'id' => $data->id)); ?>
-	<br />
-
+<div class="view" onclick="location.href='view/<?php echo $data->id?>'" onmouseover="this.style.backgroundColor='#7AC08E'"  onmouseout="this.style.backgroundColor='#fff'">
 	<?php echo GxHtml::encode($data->getAttributeLabel('nro_factura')); ?>:
 	<?php echo GxHtml::encode($data->nro_factura); ?>
 	<br />
@@ -11,7 +6,7 @@
 	<?php echo GxHtml::encode($data->fecha); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('id_combustible')); ?>:
-	<?php echo GxHtml::encode($data->id_combustible); ?>
+		<?php echo GxHtml::encode(GxHtml::valueEx($data->idCombustible)); ?>
 	<br />
 	<?php echo GxHtml::encode($data->getAttributeLabel('neto')); ?>:
 	<?php echo GxHtml::encode($data->neto); ?>

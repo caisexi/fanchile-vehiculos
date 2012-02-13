@@ -4,12 +4,6 @@
 	'action' => Yii::app()->createUrl($this->route),
 	'method' => 'get',
 )); ?>
-
-	<div class="row">
-		<?php echo $form->label($model, 'id'); ?>
-		<?php echo $form->textField($model, 'id'); ?>
-	</div>
-
 	<div class="row">
 		<?php echo $form->label($model, 'nro_factura'); ?>
 		<?php echo $form->textField($model, 'nro_factura', array('maxlength' => 10)); ?>
@@ -32,7 +26,7 @@
 
 	<div class="row">
 		<?php echo $form->label($model, 'id_combustible'); ?>
-		<?php echo $form->textField($model, 'id_combustible'); ?>
+		<?php echo $form->dropDownList($model, 'id_combustible', GxHtml::listDataEx(Combustibles::model()->findAllAttributes(null, true)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">
@@ -81,7 +75,7 @@
 	</div>
 
 	<div class="row buttons">
-		<?php echo GxHtml::submitButton(Yii::t('app', 'Search')); ?>
+		<?php echo GxHtml::submitButton(Yii::t('app', 'Buscar')); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

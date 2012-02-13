@@ -7,7 +7,7 @@
  * property or method in class "FacturaCombustible".
  *
  * Columns in table "factura_combustible" available as properties of the model,
- * and there are no model relations.
+ * followed by relations of table "factura_combustible" available as properties of the model.
  *
  * @property integer $id
  * @property string $nro_factura
@@ -23,6 +23,8 @@
  * @property string $creado
  * @property string $modificado
  *
+ * @property DetFacturaCombustible[] $detFacturaCombustibles
+ * @property Combustibles $idCombustible
  */
 abstract class BaseFacturaCombustible extends GxActiveRecord {
 
@@ -35,11 +37,11 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'FacturaCombustible|FacturaCombustibles', $n);
+		return Yii::t('app', 'Factura de Combustible|Facturas de Combustibles', $n);
 	}
 
 	public static function representingColumn() {
-		return 'fecha';
+		return 'nro_factura';
 	}
 
 	public function rules() {
@@ -53,6 +55,8 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 
 	public function relations() {
 		return array(
+			'detFacturaCombustibles' => array(self::HAS_MANY, 'DetFacturaCombustible', 'id_factura_combustible'),
+			'idCombustible' => array(self::BELONGS_TO, 'Combustibles', 'id_combustible'),
 		);
 	}
 
@@ -66,9 +70,9 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 			'id' => Yii::t('app', 'ID'),
 			'nro_factura' => Yii::t('app', 'Nro Factura'),
 			'fecha' => Yii::t('app', 'Fecha'),
-			'id_combustible' => Yii::t('app', 'Id Combustible'),
+			'id_combustible' => null,
 			'neto' => Yii::t('app', 'Neto'),
-			'iva' => Yii::t('app', 'Iva'),
+			'iva' => Yii::t('app', 'IVA'),
 			'especifico' => Yii::t('app', 'Especifico'),
 			'litros' => Yii::t('app', 'Litros'),
 			'total' => Yii::t('app', 'Total'),
@@ -76,6 +80,8 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 			'valor_guia' => Yii::t('app', 'Valor Guia'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
+			'detFacturaCombustibles' => null,
+			'idCombustible' => null,
 		);
 	}
 
@@ -100,4 +106,30 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+        
+        public function getMultiModelForm() {
+            $detfactcomb = array(
+              'elements'=>array(
+                'id_vehiculo'=>array(
+                    'type'=>'dropdownlist',
+                    'items'=>array(''=>'---')+GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)),
+                ),
+                'nro_guia'=>array(
+                    'type'=>'text',                    
+                ),
+                'litros'=>array(
+                    'type'=>'text',
+                ),
+            ));            
+            return $detfactcomb;
+        }
+        
+        public function beforeValidate() {
+            if ($this->isNewRecord)
+                $this->creado = new CDbExpression('NOW()');
+
+            $this->modificado = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 }

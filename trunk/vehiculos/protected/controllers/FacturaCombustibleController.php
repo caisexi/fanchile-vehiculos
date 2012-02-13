@@ -2,31 +2,6 @@
 
 class FacturaCombustibleController extends GxController {
 
-public function filters() {
-	return array(
-			'accessControl', 
-			);
-}
-
-public function accessRules() {
-	return array(
-			array('allow',
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
-				),
-			array('allow', 
-				'actions'=>array('minicreate', 'create','update'),
-				'users'=>array('@'),
-				),
-			array('allow', 
-				'actions'=>array('admin','delete'),
-				'users'=>array('admin'),
-				),
-			array('deny', 
-				'users'=>array('*'),
-				),
-			);
-}
 
 	public function actionView($id) {
 		$this->render('view', array(
@@ -35,37 +10,56 @@ public function accessRules() {
 	}
 
 	public function actionCreate() {
+                Yii::import('ext.multimodelform.MultiModelForm');
+                
 		$model = new FacturaCombustible;
-
+                
+                $detalle = new DetFacturaCombustible();
+                
+                $detallesValidados = array();
 
 		if (isset($_POST['FacturaCombustible'])) {
 			$model->setAttributes($_POST['FacturaCombustible']);
 
-			if ($model->save()) {
-				if (Yii::app()->getRequest()->getIsAjaxRequest())
-					Yii::app()->end();
-				else
-					$this->redirect(array('view', 'id' => $model->id));
+			if (MultiModelForm::validate($detalle,$detallesValidados,$detallesBorrados) && $model->save()) {
+                            
+				$masterValues = array ('id_factura_combustible'=>$model->id);
+                                
+                                if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues))
+                                {
+                                    $this->redirect(array('facturacombustible/view', 'id' => $model->id));
+                                }                                
 			}
 		}
 
-		$this->render('create', array( 'model' => $model));
+		$this->render('create', array( 'model' => $model,
+                                'detalle'=> $detalle,
+                                'detallesValidados' => $detallesValidados
+				));
 	}
 
 	public function actionUpdate($id) {
+                Yii::import('ext.multimodelform.MultiModelForm');
+                
 		$model = $this->loadModel($id, 'FacturaCombustible');
-
+                
+                $detalle = new DetFacturaCombustible();
+                
+                $detallesValidados = array();
 
 		if (isset($_POST['FacturaCombustible'])) {
 			$model->setAttributes($_POST['FacturaCombustible']);
-
-			if ($model->save()) {
+                        $masterValues = array ('id_factura_combustible'=>$model->id);
+                        
+			if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues) && $model->save()) {
 				$this->redirect(array('view', 'id' => $model->id));
 			}
 		}
 
 		$this->render('update', array(
 				'model' => $model,
+                                'detalle'=> $detalle,
+                                'detallesValidados' => $detallesValidados
 				));
 	}
 

@@ -1,21 +1,33 @@
 <div class="form">
-    <?php echo CHtml::beginForm('progresoGasto','get'); ?>
+    <?php echo CHtml::beginForm('progresogasto','get'); ?>
 
     <div class="row">
-        <?php echo CHtml::label('Año',0); ?>
-        <?php echo CHtml::hiddenField('vehiculo'); ?>
-        <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
-            'name'=>'Vehiculo',
-            'source'=>$this->createUrl('ordentrabajo/ACVehi'),
-            'options'=>array(
-                'showAnim'=>'fold',
-                'minLength'=>'1',
-                'select'=>'js:function(event, ui) { $("#OrdenTrabajo_id_rf").val(ui.item.id);}'
-            ),
-        ));
-        ?>
+        <?php echo CHtml::label('Año','anio'); ?>
+        <?php echo CHtml::textfield('anio',  isset ($_GET['anio']) ? $_GET['anio'] : ''); ?>
 
-    </div>    
+    </div> 
+    <?php
+    if(isset ($_GET['cv']) && $_GET['cv'] == true)
+    {
+    ?>
+     <div class="row">
+        <?php echo CHtml::label('Vehiculo','anio'); ?>
+         <?php echo CHtml::hiddenField('cv',1); ?>
+        <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
+                    'name'=>'patente',
+                    'attribute'=>'idVehiculo',
+                    'source'=>$this->createUrl('ordentrabajo/ACVehi'),
+                    'options'=>array(
+                        'showAnim'=>'fold',
+                        'minLength'=>'1',
+                        'select'=>'js:function(event, ui) { $("#patentev").val(ui.item.id);}'
+                    ),
+                ));
+        ?>
+    </div> 
+    <?php
+    }
+    ?>
     <div class="row submit">
         <?php echo GxHtml::submitButton(Yii::t('app', 'Consultar'),array('class' => 'boton')); ?>
     </div>
@@ -25,12 +37,22 @@
 </div><!-- form -->
 <div chart>
 <?php
-if(isset($dataProvider))
+if(isset($dataProvider) && ($data = $dataProvider->getData()) != null)
 {
-    $data = $dataProvider->getData();
+    for($i = 0; $i < 12;$i++)
+    {
+        $dataHc[$i] = 0;
+    }
+    foreach ($data as $da)
+        $dataHc[$da['mes']] = (integer)$da['gastoMensual'];
+
+    if(isset ($_GET['cv']) && $_GET['cv'] == true)
+        $texto = ' del vehiculo patente '.OrdenTrabajo::formatearPatente($_GET['patente']);
+    else
+        $texto = '';
     $this->Widget('ext.highcharts.HighchartsWidget', array(
        'options'=>array(
-          'title' => array('text' => 'Progreso Gastos Reparaciones'),
+          'title' => array('text' => 'Progreso Gastos Reparaciones Año '.$anio.$texto),
           'tooltip' => array(
             'formatter' => 'js:function(){ return "<b>Gastos de "+ this.x +":</b>"+ formatCurrency(this.y); }'
           ),
@@ -41,12 +63,16 @@ if(isset($dataProvider))
              'title' => array('text' => 'Gasto Reparacion')
           ),
           'series' => array(
-             array('name' => 'Gasto', 'data' => array((integer)$data[0]['gastoMensual'], (integer)$data[1]['gastoMensual']),0,0,0,0,0,0,0,0,0,0),
+             array('name' => 'Gasto'.' Año '.$anio.$texto, 'data' => $dataHc)
           ),
           'credits' => array('enabled' => false),
           //'theme' => 'grid',
        )
     )); 
+}
+else
+{
+    echo 'No hay resultados';
 }
 ?>
 </div>
@@ -61,15 +87,11 @@ num = 0;
 
 var signo = (num == (num = Math.abs(num)));
 num = Math.floor(num * 100 + 0.50000000001);
-centavos = num % 100;
 num = Math.floor(num / 100).toString();
-
-if (centavos < 10)
-centavos = '0' + centavos;
 
 for (var i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++)
 num = num.substring(0, num.length - (4 * i + 3)) + '.' + num.substring(num.length - (4 * i + 3));
 
-return (((signo) ? '' : '-') + '$' + num + ',' + centavos);
+return (((signo) ? '' : '-') + '$' + num);
 }
 </script>

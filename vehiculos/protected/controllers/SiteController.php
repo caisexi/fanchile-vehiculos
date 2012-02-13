@@ -88,19 +88,24 @@ class SiteController extends GxController
             
         public function actionProgresogasto()
         {
-            $oDbConnection = Yii::app()->db;
+            if(isset($_GET['anio']))
+            {
+                $oDbConnection = Yii::app()->db;
 
-            $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf GROUP BY MONTH(registro_factura.fecha)');
- 
-            $oCDbDataReader = $oCommand->queryAll();
-            
-            $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
-                'keyField'=>'mes'
-            ));  
-            
-            $this->render('progresogasto', array(
+                $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio GROUP BY MONTH(registro_factura.fecha)');
+
+                $oCommand->bindParam(':anio', $_GET['anio']);
+
+                $oCDbDataReader = $oCommand->queryAll();
+
+                $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
+                    'keyField'=>'mes'
+                ));  
+                $this->render('progresogasto', array(
                     'dataProvider' => $dataProvider,
-            ));
+                ));
+            }
+            $this->render('progresogasto');
         }
         
         public function actionBparcial()

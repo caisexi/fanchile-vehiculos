@@ -7,7 +7,7 @@
  * property or method in class "DetFacturaCombustible".
  *
  * Columns in table "det_factura_combustible" available as properties of the model,
- * and there are no model relations.
+ * followed by relations of table "det_factura_combustible" available as properties of the model.
  *
  * @property integer $id
  * @property integer $id_factura_combustible
@@ -17,6 +17,8 @@
  * @property string $creado
  * @property string $modificado
  *
+ * @property Vehiculos $idVehiculo
+ * @property FacturaCombustible $idFacturaCombustible
  */
 abstract class BaseDetFacturaCombustible extends GxActiveRecord {
 
@@ -38,7 +40,7 @@ abstract class BaseDetFacturaCombustible extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('id_factura_combustible, id_vehiculo, nro_guia, litros, creado, modificado', 'required'),
+			array('id_vehiculo, nro_guia, litros, creado, modificado', 'required'),
 			array('id_factura_combustible, id_vehiculo, nro_guia', 'numerical', 'integerOnly'=>true),
 			array('litros', 'length', 'max'=>10),
 			array('id, id_factura_combustible, id_vehiculo, nro_guia, litros, creado, modificado', 'safe', 'on'=>'search'),
@@ -47,6 +49,8 @@ abstract class BaseDetFacturaCombustible extends GxActiveRecord {
 
 	public function relations() {
 		return array(
+			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
+			'idFacturaCombustible' => array(self::BELONGS_TO, 'FacturaCombustible', 'id_factura_combustible'),
 		);
 	}
 
@@ -58,12 +62,14 @@ abstract class BaseDetFacturaCombustible extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'id' => Yii::t('app', 'ID'),
-			'id_factura_combustible' => Yii::t('app', 'Id Factura Combustible'),
-			'id_vehiculo' => Yii::t('app', 'Id Vehiculo'),
+			'id_factura_combustible' => null,
+			'id_vehiculo' => null,
 			'nro_guia' => Yii::t('app', 'Nro Guia'),
 			'litros' => Yii::t('app', 'Litros'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
+			'idVehiculo' => null,
+			'idFacturaCombustible' => null,
 		);
 	}
 
@@ -82,4 +88,13 @@ abstract class BaseDetFacturaCombustible extends GxActiveRecord {
 			'criteria' => $criteria,
 		));
 	}
+        
+        public function beforeValidate() {
+            if ($this->isNewRecord)
+                $this->creado = new CDbExpression('NOW()');
+
+            $this->modificado = new CDbExpression('NOW()');
+
+            return parent::beforeSave();
+        }
 }

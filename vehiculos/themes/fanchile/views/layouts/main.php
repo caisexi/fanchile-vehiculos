@@ -89,7 +89,8 @@
                                             (
                                                     array('label'=>'Reparaciones', 'url'=>array('#'), 'items'=>array
                                                     (
-                                                            array('label'=>'Progreso Gastos', 'url'=>array('/site/progresogasto')),
+                                                            array('label'=>'Progreso Gasto Anual', 'url'=>array('/site/progresogasto')),
+                                                            array('label'=>'Progreso Gasto Anual Vehiculo', 'url'=>array('/site/progresogasto','cv'=>true)),
                                                     )),                                                
                                             )),
 				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),

@@ -88,24 +88,35 @@ class SiteController extends GxController
             
         public function actionProgresogasto()
         {
+            $this->layout = '//layouts/pg';
             if(isset($_GET['anio']))
             {
                 $oDbConnection = Yii::app()->db;
-
-                $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio GROUP BY MONTH(registro_factura.fecha)');
-
+                
+                if(!isset ($_GET['patente']))
+                {
+                    $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio GROUP BY MONTH(registro_factura.fecha)');
+                    
+                }else
+                {
+                    $oCommand = $oDbConnection->createCommand('select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf INNER JOIN vehiculos on vehiculos.id = orden_trabajo.id_vehiculo where YEAR(registro_factura.fecha) = :anio AND vehiculos.patente = :patente GROUP BY MONTH(registro_factura.fecha)');
+                    $oCommand->bindParam(':patente', $_GET['patente']);
+                }
                 $oCommand->bindParam(':anio', $_GET['anio']);
-
                 $oCDbDataReader = $oCommand->queryAll();
 
                 $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
                     'keyField'=>'mes'
                 ));  
-                $this->render('progresogasto', array(
+                $this->render('pg', array(
                     'dataProvider' => $dataProvider,
+                    'anio'=>$_GET['anio'],
                 ));
             }
-            $this->render('progresogasto');
+            else
+            {
+                $this->render('pg');
+            }
         }
         
         public function actionBparcial()

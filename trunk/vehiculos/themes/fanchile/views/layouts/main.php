@@ -85,6 +85,13 @@
 							array('label'=>'Mensual', 'url'=>array('#')),
 						)),                                                
 					)),
+                                array('label'=>'Graficos', 'url'=>array('#'), 'items'=>array
+                                            (
+                                                    array('label'=>'Reparaciones', 'url'=>array('#'), 'items'=>array
+                                                    (
+                                                            array('label'=>'Progreso Gastos', 'url'=>array('/site/progresogasto')),
+                                                    )),                                                
+                                            )),
 				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),

@@ -77,8 +77,7 @@ class OrdenTrabajoController extends GxController {
                                 {
                                         $factura = $this->loadModel($model->id_rf, 'RegistroFactura');
                                         $auto = $this->loadModel($model->id_vehiculo, 'Vehiculos');
-                                        $suma = $model->sumita;
-                                        $suma_neto = $suma + $factura->total_neto;
+                                        $suma_neto = $factura->sumarNeto();
                                         $auto->gastoAcumulado = $auto->sumarGasto();
                                         $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
                                         $suma_bruto = $suma_neto * (($iva['valor_iva']/100)+1);
@@ -148,8 +147,13 @@ class OrdenTrabajoController extends GxController {
                         $orden = $this->loadModel($id, 'OrdenTrabajo');
                         $auto = $this->loadModel($orden->id_vehiculo, 'Vehiculos');                        
                         $totalorden = $orden->sumita;
+                        $factura = $this->loadModel($orden->id_rf, 'RegistroFactura');
 			if($orden->delete())
-                        {
+                        {                                
+                                $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
+                                $suma_bruto = $factura->sumarNeto() * (($iva['valor_iva']/100)+1);
+                                $factura->setAttributes(array('total_neto'=>$factura->sumarNeto(), 'total_bruto'=>round($suma_bruto)));
+                                $factura->save();
                                 $presid = Presupuesto::model()->find('ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($orden->fecha))));
                                 $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
                                 $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_disponible + $totalorden));                                        

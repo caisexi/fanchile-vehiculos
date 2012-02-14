@@ -9913,3 +9913,31 @@ in C:\wamp\www\vehiculos\index.php (13)
 2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
 in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:50:41 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (115)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:50:41 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (115)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:50:41 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/14 20:58:52 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:58:52 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 21:00:43 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 21:00:43 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 21:11:47 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 21:11:47 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)

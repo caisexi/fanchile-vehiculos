@@ -9390,3 +9390,526 @@ REQUEST_URI=/vehiculos/index.php/facturacombustible/create
 in C:\wamp\www\vehiculos\protected\views\facturaCombustible\create.php (19)
 in C:\wamp\www\vehiculos\protected\controllers\FacturaCombustibleController.php (38)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 14:36:28 [error] [php] Undefined index: cv (C:\wamp\www\vehiculos\protected\views\site\pg.php:9)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(124): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto
+in C:\wamp\www\vehiculos\protected\views\site\pg.php (9)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (124)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:38:11 [error] [php] Undefined variable: sql (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:111)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (111)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:38:47 [error] [php] Undefined variable: sql (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:113)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (113)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:39:29 [error] [php] Undefined variable: sql (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:113)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (113)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:39:30 [error] [php] Undefined variable: sql (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:113)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (113)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:40:24 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: . Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (121)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:40:24 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty. The SQL statement executed was: . Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(121): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto
+---
+2012/02/14 15:42:09 [error] [php] Undefined variable: sql (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:108)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&vendido=1&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (108)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:45:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0GROUP BY MONTH(registro_factura.fecha)' at line 1. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio 0GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (125)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:45:22 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0GROUP BY MONTH(registro_factura.fecha)' at line 1. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio 0GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(125): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto?anio=2012&uso=1&yt0=Consultar
+---
+2012/02/14 15:46:49 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0GROUP BY MONTH(registro_factura.fecha)' at line 1. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio 0GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (126)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:46:49 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0GROUP BY MONTH(registro_factura.fecha)' at line 1. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio 0GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(126): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto?anio=2012&uso=1&yt0=Consultar
+---
+2012/02/14 15:47:12 [error] [php] Undefined variable: oCommand (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:125)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (125)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:49:29 [error] [php] Undefined variable: oCommand (C:\wamp\www\vehiculos\protected\controllers\SiteController.php:126)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#1 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#2 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#3 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#4 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#5 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (126)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:49:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0GROUP BY MONTH(registro_factura.fecha)' at line 1. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio 0GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (127)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:49:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0GROUP BY MONTH(registro_factura.fecha)' at line 1. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio 0GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(127): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto?anio=2012&uso=1&yt0=Consultar
+---
+2012/02/14 15:50:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vehiculos.estado' in 'where clause'. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio AND (vehiculos.estado = '0')GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (124)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:50:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vehiculos.estado' in 'where clause'. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio AND (vehiculos.estado = '0')GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(124): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto?anio=2012&uso=1&yt0=Consultar
+---
+2012/02/14 15:50:45 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vehiculos.estado' in 'where clause'. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio AND (vehiculos.estado = '0')GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (124)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:50:45 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vehiculos.estado' in 'where clause'. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio AND (vehiculos.estado = '0')GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(124): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto?anio=2012&uso=1&yt0=Consultar
+---
+2012/02/14 15:51:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vehiculos.estado' in 'where clause'. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio AND (vehiculos.estado = '0') GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (124)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:51:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vehiculos.estado' in 'where clause'. The SQL statement executed was: select SUM(detalles_ot.subtotal) as gastoMensual, MONTH(orden_trabajo.fecha) as mes from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura on registro_factura.id = orden_trabajo.id_rf where YEAR(registro_factura.fecha) = :anio AND (vehiculos.estado = '0') GROUP BY MONTH(registro_factura.fecha). Bound with :anio='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(390): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(124): CDbCommand->queryAll()
+#2 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionProgresogasto()
+#3 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#4 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#5 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('progresogasto')
+#7 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/progresoga...')
+#8 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#9 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/vehiculos/index.php/site/progresogasto?anio=2012&venta=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/progresogasto?anio=2012&uso=1&yt0=Consultar
+---
+2012/02/14 15:53:32 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:53:32 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:53:32 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:53:32 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:53:32 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:53:32 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:55:55 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:55:55 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:55:55 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:55:55 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:55:55 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 15:55:55 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 17:36:03 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 17:36:03 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 17:36:03 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 17:36:03 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 17:36:03 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 17:36:03 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 18:59:38 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:153)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/71?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (153)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:21:02 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:153)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/67?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (153)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:25:18 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:153)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/69?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (153)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:25:37 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:154)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/65?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (154)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:30:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(148): GxController->loadModel('65', 'OrdenTrabajo')
+#1 [internal function]: OrdenTrabajoController->actionDelete('65')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OrdenTrabajoController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrdenTrabajoController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/de...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/65?ajax=orden-trabajo-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/admin
+---
+2012/02/14 19:30:56 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:153)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/63?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (153)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:33:57 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (115)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:33:57 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (115)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:33:57 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/14 19:34:25 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (115)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:34:25 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (115)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 19:34:25 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/14 20:09:36 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:151)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/62?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (151)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:11:06 [error] [php] Undefined variable: model (C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php:152)
+Stack trace:
+#0 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CInlineAction->runWithParamsInternal()
+#1 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#2 C:\wamp\www\framework\web\filters\CFilterChain.php(134): OrdenTrabajoController->runAction()
+#3 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#4 C:\wamp\www\framework\web\CController.php(1146): CAccessControlFilter->filter()
+#5 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): OrdenTrabajoController->filterAccessControl()
+#6 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#8 C:\wamp\www\framework\web\CController.php(266): OrdenTrabajoController->runActionWithFilters()
+#9 C:\wamp\www\framework\web\CWebApplication.php(276): OrdenTrabajoController->run()
+#10 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#11 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#12 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/62?ajax=orden-trabajo-grid
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (152)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:15:48 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where ano = '2012' ORDER BY modificado DESC LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `presupuesto` `t` WHERE where ano = :an ORDER BY modificado DESC LIMIT 1. Bound with :an='2012'.
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (153)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:15:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where ano = '2012' ORDER BY modificado DESC LIMIT 1' at line 1. The SQL statement executed was: SELECT * FROM `presupuesto` `t` WHERE where ano = :an ORDER BY modificado DESC LIMIT 1. Bound with :an='2012'' in C:\wamp\www\framework\db\CDbCommand.php:528
+Stack trace:
+#0 C:\wamp\www\framework\db\CDbCommand.php(408): CDbCommand->queryInternal('fetch', Array, Array)
+#1 C:\wamp\www\framework\db\ar\CActiveRecord.php(1287): CDbCommand->queryRow()
+#2 C:\wamp\www\framework\db\ar\CActiveRecord.php(1392): CActiveRecord->query(Object(CDbCriteria))
+#3 C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php(153): CActiveRecord->find('where ano = :an...', Array)
+#4 [internal function]: OrdenTrabajoController->actionDelete('62')
+#5 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(OrdenTrabajoController), Array)
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(OrdenTrabajoController), Object(ReflectionMethod), Array)
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#10 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#11 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#14 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#16 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('ordentrabajo/de...')
+#17 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#18 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/vehiculos/index.php/ordentrabajo/delete/62?ajax=orden-trabajo-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/ordentrabajo/admin
+---
+2012/02/14 20:19:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in C:\wamp\www\vehiculos\protected\extensions\giix-components\GxController.php:144
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\controllers\RegistroFacturaController.php(100): GxController->loadModel('21', 'RegistroFactura')
+#1 [internal function]: RegistroFacturaController->actionDelete('21')
+#2 C:\wamp\www\framework\web\actions\CAction.php(107): ReflectionMethod->invokeArgs(Object(RegistroFacturaController), Array)
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(48): CAction->runWithParamsInternal(Object(RegistroFacturaController), Object(ReflectionMethod), Array)
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#5 C:\wamp\www\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#6 C:\wamp\www\framework\web\filters\CFilter.php(41): CFilterChain->run()
+#7 C:\wamp\www\framework\web\CController.php(1146): CFilter->filter(Object(CFilterChain))
+#8 C:\wamp\www\framework\web\filters\CInlineFilter.php(59): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\wamp\www\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\wamp\www\framework\web\CController.php(292): CFilterChain->run()
+#11 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('delete')
+#13 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('registrofactura...')
+#14 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#15 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/vehiculos/index.php/registrofactura/delete/21?ajax=registro-factura-grid
+HTTP_REFERER=http://localhost/vehiculos/index.php/registrofactura/admin
+---
+2012/02/14 20:21:14 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:21:14 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (70)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idCombustible0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idTipoVehiculo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idProveedor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idMarca0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idModelo0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/14 20:22:20 [warning] [application] Failed to set unsafe attribute "idColor0" of "Vehiculos".
+in C:\wamp\www\vehiculos\protected\controllers\VehiculosController.php (86)
+in C:\wamp\www\vehiculos\index.php (13)

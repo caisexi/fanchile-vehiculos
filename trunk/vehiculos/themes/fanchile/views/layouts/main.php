@@ -43,38 +43,43 @@
 				array('label'=>'Inicio', 'url'=>array('/site/index')),
 				array('label'=>'Registros', 'url'=>array('#'), 'items'=>array
 				(
-					array('label'=>'Factura', 'url'=>array('/registrofactura/ ')),
-					array('label'=>'Orden de trabajo', 'url'=>array('/ordentrabajo/ ')),
-                                        array('label'=>'Historial Vehiculo', 'url'=>array('/historialvehiculos/ ')),
-                                        array('label'=>'Ingreso Presupuestario', 'url'=>array('/presupuesto/ ')),
+					array('label'=>'Factura', 'url'=>array('/registrofactura/admin ')),
+					array('label'=>'Orden de trabajo', 'url'=>array('/ordentrabajo/admin ')),
+                                        array('label'=>'Historial Vehiculo', 'url'=>array('/historialvehiculos/admin ')),
+                                        array('label'=>'Ingreso Presupuestario', 'url'=>array('/presupuesto/admin ')),
+                                        array('label'=>'Combustibles', 'url'=>array('#'), 'items'=>array
+						(
+                                                array('label'=>'Factura', 'url'=>array('/facturacombustible/admin ')),
+                                                array('label'=>'Tarjeta', 'url'=>array('#')),
+                                        )),
 								
 				)),
                                 array('label'=>'Administrar', 'url'=>array('#'), 'items'=>array
 					(
 						array('label'=>'Vehiculos', 'url'=>array('#'), 'items'=>array
 						(
-                                                        array('label'=>'Vehiculos', 'url'=>array('/vehiculos/ ')),
-							array('label'=>'Colores', 'url'=>array('/coloresvehiculos/ ')),
-							array('label'=>'Marcas', 'url'=>array('/marcasvehiculos/ ')),
-							array('label'=>'Modelos', 'url'=>array('/modelosvehiculos/ ')),
-                                                        array('label'=>'Combustibles', 'url'=>array('/combustibles/ ')),
-                                                        array('label'=>'Tipos', 'url'=>array('/tiposvehiculos/ ')),
+                                                        array('label'=>'Vehiculos', 'url'=>array('/vehiculos/admin ')),
+							array('label'=>'Colores', 'url'=>array('/coloresvehiculos/admin ')),
+							array('label'=>'Marcas', 'url'=>array('/marcasvehiculos/admin ')),
+							array('label'=>'Modelos', 'url'=>array('/modelosvehiculos/admin ')),
+                                                        array('label'=>'Combustibles', 'url'=>array('/combustibles/admin ')),
+                                                        array('label'=>'Tipos', 'url'=>array('/tiposvehiculos/admin ')),
 						)),
                                                 array('label'=>'Proveedores', 'url'=>array('#'), 'items'=>array
 						(
-                                                    array('label'=>'Proveedores', 'url'=>array('/proveedores/ ')),
-                                                    array('label'=>'Ciudades', 'url'=>array('/ciudades/ ')),
+                                                    array('label'=>'Proveedores', 'url'=>array('/proveedores/admin ')),
+                                                    array('label'=>'Ciudades', 'url'=>array('/ciudades/admin ')),
                                                 )),
                                                 array('label'=>'Personal', 'url'=>array('#'), 'items'=>array
 						(
-                                                        array('label'=>'Personal', 'url'=>array('/personal/ ')),
-                                                        array('label'=>'Cargos', 'url'=>array('/cargosempresa/ ')),
-							array('label'=>'Areas', 'url'=>array('/areasempresa/ ')),
+                                                        array('label'=>'Personal', 'url'=>array('/personal/admin ')),
+                                                        array('label'=>'Cargos', 'url'=>array('/cargosempresa/admin ')),
+							array('label'=>'Areas', 'url'=>array('/areasempresa/admin ')),
 						)),
-                                                array('label'=>'Marcas Repuestos', 'url'=>array('/marcasrepuestos/ ')),
+                                                array('label'=>'Marcas Repuestos', 'url'=>array('/marcasrepuestos/admin ')),
                                                 array('label'=>'Ivas', 'url'=>array('/ivas/ ')),
-                                                array('label'=>'Detalles de reparacion', 'url'=>array('/detallereparacion/ ')),
-                                                array('label'=>'Usuarios', 'url'=>array('/usuarios/ ')),
+                                                array('label'=>'Detalles de reparacion', 'url'=>array('/detallereparacion/admin ')),
+                                                array('label'=>'Usuarios', 'url'=>array('/usuarios/admin ')),
                                                 
 					)),
                                 array('label'=>'Informes', 'url'=>array('#'), 'items'=>array

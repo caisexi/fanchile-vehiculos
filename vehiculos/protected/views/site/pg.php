@@ -4,15 +4,33 @@
     <div class="row">
         <?php echo CHtml::label('Año','anio'); ?>
         <?php echo CHtml::textfield('anio',  isset ($_GET['anio']) ? $_GET['anio'] : ''); ?>
-
     </div> 
+    <?php
+    if(!isset ($_GET['cv']))
+    {
+    ?>
+    <div class="row">
+        <?php echo CHtml::label('Incluir vehiculos en Uso','uso'); ?>
+        <?php echo CHtml::checkBox('uso',isset ($_GET['uso']) ? true : false); ?>
+    </div> 
+    <div class="row">
+        <?php echo CHtml::label('Incluir vehiculos en Venta','venta'); ?>
+        <?php echo CHtml::checkBox('venta',isset ($_GET['venta']) ? true : false); ?>
+    </div> 
+    <div class="row">
+        <?php echo CHtml::label('Incluir vehiculos Vendidos','vendido'); ?>
+        <?php echo CHtml::checkBox('vendido',isset ($_GET['vendido']) ? true : false); ?>
+    </div> 
+    <?php
+    }
+    ?>
     <?php
     if(isset ($_GET['cv']) && $_GET['cv'] == true)
     {
     ?>
      <div class="row">
         <?php echo CHtml::label('Vehiculo','anio'); ?>
-         <?php echo CHtml::hiddenField('cv',1); ?>
+        <?php echo CHtml::hiddenField('cv',1); ?>
         <?php $this->widget('zii.widgets.jui.CJuiAutoComplete', array(
                     'name'=>'patente',
                     'attribute'=>'idVehiculo',
@@ -24,6 +42,7 @@
                     ),
                 ));
         ?>
+        
     </div> 
     <?php
     }
@@ -44,7 +63,7 @@ if(isset($dataProvider) && ($data = $dataProvider->getData()) != null)
         $dataHc[$i] = 0;
     }
     foreach ($data as $da)
-        $dataHc[$da['mes']] = (integer)$da['gastoMensual'];
+        $dataHc[$da['mes']-1] = (integer)$da['gastoMensual'];
 
     if(isset ($_GET['cv']) && $_GET['cv'] == true)
         $texto = ' del vehiculo patente '.OrdenTrabajo::formatearPatente($_GET['patente']);

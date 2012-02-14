@@ -41,6 +41,7 @@ public function accessRules() {
 
 		if (isset($_POST['Presupuesto'])) {
 			$model->setAttributes($_POST['Presupuesto']);
+                        $model->setAttributes(array('ppto_disponible'=> $_POST['Presupuesto']['ppto_anual']));
 
 			if ($model->save()) {
 				if (Yii::app()->getRequest()->getIsAjaxRequest())

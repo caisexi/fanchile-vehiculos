@@ -91,7 +91,6 @@ class OrdenTrabajoController extends GxController {
                                             $gastado = $oDbConnection->createCommand('select sum(detalles_ot.subtotal) as gasto from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot where YEAR(orden_trabajo.fecha) = :fec');
                                             $gastado->bindParam(':fec', date("Y",strtotime($model->fecha)));
                                             $gas = $gastado->queryRow();
-                                            print_r($gas);
                                             $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_anual - $gas['gasto']));                                        
                                             if($presupuesto->save())
                                                 $this->redirect(array('registrofactura/view', 'id' => $factura->id));
@@ -132,7 +131,6 @@ class OrdenTrabajoController extends GxController {
                                             $gastado = $oDbConnection->createCommand('select sum(detalles_ot.subtotal) as gasto from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot where YEAR(orden_trabajo.fecha) = :fec');
                                             $gastado->bindParam(':fec', date("Y",strtotime($model->fecha)));
                                             $gas = $gastado->queryRow();
-                                            print_r($gas);
                                             $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_anual - $gas['gasto']));                                        
                                             if($presupuesto->save())
                                                 $this->redirect(array('registrofactura/view', 'id' => $factura->id));
@@ -147,7 +145,18 @@ class OrdenTrabajoController extends GxController {
 
 	public function actionDelete($id) {
 		if (Yii::app()->getRequest()->getIsPostRequest()) {
-			$this->loadModel($id, 'OrdenTrabajo')->delete();
+                        $orden = $this->loadModel($id, 'OrdenTrabajo');
+                        $auto = $this->loadModel($orden->id_vehiculo, 'Vehiculos');                        
+                        $totalorden = $orden->sumita;
+			if($orden->delete())
+                        {
+                                $presid = Presupuesto::model()->find('ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($orden->fecha))));
+                                $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
+                                $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_disponible + $totalorden));                                        
+                                $presupuesto->save();
+                                $auto->gastoAcumulado = $auto->sumarGasto();
+                                $auto->save();
+                        }
 
 			if (!Yii::app()->getRequest()->getIsAjaxRequest())
 				$this->redirect(array('admin'));

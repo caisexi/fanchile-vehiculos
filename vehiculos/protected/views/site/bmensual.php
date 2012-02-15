@@ -1,51 +1,38 @@
 <?php
 
-$this->breadcrumbs = array(Yii::t('app', 'Resumen Parcial'));
+$this->breadcrumbs = array(Yii::t('app', 'Resumen Mensual'));
 
 ?>
 <div class="form">
+    <?php echo CHtml::beginForm('bmensual','get'); ?>
+    
+    <div class="form">
     <?php echo CHtml::beginForm('bparcial','get'); ?>
 
     <div class="row">
-        <?php echo CHtml::Label('Fecha Inicio','fecha_inicial'); ?>
-        <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-            'name' => 'fecha_inicial',
-            'language' => 'es',
-            'options' => array(
-                    'showButtonPanel' => true,
-                    'changeYear' => true,
-                    'dateFormat' => 'yy-mm-dd',
-                    ),
-            ));
-        ; ?>
+    <?php echo CHtml::label('Año','ano'); ?>
+    <?php echo CHtml::textField('ano', date("Y")); ?>
     </div>
+    
     <div class="row">
-        <?php echo CHtml::Label('Fecha Termino','fecha_termino'); ?>
-        <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-            'name' => 'fecha_termino',
-            'language' => 'es',
-            'options' => array(
-                    'showButtonPanel' => true,
-                    'changeYear' => true,
-                    'dateFormat' => 'yy-mm-dd',
-                    ),
-            ));
-        ; ?>
-    </div>
+    <?php echo CHtml::label('Mes','mes'); ?>
+    <?php echo CHtml::dropDownList('mes', '',array('1' => 'Enero','2' => 'Febrero','3' => 'Marzo','4' => 'Abril','5' => 'Mayo','6' => 'Junio','7' => 'Julio','8' => 'Agosto','9' => 'Septiembre','10' => 'Octubre','11' => 'Noviembre','12' => 'Diciembre',)); ?>
+
+    </div><!-- row -->
     
     <div class="row submit">
         <?php echo GxHtml::submitButton(Yii::t('app', 'Consultar'),array('class' => 'boton')); ?>
     </div>
     
 <?php echo CHtml::endForm(); ?>
-    
+
 </div><!-- form -->
 
 <?php
-if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
+if(isset ($_GET['mes']))
 {
 ?>
-<h1>MANTENCIONES DEL <font color="yellow"><?php echo date('d-m-Y',strtotime($fechainicial)); ?></font> AL <font color="yellow"><?php echo date('d-m-Y',strtotime($fechafinal)) ?></font></h1>
+<h1>MANTENCIONES DEL <font color="yellow"><?php echo date('m',strtotime($mes)); ?></font></h1>
 <?php
     $this->widget('zii.widgets.grid.CGridView', array(
         'summaryText'=>'', 
@@ -59,6 +46,10 @@ if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
             array(
                 'name'=>'Tipo de Vehiculo',
                 'value' => '$data["nombretipovehiculo"]',
+            ),
+            array(
+                'name'=>'Combustible',
+                'value' => '$data["combu"]',
             ),
             array(
                 'name'=>'Nombre Usuario',
@@ -88,11 +79,25 @@ if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
+                'name'=>'Litros',
+                'value' => 'OrdenTrabajo::formatearPeso($data["litros"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Costo Combustible',
+                'value' => 'OrdenTrabajo::formatearPeso($data["costocombustible"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Km/Litros',
+                'value' => '$data["kmlitros"]',
+            ),
+            array(
                 'name'=>'Pesos/Km',
                 'value' => '$data["pesoskm"]',
             ),
         ),
     ));
-    echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bparcial?pdf=1&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal);
+    echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bmensual?pdf=1&mes='.$mes);
 }
 ?>

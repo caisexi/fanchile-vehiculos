@@ -26,10 +26,6 @@ $('.search-form form').submit(function(){
 
 <h1><?php echo Yii::t('app', 'Administrar') . ' ' . GxHtml::encode($model->label(2)); ?></h1>
 
-<p>
-You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&gt; or =) at the beginning of each of your search values to specify how the comparison should be done.
-</p>
-
 <?php echo GxHtml::link(Yii::t('app', 'Busqueda Avanzada'), '#', array('class' => 'search-button')); ?>
 <div class="search-form" style="display: none">
 <?php $this->renderPartial('_search', array(
@@ -49,7 +45,6 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
         ),
 	'filter' => $model,
 	'columns' => array(
-		'id',
 		'nro_factura',
 		'fecha',
 		array(
@@ -59,10 +54,8 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
 				),
 		'neto',
 		'iva',
-		/*
-		'especifico',
 		'litros',
-		'total',
+		'total',/*
 		'valor_lt',
 		'valor_guia',
 		'creado',
@@ -78,19 +71,19 @@ You may optionally enter a comparison operator (&lt;, &lt;=, &gt;, &gt;=, &lt;&g
                         'view' => array
                         (
                             'label'=>'Ver',
-                            'url'=>'Yii::app()->createUrl("combustibles/view", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("facturacombustible/view", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/ver.png',
                         ),
                         'update' => array
                         (
                             'label'=>'Editar',
-                            'url'=>'Yii::app()->createUrl("combustibles/update", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("facturacombustible/update", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/editar.png',
                         ),
                         'delete' => array
                         (
                             'label'=>'Borrar',
-                            'url'=>'Yii::app()->createUrl("combustibles/delete", array("id"=>$data->id))',
+                            'url'=>'Yii::app()->createUrl("facturacombustible/delete", array("id"=>$data->id))',
                             'imageUrl'=>Yii::app()->baseUrl . '/images/delete.png',
                         ),
                     ),

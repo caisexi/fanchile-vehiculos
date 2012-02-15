@@ -86,8 +86,8 @@
 					(
 						array('label'=>'Mantenciones', 'url'=>array('#'), 'items'=>array
 						(
-                                                        array('label'=>'Parcial', 'url'=>array('/site/parcial')),
-							array('label'=>'Mensual', 'url'=>array('#')),
+                                                        array('label'=>'Parcial', 'url'=>array('/site/bparcial?pdf=0')),
+							array('label'=>'Mensual', 'url'=>array('/site/bmensual')),
 						)),                                                
 					)),
                                 array('label'=>'Graficos', 'url'=>array('#'), 'items'=>array

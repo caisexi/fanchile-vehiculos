@@ -27,6 +27,7 @@ class SiteController extends GxController
 	 */
 	public function actionIndex()
 	{
+                $this->layout = '//layouts/pg';
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
@@ -80,11 +81,6 @@ class SiteController extends GxController
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
 	}
-        
-        public function actionParcial()
-	{
-		$this->render('parcial');
-	}
             
         public function actionProgresogasto()
         {
@@ -137,110 +133,193 @@ class SiteController extends GxController
             }
         }
         
-        public function actionBparcial()
+        public function actionBmensual()
 	{
-            
-            $oDbConnection = Yii::app()->db;
-
-            $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechainic ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
-
-            $oCommand->bindParam(':estado', $estado = 1);
-            
-            $oCommand->bindParam(':fechainic', $_GET['fecha_inicial']);
-            
-            $oCommand->bindParam(':fechatermn', $_GET['fecha_termino']);
- 
-            $oCDbDataReader = $oCommand->queryAll();
-            
-            $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
-                'keyField'=>'patente'
-            ));                
-            if($_GET['pdf'] == 0)
-            {          
-                $this->render('bparcial', array(
-                    'dataProvider' => $dataProvider,
-                    'fechainicial' => $_GET['fecha_inicial'],
-                    'fechafinal' => $_GET['fecha_termino'],
-                ));
-            }
-            elseif($_GET['save'] == 1)
+            $this->layout = '//layouts/pg';
+            if(isset ($_GET['mes']))
             {                
-                $dpinf = $dataProvider->getData();
+                $oDbConnection = Yii::app()->db;
+
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, det_factura_combustible.litros as litros, factura_combustible.valor_lt costocombustible, (MAX(orden_trabajo.kilometraje)/det_factura_combustible.litros) as kmlitros, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :anomes ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id INNER JOIN factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id where MONTH(registro_factura.fecha) = :mes AND YEAR(registro_factura.fecha) = :ano GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
+
+                $oCommand->bindParam(':estado', $estado = 1);
+
+                $oCommand->bindParam(':mes', $_GET['mes']);
                 
-                foreach($dpinf as $i=>$dp)
-                {
-                    $inf[$i] = new InformeParcial();
-                    $inf[$i]['id_vehiculo'] = $dp['id_vehi'];
-                    $inf[$i]['id_usuario'] = $dp['perso_id'];
-                    $inf[$i]['total_reparaciones'] = $dp['reparaciones'];
-                    $inf[$i]['total_acumulado'] = $dp['gastoAcumulado'];
-                    $inf[$i]['recorrido_parcial'] = $dp['recorrido'];
-                    $inf[$i]['pesos_km'] = $dp['pesoskm'];
-                    $inf[$i]['fecha_inicial'] = $_GET['fecha_inicial'];
-                    $inf[$i]['fecha_final'] = $_GET['fecha_termino'];
-                    $inf[$i]->save();
+                $oCommand->bindParam(':ano', $_GET['ano']);
+                
+                $oCommand->bindParam(':anomes', $anomes = $_GET['ano'].'-'.$_GET['mes']);
+
+                $oCDbDataReader = $oCommand->queryAll();
+
+                $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
+                    'keyField'=>'patente'
+                ));
+                if(!isset($_GET['pdf']))
+                {          
+                    $this->render('bmensual', array(
+                        'dataProvider' => $dataProvider,
+                        'mes' => $_GET['mes'],
+                    ));
                 }
-                $this->render('inf', array('cac'=>$inf,'cac1'=>$dpinf));
+                else
+                {
+                   $mPDF1 = Yii::app()->ePdf->mPDF();
+                   $header = array (
+                      'odd' => array (
+                        'L' => array (
+                          'content' => 'FORESTAL ANCHILE LTDA.',
+                          'font-size' => 10,
+                          'font-style' => 'B',
+                          'font-family' => 'serif',
+                          'color'=>'#000000'
+                        ),
+                        'C' => array (
+                          'content' => 'RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
+                        CDateTimeParser::parse(
+                            $_GET['fecha_inicial'], 
+                            'yyyy-MM-dd'
+                        ),
+                        'long',null)).' HASTA EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
+                        CDateTimeParser::parse(
+                            $_GET['fecha_termino'], 
+                            'yyyy-MM-dd'
+                        ),
+                        'long',null)),
+                          'font-size' => 10,
+                          'font-style' => 'B',
+                          'font-family' => 'serif',
+                          'color'=>'#000000'
+                        ),
+                        'R' => array (
+                          'content' => 'GERENCIA DE ADMINISTRACION',
+                          'font-size' => 10,
+                          'font-style' => 'B',
+                          'font-family' => 'serif',
+                          'color'=>'#000000'
+                        ),
+                        'line' => 1,
+                      ),
+                      'even' => array ()
+                    );
+                    $mPDF1->SetHeader($header);
+
+                    $mPDF1->SetFooter('PAGINA {PAGENO}');
+                    $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','A3-L');
+
+
+
+                    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/styles_pdf.css');
+                    $mPDF1->WriteHTML($stylesheet, 1);
+
+                    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/screen_pdf.css');
+                    $mPDF1->WriteHTML($stylesheet, 1);
+
+                    $mPDF1->WriteHTML($this->renderPartial('parcialpdf', array('dataProvider' => $dataProvider,
+                        'fechainicial' => $_GET['fecha_inicial'],
+                        'fechafinal' => $_GET['fecha_termino'],
+                        ), true));
+
+                    $mPDF1->Output();
+                }
             }
             else
             {
-               $mPDF1 = Yii::app()->ePdf->mPDF();
-               $header = array (
-                  'odd' => array (
-                    'L' => array (
-                      'content' => 'FORESTAL ANCHILE LTDA.',
-                      'font-size' => 10,
-                      'font-style' => 'B',
-                      'font-family' => 'serif',
-                      'color'=>'#000000'
-                    ),
-                    'C' => array (
-                      'content' => 'RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
-                    CDateTimeParser::parse(
-                        $_GET['fecha_inicial'], 
-                        'yyyy-MM-dd'
-                    ),
-                    'long',null)).' HASTA EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
-                    CDateTimeParser::parse(
-                        $_GET['fecha_termino'], 
-                        'yyyy-MM-dd'
-                    ),
-                    'long',null)),
-                      'font-size' => 10,
-                      'font-style' => 'B',
-                      'font-family' => 'serif',
-                      'color'=>'#000000'
-                    ),
-                    'R' => array (
-                      'content' => 'GERENCIA DE ADMINISTRACION',
-                      'font-size' => 10,
-                      'font-style' => 'B',
-                      'font-family' => 'serif',
-                      'color'=>'#000000'
-                    ),
-                    'line' => 1,
-                  ),
-                  'even' => array ()
-                );
-                $mPDF1->SetHeader($header);
+                $this->render('bmensual');
+            }
+        }
+        public function actionBparcial()
+	{
+            $this->layout = '//layouts/pg';
+            if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
+            {                
+                $oDbConnection = Yii::app()->db;
 
-                $mPDF1->SetFooter('PAGINA {PAGENO}');
-                $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','A3-L');
-                
-                
-                
-                $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/styles_pdf.css');
-                $mPDF1->WriteHTML($stylesheet, 1);
-                
-                $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/screen_pdf.css');
-                $mPDF1->WriteHTML($stylesheet, 1);
-        
-                $mPDF1->WriteHTML($this->renderPartial('parcialpdf', array('dataProvider' => $dataProvider,
-                    'fechainicial' => $_GET['fecha_inicial'],
-                    'fechafinal' => $_GET['fecha_termino'],
-                    ), true));
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechainic ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
-                $mPDF1->Output();
+                $oCommand->bindParam(':estado', $estado = 1);
+
+                $oCommand->bindParam(':fechainic', $_GET['fecha_inicial']);
+
+                $oCommand->bindParam(':fechatermn', $_GET['fecha_termino']);
+
+                $oCDbDataReader = $oCommand->queryAll();
+
+                $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
+                    'keyField'=>'patente'
+                ));
+                if(!isset($_GET['pdf']))
+                {          
+                    $this->render('bparcial', array(
+                        'dataProvider' => $dataProvider,
+                        'fechainicial' => $_GET['fecha_inicial'],
+                        'fechafinal' => $_GET['fecha_termino'],
+                    ));
+                }
+                else
+                {
+                   $mPDF1 = Yii::app()->ePdf->mPDF();
+                   $header = array (
+                      'odd' => array (
+                        'L' => array (
+                          'content' => 'FORESTAL ANCHILE LTDA.',
+                          'font-size' => 10,
+                          'font-style' => 'B',
+                          'font-family' => 'serif',
+                          'color'=>'#000000'
+                        ),
+                        'C' => array (
+                          'content' => 'RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
+                        CDateTimeParser::parse(
+                            $_GET['fecha_inicial'], 
+                            'yyyy-MM-dd'
+                        ),
+                        'long',null)).' HASTA EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
+                        CDateTimeParser::parse(
+                            $_GET['fecha_termino'], 
+                            'yyyy-MM-dd'
+                        ),
+                        'long',null)),
+                          'font-size' => 10,
+                          'font-style' => 'B',
+                          'font-family' => 'serif',
+                          'color'=>'#000000'
+                        ),
+                        'R' => array (
+                          'content' => 'GERENCIA DE ADMINISTRACION',
+                          'font-size' => 10,
+                          'font-style' => 'B',
+                          'font-family' => 'serif',
+                          'color'=>'#000000'
+                        ),
+                        'line' => 1,
+                      ),
+                      'even' => array ()
+                    );
+                    $mPDF1->SetHeader($header);
+
+                    $mPDF1->SetFooter('PAGINA {PAGENO}');
+                    $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','A3-L');
+
+
+
+                    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/styles_pdf.css');
+                    $mPDF1->WriteHTML($stylesheet, 1);
+
+                    $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/screen_pdf.css');
+                    $mPDF1->WriteHTML($stylesheet, 1);
+
+                    $mPDF1->WriteHTML($this->renderPartial('parcialpdf', array('dataProvider' => $dataProvider,
+                        'fechainicial' => $_GET['fecha_inicial'],
+                        'fechafinal' => $_GET['fecha_termino'],
+                        ), true));
+
+                    $mPDF1->Output();
+                }
+            }
+            else
+            {
+                $this->render('bparcial');
             }
         }
 }

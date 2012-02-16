@@ -10371,3 +10371,381 @@ in C:\wamp\www\vehiculos\index.php (13)
 2012/02/15 21:27:36 [warning] [application] Failed to set unsafe attribute "idPersona" of "HistorialVehiculos".
 in C:\wamp\www\vehiculos\protected\controllers\HistorialVehiculosController.php (68)
 in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 12:43:45 [error] [php] Undefined index: fecha_termino (C:\wamp\www\vehiculos\protected\views\site\bmensual.php:37)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\views\site\bmensual.php (37)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (163)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 12:48:52 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth(false, '3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 12:49:20 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('F', '3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 12:49:20 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('F', '3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 12:49:21 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('F', '3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 12:50:24 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "getMonthName".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('getMonthName', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->getMonthName('3', 'wide')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 12:50:26 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "getMonthName".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('getMonthName', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->getMonthName('3', 'wide')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 13:02:57 [error] [php] Undefined index: fecha_termino (C:\wamp\www\vehiculos\protected\views\site\bmensual.php:37)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+in C:\wamp\www\vehiculos\protected\views\site\bmensual.php (37)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (163)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 13:07:15 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('f', '3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 13:09:54 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 13:09:55 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 13:09:56 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(35): CDateFormatter->formatMonth('3')
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=3&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual?ano=2012&mes=2&yt0=Consultar
+---
+2012/02/16 13:20:19 [error] [php] Undefined variable: mes (C:\wamp\www\vehiculos\protected\views\site\bmensual.php:32)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(228): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/bmensual
+in C:\wamp\www\vehiculos\protected\views\site\bmensual.php (32)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (228)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 13:21:55 [error] [exception.CException] exception 'CException' with message 'CDateFormatter and its behaviors do not have a method or closure named "formatMonth".' in C:\wamp\www\framework\base\CComponent.php:266
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(36): CComponent->__call('formatMonth', Array)
+#1 C:\wamp\www\vehiculos\protected\views\site\bmensual.php(36): CDateFormatter->formatMonth('MMMM', 6)
+#2 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#3 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', Array, true)
+#4 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', Array, true)
+#5 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('bmensual', Array, true)
+#6 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(163): CController->render('bmensual', Array)
+#7 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#8 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#9 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#10 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('bmensual')
+#12 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/bmensual')
+#13 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#14 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/vehiculos/index.php/site/bmensual?ano=2012&mes=1&yt0=Consultar
+HTTP_REFERER=http://localhost/vehiculos/index.php/site/bmensual
+---
+2012/02/16 14:54:58 [error] [php] Undefined variable: fechainicial (C:\wamp\www\vehiculos\protected\views\site\bparcial.php:6)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(327): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBparcial()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/bparcial?pdf=0
+in C:\wamp\www\vehiculos\protected\views\site\bparcial.php (6)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (327)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 15:12:27 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (114)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 15:12:27 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (114)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 15:12:27 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/16 15:13:06 [warning] [application] Failed to set unsafe attribute "idVehiculo" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (114)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 15:13:06 [warning] [application] Failed to set unsafe attribute "idRf" of "OrdenTrabajo".
+in C:\wamp\www\vehiculos\protected\controllers\OrdenTrabajoController.php (114)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 15:13:06 [warning] [application] Failed to set unsafe attribute "id" of "DetallesOt".
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (439)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (372)
+in C:\wamp\www\vehiculos\protected\extensions\multimodelform\MultiModelForm.php (311)
+2012/02/16 17:59:02 [error] [php] Undefined index: ano (C:\wamp\www\vehiculos\protected\views\site\bmensual.php:14)
+Stack trace:
+#0 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#1 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#2 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(233): SiteController->render()
+#3 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionBmensual()
+#4 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#5 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#6 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#7 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#8 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#9 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#10 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/bmensual
+in C:\wamp\www\vehiculos\protected\views\site\bmensual.php (14)
+in C:\wamp\www\vehiculos\protected\controllers\SiteController.php (233)
+in C:\wamp\www\vehiculos\index.php (13)
+2012/02/16 20:41:14 [error] [exception.CException] exception 'CException' with message 'Alias "application.vendors.PHPExcel" is invalid. Make sure it points to an existing PHP file.' in C:\wamp\www\framework\YiiBase.php:318
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\views\site\test.php(3): YiiBase::import('application.ven...', true)
+#1 C:\wamp\www\framework\web\CBaseController.php(127): require('C:\wamp\www\veh...')
+#2 C:\wamp\www\framework\web\CBaseController.php(96): CBaseController->renderInternal('C:\wamp\www\veh...', NULL, true)
+#3 C:\wamp\www\framework\web\CController.php(870): CBaseController->renderFile('C:\wamp\www\veh...', NULL, true)
+#4 C:\wamp\www\framework\web\CController.php(783): CController->renderPartial('test', NULL, true)
+#5 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(333): CController->render('test')
+#6 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionTest()
+#7 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams(Array)
+#8 C:\wamp\www\framework\web\CController.php(287): CController->runAction(Object(CInlineAction))
+#9 C:\wamp\www\framework\web\CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\wamp\www\framework\web\CWebApplication.php(276): CController->run('test')
+#11 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController('site/test')
+#12 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#13 C:\wamp\www\vehiculos\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/vehiculos/index.php/site/test
+---
+2012/02/16 20:41:44 [error] [php] include(PHPExcel_Shared_ZipStreamWrapper.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory (C:\wamp\www\framework\YiiBase.php:418)
+Stack trace:
+#0 C:\wamp\www\vehiculos\protected\vendors\phpexcel\PHPExcel\Autoloader.php(29): spl_autoload_call()
+#1 C:\wamp\www\vehiculos\protected\vendors\phpexcel\PHPExcel.php(32): require()
+#2 C:\wamp\www\framework\YiiBase.php(316): require()
+#3 C:\wamp\www\vehiculos\protected\views\site\test.php(3): import()
+#4 C:\wamp\www\framework\web\CBaseController.php(127): require()
+#5 C:\wamp\www\framework\web\CBaseController.php(96): SiteController->renderInternal()
+#6 C:\wamp\www\framework\web\CController.php(870): SiteController->renderFile()
+#7 C:\wamp\www\framework\web\CController.php(783): SiteController->renderPartial()
+#8 C:\wamp\www\vehiculos\protected\controllers\SiteController.php(333): SiteController->render()
+#9 C:\wamp\www\framework\web\actions\CInlineAction.php(50): SiteController->actionTest()
+#10 C:\wamp\www\framework\web\CController.php(309): CInlineAction->runWithParams()
+#11 C:\wamp\www\framework\web\CController.php(287): SiteController->runAction()
+#12 C:\wamp\www\framework\web\CController.php(266): SiteController->runActionWithFilters()
+#13 C:\wamp\www\framework\web\CWebApplication.php(276): SiteController->run()
+#14 C:\wamp\www\framework\web\CWebApplication.php(135): CWebApplication->runController()
+#15 C:\wamp\www\framework\base\CApplication.php(162): CWebApplication->processRequest()
+#16 C:\wamp\www\vehiculos\index.php(13): CWebApplication->run()
+REQUEST_URI=/vehiculos/index.php/site/test
+in C:\wamp\www\vehiculos\protected\vendors\phpexcel\PHPExcel\Autoloader.php (29)
+in C:\wamp\www\vehiculos\protected\vendors\phpexcel\PHPExcel.php (32)
+in C:\wamp\www\vehiculos\protected\views\site\test.php (3)

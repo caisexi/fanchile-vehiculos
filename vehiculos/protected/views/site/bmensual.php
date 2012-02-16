@@ -11,12 +11,12 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Mensual'));
 
     <div class="row">
     <?php echo CHtml::label('Año','ano'); ?>
-    <?php echo CHtml::textField('ano', date("Y")); ?>
+    <?php echo CHtml::textField('ano', isset ($_GET['ano']) && $_GET['ano'] != '' ? $_GET['ano'] : date("Y")); ?>
     </div>
     
     <div class="row">
     <?php echo CHtml::label('Mes','mes'); ?>
-    <?php echo CHtml::dropDownList('mes', '',array('1' => 'Enero','2' => 'Febrero','3' => 'Marzo','4' => 'Abril','5' => 'Mayo','6' => 'Junio','7' => 'Julio','8' => 'Agosto','9' => 'Septiembre','10' => 'Octubre','11' => 'Noviembre','12' => 'Diciembre',)); ?>
+    <?php echo CHtml::dropDownList('mes', isset($mes) ? $mes : '',array('1' => 'Enero','2' => 'Febrero','3' => 'Marzo','4' => 'Abril','5' => 'Mayo','6' => 'Junio','7' => 'Julio','8' => 'Agosto','9' => 'Septiembre','10' => 'Octubre','11' => 'Noviembre','12' => 'Diciembre',)); ?>
 
     </div><!-- row -->
     
@@ -29,13 +29,29 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Mensual'));
 </div><!-- form -->
 
 <?php
+
 if(isset ($_GET['mes']))
 {
+    switch($mes){
+               case 1: $mes_letra = 'Enero'; break;
+               case 2: $mes_letra = 'Febrero'; break; 
+               case 3: $mes_letra = 'Marzo'; break; 
+               case 4: $mes_letra = 'Abril'; break; 
+               case 5: $mes_letra = 'Mayo'; break; 
+               case 6: $mes_letra = 'Junio'; break; 
+               case 7: $mes_letra = 'Julio'; break; 
+               case 8: $mes_letra = 'Agosto'; break;
+               case 9: $mes_letra = 'Septiembre'; break; 
+               case 10: $mes_letra = 'Octubre'; break; 
+               case 11: $mes_letra = 'Noviembre'; break; 
+               case 12: $mes_letra = 'Diciembre'; break; 
+           }
 ?>
-<h1>MANTENCIONES DEL <font color="yellow"><?php echo date('m',strtotime($mes)); ?></font></h1>
+<h1>MANTENCIONES DE <font color="yellow"><?php echo strtoupper($mes_letra); ?></font> DEL <?php echo $ano ;?></h1>
 <?php
     $this->widget('zii.widgets.grid.CGridView', array(
-        'summaryText'=>'', 
+        'summaryText'=>'',
+        'emptyText' => 'No hay resultados',
         'dataProvider' => $dataProvider,
         'columns' => array(
             array(
@@ -98,6 +114,7 @@ if(isset ($_GET['mes']))
             ),
         ),
     ));
-    echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bmensual?pdf=1&mes='.$mes);
+    if($dataProvider->getData() != null)
+        echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bmensual?pdf=1&mes='.$mes.'&ano='.$ano);
 }
 ?>

@@ -140,7 +140,7 @@ class SiteController extends GxController
             {                
                 $oDbConnection = Yii::app()->db;
 
-                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, det_factura_combustible.litros as litros, factura_combustible.valor_lt costocombustible, (MAX(orden_trabajo.kilometraje)/det_factura_combustible.litros) as kmlitros, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :anomes ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id INNER JOIN factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id where MONTH(registro_factura.fecha) = :mes AND YEAR(registro_factura.fecha) = :ano GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, det_factura_combustible.litros as litros, factura_combustible.valor_lt costocombustible, (MAX(orden_trabajo.kilometraje)/det_factura_combustible.litros) as kmlitros, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :anomes ORDER BY historial_vehiculos.fecha DESC limit 1) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id INNER JOIN factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id where MONTH(registro_factura.fecha) = :mes AND YEAR(registro_factura.fecha) = :ano GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
                 $oCommand->bindParam(':estado', $estado = 1);
 
@@ -160,10 +160,25 @@ class SiteController extends GxController
                     $this->render('bmensual', array(
                         'dataProvider' => $dataProvider,
                         'mes' => $_GET['mes'],
+                        'ano' => $_GET['ano'],
                     ));
                 }
                 else
                 {
+                    switch($_GET['mes']){
+                       case 1: $mes_letra = 'Enero'; break;
+                       case 2: $mes_letra = 'Febrero'; break; 
+                       case 3: $mes_letra = 'Marzo'; break; 
+                       case 4: $mes_letra = 'Abril'; break; 
+                       case 5: $mes_letra = 'Mayo'; break; 
+                       case 6: $mes_letra = 'Junio'; break; 
+                       case 7: $mes_letra = 'Julio'; break; 
+                       case 8: $mes_letra = 'Agosto'; break;
+                       case 9: $mes_letra = 'Septiembre'; break; 
+                       case 10: $mes_letra = 'Octubre'; break; 
+                       case 11: $mes_letra = 'Noviembre'; break; 
+                       case 12: $mes_letra = 'Diciembre'; break; 
+                   }
                    $mPDF1 = Yii::app()->ePdf->mPDF();
                    $header = array (
                       'odd' => array (
@@ -175,17 +190,7 @@ class SiteController extends GxController
                           'color'=>'#000000'
                         ),
                         'C' => array (
-                          'content' => 'RESUMEN PARCIAL DE MANTENCION DE VEHICULOS DESDE EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
-                        CDateTimeParser::parse(
-                            $_GET['fecha_inicial'], 
-                            'yyyy-MM-dd'
-                        ),
-                        'long',null)).' HASTA EL '.strtoupper(Yii::app()->dateFormatter->formatDateTime(
-                        CDateTimeParser::parse(
-                            $_GET['fecha_termino'], 
-                            'yyyy-MM-dd'
-                        ),
-                        'long',null)),
+                          'content' => 'RESUMEN MENSUAL DE MANTENCION DE VEHICULOS DE '.strtoupper($mes_letra).' DEL '.strtoupper($_GET['ano']),
                           'font-size' => 10,
                           'font-style' => 'B',
                           'font-family' => 'serif',
@@ -215,9 +220,9 @@ class SiteController extends GxController
                     $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/screen_pdf.css');
                     $mPDF1->WriteHTML($stylesheet, 1);
 
-                    $mPDF1->WriteHTML($this->renderPartial('parcialpdf', array('dataProvider' => $dataProvider,
-                        'fechainicial' => $_GET['fecha_inicial'],
-                        'fechafinal' => $_GET['fecha_termino'],
+                    $mPDF1->WriteHTML($this->renderPartial('mensualpdf', array('dataProvider' => $dataProvider,
+                        'mes' => $_GET['mes'],
+                        'ano' => $_GET['ano'],
                         ), true));
 
                     $mPDF1->Output();
@@ -235,7 +240,7 @@ class SiteController extends GxController
             {                
                 $oDbConnection = Yii::app()->db;
 
-                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechainic ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechatermn ORDER BY historial_vehiculos.fecha DESC limit 1) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
                 $oCommand->bindParam(':estado', $estado = 1);
 

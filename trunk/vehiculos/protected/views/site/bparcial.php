@@ -16,6 +16,7 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Parcial'));
                     'changeYear' => true,
                     'dateFormat' => 'yy-mm-dd',
                     ),
+            'value' => isset ($_GET['fecha_inicial']) ? $_GET['fecha_inicial'] : '',
             ));
         ; ?>
     </div>
@@ -29,6 +30,7 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Parcial'));
                     'changeYear' => true,
                     'dateFormat' => 'yy-mm-dd',
                     ),
+            'value' => isset ($_GET['fecha_termino']) ? $_GET['fecha_termino'] : '',
             ));
         ; ?>
     </div>
@@ -50,6 +52,7 @@ if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
     $this->widget('zii.widgets.grid.CGridView', array(
         'summaryText'=>'', 
         'dataProvider' => $dataProvider,
+        'emptyText' => 'No hay resultados',
         'columns' => array(
             array(
                 'name'=>'Patente',
@@ -93,6 +96,7 @@ if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
             ),
         ),
     ));
-    echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bparcial?pdf=1&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal);
+    if($dataProvider->getData() != null)
+        echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bparcial?pdf=1&fecha_inicial='.$fechainicial.'&fecha_termino='.$fechafinal);
 }
 ?>

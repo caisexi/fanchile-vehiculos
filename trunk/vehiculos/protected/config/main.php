@@ -19,6 +19,7 @@ return array(
 		'application.models.*',
 		'application.components.*',
                 'ext.giix-components.*', 
+                'application.extensions.*',
                 'application.modules.srbac.controllers.SBaseController'
 	),
 

@@ -33,9 +33,13 @@
 		<?php echo $form->textField($model, 'apellido_mat', array('maxlength' => 50)); ?>
 		<?php echo $form->error($model,'apellido_mat'); ?>
 		</div><!-- row -->
+                <?php   
+                    $criteria=new CDbCriteria;                        
+                    $criteria->order='nombre ASC';
+                ?>
 		<div class="row">
 		<?php echo $form->labelEx($model,'id_cargo_empresa'); ?>
-		<?php echo $form->dropDownList($model, 'id_cargo_empresa', GxHtml::listDataEx(CargosEmpresa::model()->findAllAttributes(null, true))); ?>
+		<?php echo $form->dropDownList($model, 'id_cargo_empresa', GxHtml::listDataEx(CargosEmpresa::model()->findAllAttributes(null, true,$criteria))); ?>
 		<?php echo $form->error($model,'id_cargo_empresa'); ?>
 		</div><!-- row -->
 

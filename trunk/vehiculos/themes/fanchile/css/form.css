@@ -183,3 +183,12 @@ div.wide.form .buttons, div.wide.form .hint, div.wide.form .errorMessage
     color: #fff;
 
 }
+
+DIV#content DIV.compactRadioGroup {
+    padding-left: 1em;
+}
+ 
+DIV#content .compactRadioGroup LABEL,
+DIV#content .compactRadioGroup INPUT {
+    display: inline;
+}

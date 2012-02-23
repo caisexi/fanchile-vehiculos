@@ -50,7 +50,7 @@
                                         array('label'=>'Combustibles', 'url'=>array('#'), 'items'=>array
 						(
                                                 array('label'=>'Factura', 'url'=>array('/facturacombustible/admin ')),
-                                                array('label'=>'Tarjeta', 'url'=>array('#')),
+                                                array('label'=>'Tarjeta', 'url'=>array('/site/subir')),
                                         )),
 								
 				)),

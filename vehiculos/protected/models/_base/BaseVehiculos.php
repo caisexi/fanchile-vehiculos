@@ -138,6 +138,11 @@ abstract class BaseVehiculos extends GxActiveRecord {
             return parent::beforeSave();
         }
         
+        /*public function beforeSave() {
+            if (!$this->isNewRecord)
+                return Yii::app()->user->setFlash('notice', "El Archivo ya existe!");
+        }*/
+        
         public function saberEstado($estado) {
             
             switch ($estado) {

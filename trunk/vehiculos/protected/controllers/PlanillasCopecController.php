@@ -29,8 +29,40 @@ public function accessRules() {
 }
 
 	public function actionView($id) {
+                $tipo = $this->loadModel($id, 'PlanillasCopec')->tipo_planilla;
+                if ($tipo == 0)
+                {
+                    $dataProvider = new CActiveDataProvider('Diesel', array(
+                        'pagination'=>array(
+                            'pageSize'=>30,
+                        ),
+                        'criteria' => array(
+                            'condition' => 'id_planilla = :planilla',
+                            'params' => array(
+                            ':planilla' => $this->loadModel($id, 'PlanillasCopec')->id,
+                            ),
+                        ),
+                    ));
+                }
+                elseif($tipo == 1)
+                {
+                    $dataProvider = new CActiveDataProvider('Gasolina', array(
+                        'pagination'=>array(
+                            'pageSize'=>30,
+                        ),
+                        'criteria' => array(
+                            'condition' => 'id_planilla = :planilla',
+                            'params' => array(
+                            ':planilla' => $this->loadModel($id, 'PlanillasCopec')->id,
+                            ),
+                        ),
+                    ));
+                }
+                
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'PlanillasCopec'),
+                        'dataProvider' => $dataProvider,
+                        'tipo' => $tipo, 
 		));
 	}
 

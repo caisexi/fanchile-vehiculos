@@ -9,7 +9,8 @@
  * Columns in table "planillas_copec" available as properties of the model,
  * followed by relations of table "planillas_copec" available as properties of the model.
  *
- * @property string $id
+ * @property integer $id
+ * @property string $nombre
  * @property integer $tipo_planilla
  * @property string $creado
  * @property string $modificado
@@ -28,19 +29,19 @@ abstract class BasePlanillasCopec extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'PlanillasCopec|PlanillasCopecs', $n);
+		return Yii::t('app', 'Planilla COPEC|Planillas COPEC', $n);
 	}
 
 	public static function representingColumn() {
-		return 'creado';
+		return 'nombre';
 	}
 
 	public function rules() {
 		return array(
-			array('id, tipo_planilla, creado, modificado', 'required'),
+			array('nombre, tipo_planilla, creado, modificado', 'required'),
 			array('tipo_planilla', 'numerical', 'integerOnly'=>true),
-			array('id', 'length', 'max'=>255),
-			array('id, tipo_planilla, creado, modificado', 'safe', 'on'=>'search'),
+			array('nombre', 'length', 'max'=>40),
+			array('id, nombre, tipo_planilla, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -59,6 +60,7 @@ abstract class BasePlanillasCopec extends GxActiveRecord {
 	public function attributeLabels() {
 		return array(
 			'id' => Yii::t('app', 'ID'),
+			'nombre' => Yii::t('app', 'Nombre'),
 			'tipo_planilla' => Yii::t('app', 'Tipo Planilla'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
@@ -70,7 +72,8 @@ abstract class BasePlanillasCopec extends GxActiveRecord {
 	public function search() {
 		$criteria = new CDbCriteria;
 
-		$criteria->compare('id', $this->id, true);
+		$criteria->compare('id', $this->id);
+		$criteria->compare('nombre', $this->nombre, true);
 		$criteria->compare('tipo_planilla', $this->tipo_planilla);
 		$criteria->compare('creado', $this->creado, true);
 		$criteria->compare('modificado', $this->modificado, true);

@@ -20,7 +20,6 @@ return array(
 		'application.components.*',
                 'ext.giix-components.*', 
                 'application.extensions.*',
-                'application.modules.srbac.controllers.SBaseController'
 	),
 
 	'modules'=>array(
@@ -33,51 +32,21 @@ return array(
 			'ext.giix-core', // giix generators
                         ),
 		 	// If removed, Gii defaults to localhost only. Edit carefully to taste.
-			'ipFilters'=>array('127.0.0.1','::1'),
+			'ipFilters'=>array('127.0.0.1','192.168.254.225','::1'),
 		),
-                'srbac' => array(
-                     'userclass'=>'Usuarios', //default: User
-                     'userid'=>'id', //default: userid
-                     'username'=>'usuario', //default:username
-                     'delimeter'=>'@', //default:-
-                     'debug'=>true, //default :false
-                     'pageSize'=>10, // default : 15
-                     'superUser' =>'Authority', //default: Authorizer
-                     'css'=>'srbac.css',  //default: srbac.css
-                     'layout'=>
-                       'application.views.layouts.main', //default: application.views.layouts.main,                                          //must be an existing alias
-                     'notAuthorizedView'=> 'srbac.views.authitem.unauthorized', // default:                   
-                                       //srbac.views.authitem.unauthorized, must be an existing alias
-                     'alwaysAllowed'=>array(   //default: array()
-                      'SiteLogin','SiteLogout','SiteIndex','SiteAdmin',
-                     'SiteError', 'SiteContact'),
-                     'userActions'=>array('Show','View','List'), //default: array()
-                    'listBoxNumberOfLines' => 15,  //default : 10
-                    'imagesPath' => 'srbac.images', // default: srbac.images
-                     'imagesPack'=>'tango', //default: noia
-                     'iconText'=>true, // default : false
-                     'header'=>'srbac.views.authitem.header', //default : srbac.views.authitem.header, 
-                                                              //must be an existing alias
-                     'footer'=>'srbac.views.authitem.footer', //default: srbac.views.authitem.footer, 
-                                                              //must be an existing alias
-                     'showHeader'=>true, // default: false
-                     'showFooter'=>true, // default: false
-                     'alwaysAllowedPath'=>'srbac.components', // default: srbac.components
-                                                              // must be an existing alias
-                   )
 	),
 
 	// application components
 	'components'=>array(
                 'ePdf' => array(
-        'class'         => 'ext.yii-pdf.EYiiPdf',
-        'params'        => array(
-            'mPDF'     => array(
-                'librarySourcePath' => 'application.vendors.mpdf.*',
-                'constants'         => array(
-                    '_MPDF_TEMP_PATH' => Yii::getPathOfAlias('application.runtime'),
-                ),
-                'class'=>'mpdf', // the literal class filename to be loaded from the vendors folder
+                    'class'         => 'ext.yii-pdf.EYiiPdf',
+                    'params'        => array(
+                        'mPDF'     => array(
+                            'librarySourcePath' => 'application.vendors.mpdf.*',
+                            'constants'         => array(
+                                '_MPDF_TEMP_PATH' => Yii::getPathOfAlias('application.runtime'),
+                            ),
+                            'class'=>'mpdf', // the literal class filename to be loaded from the vendors folder
                 /*'defaultParams'     => array( // More info: http://mpdf1.com/manual/index.php?tid=184
                     'mode'              => '', //  This parameter specifies the mode of the new document.
                     'format'            => 'A4', // format A4, A5, ...

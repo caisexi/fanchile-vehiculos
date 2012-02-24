@@ -10,7 +10,7 @@
  * followed by relations of table "gasolina" available as properties of the model.
  *
  * @property integer $id
- * @property string $id_planilla
+ * @property integer $id_planilla
  * @property integer $id_vehiculo
  * @property string $tarjeta
  * @property string $fecha
@@ -22,8 +22,8 @@
  * @property string $litros
  * @property integer $total
  *
- * @property PlanillasCopec $idPlanilla
  * @property Vehiculos $idVehiculo
+ * @property PlanillasCopec $idPlanilla
  */
 abstract class BaseGasolina extends GxActiveRecord {
 
@@ -46,11 +46,8 @@ abstract class BaseGasolina extends GxActiveRecord {
 	public function rules() {
 		return array(
 			array('id_planilla, id_vehiculo, tarjeta, fecha, hora, comuna, direccion, nro_transaccion, precio_u, litros, total', 'required'),
-			array('id_vehiculo, precio_u, total', 'numerical', 'integerOnly'=>true),
-			array('id_planilla', 'length', 'max'=>255),
-			array('tarjeta, nro_transaccion', 'length', 'max'=>20),
-			array('comuna', 'length', 'max'=>40),
-			array('direccion', 'length', 'max'=>100),
+			array('id_planilla, id_vehiculo, precio_u, total', 'numerical', 'integerOnly'=>true),
+			array('tarjeta, comuna, direccion, nro_transaccion', 'length', 'max'=>255),
 			array('litros', 'length', 'max'=>10),
 			array('id, id_planilla, id_vehiculo, tarjeta, fecha, hora, comuna, direccion, nro_transaccion, precio_u, litros, total', 'safe', 'on'=>'search'),
 		);
@@ -58,8 +55,8 @@ abstract class BaseGasolina extends GxActiveRecord {
 
 	public function relations() {
 		return array(
-			'idPlanilla' => array(self::BELONGS_TO, 'PlanillasCopec', 'id_planilla'),
 			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
+			'idPlanilla' => array(self::BELONGS_TO, 'PlanillasCopec', 'id_planilla'),
 		);
 	}
 
@@ -82,8 +79,8 @@ abstract class BaseGasolina extends GxActiveRecord {
 			'precio_u' => Yii::t('app', 'Precio U'),
 			'litros' => Yii::t('app', 'Litros'),
 			'total' => Yii::t('app', 'Total'),
-			'idPlanilla' => null,
 			'idVehiculo' => null,
+			'idPlanilla' => null,
 		);
 	}
 

@@ -15,7 +15,6 @@ $this->breadcrumbs = array(Yii::t('app', 'Subir Planilla'));
         <?php echo CHtml::fileField('excel', '', array('style' => 'width:400px')); ?>
         <?php echo CHtml::hiddenField('action','upload'); ?>
     </div><!-- row -->
-    <?php echo CHtml::label('Tipo de Excel','tipoxls'); ?>
     <div class="row">
         <?php echo CHtml::label('Sobreescribir si existe','sobreescribir'); ?>
         <?php echo CHtml::checkBox('sobreescribir'); ?>
@@ -38,5 +37,10 @@ $this->breadcrumbs = array(Yii::t('app', 'Subir Planilla'));
         }
         if(isset($invalido))
             print_r($invalido);
+        if(isset($planilla))
+        {
+            print_r($planilla->attributes);
+            print_r($planilla->errors);
+        }
     ?>
 </div><!-- form -->

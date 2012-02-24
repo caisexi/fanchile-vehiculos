@@ -338,11 +338,9 @@ class SiteController extends GxController
 
                     $archivo = $_FILES['excel']['name'];
 
-                    $tipo = $_FILES['excel']['type'];
-
                     $destino = "xls/bak_".$archivo;
                     
-                    $p = PlanillasCopec::model()->findByPk($archivo);
+                    $p = PlanillasCopec::model()->find('nombre = :archivo', array(':archivo' => $archivo));
                     
                     if($p != null && !isset ($sobreescribir))
                     {                        
@@ -371,10 +369,10 @@ class SiteController extends GxController
                                         $gas = true;
                             if($p != null)
                             {
-                                $planilla = $this->loadModel($archivo, 'PlanillasCopec');
+                                $planilla = $this->loadModel($p->id, 'PlanillasCopec');
                                 $planilla->delete();
                                 $planilla = new PlanillasCopec();
-                                $planilla->id = $archivo;
+                                $planilla->nombre = $archivo;
                                 if($gas)
                                     $planilla->tipo_planilla = '1';
                                 else
@@ -383,19 +381,19 @@ class SiteController extends GxController
                             else
                             {
                                 $planilla = new PlanillasCopec();
-                                $planilla->id = $archivo;
+                                $planilla->nombre = $archivo;
                                 if($gas)
                                     $planilla->tipo_planilla = '1';
                                 else
                                     $planilla->tipo_planilla = '0';
                             }                                
                             if($planilla->save())
-                            {     
+                            {  
                                 if(!$gas)
                                 {
                                     while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
                                         $diesel[$i] = new Diesel();
-                                        $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => str_replace('-', '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue()))));
+                                        $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
                                         $diesel[$i]->setAttributes(array(
                                             'id_planilla' => $planilla->id,
                                             'nro_factura' => $objPHPExcel->getActiveSheet()->getCell('B'.($i))->getCalculatedValue(),
@@ -422,7 +420,7 @@ class SiteController extends GxController
                                         {
                                             $di->save();
                                         }
-                                        $this->render('subir',array('diesel'=>$diesel,));
+                                        $this->redirect(array('planillascopec/view', 'id' => $planilla->id));
                                     }
                                     else{
                                         Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
@@ -433,7 +431,7 @@ class SiteController extends GxController
                                 {
                                     while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
                                         $gasolina[$i] = new Gasolina();
-                                        $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace('-', '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
+                                        $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
                                         $gasolina[$i]->setAttributes(array(
                                             'id_planilla' => $planilla->id,
                                             'nro_factura' => $objPHPExcel->getActiveSheet()->getCell('B'.($i))->getCalculatedValue(),
@@ -459,13 +457,18 @@ class SiteController extends GxController
                                         {
                                             $ga->save();
                                         }
-                                        $this->render('subir',array('gasolina'=>$gasolina,));
+                                        $this->redirect(array('planillascopec/view', 'id' => $planilla->id));
                                     }
                                     else{
                                         Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
                                         $this->render('subir',array('invalido'=>$invalido,'gasolina'=>$gasolina));
                                     }
                                 }
+                            }
+                            else
+                            {
+                                Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
+                                $this->render('subir',array('planilla'=>$planilla));
                             }
                         }
                         else

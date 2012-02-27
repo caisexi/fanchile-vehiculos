@@ -50,9 +50,8 @@
                                         array('label'=>'Combustibles', 'url'=>array('#'), 'items'=>array
 						(
                                                 array('label'=>'Factura', 'url'=>array('/facturacombustible/admin ')),
-                                                array('label'=>'Tarjeta', 'url'=>array('/site/subir')),
-                                        )),
-								
+                                                array('label'=>'Tarjeta', 'url'=>array('/planillascopec/admin ')),
+                                        )),								
 				)),
                                 array('label'=>'Administrar', 'url'=>array('#'), 'items'=>array
 					(

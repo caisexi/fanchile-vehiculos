@@ -11,6 +11,7 @@ $this->menu=array(
 	array('label'=>Yii::t('app', 'Editar') . ' ' . $model->label(), 'url'=>array('update', 'id' => $model->id)),
 	array('label'=>Yii::t('app', 'Borrar') . ' ' . $model->label(), 'url'=>'#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm'=>'Are you sure you want to delete this item?')),
 	array('label'=>Yii::t('app', 'Administrar') . ' ' . $model->label(2), 'url'=>array('admin')),
+        array('label'=>Yii::t('app', 'Subir Planilla'), 'url'=>array('site/subir')),
 );
 ?>
 
@@ -43,13 +44,14 @@ if($tipo == 1)
         ),
         'columns' => array(
             array(
-                'name'=>'id_vehiculo',
-                'value' => '$data->idVehiculo == null ? null : $data->idVehiculo->patente',
+              'name' => 'id_vehiculo',
+              'type' => 'raw',
+              'value' => 'CHtml::link(OrdenTrabajo::formatearPatente($data->idVehiculo),"/vehiculos/index.php/vehiculos/".$data->idVehiculo->id)'
             ),
             array(
                 'name'=>'tarjeta',
                 'value' => '$data->tarjeta == null ? null : $data->tarjeta',
-            ),
+            ),            
             array(
                 'name'=>'fecha',
                 'value' => '$data->fecha == null ? null : $data->fecha',
@@ -66,7 +68,7 @@ if($tipo == 1)
             array(
                 'name'=>'direccion',
                 'value' => '$data->direccion == null ? null : $data->direccion',
-                'htmlOptions'=>array('style' => 'width:180px'),
+                'htmlOptions'=>array('style' => 'width:150px'),
             ),
             array(
                 'name'=>'precio_u',
@@ -99,8 +101,9 @@ elseif($tipo == 0)
         ),
         'columns' => array(
             array(
-                'name'=>'id_vehiculo',
-                'value' => '$data->idVehiculo == null ? null : OrdenTrabajo::formatearPatente($data->idVehiculo->patente)',
+              'name' => 'id_vehiculo',
+              'type' => 'raw',
+              'value' => 'CHtml::link(OrdenTrabajo::formatearPatente($data->idVehiculo),"/vehiculos/index.php/vehiculos/".$data->idVehiculo->id)'
             ),
             array(
                 'name'=>'nro_factura',

@@ -11,6 +11,7 @@ $this->menu = array(
 	array('label' => Yii::t('app', 'Agregar') . ' ' . $model->label(), 'url'=>array('create')),
 	array('label' => Yii::t('app', 'Ver') . ' ' . $model->label(), 'url'=>array('view', 'id' => GxActiveRecord::extractPkValue($model, true))),
 	array('label' => Yii::t('app', 'Administrar') . ' ' . $model->label(2), 'url'=>array('admin')),
+        array('label'=>Yii::t('app', 'Subir Planilla'), 'url'=>array('site/subir')),
 );
 ?>
 

@@ -8,6 +8,7 @@ $this->breadcrumbs = array(
 $this->menu = array(
 		array('label'=>Yii::t('app', 'Listar') . ' ' . $model->label(2), 'url'=>array('index')),
 		array('label'=>Yii::t('app', 'Agregar') . ' ' . $model->label(), 'url'=>array('create')),
+                array('label'=>Yii::t('app', 'Subir Planilla'), 'url'=>array('site/subir')),
 	);
 
 Yii::app()->clientScript->registerScript('search', "

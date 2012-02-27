@@ -351,7 +351,6 @@ class SiteController extends GxController
                     {
                         if (copy($_FILES['excel']['tmp_name'],$destino)) 
                         {
-                            Yii::app()->user->setFlash('success', $archivo . " Subido con Exito!");
                             Yii::import('application.extensions.Classes.PHPExcel',true);
                             $objReader = new PHPExcel_Reader_Excel5;
                             $objPHPExcel = $objReader->load("xls/bak_".$archivo);
@@ -359,115 +358,127 @@ class SiteController extends GxController
                             $valid=true;
                             $i='2'; 
                             $gas = false;
+                            $petroleo = false;
                             if (preg_match("/g93/i",$objPHPExcel->getActiveSheet()->getCell("F2")->getValue()))
                                         $gas = true;
                                 else
                                     if (preg_match("/g95/i",$objPHPExcel->getActiveSheet()->getCell("F2")->getValue()))
-                                            $gas = true;
+                                        $gas = true;
                                     else
                                         if (preg_match("/g95/i",$objPHPExcel->getActiveSheet()->getCell("F2")->getValue()))
-                                        $gas = true;
+                                            $gas = true;
+                                        else
+                                            if (preg_match("/diesel/i",$objPHPExcel->getActiveSheet()->getCell("H2")->getValue()))
+                                                $petroleo = true;
                             if($p != null)
                             {
                                 $planilla = $this->loadModel($p->id, 'PlanillasCopec');
                                 $planilla->delete();
                                 $planilla = new PlanillasCopec();
-                                $planilla->nombre = $archivo;
-                                if($gas)
-                                    $planilla->tipo_planilla = '1';
-                                else
-                                    $planilla->tipo_planilla = '0';
+                                $planilla->nombre = $archivo;                                
                             }
                             else
                             {
                                 $planilla = new PlanillasCopec();
                                 $planilla->nombre = $archivo;
-                                if($gas)
+                            }
+                            
+                            if($gas)
                                     $planilla->tipo_planilla = '1';
                                 else
                                     $planilla->tipo_planilla = '0';
-                            }                                
-                            if($planilla->save())
-                            {  
-                                if(!$gas)
+                                
+                            if($gas || $petroleo)
+                            {
+                                if($planilla->save())
                                 {
-                                    while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
-                                        $diesel[$i] = new Diesel();
-                                        $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
-                                        $diesel[$i]->setAttributes(array(
-                                            'id_planilla' => $planilla->id,
-                                            'nro_factura' => $objPHPExcel->getActiveSheet()->getCell('B'.($i))->getCalculatedValue(),
-                                            'id_vehiculo' => isset($vehiculo->id) ? $vehiculo->id : '',
-                                            'fecha' => date("Y-m-d",PHPExcel_Shared_Date::ExcelToPHP($objPHPExcel->getActiveSheet()->getCell('E'.($i))->getCalculatedValue())),
-                                            'region' => $objPHPExcel->getActiveSheet()->getCell('F'.($i))->getCalculatedValue(),
-                                            'estacion' => $objPHPExcel->getActiveSheet()->getCell('G'.($i))->getCalculatedValue(),
-                                            'litros' => str_replace(',', '.', $objPHPExcel->getActiveSheet()->getCell('I'.($i))->getCalculatedValue()),
-                                            'precio_u' => intval($objPHPExcel->getActiveSheet()->getCell('J'.($i))->getCalculatedValue()),
-                                            'especifico' => intval($objPHPExcel->getActiveSheet()->getCell('K'.($i))->getCalculatedValue()),
-                                            'variable' => intval($objPHPExcel->getActiveSheet()->getCell('L'.($i))->getCalculatedValue()),
-                                            'total' => str_replace(array(',','.'), '', $objPHPExcel->getActiveSheet()->getCell('M'.($i))->getCalculatedValue()),
-                                            'nro_guia' => $objPHPExcel->getActiveSheet()->getCell('N'.($i))->getCalculatedValue(),
-                                            'rollo' => $objPHPExcel->getActiveSheet()->getCell('O'.($i))->getCalculatedValue(),
-                                        ));
-                                        $valid = $diesel[$i]->validate() && $valid;
-                                        if($valid == false)
-                                            $invalido[$i] = $i;
-                                        $i++;
-                                    }
-                                    if($valid)
+                                    Yii::app()->user->setFlash('success', $archivo . " Subido con Exito!");
+                                    if($petroleo)
                                     {
-                                        foreach($diesel as $di)
-                                        {
-                                            $di->save();
+                                        while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
+                                            $diesel[$i] = new Diesel();
+                                            $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
+                                            $diesel[$i]->setAttributes(array(
+                                                'id_planilla' => $planilla->id,
+                                                'nro_factura' => $objPHPExcel->getActiveSheet()->getCell('B'.($i))->getCalculatedValue(),
+                                                'id_vehiculo' => isset($vehiculo->id) ? $vehiculo->id : '',
+                                                'fecha' => date("Y-m-d",PHPExcel_Shared_Date::ExcelToPHP($objPHPExcel->getActiveSheet()->getCell('E'.($i))->getCalculatedValue())),
+                                                'region' => $objPHPExcel->getActiveSheet()->getCell('F'.($i))->getCalculatedValue(),
+                                                'estacion' => $objPHPExcel->getActiveSheet()->getCell('G'.($i))->getCalculatedValue(),
+                                                'litros' => str_replace(',', '.', $objPHPExcel->getActiveSheet()->getCell('I'.($i))->getCalculatedValue()),
+                                                'precio_u' => intval($objPHPExcel->getActiveSheet()->getCell('J'.($i))->getCalculatedValue()),
+                                                'especifico' => intval($objPHPExcel->getActiveSheet()->getCell('K'.($i))->getCalculatedValue()),
+                                                'variable' => intval($objPHPExcel->getActiveSheet()->getCell('L'.($i))->getCalculatedValue()),
+                                                'total' => str_replace(array(',','.'), '', $objPHPExcel->getActiveSheet()->getCell('M'.($i))->getCalculatedValue()),
+                                                'nro_guia' => $objPHPExcel->getActiveSheet()->getCell('N'.($i))->getCalculatedValue(),
+                                                'rollo' => $objPHPExcel->getActiveSheet()->getCell('O'.($i))->getCalculatedValue(),
+                                            ));
+                                            $valid = $diesel[$i]->validate() && $valid;
+                                            if($valid == false)
+                                                $invalido[$i] = $i;
+                                            $i++;
                                         }
-                                        $this->redirect(array('planillascopec/view', 'id' => $planilla->id));
+                                        if($valid)
+                                        {
+                                            foreach($diesel as $di)
+                                            {
+                                                $di->save();
+                                            }
+                                            $this->redirect(array('planillascopec/view', 'id' => $planilla->id));
+                                        }
+                                        else{
+                                            Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
+                                            $this->render('subir',array('invalido'=>$invalido,'diesel'=>$diesel));
+                                        }
                                     }
-                                    else{
-                                        Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
-                                        $this->render('subir',array('invalido'=>$invalido,'diesel'=>$diesel));
+                                    elseif($gas)
+                                    {
+                                        while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
+                                            $gasolina[$i] = new Gasolina();
+                                            $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
+                                            $gasolina[$i]->setAttributes(array(
+                                                'id_planilla' => $planilla->id,
+                                                'nro_factura' => $objPHPExcel->getActiveSheet()->getCell('B'.($i))->getCalculatedValue(),
+                                                'id_vehiculo' => isset($vehiculo->id) ? $vehiculo->id : '',
+                                                'tarjeta' => $objPHPExcel->getActiveSheet()->getCell('E'.($i))->getCalculatedValue(),
+                                                'fecha' => date("Y-m-d",PHPExcel_Shared_Date::ExcelToPHP($objPHPExcel->getActiveSheet()->getCell('G'.($i))->getCalculatedValue())),
+                                                'hora' => date("H:i:s",PHPExcel_Shared_Date::ExcelToPHP($objPHPExcel->getActiveSheet()->getCell('H'.($i))->getCalculatedValue())),
+                                                'comuna' => $objPHPExcel->getActiveSheet()->getCell('I'.($i))->getCalculatedValue(),
+                                                'direccion' => $objPHPExcel->getActiveSheet()->getCell('J'.($i))->getCalculatedValue(),
+                                                'nro_transaccion' => $objPHPExcel->getActiveSheet()->getCell('K'.($i))->getCalculatedValue(),
+                                                'precio_u' => intval($objPHPExcel->getActiveSheet()->getCell('M'.($i))->getCalculatedValue()),
+                                                'litros' => str_replace(',', '.', $objPHPExcel->getActiveSheet()->getCell('N'.($i))->getCalculatedValue()),
+                                                'total' => str_replace(array(',','.'), '', $objPHPExcel->getActiveSheet()->getCell('O'.($i))->getCalculatedValue()),
+                                            ));
+                                            $valid = $gasolina[$i]->validate() && $valid;
+                                            if($valid == false)
+                                                $invalido[$i] = $i;
+                                            $i++;
+                                        }
+                                        if($valid)
+                                        {
+                                            foreach($gasolina as $ga)
+                                            {
+                                                $ga->save();
+                                            }
+                                            $this->redirect(array('planillascopec/view', 'id' => $planilla->id));
+                                        }
+                                        else{
+                                            Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
+                                            $this->render('subir',array('invalido'=>$invalido,'gasolina'=>$gasolina));
+                                        }
                                     }
                                 }
-                                elseif($gas)
-                                {
-                                    while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
-                                        $gasolina[$i] = new Gasolina();
-                                        $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
-                                        $gasolina[$i]->setAttributes(array(
-                                            'id_planilla' => $planilla->id,
-                                            'nro_factura' => $objPHPExcel->getActiveSheet()->getCell('B'.($i))->getCalculatedValue(),
-                                            'id_vehiculo' => isset($vehiculo->id) ? $vehiculo->id : '',
-                                            'tarjeta' => $objPHPExcel->getActiveSheet()->getCell('E'.($i))->getCalculatedValue(),
-                                            'fecha' => date("Y-m-d",PHPExcel_Shared_Date::ExcelToPHP($objPHPExcel->getActiveSheet()->getCell('G'.($i))->getCalculatedValue())),
-                                            'hora' => date("H:i:s",PHPExcel_Shared_Date::ExcelToPHP($objPHPExcel->getActiveSheet()->getCell('H'.($i))->getCalculatedValue())),
-                                            'comuna' => $objPHPExcel->getActiveSheet()->getCell('I'.($i))->getCalculatedValue(),
-                                            'direccion' => $objPHPExcel->getActiveSheet()->getCell('J'.($i))->getCalculatedValue(),
-                                            'nro_transaccion' => $objPHPExcel->getActiveSheet()->getCell('K'.($i))->getCalculatedValue(),
-                                            'precio_u' => intval($objPHPExcel->getActiveSheet()->getCell('M'.($i))->getCalculatedValue()),
-                                            'litros' => str_replace(',', '.', $objPHPExcel->getActiveSheet()->getCell('N'.($i))->getCalculatedValue()),
-                                            'total' => str_replace(array(',','.'), '', $objPHPExcel->getActiveSheet()->getCell('O'.($i))->getCalculatedValue()),
-                                        ));
-                                        $valid = $gasolina[$i]->validate() && $valid;
-                                        if($valid == false)
-                                            $invalido[$i] = $i;
-                                        $i++;
-                                    }
-                                    if($valid)
-                                    {
-                                        foreach($gasolina as $ga)
-                                        {
-                                            $ga->save();
-                                        }
-                                        $this->redirect(array('planillascopec/view', 'id' => $planilla->id));
-                                    }
-                                    else{
-                                        Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
-                                        $this->render('subir',array('invalido'=>$invalido,'gasolina'=>$gasolina));
-                                    }
+                                else{
+                                    unlink("xls/bak_".$archivo);
+                                    Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
+                                    $this->render('subir',array('invalido'=>$invalido,'gasolina'=>$gasolina));
                                 }
                             }
                             else
                             {
-                                Yii::app()->user->setFlash('error', "No se han podido validar los datos!");
+                                unlink("xls/bak_".$archivo);
+                                Yii::app()->user->setFlash('error', "Planilla no valida!");
                                 $this->render('subir',array('planilla'=>$planilla));
                             }
                         }

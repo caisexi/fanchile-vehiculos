@@ -38,7 +38,7 @@ abstract class BaseDiesel extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Diesel|Diesels', $n);
+		return Yii::t('app', 'Diesel|Diesel', $n);
 	}
 
 	public static function representingColumn() {
@@ -78,7 +78,7 @@ abstract class BaseDiesel extends GxActiveRecord {
 			'region' => Yii::t('app', 'Region'),
 			'estacion' => Yii::t('app', 'Estacion'),
 			'litros' => Yii::t('app', 'Litros'),
-			'precio_u' => Yii::t('app', 'Precio U'),
+			'precio_u' => Yii::t('app', 'Precio Unitario'),
 			'especifico' => Yii::t('app', 'Especifico'),
 			'variable' => Yii::t('app', 'Variable'),
 			'total' => Yii::t('app', 'Total'),

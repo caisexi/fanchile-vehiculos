@@ -76,7 +76,7 @@ abstract class BaseGasolina extends GxActiveRecord {
 			'comuna' => Yii::t('app', 'Comuna'),
 			'direccion' => Yii::t('app', 'Direccion'),
 			'nro_transaccion' => Yii::t('app', 'Nro Transaccion'),
-			'precio_u' => Yii::t('app', 'Precio U'),
+			'precio_u' => Yii::t('app', 'Precio Unitario'),
 			'litros' => Yii::t('app', 'Litros'),
 			'total' => Yii::t('app', 'Total'),
 			'idVehiculo' => null,

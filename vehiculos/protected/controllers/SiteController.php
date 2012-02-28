@@ -133,6 +133,102 @@ class SiteController extends GxController
             }
         }
         
+        
+        public function actionGastocombustible()
+        {
+            $this->layout = '//layouts/pg';
+            if(isset($_GET['anio']))
+            {
+                $oDbConnection = Yii::app()->db;
+              
+                $oCommand = $oDbConnection->createCommand('select SUM(gasolina.litros) as gasolitros, MONTH(gasolina.fecha) as mes, combustibles.nombre as combu from gasolina INNER JOIN vehiculos ON vehiculos.id = gasolina.id_vehiculo INNER JOIN combustibles ON combustibles.id = vehiculos.idCombustible where gasolina.id_vehiculo = :idv AND YEAR(gasolina.fecha) = :ano GROUP BY MONTH(gasolina.fecha)');
+                $oCommand->bindParam(':idv', $_GET['cv']);
+                $oCommand->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader = $oCommand->queryAll();
+
+                $oCommand2 = $oDbConnection->createCommand('select SUM(diesel.litros) as diesilitros, MONTH(diesel.fecha) as mes, combustibles.nombre as combu from diesel INNER JOIN vehiculos ON vehiculos.id = diesel.id_vehiculo INNER JOIN combustibles ON combustibles.id = vehiculos.idCombustible where diesel.id_vehiculo = :idv AND YEAR(diesel.fecha) = :ano GROUP BY MONTH(diesel.fecha)');
+                $oCommand2->bindParam(':idv', $_GET['cv']);
+                $oCommand2->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader2 = $oCommand2->queryAll();
+
+                $oCommand3 = $oDbConnection->createCommand('select SUM(det_factura_combustible.litros) as factulitros, MONTH(factura_combustible.fecha) as mes, combustibles.nombre as combu from det_factura_combustible INNER JOIN factura_combustible on factura_combustible.id = det_factura_combustible.id_factura_combustible INNER JOIN combustibles on combustibles.id = factura_combustible.id_combustible where det_factura_combustible.id_vehiculo = :idv AND YEAR(factura_combustible.fecha) = :ano GROUP BY MONTH(factura_combustible.fecha)');
+                $oCommand3->bindParam(':idv', $_GET['cv']);
+                $oCommand3->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader3 = $oCommand3->queryAll();
+                      
+
+                $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
+                    'keyField'=>'mes'
+                ));
+                $dataProvider2=new CArrayDataProvider($oCDbDataReader2, array(
+                    'keyField'=>'mes'
+                ));
+                $dataProvider3=new CArrayDataProvider($oCDbDataReader3, array(
+                    'keyField'=>'mes'
+                ));
+                $this->render('gc', array(
+                    'dataProvider' => $dataProvider,
+                    'dataProvider2' => $dataProvider2,
+                    'dataProvider3' => $dataProvider3,
+                    'anio'=>$_GET['anio'],
+                ));
+            }
+            else
+            {
+                $this->render('gc');
+            }
+        }
+        
+        public function actionLitrosanuales()
+        {
+            $this->layout = '//layouts/pg';
+            if(isset($_GET['anio']))
+            {
+                $oDbConnection = Yii::app()->db;
+              
+                $oCommand = $oDbConnection->createCommand('select SUM(gasolina.litros) as gasolitros, MONTH(gasolina.fecha) as mes from gasolina where YEAR(gasolina.fecha) = :ano GROUP BY MONTH(gasolina.fecha)');
+                $oCommand->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader = $oCommand->queryAll();
+
+                $oCommand2 = $oDbConnection->createCommand('select SUM(diesel.litros) as diesilitros, MONTH(diesel.fecha) as mes from diesel where YEAR(diesel.fecha) = :ano GROUP BY MONTH(diesel.fecha)');
+                $oCommand2->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader2 = $oCommand2->queryAll();         
+                
+                $oCommand3 = $oDbConnection->createCommand('select SUM(factura_combustible.litros) as factulitros, MONTH(factura_combustible.fecha) as mes from factura_combustible where YEAR(factura_combustible.fecha) = :ano AND (factura_combustible.id_combustible = "2" OR factura_combustible.id_combustible = "3" OR factura_combustible.id_combustible = "4")GROUP BY MONTH(factura_combustible.fecha)');
+                $oCommand3->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader3 = $oCommand3->queryAll();
+                
+                $oCommand4 = $oDbConnection->createCommand('select SUM(factura_combustible.litros) as factulitros, MONTH(factura_combustible.fecha) as mes from factura_combustible where YEAR(factura_combustible.fecha) = :ano AND factura_combustible.id_combustible = "1" GROUP BY MONTH(factura_combustible.fecha)');
+                $oCommand4->bindParam(':ano', $_GET['anio']);
+                $oCDbDataReader4 = $oCommand4->queryAll();
+
+                $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
+                    'keyField'=>'mes'
+                ));
+                $dataProvider2=new CArrayDataProvider($oCDbDataReader2, array(
+                    'keyField'=>'mes'
+                ));                
+                $dataProvider3=new CArrayDataProvider($oCDbDataReader3, array(
+                    'keyField'=>'mes'
+                ));
+                $dataProvider4=new CArrayDataProvider($oCDbDataReader4, array(
+                    'keyField'=>'mes'
+                ));
+
+                $this->render('la', array(
+                    'dataProvider' => $dataProvider,
+                    'dataProvider2' => $dataProvider2,                    
+                    'dataProvider3' => $dataProvider3,
+                    'dataProvider4' => $dataProvider4,
+                    'anio'=>$_GET['anio'],
+                ));
+            }
+            else
+            {
+                $this->render('la');
+            }
+        }
+        
         public function actionBmensual()
 	{
             $this->layout = '//layouts/pg';
@@ -140,7 +236,7 @@ class SiteController extends GxController
             {                
                 $oDbConnection = Yii::app()->db;
 
-                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, det_factura_combustible.litros as litros, factura_combustible.valor_lt costocombustible, (MAX(orden_trabajo.kilometraje)/det_factura_combustible.litros) as kmlitros, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :anomes ORDER BY historial_vehiculos.fecha DESC limit 1) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id INNER JOIN factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id where MONTH(registro_factura.fecha) = :mes AND YEAR(registro_factura.fecha) = :ano GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, det_factura_combustible.litros as litros, factura_combustible.valor_lt costocombustible, (MAX(orden_trabajo.kilometraje)/det_factura_combustible.litros) as kmlitros, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select DISTINCT historial_vehiculos.id_vehiculo, historial_vehiculos.id_persona from historial_vehiculos where historial_vehiculos.fecha <= :anomes GROUP BY historial_vehiculos.id_vehiculo ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id INNER JOIN factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id where MONTH(registro_factura.fecha) = :mes AND YEAR(registro_factura.fecha) = :ano GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
                 $oCommand->bindParam(':estado', $estado = 1);
 
@@ -240,7 +336,7 @@ class SiteController extends GxController
             {                
                 $oDbConnection = Yii::app()->db;
 
-                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select * from historial_vehiculos where historial_vehiculos.fecha <= :fechatermn ORDER BY historial_vehiculos.fecha DESC limit 1) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.id as id_vehi, personal.id as perso_id, vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, sum(detalles_ot.subtotal) as reparaciones , vehiculos.gastoAcumulado, MAX(orden_trabajo.kilometraje) as recorrido, ((vehiculos.gastoAcumulado)/(MAX(orden_trabajo.kilometraje))) as pesoskm from (select DISTINCT historial_vehiculos.id_vehiculo, historial_vehiculos.id_persona from historial_vehiculos where historial_vehiculos.fecha <= :fechatermn GROUP BY historial_vehiculos.id_vehiculo ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa  on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa INNER JOIN orden_trabajo on orden_trabajo.id_vehiculo = vehiculos.id INNER JOIN detalles_ot on detalles_ot.id_ot = orden_trabajo.id INNER JOIN registro_factura on orden_trabajo.id_rf = registro_factura.id where registro_factura.fecha >= :fechainic and registro_factura.fecha <= :fechatermn GROUP BY histo.id_vehiculo ORDER BY vehiculos.patente');
 
                 $oCommand->bindParam(':estado', $estado = 1);
 
@@ -315,8 +411,6 @@ class SiteController extends GxController
                     $mPDF1->WriteHTML($stylesheet, 1);
 
                     $mPDF1->WriteHTML($this->renderPartial('parcialpdf', array('dataProvider' => $dataProvider,
-                        'fechainicial' => $_GET['fecha_inicial'],
-                        'fechafinal' => $_GET['fecha_termino'],
                         ), true));
 
                     $mPDF1->Output();
@@ -395,7 +489,7 @@ class SiteController extends GxController
                                     Yii::app()->user->setFlash('success', $archivo . " Subido con Exito!");
                                     if($petroleo)
                                     {
-                                        while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
+                                        while($objPHPExcel->getActiveSheet()->getCell("F".$i)->getValue() != ''){
                                             $diesel[$i] = new Diesel();
                                             $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
                                             $diesel[$i]->setAttributes(array(
@@ -433,7 +527,7 @@ class SiteController extends GxController
                                     }
                                     elseif($gas)
                                     {
-                                        while($objPHPExcel->getActiveSheet()->getCell("A".$i)->getValue() != ''){
+                                        while($objPHPExcel->getActiveSheet()->getCell("F".$i)->getValue() != ''){
                                             $gasolina[$i] = new Gasolina();
                                             $vehiculo = Vehiculos::model()->find('patente like :pate',array('pate' => substr(str_replace(array('-',' '), '',  trim($objPHPExcel->getActiveSheet()->getCell('D'.($i))->getCalculatedValue())),0,6).'%'));
                                             $gasolina[$i]->setAttributes(array(

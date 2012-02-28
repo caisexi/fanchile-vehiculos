@@ -38,7 +38,6 @@
                     'options'=>array(
                         'showAnim'=>'fold',
                         'minLength'=>'1',
-                        'select'=>'js:function(event, ui) { $("#patentev").val(ui.item.id);}'
                     ),
                 ));
         ?>

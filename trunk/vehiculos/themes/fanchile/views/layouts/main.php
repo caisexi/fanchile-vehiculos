@@ -95,7 +95,13 @@
                                                     (
                                                             array('label'=>'Progreso Gasto Anual', 'url'=>array('/site/progresogasto')),
                                                             array('label'=>'Progreso Gasto Anual Vehiculo', 'url'=>array('/site/progresogasto','cv'=>true)),
-                                                    )),                                                
+                                                    )),
+                                                    array('label'=>'Combustible', 'url'=>array('#'), 'items'=>array
+                                                    (
+                                                            array('label'=>'Cantidad Combustible Vehiculo', 'url'=>array('/site/gastocombustible')),
+                                                            array('label'=>'Cantidad Combustible Anuales', 'url'=>array('/site/litrosanuales')),
+                                                    )),
+                                                    
                                             )),
 				array('label'=>'Entrar', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
 				array('label'=>'Salir ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)

@@ -108,11 +108,13 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 	}
         
         public function getMultiModelForm() {
+            $criteria=new CDbCriteria;                        
+            $criteria->order='patente ASC';
             $detfactcomb = array(
               'elements'=>array(
                 'id_vehiculo'=>array(
                     'type'=>'dropdownlist',
-                    'items'=>array(''=>'---')+GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)),
+                    'items'=>array(''=>'---')+GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true, $criteria)),
                 ),
                 'nro_guia'=>array(
                     'type'=>'text',                    

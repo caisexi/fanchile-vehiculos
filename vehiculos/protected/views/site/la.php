@@ -22,8 +22,6 @@ if((isset($dataProvider) && ($data = $dataProvider->getData()) != null ) || (iss
         $dataHc[$i] = 0;
         $dataHc2[$i] = 0;
     }
-    $textipo = '';
-
     
     if((isset($dataProvider) && ($data = $dataProvider->getData())))
     {
@@ -63,7 +61,7 @@ if((isset($dataProvider) && ($data = $dataProvider->getData()) != null ) || (iss
     
     $this->Widget('ext.highcharts.HighchartsWidget', array(
        'options'=>array(
-          'title' => array('text' => 'Total de combustible '.$textipo.' el Año '.$anio),
+          'title' => array('text' => 'Total de combustible el Año '.$anio),
 
           'xAxis' => array(
              'categories' => array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre')

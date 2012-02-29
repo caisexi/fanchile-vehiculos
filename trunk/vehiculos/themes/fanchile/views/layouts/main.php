@@ -47,6 +47,7 @@
 					array('label'=>'Orden de trabajo', 'url'=>array('/ordentrabajo/admin ')),
                                         array('label'=>'Historial Vehiculo', 'url'=>array('/historialvehiculos/admin ')),
                                         array('label'=>'Ingreso Presupuestario', 'url'=>array('/presupuesto/admin ')),
+                                        array('label'=>'Bitacoras', 'url'=>array('/bitacoras/admin ')),
                                         array('label'=>'Combustibles', 'url'=>array('#'), 'items'=>array
 						(
                                                 array('label'=>'Factura', 'url'=>array('/facturacombustible/admin ')),

@@ -30,8 +30,7 @@
 				'changeYear' => true,
 				'dateFormat' => 'yy-mm-dd',
 				),
-			));
-; ?>
+                ));?>
 		<?php echo $form->error($model,'fecha'); ?>
 		</div><!-- row -->
 		<div class="row">

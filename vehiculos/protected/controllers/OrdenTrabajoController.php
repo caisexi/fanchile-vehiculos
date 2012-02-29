@@ -216,6 +216,7 @@ class OrdenTrabajoController extends GxController {
                     'label' => $gevehi->patente, // label y value son usados por el juiautocomplete
                     'value' => $gevehi->patente,
                     'id' => $gevehi->id,
+                    'combu' => $gevehi->idCombustible,
                 );
             }
 

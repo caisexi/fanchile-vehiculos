@@ -90,18 +90,47 @@ if(isset ($_GET['mes']))
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
-                'name'=>'Recorrido Parcial',
-                'value' => 'OrdenTrabajo::formatearKm($data["recorrido"])',
+                'name'=>'Km Inicial',
+                'value' => 'OrdenTrabajo::formatearKm($data["ini"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
-                'name'=>'Litros',
-                'value' => 'OrdenTrabajo::formatearPeso($data["litros"])',
+                'name'=>'Km Final',
+                'value' => 'OrdenTrabajo::formatearKm($data["fina"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Recorrido',
+                'value' => 'OrdenTrabajo::formatearKm($data["recorrido"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),array(
+                'name'=>'Litros Diesel',
+                'value' => '$data["litrosdiesel"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Litros Gasolina',
+                'value' => '$data["litrosgaso"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Litros Facturas',
+                'value' => '$data["litrosfactura"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Litros Bitacora',
+                'value' => '$data["litrosbitacora"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Total Litros',
+                'value' => '$data["totallitros"]',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
                 'name'=>'Costo Combustible',
-                'value' => 'OrdenTrabajo::formatearPeso($data["costocombustible"])',
+                'value' => 'OrdenTrabajo::formatearPeso($data["precioxlitro"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
@@ -114,6 +143,27 @@ if(isset ($_GET['mes']))
             ),
         ),
     ));
+    $data2 = $dataProvider2->getData();
+    $data3 = $dataProvider3->getData();
+?>
+    <b><?php echo 'Totales Reales'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data2[0]['total']); ?>
+    <br />
+    
+    <b><?php echo 'Presupuesto Anual'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data3[0]['ppto_anual']); ?>
+    <br />
+    
+    <b><?php echo 'Presupuesto Mensual'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']); ?>
+    <br />
+    
+    <b><?php echo 'Presupuesto Disponible'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data3[0]['ppto_disponible']); ?>
+    <br />
+        
+<?php
+     
     if($dataProvider->getData() != null)
         echo CHtml::link(CHtml::image(Yii::app()->baseUrl.'/images/pdf.png','Lov'), 'bmensual?pdf=1&mes='.$mes.'&ano='.$ano);
 }

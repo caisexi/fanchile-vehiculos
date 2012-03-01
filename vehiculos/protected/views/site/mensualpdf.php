@@ -50,18 +50,47 @@ $this->widget('zii.widgets.grid.CGridView', array(
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
-                'name'=>'Recorrido Parcial',
-                'value' => 'OrdenTrabajo::formatearKm($data["recorrido"])',
+                'name'=>'Km Inicial',
+                'value' => 'OrdenTrabajo::formatearKm($data["ini"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
-                'name'=>'Litros',
-                'value' => 'OrdenTrabajo::formatearPeso($data["litros"])',
+                'name'=>'Km Final',
+                'value' => 'OrdenTrabajo::formatearKm($data["fina"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Recorrido',
+                'value' => 'OrdenTrabajo::formatearKm($data["recorrido"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),array(
+                'name'=>'Litros Diesel',
+                'value' => '$data["litrosdiesel"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Litros Gasolina',
+                'value' => '$data["litrosgaso"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Litros Facturas',
+                'value' => '$data["litrosfactura"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Litros Bitacora',
+                'value' => '$data["litrosbitacora"]',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Total Litros',
+                'value' => '$data["totallitros"]',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
                 'name'=>'Costo Combustible',
-                'value' => 'OrdenTrabajo::formatearPeso($data["costocombustible"])',
+                'value' => 'OrdenTrabajo::formatearPeso($data["precioxlitro"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(

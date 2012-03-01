@@ -64,6 +64,7 @@ if((isset($dataProvider) && ($data = $dataProvider->getData()) != null ) || (iss
         foreach($data3 as $d3)
         {
             $dataHc[$d3['mes']-1] = (float) $dataHc[$d3['mes']-1] + (float)$d3['factulitros'];
+            print_r($d3);
             if(isset ($d3['combu']))
                 $textipo = $d3['combu'];
         }

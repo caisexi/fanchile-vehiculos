@@ -16,7 +16,7 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Mensual'));
     
     <div class="row">
     <?php echo CHtml::label('Mes','mes'); ?>
-    <?php echo CHtml::dropDownList('mes', isset($mes) ? $mes : '',array('1' => 'Enero','2' => 'Febrero','3' => 'Marzo','4' => 'Abril','5' => 'Mayo','6' => 'Junio','7' => 'Julio','8' => 'Agosto','9' => 'Septiembre','10' => 'Octubre','11' => 'Noviembre','12' => 'Diciembre',)); ?>
+    <?php echo CHtml::dropDownList('mes', isset($mes) ? $mes : '',array('01' => 'Enero','02' => 'Febrero','03' => 'Marzo','04' => 'Abril','05' => 'Mayo','06' => 'Junio','07' => 'Julio','08' => 'Agosto','09' => 'Septiembre','10' => 'Octubre','11' => 'Noviembre','12' => 'Diciembre',)); ?>
 
     </div><!-- row -->
     
@@ -106,27 +106,27 @@ if(isset ($_GET['mes']))
             ),array(
                 'name'=>'Litros Diesel',
                 'value' => '$data["litrosdiesel"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Litros Gasolina',
                 'value' => '$data["litrosgaso"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Litros Facturas',
                 'value' => '$data["litrosfactura"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Litros Bitacora',
                 'value' => '$data["litrosbitacora"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Total Litros',
                 'value' => '$data["totallitros"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Costo Combustible',
@@ -135,31 +135,35 @@ if(isset ($_GET['mes']))
             ),
             array(
                 'name'=>'Km/Litros',
-                'value' => '$data["kmlitros"]',
+                'value' => 'number_format($data["kmlitros"],2,",",".")',
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Pesos/Km',
-                'value' => '$data["pesoskm"]',
+                'value' => 'OrdenTrabajo::formatearPeso($data["pesoskm"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
         ),
     ));
     $data2 = $dataProvider2->getData();
     $data3 = $dataProvider3->getData();
+    $data4 = $dataProvider4->getData();
+
 ?>
     <b><?php echo 'Totales Reales'?>:</b>
     <?php echo OrdenTrabajo::formatearPeso($data2[0]['total']); ?>
     <br />
     
     <b><?php echo 'Presupuesto Anual'?>:</b>
-    <?php echo OrdenTrabajo::formatearPeso($data3[0]['ppto_anual']); ?>
+    <?php echo isset($data3[0]['ppto_anual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_anual']) : '$ 0'; ?>
     <br />
     
     <b><?php echo 'Presupuesto Mensual'?>:</b>
-    <?php echo OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']); ?>
+    <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']) : '$ 0'; ?>
     <br />
     
     <b><?php echo 'Presupuesto Disponible'?>:</b>
-    <?php echo OrdenTrabajo::formatearPeso($data3[0]['ppto_disponible']); ?>
+    <?php echo isset($data4[0]['total']) && isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual'] - $data4[0]['total']) : '$ 0'; ?>
     <br />
         
 <?php

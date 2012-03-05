@@ -86,6 +86,16 @@ if(isset ($_GET['fecha_inicial']) && isset ($_GET['fecha_termino']))
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
+                'name'=>'Kilometraje Inicial',
+                'value' => 'OrdenTrabajo::formatearKm($data["ini"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
+                'name'=>'Kilometraje Final',
+                'value' => 'OrdenTrabajo::formatearKm($data["final"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
+            array(
                 'name'=>'Recorrido Parcial',
                 'value' => 'OrdenTrabajo::formatearKm($data["recorrido"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),

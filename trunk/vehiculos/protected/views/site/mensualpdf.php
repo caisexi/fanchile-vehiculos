@@ -100,7 +100,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             ),
             array(
                 'name'=>'Pesos/Km',
-                'value' => 'OrdenTrabajo::formatearPeso($data["pesoskm"])',
+                'value' => '$data["pesoskm"]',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
     ),

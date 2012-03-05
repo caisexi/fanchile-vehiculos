@@ -140,7 +140,7 @@ if(isset ($_GET['mes']))
             ),
             array(
                 'name'=>'Pesos/Km',
-                'value' => 'OrdenTrabajo::formatearPeso($data["pesoskm"])',
+                'value' => '$data["pesoskm"]',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
         ),

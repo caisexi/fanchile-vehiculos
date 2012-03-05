@@ -31,7 +31,7 @@
 </div><!-- form -->
 <div chart>
 <?php
-if((isset($dataProvider) && ($data = $dataProvider->getData()) != null ) || (isset($dataProvider2) && ($data2 = $dataProvider2->getData()) != null ) || (isset($dataProvider3) && ($data3 = $dataProvider3->getData()) != null ))
+if((isset($dataProvider) && ($data = $dataProvider->getData()) != null ) || (isset($dataProvider2) && ($data2 = $dataProvider2->getData()) != null ) || (isset($dataProvider3) && ($data4 = $dataProvider4->getData()) != null ) || (isset($dataProvider4) && ($data4 = $dataProvider4->getData()) != null ))
 {
     for($i = 0; $i < 12;$i++)
     {
@@ -64,9 +64,20 @@ if((isset($dataProvider) && ($data = $dataProvider->getData()) != null ) || (iss
         foreach($data3 as $d3)
         {
             $dataHc[$d3['mes']-1] = (float) $dataHc[$d3['mes']-1] + (float)$d3['factulitros'];
-            print_r($d3);
+            //print_r($d3);
             if(isset ($d3['combu']))
                 $textipo = $d3['combu'];
+        }
+    }
+    
+    if((isset($dataProvider4) && ($data4 = $dataProvider4->getData())))
+    {
+        foreach($data4 as $d4)
+        {
+            print_r($d4);
+            
+            $dataHc[$d4['mes']-1] = (float)$dataHc[$d4['mes']-1] + (float)$d4['litrosad'];
+            print_r($dataHc);
         }
     }
     

@@ -66,27 +66,27 @@ $this->widget('zii.widgets.grid.CGridView', array(
             ),array(
                 'name'=>'Litros Diesel',
                 'value' => '$data["litrosdiesel"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Litros Gasolina',
                 'value' => '$data["litrosgaso"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Litros Facturas',
                 'value' => '$data["litrosfactura"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Litros Bitacora',
                 'value' => '$data["litrosbitacora"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Total Litros',
                 'value' => '$data["totallitros"]',
-                'htmlOptions'=>array('style' => 'text-align: right;'),
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Costo Combustible',
@@ -95,12 +95,32 @@ $this->widget('zii.widgets.grid.CGridView', array(
             ),
             array(
                 'name'=>'Km/Litros',
-                'value' => '$data["kmlitros"]',
+                'value' => 'number_format($data["kmlitros"],2,",",".")',
+                'htmlOptions'=>array('style' => 'text-align: center;'),
             ),
             array(
                 'name'=>'Pesos/Km',
-                'value' => '$data["pesoskm"]',
+                'value' => 'OrdenTrabajo::formatearPeso($data["pesoskm"])',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
     ),
 ));
+
+$data2 = $dataProvider2->getData();
+$data3 = $dataProvider3->getData();
 ?>
+<b><?php echo 'Totales Reales'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data2[0]['total']); ?>
+    <br />
+    
+    <b><?php echo 'Presupuesto Anual'?>:</b>
+    <?php echo isset($data3[0]['ppto_anual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_anual']) : ''; ?>
+    <br />
+    
+    <b><?php echo 'Presupuesto Mensual'?>:</b>
+    <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']) : ''; ?>
+    <br />
+    
+    <b><?php echo 'Presupuesto Disponible'?>:</b>
+    <?php echo isset($data4[0]['total']) && isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual'] - $data4[0]['total']) : ''; ?>
+    <br />

@@ -4,15 +4,30 @@
 	'action'=>Yii::app()->createUrl($this->route),
 	'method'=>'get',
 )); ?>
+        <?php   
+            $criteria=new CDbCriteria;                        
+            $criteria->order='patente ASC';
+        ?>
 
 	<div class="row">
-		<?php echo $form->label($model,'id_vehiculo'); ?>
-		<?php echo $form->textField($model,'id_vehiculo'); ?>
+		<?php echo $form->label($model, 'id_vehiculo'); ?>
+		<?php echo $form->dropDownList($model, 'id_vehiculo', GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true,$criteria)), array('prompt' => Yii::t('app', 'All'))); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'fecha'); ?>
-		<?php echo $form->textField($model,'fecha'); ?>
+		<?php echo $form->label($model, 'fecha'); ?>
+		<?php $form->widget('zii.widgets.jui.CJuiDatePicker', array(
+			'model' => $model,
+			'attribute' => 'fecha',
+                        'language' => 'es',
+			'value' => $model->fecha,
+			'options' => array(
+				'showButtonPanel' => true,
+				'changeYear' => true,
+				'dateFormat' => 'yy-mm-dd',
+				),
+			));
+; ?>
 	</div>
 
 	<div class="row">

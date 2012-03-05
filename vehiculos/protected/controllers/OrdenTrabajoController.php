@@ -76,13 +76,11 @@ class OrdenTrabajoController extends GxController {
                                 if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues))
                                 {
                                         $factura = $this->loadModel($model->id_rf, 'RegistroFactura');
-                                        $auto = $this->loadModel($model->id_vehiculo, 'Vehiculos');
                                         $suma_neto = $factura->sumarNeto();
-                                        $auto->gastoAcumulado = $auto->sumarGasto();
                                         $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
                                         $suma_bruto = $suma_neto * (($iva['valor_iva']/100)+1);
                                         $factura->setAttributes(array('total_neto'=>$suma_neto, 'total_bruto'=>round($suma_bruto)));
-                                        if($factura->save() && $auto->save())
+                                        if($factura->save())
                                         {
                                             $oDbConnection = Yii::app()->db;
                                             $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($model->fecha))));
@@ -117,12 +115,10 @@ class OrdenTrabajoController extends GxController {
 
 			if (MultiModelForm::save($detalle,$detallesValidados,$detallesBorrados,$masterValues) && $model->save()) {
                                         $factura = $this->loadModel($model->id_rf, 'RegistroFactura');
-                                        $auto = $this->loadModel($model->id_vehiculo, 'Vehiculos');
-                                        $auto->gastoAcumulado = $auto->sumarGasto();
                                         $iva = Ivas::model()->findBySql('SELECT valor_iva FROM ivas ORDER BY fecha DESC');
                                         $suma_bruto = $factura->sumarNeto() * (($iva['valor_iva']/100)+1);
                                         $factura->setAttributes(array('total_neto'=>$factura->sumarNeto(), 'total_bruto'=>round($suma_bruto)));
-                                        if($factura->save() && $auto->save())
+                                        if($factura->save())
                                         {
                                             $oDbConnection = Yii::app()->db;
                                             $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($model->fecha))));
@@ -144,8 +140,7 @@ class OrdenTrabajoController extends GxController {
 
 	public function actionDelete($id) {
 		if (Yii::app()->getRequest()->getIsPostRequest()) {
-                        $orden = $this->loadModel($id, 'OrdenTrabajo');
-                        $auto = $this->loadModel($orden->id_vehiculo, 'Vehiculos');                        
+                        $orden = $this->loadModel($id, 'OrdenTrabajo');                       
                         $totalorden = $orden->sumita;
                         $factura = $this->loadModel($orden->id_rf, 'RegistroFactura');
 			if($orden->delete())
@@ -158,8 +153,6 @@ class OrdenTrabajoController extends GxController {
                                 $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
                                 $presupuesto->setAttributes(array('ppto_disponible' => $presupuesto->ppto_disponible + $totalorden));                                        
                                 $presupuesto->save();
-                                $auto->gastoAcumulado = $auto->sumarGasto();
-                                $auto->save();
                         }
 
 			if (!Yii::app()->getRequest()->getIsAjaxRequest())

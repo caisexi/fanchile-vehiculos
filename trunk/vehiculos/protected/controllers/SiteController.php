@@ -236,11 +236,13 @@ class SiteController extends GxController
             {                
                 $oDbConnection = Yii::app()->db;
 
-                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, repara.sumaSub as reparaciones , vehiculos.gastoAcumulado, dfacturas.li as litrosfactura , SUM(diesel.litros) as litrosdiesel, SUM(gasolina.litros) as litrosgaso, bitacoras.litros_adicionales as litrosbitacora, bitacoras.kilometraje_inicial as ini, bitacoras.kilometraje_final as fina, (bitacoras.kilometraje_final - bitacoras.kilometraje_inicial) as recorrido, (IFNULL(dfacturas.li,0) + IFNULL(SUM(diesel.litros),0) + IFNULL(SUM(gasolina.litros),0) + IFNULL(bitacoras.litros_adicionales,0)) as totallitros, ((bitacoras.kilometraje_final - bitacoras.kilometraje_inicial) / (IFNULL(dfacturas.li,0) + IFNULL(SUM(diesel.litros),0) + IFNULL(SUM(gasolina.litros),0) + IFNULL(bitacoras.litros_adicionales,0))) as kmlitros, (bitacoras.kilometraje_final / vehiculos.gastoAcumulado) as pesoskm, if(AVG(gasolina.precio_u) IS NULL, AVG(diesel.precio_u) , AVG(gasolina.precio_u)) as precioxlitro from (select DISTINCT historial_vehiculos.id_vehiculo, historial_vehiculos.id_persona from historial_vehiculos where historial_vehiculos.fecha <= :anomes GROUP BY historial_vehiculos.id_vehiculo ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa LEFT JOIN (SELECT SUM(detalles_ot.subtotal) as sumaSub, orden_trabajo.id_vehiculo as vehiOrden FROM detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura ON registro_factura.id = orden_trabajo.id_rf WHERE MONTH(registro_factura.fecha) = :mes) as repara on repara.vehiOrden = vehiculos.id LEFT JOIN (SELECT det_factura_combustible.id_vehiculo as v, SUM(det_factura_combustible.litros) as li, AVG(factura_combustible.valor_lt) as valu from factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id WHERE MONTH(factura_combustible.fecha) = :mes GROUP BY det_factura_combustible.id_vehiculo) as dfacturas ON dfacturas.v = vehiculos.id LEFT JOIN diesel ON diesel.id_vehiculo = vehiculos.id AND MONTH(diesel.fecha) = :mes LEFT JOIN gasolina ON gasolina.id_vehiculo = vehiculos.id AND MONTH(gasolina.fecha) = :mes LEFT JOIN bitacoras on bitacoras.id_vehiculo = vehiculos.id AND MONTH(bitacoras.fecha) = :mes GROUP BY vehiculos.patente ORDER BY vehiculos.patente');
+                $oCommand = $oDbConnection->createCommand('SELECT vehiculos.patente, tipos_vehiculos.nombre as nombretipovehiculo, combustibles.nombre as combu , personal.nombre as nombrepersonal, personal.apellido_pat, areas_empresa.nombre as nombreareaempresa, repara.sumaSub as reparaciones , acu.sumaSub as gastoAcumulado, dfacturas.li as litrosfactura , SUM(diesel.litros) as litrosdiesel, SUM(gasolina.litros) as litrosgaso, bitacoras.litros_adicionales as litrosbitacora, bitacoras.kilometraje_inicial as ini, bitacoras.kilometraje_final as fina, (bitacoras.kilometraje_final - bitacoras.kilometraje_inicial) as recorrido, (IFNULL(dfacturas.li,0) + IFNULL(SUM(diesel.litros),0) + IFNULL(SUM(gasolina.litros),0) + IFNULL(bitacoras.litros_adicionales,0)) as totallitros, ((bitacoras.kilometraje_final - bitacoras.kilometraje_inicial) / (IFNULL(dfacturas.li,0) + IFNULL(SUM(diesel.litros),0) + IFNULL(SUM(gasolina.litros),0) + IFNULL(bitacoras.litros_adicionales,0))) as kmlitros, (bitacoras.kilometraje_final / acu.sumaSub) as pesoskm, if(AVG(gasolina.precio_u) IS NULL, AVG(diesel.precio_u) , AVG(gasolina.precio_u)) as precioxlitro from (select DISTINCT historial_vehiculos.id_vehiculo, historial_vehiculos.id_persona from historial_vehiculos where historial_vehiculos.fecha <= :anomes GROUP BY historial_vehiculos.id_vehiculo ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN tipos_vehiculos on vehiculos.idTipoVehiculo = tipos_vehiculos.id INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa LEFT JOIN (SELECT SUM(detalles_ot.subtotal) as sumaSub, orden_trabajo.id_vehiculo as vehiOrden FROM detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura ON registro_factura.id = orden_trabajo.id_rf WHERE YEAR(registro_factura.fecha) = :ano AND MONTH(registro_factura.fecha) = :mes) as repara on repara.vehiOrden = vehiculos.id  LEFT JOIN (SELECT SUM(detalles_ot.subtotal) as sumaSub, orden_trabajo.id_vehiculo as vehiOrden FROM detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot INNER JOIN registro_factura ON registro_factura.id = orden_trabajo.id_rf WHERE date_format(registro_factura.fecha,"%Y-%m") <= :anomes ) as acu on acu.vehiOrden = vehiculos.id LEFT JOIN (SELECT det_factura_combustible.id_vehiculo as v, SUM(det_factura_combustible.litros) as li, AVG(factura_combustible.valor_lt) as valu from factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id WHERE YEAR(factura_combustible.fecha) = :ano AND MONTH(factura_combustible.fecha) = :mes GROUP BY det_factura_combustible.id_vehiculo) as dfacturas ON dfacturas.v = vehiculos.id LEFT JOIN diesel ON diesel.id_vehiculo = vehiculos.id AND YEAR(diesel.fecha) = :ano AND MONTH(diesel.fecha) = :mes LEFT JOIN gasolina ON gasolina.id_vehiculo = vehiculos.id AND YEAR(gasolina.fecha) = :ano AND MONTH(gasolina.fecha) = :mes LEFT JOIN bitacoras on bitacoras.id_vehiculo = vehiculos.id AND YEAR(bitacoras.fecha) = :ano AND MONTH(bitacoras.fecha) = :mes GROUP BY vehiculos.patente ORDER BY vehiculos.patente');
 
-                $oCommand2 = $oDbConnection->createCommand('SELECT SUM(detalles_ot.subtotal) AS total FROM registro_factura INNER JOIN orden_trabajo ON orden_trabajo.id_rf = registro_factura.id INNER JOIN detalles_ot ON detalles_ot.id_ot = orden_trabajo.id WHERE MONTH(registro_factura.fecha) = :mes');
+                $oCommand2 = $oDbConnection->createCommand('SELECT SUM(detalles_ot.subtotal) AS total FROM registro_factura INNER JOIN orden_trabajo ON orden_trabajo.id_rf = registro_factura.id INNER JOIN detalles_ot ON detalles_ot.id_ot = orden_trabajo.id WHERE YEAR(registro_factura.fecha) = :ano AND MONTH(registro_factura.fecha) = :mes');
                 
-                $oCommand3 = $oDbConnection->createCommand('SELECT ano, ppto_anual, ppto_mensual, ppto_disponible FROM presupuesto WHERE ano = :ano');
+                $oCommand3 = $oDbConnection->createCommand('SELECT ano, ppto_anual, ppto_mensual FROM presupuesto WHERE ano = :ano');
+                
+                $oCommand4 = $oDbConnection->createCommand('SELECT SUM(detalles_ot.subtotal) AS total FROM registro_factura INNER JOIN orden_trabajo ON orden_trabajo.id_rf = registro_factura.id INNER JOIN detalles_ot ON detalles_ot.id_ot = orden_trabajo.id WHERE date_format(registro_factura.fecha,"%Y-%m") <= :anomes');
                 
                 $oCommand->bindParam(':estado', $estado = 1);
 
@@ -252,13 +254,19 @@ class SiteController extends GxController
                 
                 $oCommand2->bindParam(':mes', $_GET['mes']);
                 
+                $oCommand2->bindParam(':ano', $_GET['ano']);
+                
                 $oCommand3->bindParam(':ano', $_GET['ano']);
+                
+                $oCommand4->bindParam(':anomes', $anomes = $_GET['ano'].'-'.$_GET['mes']);
 
                 $oCDbDataReader = $oCommand->queryAll();
                 
                 $oCDbDataReader2 = $oCommand2->queryAll();
                 
                 $oCDbDataReader3 = $oCommand3->queryAll();
+                
+                $oCDbDataReader4 = $oCommand4->queryAll();
 
                 $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
                     'keyField'=>'patente',
@@ -275,12 +283,17 @@ class SiteController extends GxController
                     'keyField'=>'ano',
                 ));
                 
+                $dataProvider4=new CArrayDataProvider($oCDbDataReader4, array(
+                    'keyField'=>'total',
+                ));
+                
                 if(!isset($_GET['pdf']))
                 {          
                     $this->render('bmensual', array(
                         'dataProvider' => $dataProvider,
                         'dataProvider2' => $dataProvider2,
                         'dataProvider3' => $dataProvider3,
+                        'dataProvider4' => $dataProvider4,
                         'mes' => $_GET['mes'],
                         'ano' => $_GET['ano'],
                     ));
@@ -331,7 +344,8 @@ class SiteController extends GxController
                     );
                     $mPDF1->SetHeader($header);
 
-                    $mPDF1->SetFooter('PAGINA {PAGENO}');
+                    $mPDF1->SetFooter('REPORTE MENSUAL {DATE j-m-Y}');
+
                     $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','A3-L');
 
 

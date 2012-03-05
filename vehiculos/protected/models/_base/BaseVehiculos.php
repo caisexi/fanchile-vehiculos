@@ -59,7 +59,7 @@ abstract class BaseVehiculos extends GxActiveRecord {
 			array('patente', 'length', 'max'=>6),
 			array('foto', 'safe'),
 			array('idColor, foto', 'default', 'setOnEmpty' => true, 'value' => null),
-			array('id, idCombustible, idTipoVehiculo, idProveedor, idMarca, idModelo, idColor, ano, patente, precioCompra, estado, foto, gastoAcumulado, creado, modificado', 'safe', 'on'=>'search'),
+			array('id, idCombustible, idTipoVehiculo, idProveedor, idMarca, idModelo, idColor, ano, patente, precioCompra, estado, foto, creado, modificado', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -137,11 +137,6 @@ abstract class BaseVehiculos extends GxActiveRecord {
 
             return parent::beforeSave();
         }
-        
-        /*public function beforeSave() {
-            if (!$this->isNewRecord)
-                return Yii::app()->user->setFlash('notice', "El Archivo ya existe!");
-        }*/
         
         public function saberEstado($estado) {
             

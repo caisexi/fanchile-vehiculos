@@ -4,8 +4,25 @@ class FacturaCombustibleController extends GxController {
 
 
 	public function actionView($id) {
+                $dataProvider = new CActiveDataProvider('DetFacturaCombustible', array(
+                    'pagination'=>array(
+                        'pageSize'=>30,
+                    ),
+                    'sort'=>array(
+			'defaultOrder'=>'id_vehiculo ASC',
+                    ),
+                    'criteria' => array(
+                        'condition' => 'id_factura_combustible = :idfc',
+                        'params' => array(
+                        ':idfc' => $this->loadModel($id, 'FacturaCombustible')->id,
+                        ),
+                        ),
+                    )
+                        
+                );
 		$this->render('view', array(
 			'model' => $this->loadModel($id, 'FacturaCombustible'),
+                        'DetFacturaCombustible' => $dataProvider,
 		));
 	}
 

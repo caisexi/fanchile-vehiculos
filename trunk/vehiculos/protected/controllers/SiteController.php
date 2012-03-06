@@ -364,7 +364,7 @@ class SiteController extends GxController
                     $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/screen_pdf.css');
                     $mPDF1->WriteHTML($stylesheet, 1);
 
-                    $mPDF1->WriteHTML($this->renderPartial('mensualpdf', array('dataProvider' => $dataProvider,'dataProvider2' => $dataProvider2,'dataProvider3' => $dataProvider3,
+                    $mPDF1->WriteHTML($this->renderPartial('mensualpdf', array('dataProvider' => $dataProvider,'dataProvider2' => $dataProvider2,'dataProvider3' => $dataProvider3,'dataProvider4' => $dataProvider4,
                         'mes' => $_GET['mes'],
                         'ano' => $_GET['ano'],
                         ), true));
@@ -395,7 +395,10 @@ class SiteController extends GxController
                 $oCDbDataReader = $oCommand->queryAll();
 
                 $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
-                    'keyField'=>'patente'
+                    'keyField'=>'patente',
+                    'pagination'=>array(
+                        'pageSize'=>60,
+                    ),
                 ));
                 if(!isset($_GET['pdf']))
                 {          
@@ -447,7 +450,7 @@ class SiteController extends GxController
                     );
                     $mPDF1->SetHeader($header);
 
-                    $mPDF1->SetFooter('PAGINA {PAGENO}');
+                    $mPDF1->SetFooter('REPORTE PARCIAL {DATE j-m-Y}');
                     $mPDF1->AddPage('L','','','','','','','','','','','','','','','','','','','','A3-L');
 
 

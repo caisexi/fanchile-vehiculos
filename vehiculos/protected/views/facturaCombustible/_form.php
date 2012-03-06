@@ -40,7 +40,7 @@
 		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'neto'); ?>
-		<?php echo $form->textField($model, 'neto',array('onblur'=>'calcularIva();')); ?>
+		<?php echo $form->textField($model, 'neto',array('onblur'=>'calcularIva(),calcularTotal();')); ?>
 		<?php echo $form->error($model,'neto'); ?>
 		</div><!-- row -->
 		<div class="row">
@@ -53,17 +53,7 @@
 		<?php echo $form->labelEx($model,'especifico'); ?>
 		<?php echo $form->textField($model, 'especifico',array('onblur'=>'calcularTotal()')); ?>
 		<?php echo $form->error($model,'especifico'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'litros'); ?>
-		<?php echo $form->textField($model, 'litros', array('maxlength' => 10,'onblur'=>'calcularTotal()')); ?>
-		<?php echo $form->error($model,'litros'); ?>
-		</div><!-- row -->
-		<div class="row">
-		<?php echo $form->labelEx($model,'total'); ?>
-		<?php echo $form->textField($model, 'total'); ?>
-		<?php echo $form->error($model,'total'); ?>
-		</div><!-- row -->
+		</div><!-- row -->		
                 <?php
                 $this->widget('ext.multimodelform.MultiModelForm',array(
                     'id' => 'id_detfactcomb', //the unique widget id
@@ -79,6 +69,16 @@
                     'data' => $detalle->findAll('id_factura_combustible=:id_factura_combustible', array(':id_factura_combustible'=>$model->id)),
                 ));
                 ?>
+                <div class="row">
+		<?php echo $form->labelEx($model,'litros'); ?>
+		<?php echo $form->textField($model, 'litros', array('maxlength' => 10)); ?>
+		<?php echo $form->error($model,'litros'); ?>
+		</div><!-- row -->
+		<div class="row">
+		<?php echo $form->labelEx($model,'total'); ?>
+		<?php echo $form->textField($model, 'total'); ?>
+		<?php echo $form->error($model,'total'); ?>
+		</div><!-- row -->
 		<div class="row">
 		<?php echo $form->labelEx($model,'valor_lt'); ?>
 		<?php echo $form->textField($model, 'valor_lt'); ?>
@@ -104,5 +104,61 @@ function calcularTotal(){
     document.getElementById('FacturaCombustible_total').value = parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_iva').value) + parseInt(document.getElementById('FacturaCombustible_especifico').value);
     document.getElementById('FacturaCombustible_valor_lt').value = Math.round((parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_especifico').value)) / document.getElementById('FacturaCombustible_litros').value);
     document.getElementById('FacturaCombustible_valor_guia').value = parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_iva').value);
+}
+
+function totallitros(){
+    existe = true;
+    existe2 = true;
+    existe3 = true;
+
+    litr = '_litros';
+    deta = 'DetFacturaCombustible';
+    
+    pu_a = deta+litr;
+    
+    update = '_u___';
+    error = '_n___';
+    
+    litros = 0;
+
+    i_a=1;
+    i_b=0;
+    i_c=0;
+    
+    while(existe2){    
+        try{
+            pu_b = deta+update+i_b.toString()+litr;
+            if(document.getElementById(pu_b).value != ''){
+                litros = litros + parseInt(document.getElementById(pu_b).value);
+            }
+            i_b = i_b + 1;
+        }catch(e){
+           existe2 = false;
+        }
+    }
+    while(existe3){    
+        try{
+            pu_c = deta+error+i_c.toString()+litr;
+            if(document.getElementById(pu_c).value != ''){
+                litros = litros + document.getElementById(pu_c).value;
+            }
+            i_c = i_c + 1;
+        }catch(e){
+           existe3 = false;
+        }
+    }
+    while(existe){    
+        try{
+            
+            if(document.getElementById(pu_a).value != ''){
+                litros = litros + parseInt(document.getElementById(pu_a).value);
+            }
+            i_a = i_a + 1;
+            pu_a = deta+litr+i_a.toString();
+        }catch(e){
+           existe = false;
+        }
+    }
+    document.getElementById('FacturaCombustible_litros').value = litros;
 }
 </script>

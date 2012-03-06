@@ -108,19 +108,28 @@ $this->widget('zii.widgets.grid.CGridView', array(
 
 $data2 = $dataProvider2->getData();
 $data3 = $dataProvider3->getData();
+$data4 = $dataProvider4->getData();
 ?>
-<b><?php echo 'Totales Reales'?>:</b>
+<b><?php echo 'Total Reparaciones del Mes'?>:</b>
     <?php echo OrdenTrabajo::formatearPeso($data2[0]['total']); ?>
     <br />
     
+    <b><?php echo 'Total Reparaciones a la Fecha'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data4[0]['total']); ?>
+    <br />
+    
     <b><?php echo 'Presupuesto Anual'?>:</b>
-    <?php echo isset($data3[0]['ppto_anual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_anual']) : ''; ?>
+    <?php echo isset($data3[0]['ppto_anual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_anual']) : '$ 0'; ?>
     <br />
     
     <b><?php echo 'Presupuesto Mensual'?>:</b>
-    <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']) : ''; ?>
+    <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']) : '$ 0'; ?>
     <br />
     
-    <b><?php echo 'Presupuesto Disponible'?>:</b>
-    <?php echo isset($data4[0]['total']) && isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual'] - $data4[0]['total']) : ''; ?>
+    <b><?php echo 'Presupuesto Anual Disponible'?>:</b>
+    <?php echo isset($data4[0]['total']) && isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_anual'] - $data4[0]['total']) : '$ 0'; ?>
     <br />
+    
+    <b><?php echo 'Presupuesto Mensual Disponible'?>:</b>
+    <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual'] - $data2[0]['total']) : '$ 0'; ?>
+    <br />   

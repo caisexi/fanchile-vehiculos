@@ -49,6 +49,14 @@ if(isset ($_GET['mes']))
 ?>
 <h1>MANTENCIONES DE <font color="yellow"><?php echo strtoupper($mes_letra); ?></font> DEL <?php echo $ano ;?></h1>
 <?php
+$sumat = 0;
+$sumal = 0;
+$dp = $dataProvider->getData();
+foreach ($dp as $dpf)
+{
+    $sumat += $dpf["totallitros"];
+    $sumal += $dpf["precioxlitro"];
+}
     $this->widget('zii.widgets.grid.CGridView', array(
         'summaryText'=>'',
         'emptyText' => 'No hay resultados',
@@ -127,11 +135,13 @@ if(isset ($_GET['mes']))
                 'name'=>'Total Litros',
                 'value' => '$data["totallitros"]',
                 'htmlOptions'=>array('style' => 'text-align: center;'),
+                'footer'=>'Total: '.$sumat,
             ),
             array(
                 'name'=>'Costo Combustible',
                 'value' => 'OrdenTrabajo::formatearPeso($data["precioxlitro"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
+                'footer'=>'Total: '.$sumal,
             ),
             array(
                 'name'=>'Km/Litros',
@@ -150,8 +160,12 @@ if(isset ($_GET['mes']))
     $data4 = $dataProvider4->getData();
 
 ?>
-    <b><?php echo 'Totales Reales'?>:</b>
+    <b><?php echo 'Total Reparaciones del Mes'?>:</b>
     <?php echo OrdenTrabajo::formatearPeso($data2[0]['total']); ?>
+    <br />
+    
+    <b><?php echo 'Total Reparaciones a la Fecha'?>:</b>
+    <?php echo OrdenTrabajo::formatearPeso($data4[0]['total']); ?>
     <br />
     
     <b><?php echo 'Presupuesto Anual'?>:</b>
@@ -162,9 +176,13 @@ if(isset ($_GET['mes']))
     <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual']) : '$ 0'; ?>
     <br />
     
-    <b><?php echo 'Presupuesto Disponible'?>:</b>
-    <?php echo isset($data4[0]['total']) && isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual'] - $data4[0]['total']) : '$ 0'; ?>
+    <b><?php echo 'Presupuesto Anual Disponible'?>:</b>
+    <?php echo isset($data4[0]['total']) && isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_anual'] - $data4[0]['total']) : '$ 0'; ?>
     <br />
+    
+    <b><?php echo 'Presupuesto Mensual Disponible'?>:</b>
+    <?php echo isset($data3[0]['ppto_mensual']) ? OrdenTrabajo::formatearPeso($data3[0]['ppto_mensual'] - $data2[0]['total']) : '$ 0'; ?>
+    <br />    
         
 <?php
      

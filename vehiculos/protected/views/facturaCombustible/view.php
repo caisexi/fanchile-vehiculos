@@ -36,4 +36,28 @@ array(
 'creado',
 'modificado',
 	),
-)); ?>
+)); 
+
+$this->widget('zii.widgets.grid.CGridView', array(
+    'id' => 'ordenes-grid',
+    'summaryText'=>'', 
+    'dataProvider' => $DetFacturaCombustible,
+    'columns' => array(
+        array(
+            'name'=>'nro_guia',
+            'value' => '$data->nro_guia',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+        ),        
+        array(
+            'header'=>'Patente',
+            'value' => 'OrdenTrabajo::formatearPatente($data->idVehiculo->patente)',
+            'htmlOptions'=>array('style' => 'text-align: center;'),
+        ),
+        array(
+            'header'=>'Litros',
+            'value' => 'OrdenTrabajo::formatearKm($data->litros)',
+            'htmlOptions'=>array('style' => 'text-align: right;'),
+        ),
+    ),
+));
+?>

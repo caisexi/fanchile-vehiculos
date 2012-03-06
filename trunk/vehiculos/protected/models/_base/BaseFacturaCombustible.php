@@ -121,6 +121,8 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
                 ),
                 'litros'=>array(
                     'type'=>'text',
+                    'onblur'=>'totallitros(),calcularTotal();',
+                    'onkeypress'=>'if (event.keyCode == 13){totallitros(),calcularTotal()};',
                 ),
             ));            
             return $detfactcomb;

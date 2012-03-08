@@ -83,7 +83,7 @@ class OrdenTrabajoController extends GxController {
                                         if($factura->save())
                                         {
                                             $oDbConnection = Yii::app()->db;
-                                            $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($model->fecha))));
+                                            $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($factura->fecha))));
                                             $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
                                             $gastado = $oDbConnection->createCommand('select sum(detalles_ot.subtotal) as gasto from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot where YEAR(orden_trabajo.fecha) = :fec');
                                             $gastado->bindParam(':fec', date("Y",strtotime($model->fecha)));
@@ -121,7 +121,7 @@ class OrdenTrabajoController extends GxController {
                                         if($factura->save())
                                         {
                                             $oDbConnection = Yii::app()->db;
-                                            $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($model->fecha))));
+                                            $presid = Presupuesto::model()->findBySql('SELECT id FROM presupuesto where ano = :an ORDER BY modificado DESC', array(':an' => date("Y",strtotime($factura->fecha))));
                                             $presupuesto = $this->loadModel($presid->id, 'Presupuesto');
                                             $gastado = $oDbConnection->createCommand('select sum(detalles_ot.subtotal) as gasto from detalles_ot INNER JOIN orden_trabajo on orden_trabajo.id = detalles_ot.id_ot where YEAR(orden_trabajo.fecha) = :fec');
                                             $gastado->bindParam(':fec', date("Y",strtotime($model->fecha)));

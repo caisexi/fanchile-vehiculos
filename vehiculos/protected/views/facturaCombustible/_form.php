@@ -103,7 +103,7 @@ function calcularIva(){
 function calcularTotal(){
     document.getElementById('FacturaCombustible_total').value = parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_iva').value) + parseInt(document.getElementById('FacturaCombustible_especifico').value);
     document.getElementById('FacturaCombustible_valor_lt').value = Math.round((parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_especifico').value)) / document.getElementById('FacturaCombustible_litros').value);
-    document.getElementById('FacturaCombustible_valor_guia').value = parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_iva').value);
+    document.getElementById('FacturaCombustible_valor_guia').value = parseInt(document.getElementById('FacturaCombustible_neto').value) + parseInt(document.getElementById('FacturaCombustible_especifico').value);
 }
 
 function totallitros(){
@@ -129,7 +129,7 @@ function totallitros(){
         try{
             pu_b = deta+update+i_b.toString()+litr;
             if(document.getElementById(pu_b).value != ''){
-                litros = litros + parseInt(document.getElementById(pu_b).value);
+                litros = litros + parseFloat(document.getElementById(pu_b).value);
             }
             i_b = i_b + 1;
         }catch(e){
@@ -140,7 +140,7 @@ function totallitros(){
         try{
             pu_c = deta+error+i_c.toString()+litr;
             if(document.getElementById(pu_c).value != ''){
-                litros = litros + document.getElementById(pu_c).value;
+                litros = litros + parseFloat(document.getElementById(pu_c).value);
             }
             i_c = i_c + 1;
         }catch(e){
@@ -151,7 +151,7 @@ function totallitros(){
         try{
             
             if(document.getElementById(pu_a).value != ''){
-                litros = litros + parseInt(document.getElementById(pu_a).value);
+                litros = litros + parseFloat(document.getElementById(pu_a).value);
             }
             i_a = i_a + 1;
             pu_a = deta+litr+i_a.toString();

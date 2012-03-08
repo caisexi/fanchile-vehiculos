@@ -98,11 +98,13 @@ abstract class BaseOrdenTrabajo extends GxActiveRecord {
 	}
         
         public function getMultiModelForm() {
+            $criteria=new CDbCriteria;                        
+            $criteria->order='nombre ASC';
             $memberFormConfig = array(
               'elements'=>array(
                 'id_detalle_reparacion'=>array(
                     'type'=>'dropdownlist',
-                    'items'=>array(''=>'---')+GxHtml::listDataEx(DetalleReparacion::model()->findAllAttributes(null, true)),
+                    'items'=>array(''=>'---')+GxHtml::listDataEx(DetalleReparacion::model()->findAllAttributes(null, true,$criteria)),
                 ),
                 'id_marca'=>array(
                     'type'=>'dropdownlist',

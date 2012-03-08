@@ -92,6 +92,11 @@
 		<?php echo $form->error($model,'kilometraje'); ?>
 		</div><!-- row -->
                 
+                <div class="row">
+                    <?php echo CHtml::label('Valores con :','valores'); ?>
+                    <?php echo CHtml::radioButtonList('valores','',array('1' => 'Con Iva', '2' => 'Sin Iva'),array('onChange' => 'subtotal()')); ?>
+                </div> 
+                
                 <?php
                 $this->widget('ext.multimodelform.MultiModelForm',array(
                     'id' => 'id_member', //the unique widget id
@@ -144,7 +149,10 @@ function subtotal(){
             if(document.getElementById(pu_b).value != ''){
                 if(document.getElementById(cant_b).value == '')
                     document.getElementById(cant_b).value = 1;
-                document.getElementById(sub_b).value = document.getElementById(pu_b).value * document.getElementById(cant_b).value;
+                if(valores_0.checked)
+                    document.getElementById(sub_b).value = Math.round((document.getElementById(pu_b).value / 1.19) * document.getElementById(cant_b).value);
+                else
+                    document.getElementById(sub_b).value = document.getElementById(pu_b).value * document.getElementById(cant_b).value;
             }
             i_b = i_b + 1;
         }catch(e){
@@ -159,7 +167,10 @@ function subtotal(){
             if(document.getElementById(pu_c).value != ''){
                 if(document.getElementById(cant_c).value == '')
                     document.getElementById(cant_c).value = 1;
-                document.getElementById(sub_c).value = document.getElementById(pu_c).value * document.getElementById(cant_c).value;
+                if(valores_0.checked)
+                    document.getElementById(sub_c).value = Math.round((document.getElementById(pu_c).value / 1.19) * document.getElementById(cant_c).value);
+                else
+                    document.getElementById(sub_c).value = document.getElementById(pu_c).value * document.getElementById(cant_c).value;
             }
             i_c = i_c + 1;
         }catch(e){
@@ -172,13 +183,15 @@ function subtotal(){
             if(document.getElementById(pu_a).value != ''){
                 if(document.getElementById(cant_a).value == '')
                     document.getElementById(cant_a).value = 1;
-                document.getElementById(sub_a).value = document.getElementById(pu_a).value * document.getElementById(cant_a).value;
+                if(valores_0.checked)
+                    document.getElementById(sub_a).value = Math.round((document.getElementById(pu_a).value / 1.19) * document.getElementById(cant_a).value);
+                else
+                    document.getElementById(sub_a).value = document.getElementById(pu_a).value * document.getElementById(cant_a).value;
             }
             i_a = i_a + 1;
             pu_a = deta+pu+i_a.toString();
             cant_a = deta+cant+i_a.toString();
             sub_a = deta+sub+i_a.toString();
-            //alert(sub);
         }catch(e){
            existe = false;
         }

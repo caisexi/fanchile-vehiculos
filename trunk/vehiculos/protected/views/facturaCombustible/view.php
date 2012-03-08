@@ -55,7 +55,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
         ),
         array(
             'header'=>'Litros',
-            'value' => 'OrdenTrabajo::formatearKm($data->litros)',
+            'value' => '$data->litros',
             'htmlOptions'=>array('style' => 'text-align: right;'),
         ),
     ),

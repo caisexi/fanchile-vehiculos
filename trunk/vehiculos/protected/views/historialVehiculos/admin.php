@@ -33,7 +33,11 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+    $criteria=new CDbCriteria;                        
+    $criteria->order='nombre ASC';
+    
+    $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'historial-vehiculos-grid',
 	'dataProvider' => $model->search(),
         'emptyText' => 'No hay resultados',
@@ -54,7 +58,7 @@ $('.search-form form').submit(function(){
 		array(
 				'name'=>'id_persona',
 				'value'=>'GxHtml::valueEx($data->idPersona)',
-				'filter'=>GxHtml::listDataEx(Personal::model()->findAllAttributes(null, true)),
+				'filter'=>GxHtml::listDataEx(Personal::model()->findAllAttributes(null, true,$criteria)),
 				),
 		'fecha',
 		'creado',

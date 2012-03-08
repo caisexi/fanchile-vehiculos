@@ -33,7 +33,11 @@ $('.search-form form').submit(function(){
 )); ?>
 </div><!-- search-form -->
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php 
+    $criteria=new CDbCriteria;                        
+    $criteria->order='patente ASC';
+    
+    $this->widget('zii.widgets.grid.CGridView', array(
 	'id' => 'orden-trabajo-grid',
 	'dataProvider' => $model->search(),
 	'filter' => $model,
@@ -49,7 +53,7 @@ $('.search-form form').submit(function(){
 		array(
 				'name'=>'id_vehiculo',
 				'value'=>'GxHtml::valueEx($data->idVehiculo)',
-				'filter'=>GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true)),
+				'filter'=>GxHtml::listDataEx(Vehiculos::model()->findAllAttributes(null, true,$criteria)),
 				),
 		array(
 				'name'=>'id_rf',

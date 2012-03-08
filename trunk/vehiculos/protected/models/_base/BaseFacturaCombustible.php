@@ -77,7 +77,7 @@ abstract class BaseFacturaCombustible extends GxActiveRecord {
 			'litros' => Yii::t('app', 'Litros'),
 			'total' => Yii::t('app', 'Total'),
 			'valor_lt' => Yii::t('app', 'Valor Lt'),
-			'valor_guia' => Yii::t('app', 'Valor Guia'),
+			'valor_guia' => Yii::t('app', 'Costo Empresa'),
 			'creado' => Yii::t('app', 'Creado'),
 			'modificado' => Yii::t('app', 'Modificado'),
 			'detFacturaCombustibles' => null,

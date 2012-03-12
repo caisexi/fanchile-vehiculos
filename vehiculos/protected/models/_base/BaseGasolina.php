@@ -20,10 +20,12 @@
  * @property string $nro_transaccion
  * @property integer $precio_u
  * @property string $litros
+ * @property integer $especifico
  * @property integer $total
+ * @property integer $costo_empresa
  *
- * @property Vehiculos $idVehiculo
  * @property PlanillasCopec $idPlanilla
+ * @property Vehiculos $idVehiculo
  */
 abstract class BaseGasolina extends GxActiveRecord {
 
@@ -45,18 +47,18 @@ abstract class BaseGasolina extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('id_planilla, id_vehiculo, tarjeta, fecha, hora, comuna, direccion, nro_transaccion, precio_u, litros, total', 'required'),
-			array('id_planilla, id_vehiculo, precio_u, total', 'numerical', 'integerOnly'=>true),
+			array('id_planilla, id_vehiculo, tarjeta, fecha, hora, comuna, direccion, nro_transaccion, precio_u, litros, especifico, total, costo_empresa', 'required'),
+			array('id_planilla, id_vehiculo, precio_u, especifico, total, costo_empresa', 'numerical', 'integerOnly'=>true),
 			array('tarjeta, comuna, direccion, nro_transaccion', 'length', 'max'=>255),
 			array('litros', 'length', 'max'=>10),
-			array('id, id_planilla, id_vehiculo, tarjeta, fecha, hora, comuna, direccion, nro_transaccion, precio_u, litros, total', 'safe', 'on'=>'search'),
+			array('id, id_planilla, id_vehiculo, tarjeta, fecha, hora, comuna, direccion, nro_transaccion, precio_u, litros, especifico, total, costo_empresa', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations() {
 		return array(
-			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
 			'idPlanilla' => array(self::BELONGS_TO, 'PlanillasCopec', 'id_planilla'),
+			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
 		);
 	}
 
@@ -76,11 +78,13 @@ abstract class BaseGasolina extends GxActiveRecord {
 			'comuna' => Yii::t('app', 'Comuna'),
 			'direccion' => Yii::t('app', 'Direccion'),
 			'nro_transaccion' => Yii::t('app', 'Nro Transaccion'),
-			'precio_u' => Yii::t('app', 'Precio Unitario'),
+			'precio_u' => Yii::t('app', 'Precio U'),
 			'litros' => Yii::t('app', 'Litros'),
+			'especifico' => Yii::t('app', 'Especifico'),
 			'total' => Yii::t('app', 'Total'),
-			'idVehiculo' => null,
+			'costo_empresa' => Yii::t('app', 'Costo Empresa'),
 			'idPlanilla' => null,
+			'idVehiculo' => null,
 		);
 	}
 
@@ -98,7 +102,9 @@ abstract class BaseGasolina extends GxActiveRecord {
 		$criteria->compare('nro_transaccion', $this->nro_transaccion, true);
 		$criteria->compare('precio_u', $this->precio_u);
 		$criteria->compare('litros', $this->litros, true);
+		$criteria->compare('especifico', $this->especifico);
 		$criteria->compare('total', $this->total);
+		$criteria->compare('costo_empresa', $this->costo_empresa);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

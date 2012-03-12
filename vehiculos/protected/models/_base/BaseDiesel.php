@@ -21,11 +21,12 @@
  * @property integer $especifico
  * @property integer $variable
  * @property integer $total
+ * @property integer $costo_empresa
  * @property integer $nro_guia
  * @property integer $rollo
  *
- * @property Vehiculos $idVehiculo
  * @property PlanillasCopec $idPlanilla
+ * @property Vehiculos $idVehiculo
  */
 abstract class BaseDiesel extends GxActiveRecord {
 
@@ -38,7 +39,7 @@ abstract class BaseDiesel extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Diesel|Diesel', $n);
+		return Yii::t('app', 'Diesel|Diesels', $n);
 	}
 
 	public static function representingColumn() {
@@ -47,19 +48,19 @@ abstract class BaseDiesel extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('id_planilla, id_vehiculo, nro_factura, fecha, region, estacion, litros, precio_u, especifico, variable, total, nro_guia, rollo', 'required'),
-			array('id_planilla, id_vehiculo, region, precio_u, especifico, variable, total, nro_guia, rollo', 'numerical', 'integerOnly'=>true),
+			array('id_planilla, id_vehiculo, nro_factura, fecha, region, estacion, litros, precio_u, especifico, variable, total, costo_empresa, nro_guia, rollo', 'required'),
+			array('id_planilla, id_vehiculo, region, precio_u, especifico, variable, total, costo_empresa, nro_guia, rollo', 'numerical', 'integerOnly'=>true),
 			array('nro_factura', 'length', 'max'=>7),
 			array('estacion', 'length', 'max'=>100),
 			array('litros', 'length', 'max'=>10),
-			array('id, id_planilla, id_vehiculo, nro_factura, fecha, region, estacion, litros, precio_u, especifico, variable, total, nro_guia, rollo', 'safe', 'on'=>'search'),
+			array('id, id_planilla, id_vehiculo, nro_factura, fecha, region, estacion, litros, precio_u, especifico, variable, total, costo_empresa, nro_guia, rollo', 'safe', 'on'=>'search'),
 		);
 	}
 
 	public function relations() {
 		return array(
-			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
 			'idPlanilla' => array(self::BELONGS_TO, 'PlanillasCopec', 'id_planilla'),
+			'idVehiculo' => array(self::BELONGS_TO, 'Vehiculos', 'id_vehiculo'),
 		);
 	}
 
@@ -78,14 +79,15 @@ abstract class BaseDiesel extends GxActiveRecord {
 			'region' => Yii::t('app', 'Region'),
 			'estacion' => Yii::t('app', 'Estacion'),
 			'litros' => Yii::t('app', 'Litros'),
-			'precio_u' => Yii::t('app', 'Precio Unitario'),
+			'precio_u' => Yii::t('app', 'Precio U'),
 			'especifico' => Yii::t('app', 'Especifico'),
 			'variable' => Yii::t('app', 'Variable'),
 			'total' => Yii::t('app', 'Total'),
+			'costo_empresa' => Yii::t('app', 'Costo Empresa'),
 			'nro_guia' => Yii::t('app', 'Nro Guia'),
 			'rollo' => Yii::t('app', 'Rollo'),
-			'idVehiculo' => null,
 			'idPlanilla' => null,
+			'idVehiculo' => null,
 		);
 	}
 
@@ -104,6 +106,7 @@ abstract class BaseDiesel extends GxActiveRecord {
 		$criteria->compare('especifico', $this->especifico);
 		$criteria->compare('variable', $this->variable);
 		$criteria->compare('total', $this->total);
+		$criteria->compare('costo_empresa', $this->costo_empresa);
 		$criteria->compare('nro_guia', $this->nro_guia);
 		$criteria->compare('rollo', $this->rollo);
 

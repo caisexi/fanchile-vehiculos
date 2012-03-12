@@ -15,6 +15,9 @@
  * @property integer $kilometraje_inicial
  * @property integer $kilometraje_final
  * @property string $litros_adicionales
+ * @property integer $neto
+ * @property integer $especifico
+ * @property integer $costo_empresa
  *
  * @property Vehiculos $idVehiculo
  */
@@ -38,10 +41,11 @@ abstract class BaseBitacoras extends GxActiveRecord {
 
 	public function rules() {
 		return array(
-			array('id_vehiculo, fecha, kilometraje_inicial, kilometraje_final, litros_adicionales', 'required'),
-			array('id_vehiculo, kilometraje_inicial, kilometraje_final', 'numerical', 'integerOnly'=>true),
+			array('id_vehiculo, fecha, kilometraje_inicial, kilometraje_final', 'required'),
+			array('id_vehiculo, kilometraje_inicial, kilometraje_final, neto, especifico, costo_empresa', 'numerical', 'integerOnly'=>true),
 			array('litros_adicionales', 'length', 'max'=>10),
-			array('id, id_vehiculo, fecha, kilometraje_inicial, kilometraje_final, litros_adicionales', 'safe', 'on'=>'search'),
+			array('litros_adicionales, neto, especifico, costo_empresa', 'default', 'setOnEmpty' => true, 'value' => null),
+			array('id, id_vehiculo, fecha, kilometraje_inicial, kilometraje_final, litros_adicionales, neto, especifico, costo_empresa', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -64,6 +68,9 @@ abstract class BaseBitacoras extends GxActiveRecord {
 			'kilometraje_inicial' => Yii::t('app', 'Kilometraje Inicial'),
 			'kilometraje_final' => Yii::t('app', 'Kilometraje Final'),
 			'litros_adicionales' => Yii::t('app', 'Litros Adicionales'),
+			'neto' => Yii::t('app', 'Neto'),
+			'especifico' => Yii::t('app', 'Especifico'),
+			'costo_empresa' => Yii::t('app', 'Costo Empresa'),
 			'idVehiculo' => null,
 		);
 	}
@@ -77,6 +84,9 @@ abstract class BaseBitacoras extends GxActiveRecord {
 		$criteria->compare('kilometraje_inicial', $this->kilometraje_inicial);
 		$criteria->compare('kilometraje_final', $this->kilometraje_final);
 		$criteria->compare('litros_adicionales', $this->litros_adicionales, true);
+		$criteria->compare('neto', $this->neto);
+		$criteria->compare('especifico', $this->especifico);
+		$criteria->compare('costo_empresa', $this->costo_empresa);
 
 		return new CActiveDataProvider($this, array(
 			'criteria' => $criteria,

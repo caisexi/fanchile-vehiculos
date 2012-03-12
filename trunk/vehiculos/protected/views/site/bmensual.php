@@ -6,9 +6,6 @@ $this->breadcrumbs = array(Yii::t('app', 'Resumen Mensual'));
 <div class="form">
     <?php echo CHtml::beginForm('bmensual','get'); ?>
     
-    <div class="form">
-    <?php echo CHtml::beginForm('bparcial','get'); ?>
-
     <div class="row">
     <?php echo CHtml::label('Año','ano'); ?>
     <?php echo CHtml::textField('ano', isset ($_GET['ano']) && $_GET['ano'] != '' ? $_GET['ano'] : date("Y")); ?>
@@ -55,7 +52,7 @@ $dp = $dataProvider->getData();
 foreach ($dp as $dpf)
 {
     $sumat += $dpf["totallitros"];
-    $sumal += $dpf["precioxlitro"];
+    $sumal += $dpf["costoempresa"];
 }
     $this->widget('zii.widgets.grid.CGridView', array(
         'summaryText'=>'',
@@ -139,7 +136,7 @@ foreach ($dp as $dpf)
             ),
             array(
                 'name'=>'Costo Combustible',
-                'value' => 'OrdenTrabajo::formatearPeso($data["precioxlitro"])',
+                'value' => 'OrdenTrabajo::formatearPeso($data["costoempresa"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
                 'footer'=>'Total: '.$sumal,
             ),

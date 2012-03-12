@@ -84,6 +84,11 @@ if($tipo == 1)
                 'value' => 'OrdenTrabajo::formatearPeso($data->total)',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
+            array(
+                'name'=>'costo_empresa',
+                'value' => 'OrdenTrabajo::formatearPeso($data->costo_empresa)',
+                'htmlOptions'=>array('style' => 'text-align: right;'),
+            ),
         ),
     ));
 }
@@ -133,8 +138,8 @@ elseif($tipo == 0)
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(
-                'name'=>'variable',
-                'value' => 'OrdenTrabajo::formatearPeso($data->variable)',
+                'name'=>'costo_empresa',
+                'value' => 'OrdenTrabajo::formatearPeso($data->costo_empresa)',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(

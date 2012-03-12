@@ -62,6 +62,21 @@
 		<?php echo $form->textField($model,'litros_adicionales',array('size'=>10,'maxlength'=>10)); ?>
 		<?php echo $form->error($model,'litros_adicionales'); ?>
 	</div>
+        <div class="row">
+            <?php echo $form->labelEx($model,'neto'); ?>
+            <?php echo $form->textField($model,'neto',array('size'=>10,'maxlength'=>11)); ?>
+            <?php echo $form->error($model,'neto'); ?>
+	</div>
+        <div class="row">
+            <?php echo $form->labelEx($model,'especifico'); ?>
+            <?php echo $form->textField($model,'especifico',array('size'=>10,'maxlength'=>11)); ?>
+            <?php echo $form->error($model,'especifico'); ?>
+	</div>
+        <div class="row">
+            <?php echo $form->labelEx($model,'costo_empresa'); ?>
+            <?php echo $form->textField($model,'costo_empresa',array('size'=>10,'maxlength'=>11)); ?>
+            <?php echo $form->error($model,'costo_empresa'); ?>
+	</div>
 
 	<div class="row buttons">
 		<?php echo GxHtml::submitButton(Yii::t('app', 'Guardar'),array('class' => 'boton')); ?>

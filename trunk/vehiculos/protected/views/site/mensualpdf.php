@@ -1,14 +1,4 @@
 <?php
-/*
-$data = $dataProvider->getData();
-echo '<table id="yw0" class="detail-view2">
-<tr class="principal">
-<td colspan="2" align="center"><b>DATOS DEL CONTRATO</b></td>
-<tr>';
-foreach ($data as $dat)
-echo '<tr class="odd"><td> <b>N° Control</b> </td><td> '.$dat['patente'].'</td></tr>';
-echo '</table>';
-*/
 
 $this->widget('zii.widgets.grid.CGridView', array(
     'summaryText'=>'', 
@@ -90,7 +80,7 @@ $this->widget('zii.widgets.grid.CGridView', array(
             ),
             array(
                 'name'=>'Costo Combustible',
-                'value' => 'OrdenTrabajo::formatearPeso($data["precioxlitro"])',
+                'value' => 'OrdenTrabajo::formatearPeso($data["costoempresa"])',
                 'htmlOptions'=>array('style' => 'text-align: right;'),
             ),
             array(

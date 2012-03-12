@@ -15,6 +15,11 @@ $this->breadcrumbs = array(Yii::t('app', 'Subir Planilla'));
         <?php echo CHtml::fileField('excel', '', array('style' => 'width:400px')); ?>
         <?php echo CHtml::hiddenField('action','upload'); ?>
     </div><!-- row -->
+    <div class="row">        
+        <?php echo CHtml::label('Impuesto Especifico','subir'); ?>
+        <?php echo CHtml::textField('especifico'); ?>
+        <span class="required">*</span><?php echo Yii::t('app', 'Solo gasolina'); ?>
+    </div><!-- row -->
     <div class="row">
         <?php echo CHtml::label('Sobreescribir si existe','sobreescribir'); ?>
         <?php echo CHtml::checkBox('sobreescribir'); ?>

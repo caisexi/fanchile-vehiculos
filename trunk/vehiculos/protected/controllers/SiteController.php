@@ -1,7 +1,7 @@
 <?php
 
 class SiteController extends GxController
-{
+{   
 	/**
 	 * Declares class-based actions.
 	 */
@@ -656,7 +656,9 @@ class SiteController extends GxController
                 $oDbConnection = Yii::app()->db;
 
                 $oCommand = $oDbConnection->createCommand('SELECT areas_empresa.nombre as area, personal.nombre, personal.apellido_pat, vehiculos.patente, (IFNULL(dfacturas.li,0) + IFNULL(SUM(sdiesel.litrosd),0) + IFNULL(gas.litrosg,0) + IFNULL(bita.ladi,0)) as totallitros, ((IFNULL(dfacturas.ce,0) + IFNULL(sdiesel.costodiesel,0) + IFNULL(gas.costogasolina,0) + IFNULL(bita.costobita,0)) - (IFNULL(dfacturas.costoespecifico,0) + IFNULL(sdiesel.costoespecifico,0) + IFNULL(gas.costoespecifico,0) + IFNULL(bita.costoespecifico,0))) as neto,(((IFNULL(dfacturas.ce,0) + IFNULL(sdiesel.costodiesel,0) + IFNULL(gas.costogasolina,0) + IFNULL(bita.costobita,0)) - (IFNULL(dfacturas.costoespecifico,0) + IFNULL(sdiesel.costoespecifico,0) + IFNULL(gas.costoespecifico,0) + IFNULL(bita.costoespecifico,0))) *0.19) as iva, (IFNULL(dfacturas.costoespecifico,0) + IFNULL(sdiesel.costoespecifico,0) + IFNULL(gas.costoespecifico,0) + IFNULL(bita.costoespecifico,0)) as costoespecifico, (IFNULL(dfacturas.ce,0) + IFNULL(sdiesel.costodiesel,0) + IFNULL(gas.costogasolina,0) + IFNULL(bita.costobita,0)) as costoempresa FROM (select DISTINCT historial_vehiculos.id_vehiculo, historial_vehiculos.id_persona from historial_vehiculos where historial_vehiculos.fecha <= :anomes GROUP BY historial_vehiculos.id_vehiculo ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa LEFT JOIN (SELECT det_factura_combustible.id_vehiculo as v, SUM(det_factura_combustible.litros) as li, SUM(factura_combustible.valor_guia) as ce, SUM(factura_combustible.especifico) as costoespecifico from factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id WHERE YEAR(factura_combustible.fecha) = :ano AND MONTH(factura_combustible.fecha) = :mes GROUP BY det_factura_combustible.id_vehiculo) as dfacturas ON dfacturas.v = vehiculos.id LEFT JOIN (SELECT SUM(diesel.litros) as litrosd, diesel.id_vehiculo, SUM(diesel.costo_empresa) as costodiesel, SUM(diesel.especifico) as costoespecifico FROM diesel WHERE YEAR(diesel.fecha) = :ano AND MONTH(diesel.fecha) = :mes GROUP BY diesel.id_vehiculo) as sdiesel ON sdiesel.id_vehiculo = vehiculos.id LEFT JOIN (select SUM(gasolina.litros) as litrosg, SUM(gasolina.costo_empresa) as costogasolina, SUM(gasolina.especifico) as costoespecifico, gasolina.id_vehiculo FROM gasolina WHERE YEAR(gasolina.fecha) = :ano AND MONTH(gasolina.fecha) = :mes GROUP BY gasolina.id_vehiculo)as gas ON gas.id_vehiculo = vehiculos.id LEFT JOIN (SELECT SUM(bitacoras.litros_adicionales) AS ladi, bitacoras.id_vehiculo, SUM(bitacoras.costo_empresa) as costobita, SUM(bitacoras.especifico) as costoespecifico FROM bitacoras WHERE YEAR(bitacoras.fecha) = :ano AND MONTH(bitacoras.fecha) = :mes) as bita ON bita.id_vehiculo = vehiculos.id GROUP BY vehiculos.id ORDER BY areas_empresa.nombre, personal.nombre ASC');
-     
+                
+                $oCommand2 = $oDbConnection->createCommand('SELECT areas_empresa.nombre as area, SUM(IFNULL(dfacturas.li,0) + IFNULL(sdiesel.litrosd,0) + IFNULL(gas.litrosg,0) + IFNULL(bita.ladi,0)) as totallitros, SUM((IFNULL(dfacturas.ce,0) + IFNULL(sdiesel.costodiesel,0) + IFNULL(gas.costogasolina,0) + IFNULL(bita.costobita,0)) - (IFNULL(dfacturas.costoespecifico,0) + IFNULL(sdiesel.costoespecifico,0) + IFNULL(gas.costoespecifico,0) + IFNULL(bita.costoespecifico,0))) as neto,SUM(((IFNULL(dfacturas.ce,0) + IFNULL(sdiesel.costodiesel,0) + IFNULL(gas.costogasolina,0) + IFNULL(bita.costobita,0)) - (IFNULL(dfacturas.costoespecifico,0) + IFNULL(sdiesel.costoespecifico,0) + IFNULL(gas.costoespecifico,0) + IFNULL(bita.costoespecifico,0))) *0.19) as iva, SUM(IFNULL(dfacturas.costoespecifico,0) + IFNULL(sdiesel.costoespecifico,0) + IFNULL(gas.costoespecifico,0) + IFNULL(bita.costoespecifico,0)) as costoespecifico, SUM(IFNULL(dfacturas.ce,0) + IFNULL(sdiesel.costodiesel,0) + IFNULL(gas.costogasolina,0) + IFNULL(bita.costobita,0)) as costoempresa FROM (select DISTINCT historial_vehiculos.id_vehiculo, historial_vehiculos.id_persona from historial_vehiculos where historial_vehiculos.fecha <= :anomes GROUP BY historial_vehiculos.id_vehiculo ORDER BY historial_vehiculos.fecha DESC) as histo INNER JOIN vehiculos on vehiculos.id = histo.id_vehiculo and vehiculos.estado = :estado INNER JOIN combustibles on combustibles.id = vehiculos.idCombustible INNER JOIN personal on personal.id = histo.id_persona INNER JOIN cargos_empresa on personal.id_cargo_empresa = cargos_empresa.id INNER JOIN areas_empresa on areas_empresa.id = cargos_empresa.id_area_empresa LEFT JOIN (SELECT det_factura_combustible.id_vehiculo as v, SUM(det_factura_combustible.litros) as li, SUM(factura_combustible.valor_guia) as ce, SUM(factura_combustible.especifico) as costoespecifico from factura_combustible INNER JOIN det_factura_combustible on det_factura_combustible.id_factura_combustible = factura_combustible.id WHERE YEAR(factura_combustible.fecha) = :ano AND MONTH(factura_combustible.fecha) = :mes GROUP BY det_factura_combustible.id_vehiculo) as dfacturas ON dfacturas.v = vehiculos.id LEFT JOIN (SELECT SUM(diesel.litros) as litrosd, diesel.id_vehiculo, SUM(diesel.costo_empresa) as costodiesel, SUM(diesel.especifico) as costoespecifico FROM diesel WHERE YEAR(diesel.fecha) = :ano AND MONTH(diesel.fecha) = :mes GROUP BY diesel.id_vehiculo) as sdiesel ON sdiesel.id_vehiculo = vehiculos.id LEFT JOIN (select SUM(gasolina.litros) as litrosg, SUM(gasolina.costo_empresa) as costogasolina, SUM(gasolina.especifico) as costoespecifico, gasolina.id_vehiculo FROM gasolina WHERE YEAR(gasolina.fecha) = :ano AND MONTH(gasolina.fecha) = :mes GROUP BY gasolina.id_vehiculo)as gas ON gas.id_vehiculo = vehiculos.id LEFT JOIN (SELECT SUM(bitacoras.litros_adicionales) AS ladi, bitacoras.id_vehiculo, SUM(bitacoras.costo_empresa) as costobita, SUM(bitacoras.especifico) as costoespecifico FROM bitacoras WHERE YEAR(bitacoras.fecha) = :ano AND MONTH(bitacoras.fecha) = :mes) as bita ON bita.id_vehiculo = vehiculos.id GROUP BY areas_empresa.nombre ORDER BY areas_empresa.nombre ASC');
+                
                 $oCommand->bindParam(':estado', $estado = 1);
 
                 $oCommand->bindParam(':mes', $_GET['mes']);
@@ -664,13 +666,30 @@ class SiteController extends GxController
                 $oCommand->bindParam(':ano', $_GET['ano']);
                 
                 $oCommand->bindParam(':anomes', $anomes = $_GET['ano'].'-'.$_GET['mes']);
+                
+                $oCommand2->bindParam(':estado', $estado = 1);
+
+                $oCommand2->bindParam(':mes', $_GET['mes']);
+                
+                $oCommand2->bindParam(':ano', $_GET['ano']);
+                
+                $oCommand2->bindParam(':anomes', $anomes = $_GET['ano'].'-'.$_GET['mes']);
 
                 $oCDbDataReader = $oCommand->queryAll();
+                
+                $oCDbDataReader2 = $oCommand2->queryAll();
 
                 $dataProvider=new CArrayDataProvider($oCDbDataReader, array(
                     'keyField'=>'area',
                     'pagination'=>array(
-                        'pageSize'=>60,
+                        'pageSize'=>80,
+                    ),
+                ));
+                
+                $dataProvider2=new CArrayDataProvider($oCDbDataReader2, array(
+                    'keyField'=>'area',
+                    'pagination'=>array(
+                        'pageSize'=>20,
                     ),
                 ));
                 
@@ -678,6 +697,7 @@ class SiteController extends GxController
                 {          
                     $this->render('informe', array(
                         'dataProvider' => $dataProvider,
+                        'dataProvider2' => $dataProvider2,
                         'mes' => $_GET['mes'],
                         'ano' => $_GET['ano'],
                     ));
@@ -740,7 +760,7 @@ class SiteController extends GxController
                     $stylesheet = file_get_contents(Yii::getPathOfAlias('webroot.css') . '/screen_pdf.css');
                     $mPDF1->WriteHTML($stylesheet, 1);
 
-                    $mPDF1->WriteHTML($this->renderPartial('informepdf', array('dataProvider' => $dataProvider,
+                    $mPDF1->WriteHTML($this->renderPartial('informepdf', array('dataProvider' => $dataProvider,'dataProvider2' => $dataProvider2,
                         'mes' => $_GET['mes'],
                         'ano' => $_GET['ano'],
                         ), true));
